@@ -1,0 +1,111 @@
+
+Lmod is automatically replacing "gnu9/9.3.0" with "gnu10/10.3.0-ya".
+
+
+Inactive Modules:
+  1) hwloc/2.1.0     2) libfabric     3) openmpi4     4) ucx
+
+WARNING: Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<pip._vendor.urllib3.connection.HTTPSConnection object at 0x7fa693e32a30>: Failed to establish a new connection: [Errno -2] Name or service not known')': /simple/pip/
+WARNING: Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<pip._vendor.urllib3.connection.HTTPSConnection object at 0x7fa693e32e80>: Failed to establish a new connection: [Errno -2] Name or service not known')': /simple/pip/
+WARNING: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<pip._vendor.urllib3.connection.HTTPSConnection object at 0x7fa693e32f40>: Failed to establish a new connection: [Errno -2] Name or service not known')': /simple/pip/
+WARNING: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<pip._vendor.urllib3.connection.HTTPSConnection object at 0x7fa693dd5220>: Failed to establish a new connection: [Errno -2] Name or service not known')': /simple/pip/
+WARNING: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<pip._vendor.urllib3.connection.HTTPSConnection object at 0x7fa693dd53d0>: Failed to establish a new connection: [Errno -2] Name or service not known')': /simple/pip/
+wandb: Tracking run with wandb version 0.14.0
+wandb: W&B syncing is set to `offline` in this directory.  
+wandb: Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+  0%|          | 0/3 [00:00<?, ?it/s]100%|██████████| 3/3 [00:00<00:00, 35.93it/s]
+loading configuration file https://huggingface.co/morenolq/bart-base-xsum/resolve/main/config.json from cache at /home/sshukla7/.cache/huggingface/transformers/2143f5ca2ddc879a69c18aa4aeea4f929e8be4b7ad2fb7f450e80a9f2fb84b3c.cb679a7a582c3b5fc9b83719fcd777614feda13430c8aab95c403ce32b2096c1
+Model config BartConfig {
+  "_name_or_path": "morenolq/bart-base-xsum",
+  "activation_dropout": 0.1,
+  "activation_function": "gelu",
+  "add_bias_logits": false,
+  "add_final_layer_norm": false,
+  "architectures": [
+    "BartForConditionalGeneration"
+  ],
+  "attention_dropout": 0.1,
+  "bos_token_id": 0,
+  "classif_dropout": 0.1,
+  "classifier_dropout": 0.0,
+  "d_model": 768,
+  "decoder_attention_heads": 12,
+  "decoder_ffn_dim": 3072,
+  "decoder_layerdrop": 0.0,
+  "decoder_layers": 6,
+  "decoder_start_token_id": 2,
+  "dropout": 0.1,
+  "early_stopping": true,
+  "encoder_attention_heads": 12,
+  "encoder_ffn_dim": 3072,
+  "encoder_layerdrop": 0.0,
+  "encoder_layers": 6,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2"
+  },
+  "init_std": 0.02,
+  "is_encoder_decoder": true,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2
+  },
+  "max_position_embeddings": 1024,
+  "model_type": "bart",
+  "no_repeat_ngram_size": 3,
+  "normalize_before": false,
+  "normalize_embedding": true,
+  "num_beams": 4,
+  "num_hidden_layers": 6,
+  "pad_token_id": 1,
+  "scale_embedding": false,
+  "task_specific_params": {
+    "summarization": {
+      "length_penalty": 1.0,
+      "max_length": 128,
+      "min_length": 12,
+      "num_beams": 4
+    },
+    "summarization_cnn": {
+      "length_penalty": 2.0,
+      "max_length": 142,
+      "min_length": 56,
+      "num_beams": 4
+    },
+    "summarization_xsum": {
+      "length_penalty": 1.0,
+      "max_length": 62,
+      "min_length": 11,
+      "num_beams": 6
+    }
+  },
+  "torch_dtype": "float32",
+  "transformers_version": "4.17.0",
+  "use_cache": true,
+  "vocab_size": 50265
+}
+
+Traceback (most recent call last):
+  File "/home/sshukla7/sshukla7/DQ_BART/run_summarization_no_trainer_full_data.py", line 905, in <module>
+    main()
+  File "/home/sshukla7/sshukla7/DQ_BART/run_summarization_no_trainer_full_data.py", line 430, in main
+    tokenizer = AutoTokenizer.from_pretrained(args.model_name_or_path, use_fast=not args.use_slow_tokenizer)
+  File "/home/sshukla7/.local/lib/python3.9/site-packages/transformers/models/auto/tokenization_auto.py", line 528, in from_pretrained
+    return tokenizer_class.from_pretrained(pretrained_model_name_or_path, *inputs, **kwargs)
+  File "/home/sshukla7/.local/lib/python3.9/site-packages/transformers/tokenization_utils_base.py", line 1724, in from_pretrained
+    resolved_vocab_files[file_id] = cached_path(
+  File "/home/sshukla7/.local/lib/python3.9/site-packages/transformers/file_utils.py", line 1921, in cached_path
+    output_path = get_from_cache(
+  File "/home/sshukla7/.local/lib/python3.9/site-packages/transformers/file_utils.py", line 2177, in get_from_cache
+    raise ValueError(
+ValueError: Connection error, and we cannot find the requested files in the cached path. Please try again or make sure your Internet connection is on.
+wandb: Waiting for W&B process to finish... (failed 1).
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /home/sshukla7/sshukla7/DQ_BART/wandb/offline-run-20230405_020820-6onid227
+wandb: Find logs at: ./wandb/offline-run-20230405_020820-6onid227/logs

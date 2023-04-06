@@ -1,0 +1,1936 @@
+
+Lmod is automatically replacing "gnu9/9.3.0" with "gnu10/10.3.0-ya".
+
+
+Inactive Modules:
+  1) hwloc/2.1.0     2) libfabric     3) openmpi4     4) ucx
+
+wandb: Tracking run with wandb version 0.14.0
+wandb: W&B syncing is set to `offline` in this directory.  
+wandb: Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+  0%|          | 0/3 [00:00<?, ?it/s]100%|██████████| 3/3 [00:00<00:00, 33.02it/s]
+loading configuration file https://huggingface.co/ainize/bart-base-cnn/resolve/main/config.json from cache at /home/sshukla7/.cache/huggingface/transformers/e1ac243b74d103ddb74849d7dba037210a4c9121c24f84283504f2a0d9e59a22.3c4e938c08a46506ff9a4be12e0f858cd714b9a5c76090d571e7a4aa95cae853
+Model config BartConfig {
+  "_name_or_path": "ainize/bart-base-cnn",
+  "activation_dropout": 0.1,
+  "activation_function": "gelu",
+  "add_bias_logits": false,
+  "add_final_layer_norm": false,
+  "architectures": [
+    "BartModel",
+    "BartForConditionalGeneration",
+    "BartForSequenceClassification"
+  ],
+  "attention_dropout": 0.1,
+  "bos_token_id": 0,
+  "classif_dropout": 0.1,
+  "classifier_dropout": 0.0,
+  "d_model": 768,
+  "decoder_attention_heads": 12,
+  "decoder_ffn_dim": 3072,
+  "decoder_layerdrop": 0.0,
+  "decoder_layers": 6,
+  "decoder_start_token_id": 2,
+  "dropout": 0.1,
+  "early_stopping": true,
+  "encoder_attention_heads": 12,
+  "encoder_ffn_dim": 3072,
+  "encoder_layerdrop": 0.0,
+  "encoder_layers": 6,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2"
+  },
+  "init_std": 0.02,
+  "is_encoder_decoder": true,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2
+  },
+  "max_position_embeddings": 1024,
+  "model_type": "bart",
+  "no_repeat_ngram_size": 3,
+  "normalize_before": false,
+  "normalize_embedding": true,
+  "num_beams": 4,
+  "num_hidden_layers": 6,
+  "pad_token_id": 1,
+  "scale_embedding": false,
+  "task_specific_params": {
+    "summarization": {
+      "length_penalty": 1.0,
+      "max_length": 128,
+      "min_length": 12,
+      "num_beams": 4
+    },
+    "summarization_cnn": {
+      "length_penalty": 2.0,
+      "max_length": 142,
+      "min_length": 56,
+      "num_beams": 4
+    },
+    "summarization_xsum": {
+      "length_penalty": 1.0,
+      "max_length": 62,
+      "min_length": 11,
+      "num_beams": 6
+    }
+  },
+  "transformers_version": "4.17.0",
+  "use_cache": true,
+  "vocab_size": 50265
+}
+
+loading configuration file https://huggingface.co/ainize/bart-base-cnn/resolve/main/config.json from cache at /home/sshukla7/.cache/huggingface/transformers/e1ac243b74d103ddb74849d7dba037210a4c9121c24f84283504f2a0d9e59a22.3c4e938c08a46506ff9a4be12e0f858cd714b9a5c76090d571e7a4aa95cae853
+Model config BartConfig {
+  "_name_or_path": "ainize/bart-base-cnn",
+  "activation_dropout": 0.1,
+  "activation_function": "gelu",
+  "add_bias_logits": false,
+  "add_final_layer_norm": false,
+  "architectures": [
+    "BartModel",
+    "BartForConditionalGeneration",
+    "BartForSequenceClassification"
+  ],
+  "attention_dropout": 0.1,
+  "bos_token_id": 0,
+  "classif_dropout": 0.1,
+  "classifier_dropout": 0.0,
+  "d_model": 768,
+  "decoder_attention_heads": 12,
+  "decoder_ffn_dim": 3072,
+  "decoder_layerdrop": 0.0,
+  "decoder_layers": 6,
+  "decoder_start_token_id": 2,
+  "dropout": 0.1,
+  "early_stopping": true,
+  "encoder_attention_heads": 12,
+  "encoder_ffn_dim": 3072,
+  "encoder_layerdrop": 0.0,
+  "encoder_layers": 6,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2"
+  },
+  "init_std": 0.02,
+  "is_encoder_decoder": true,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2
+  },
+  "max_position_embeddings": 1024,
+  "model_type": "bart",
+  "no_repeat_ngram_size": 3,
+  "normalize_before": false,
+  "normalize_embedding": true,
+  "num_beams": 4,
+  "num_hidden_layers": 6,
+  "pad_token_id": 1,
+  "scale_embedding": false,
+  "task_specific_params": {
+    "summarization": {
+      "length_penalty": 1.0,
+      "max_length": 128,
+      "min_length": 12,
+      "num_beams": 4
+    },
+    "summarization_cnn": {
+      "length_penalty": 2.0,
+      "max_length": 142,
+      "min_length": 56,
+      "num_beams": 4
+    },
+    "summarization_xsum": {
+      "length_penalty": 1.0,
+      "max_length": 62,
+      "min_length": 11,
+      "num_beams": 6
+    }
+  },
+  "transformers_version": "4.17.0",
+  "use_cache": true,
+  "vocab_size": 50265
+}
+
+loading file https://huggingface.co/ainize/bart-base-cnn/resolve/main/vocab.json from cache at None
+loading file https://huggingface.co/ainize/bart-base-cnn/resolve/main/merges.txt from cache at None
+loading file https://huggingface.co/ainize/bart-base-cnn/resolve/main/tokenizer.json from cache at /home/sshukla7/.cache/huggingface/transformers/322b0e12d5552f61ee9da2b4c018dccbdf5bd18ecf8e30279947a0786e5bd74b.9f68d0ce76c33cdd199a6beeede63d9293d6005f826c0702d530ccefbcd221b7
+loading file https://huggingface.co/ainize/bart-base-cnn/resolve/main/added_tokens.json from cache at None
+loading file https://huggingface.co/ainize/bart-base-cnn/resolve/main/special_tokens_map.json from cache at /home/sshukla7/.cache/huggingface/transformers/1b08f23fe613b0095adfeb8367e54455c71c4d5ca640491db22e74cce8cd6818.a11ebb04664c067c8fe5ef8f8068b0f721263414a26058692f7b2e4ba2a1b342
+loading file https://huggingface.co/ainize/bart-base-cnn/resolve/main/tokenizer_config.json from cache at /home/sshukla7/.cache/huggingface/transformers/f3f3a940d0cf181bb645a6dc4579f89e513e9e4934bbf2156c1b582b6b6cbd4d.bbfff88e4548d13994178581758e5cb778a3c07bc53bb8290fbd90aa7268b858
+loading configuration file https://huggingface.co/ainize/bart-base-cnn/resolve/main/config.json from cache at /home/sshukla7/.cache/huggingface/transformers/e1ac243b74d103ddb74849d7dba037210a4c9121c24f84283504f2a0d9e59a22.3c4e938c08a46506ff9a4be12e0f858cd714b9a5c76090d571e7a4aa95cae853
+Model config BartConfig {
+  "_name_or_path": "ainize/bart-base-cnn",
+  "activation_dropout": 0.1,
+  "activation_function": "gelu",
+  "add_bias_logits": false,
+  "add_final_layer_norm": false,
+  "architectures": [
+    "BartModel",
+    "BartForConditionalGeneration",
+    "BartForSequenceClassification"
+  ],
+  "attention_dropout": 0.1,
+  "bos_token_id": 0,
+  "classif_dropout": 0.1,
+  "classifier_dropout": 0.0,
+  "d_model": 768,
+  "decoder_attention_heads": 12,
+  "decoder_ffn_dim": 3072,
+  "decoder_layerdrop": 0.0,
+  "decoder_layers": 6,
+  "decoder_start_token_id": 2,
+  "dropout": 0.1,
+  "early_stopping": true,
+  "encoder_attention_heads": 12,
+  "encoder_ffn_dim": 3072,
+  "encoder_layerdrop": 0.0,
+  "encoder_layers": 6,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2"
+  },
+  "init_std": 0.02,
+  "is_encoder_decoder": true,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2
+  },
+  "max_position_embeddings": 1024,
+  "model_type": "bart",
+  "no_repeat_ngram_size": 3,
+  "normalize_before": false,
+  "normalize_embedding": true,
+  "num_beams": 4,
+  "num_hidden_layers": 6,
+  "pad_token_id": 1,
+  "scale_embedding": false,
+  "task_specific_params": {
+    "summarization": {
+      "length_penalty": 1.0,
+      "max_length": 128,
+      "min_length": 12,
+      "num_beams": 4
+    },
+    "summarization_cnn": {
+      "length_penalty": 2.0,
+      "max_length": 142,
+      "min_length": 56,
+      "num_beams": 4
+    },
+    "summarization_xsum": {
+      "length_penalty": 1.0,
+      "max_length": 62,
+      "min_length": 11,
+      "num_beams": 6
+    }
+  },
+  "transformers_version": "4.17.0",
+  "use_cache": true,
+  "vocab_size": 50265
+}
+
+loading weights file https://huggingface.co/ainize/bart-base-cnn/resolve/main/pytorch_model.bin from cache at /home/sshukla7/.cache/huggingface/transformers/b5a0b495603513532b029d8e2dd5d1e57feb903dd0144c9e9b88457990236b82.03fa9136c4dd934650ce756ee586bdf7ebc801b99788bd69a4899fd475bf35f3
+All model checkpoint weights were used when initializing BartForConditionalGeneration.
+
+All the weights of BartForConditionalGeneration were initialized from the model checkpoint at ainize/bart-base-cnn.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use BartForConditionalGeneration for predictions without further training.
+/home/sshukla7/.local/lib/python3.9/site-packages/huggingface_hub/file_download.py:637: FutureWarning: `cached_download` is the legacy way to download files from the HF hub, please consider upgrading to `hf_hub_download`
+  warnings.warn(
+Running tokenizer on dataset #0:   0%|          | 0/29 [00:00<?, ?ba/s]
+Running tokenizer on dataset #1:   0%|          | 0/29 [00:00<?, ?ba/s][A
+
+Running tokenizer on dataset #2:   0%|          | 0/29 [00:00<?, ?ba/s][A[A
+
+
+Running tokenizer on dataset #3:   0%|          | 0/29 [00:00<?, ?ba/s][A[A[A
+
+
+
+Running tokenizer on dataset #4:   0%|          | 0/29 [00:00<?, ?ba/s][A[A[A[A
+
+
+
+
+Running tokenizer on dataset #5:   0%|          | 0/29 [00:00<?, ?ba/s][A[A[A[A[A
+
+
+
+
+
+Running tokenizer on dataset #6:   0%|          | 0/29 [00:00<?, ?ba/s][A[A[A[A[A[A
+
+
+
+
+
+
+Running tokenizer on dataset #7:   0%|          | 0/29 [00:00<?, ?ba/s][A[A[A[A[A[A[A
+
+
+
+
+
+
+
+Running tokenizer on dataset #8:   0%|          | 0/29 [00:00<?, ?ba/s][A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+Running tokenizer on dataset #9:   0%|          | 0/29 [00:00<?, ?ba/s][A[A[A[A[A[A[A[A[A
+Running tokenizer on dataset #1:   3%|▎         | 1/29 [00:01<00:48,  1.74s/ba][A
+
+Running tokenizer on dataset #2:   3%|▎         | 1/29 [00:01<00:48,  1.73s/ba][A[ARunning tokenizer on dataset #0:   3%|▎         | 1/29 [00:01<00:50,  1.81s/ba]
+
+
+Running tokenizer on dataset #3:   3%|▎         | 1/29 [00:01<00:50,  1.81s/ba][A[A[A
+
+
+
+Running tokenizer on dataset #4:   3%|▎         | 1/29 [00:01<00:50,  1.82s/ba][A[A[A[A
+
+
+
+
+Running tokenizer on dataset #5:   3%|▎         | 1/29 [00:01<00:50,  1.80s/ba][A[A[A[A[A
+
+
+
+
+
+
+Running tokenizer on dataset #7:   3%|▎         | 1/29 [00:01<00:51,  1.84s/ba][A[A[A[A[A[A[A
+
+
+
+
+
+
+
+Running tokenizer on dataset #8:   3%|▎         | 1/29 [00:01<00:50,  1.79s/ba][A[A[A[A[A[A[A[A
+
+
+
+
+
+Running tokenizer on dataset #6:   3%|▎         | 1/29 [00:01<00:55,  1.99s/ba][A[A[A[A[A[A
+
+
+
+
+
+
+
+
+Running tokenizer on dataset #9:   3%|▎         | 1/29 [00:01<00:53,  1.90s/ba][A[A[A[A[A[A[A[A[A
+
+Running tokenizer on dataset #2:   7%|▋         | 2/29 [00:03<00:46,  1.71s/ba][A[A
+Running tokenizer on dataset #1:   7%|▋         | 2/29 [00:03<00:48,  1.78s/ba][A
+
+
+Running tokenizer on dataset #3:   7%|▋         | 2/29 [00:03<00:48,  1.80s/ba][A[A[A
+
+
+
+
+Running tokenizer on dataset #5:   7%|▋         | 2/29 [00:03<00:49,  1.82s/ba][A[A[A[A[A
+
+
+
+Running tokenizer on dataset #4:   7%|▋         | 2/29 [00:03<00:50,  1.86s/ba][A[A[A[ARunning tokenizer on dataset #0:   7%|▋         | 2/29 [00:03<00:52,  1.93s/ba]
+
+
+
+
+
+
+
+Running tokenizer on dataset #8:   7%|▋         | 2/29 [00:03<00:49,  1.83s/ba][A[A[A[A[A[A[A[A
+
+
+
+
+
+
+Running tokenizer on dataset #7:   7%|▋         | 2/29 [00:03<00:52,  1.93s/ba][A[A[A[A[A[A[A
+
+
+
+
+
+Running tokenizer on dataset #6:   7%|▋         | 2/29 [00:03<00:52,  1.96s/ba][A[A[A[A[A[A
+
+
+
+
+
+
+
+
+Running tokenizer on dataset #9:   7%|▋         | 2/29 [00:03<00:51,  1.92s/ba][A[A[A[A[A[A[A[A[A
+
+Running tokenizer on dataset #2:  10%|█         | 3/29 [00:05<00:43,  1.69s/ba][A[A
+Running tokenizer on dataset #1:  10%|█         | 3/29 [00:05<00:45,  1.73s/ba][A
+
+
+Running tokenizer on dataset #3:  10%|█         | 3/29 [00:05<00:45,  1.75s/ba][A[A[ARunning tokenizer on dataset #0:  10%|█         | 3/29 [00:05<00:47,  1.83s/ba]
+
+
+
+
+Running tokenizer on dataset #5:  10%|█         | 3/29 [00:05<00:47,  1.82s/ba][A[A[A[A[A
+
+
+
+Running tokenizer on dataset #4:  10%|█         | 3/29 [00:05<00:47,  1.83s/ba][A[A[A[A
+
+
+
+
+
+
+
+Running tokenizer on dataset #8:  10%|█         | 3/29 [00:05<00:47,  1.84s/ba][A[A[A[A[A[A[A[A
+
+
+
+
+
+
+Running tokenizer on dataset #7:  10%|█         | 3/29 [00:05<00:48,  1.86s/ba][A[A[A[A[A[A[A
+
+
+
+
+
+Running tokenizer on dataset #6:  10%|█         | 3/29 [00:05<00:49,  1.90s/ba][A[A[A[A[A[A
+
+
+
+
+
+
+
+
+Running tokenizer on dataset #9:  10%|█         | 3/29 [00:05<00:48,  1.85s/ba][A[A[A[A[A[A[A[A[A
+
+Running tokenizer on dataset #2:  14%|█▍        | 4/29 [00:06<00:41,  1.67s/ba][A[A
+Running tokenizer on dataset #1:  14%|█▍        | 4/29 [00:06<00:43,  1.73s/ba][A
+
+
+Running tokenizer on dataset #3:  14%|█▍        | 4/29 [00:06<00:42,  1.71s/ba][A[A[ARunning tokenizer on dataset #0:  14%|█▍        | 4/29 [00:07<00:44,  1.76s/ba]
+
+
+
+
+Running tokenizer on dataset #5:  14%|█▍        | 4/29 [00:07<00:45,  1.80s/ba][A[A[A[A[A
+
+
+
+Running tokenizer on dataset #4:  14%|█▍        | 4/29 [00:07<00:45,  1.81s/ba][A[A[A[A
+
+
+
+
+
+
+
+Running tokenizer on dataset #8:  14%|█▍        | 4/29 [00:07<00:45,  1.80s/ba][A[A[A[A[A[A[A[A
+
+
+
+
+
+
+Running tokenizer on dataset #7:  14%|█▍        | 4/29 [00:07<00:45,  1.83s/ba][A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+Running tokenizer on dataset #9:  14%|█▍        | 4/29 [00:07<00:45,  1.81s/ba][A[A[A[A[A[A[A[A[A
+
+
+
+
+
+Running tokenizer on dataset #6:  14%|█▍        | 4/29 [00:07<00:46,  1.86s/ba][A[A[A[A[A[A
+
+Running tokenizer on dataset #2:  17%|█▋        | 5/29 [00:08<00:39,  1.65s/ba][A[A
+Running tokenizer on dataset #1:  17%|█▋        | 5/29 [00:08<00:41,  1.72s/ba][A
+
+
+Running tokenizer on dataset #3:  17%|█▋        | 5/29 [00:08<00:41,  1.75s/ba][A[A[ARunning tokenizer on dataset #0:  17%|█▋        | 5/29 [00:08<00:42,  1.76s/ba]
+
+
+
+
+Running tokenizer on dataset #5:  17%|█▋        | 5/29 [00:09<00:43,  1.79s/ba][A[A[A[A[A
+
+
+
+Running tokenizer on dataset #4:  17%|█▋        | 5/29 [00:09<00:43,  1.82s/ba][A[A[A[A
+
+
+
+
+
+
+
+Running tokenizer on dataset #8:  17%|█▋        | 5/29 [00:09<00:43,  1.80s/ba][A[A[A[A[A[A[A[A
+
+
+
+
+
+
+Running tokenizer on dataset #7:  17%|█▋        | 5/29 [00:09<00:43,  1.81s/ba][A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+Running tokenizer on dataset #9:  17%|█▋        | 5/29 [00:09<00:42,  1.78s/ba][A[A[A[A[A[A[A[A[A
+
+
+
+
+
+Running tokenizer on dataset #6:  17%|█▋        | 5/29 [00:09<00:43,  1.82s/ba][A[A[A[A[A[A
+
+Running tokenizer on dataset #2:  21%|██        | 6/29 [00:09<00:37,  1.64s/ba][A[A
+Running tokenizer on dataset #1:  21%|██        | 6/29 [00:10<00:38,  1.67s/ba][A
+
+
+Running tokenizer on dataset #3:  21%|██        | 6/29 [00:10<00:40,  1.77s/ba][A[A[ARunning tokenizer on dataset #0:  21%|██        | 6/29 [00:10<00:40,  1.75s/ba]
+
+
+
+
+Running tokenizer on dataset #5:  21%|██        | 6/29 [00:10<00:41,  1.79s/ba][A[A[A[A[A
+
+
+
+Running tokenizer on dataset #4:  21%|██        | 6/29 [00:10<00:41,  1.81s/ba][A[A[A[A
+
+
+
+
+
+
+
+Running tokenizer on dataset #8:  21%|██        | 6/29 [00:10<00:41,  1.80s/ba][A[A[A[A[A[A[A[A
+
+
+
+
+
+
+Running tokenizer on dataset #7:  21%|██        | 6/29 [00:10<00:41,  1.79s/ba][A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+Running tokenizer on dataset #9:  21%|██        | 6/29 [00:10<00:41,  1.78s/ba][A[A[A[A[A[A[A[A[A
+
+
+
+
+
+Running tokenizer on dataset #6:  21%|██        | 6/29 [00:11<00:41,  1.81s/ba][A[A[A[A[A[A
+
+Running tokenizer on dataset #2:  24%|██▍       | 7/29 [00:11<00:36,  1.64s/ba][A[A
+Running tokenizer on dataset #1:  24%|██▍       | 7/29 [00:11<00:36,  1.67s/ba][ARunning tokenizer on dataset #0:  24%|██▍       | 7/29 [00:12<00:38,  1.74s/ba]
+
+
+Running tokenizer on dataset #3:  24%|██▍       | 7/29 [00:12<00:39,  1.79s/ba][A[A[A
+
+
+
+
+Running tokenizer on dataset #5:  24%|██▍       | 7/29 [00:12<00:39,  1.80s/ba][A[A[A[A[A
+
+
+
+Running tokenizer on dataset #4:  24%|██▍       | 7/29 [00:12<00:39,  1.79s/ba][A[A[A[A
+
+
+
+
+
+
+
+Running tokenizer on dataset #8:  24%|██▍       | 7/29 [00:12<00:39,  1.78s/ba][A[A[A[A[A[A[A[A
+
+
+
+
+
+
+Running tokenizer on dataset #7:  24%|██▍       | 7/29 [00:12<00:39,  1.78s/ba][A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+Running tokenizer on dataset #9:  24%|██▍       | 7/29 [00:12<00:39,  1.77s/ba][A[A[A[A[A[A[A[A[A
+
+
+
+
+
+Running tokenizer on dataset #6:  24%|██▍       | 7/29 [00:12<00:39,  1.80s/ba][A[A[A[A[A[A
+
+Running tokenizer on dataset #2:  28%|██▊       | 8/29 [00:13<00:34,  1.63s/ba][A[A
+Running tokenizer on dataset #1:  28%|██▊       | 8/29 [00:13<00:35,  1.67s/ba][ARunning tokenizer on dataset #0:  28%|██▊       | 8/29 [00:14<00:36,  1.72s/ba]
+
+
+Running tokenizer on dataset #3:  28%|██▊       | 8/29 [00:14<00:37,  1.80s/ba][A[A[A
+
+
+
+Running tokenizer on dataset #4:  28%|██▊       | 8/29 [00:14<00:37,  1.78s/ba][A[A[A[A
+
+
+
+
+Running tokenizer on dataset #5:  28%|██▊       | 8/29 [00:14<00:37,  1.80s/ba][A[A[A[A[A
+
+
+
+
+
+
+Running tokenizer on dataset #7:  28%|██▊       | 8/29 [00:14<00:37,  1.77s/ba][A[A[A[A[A[A[A
+
+
+
+
+
+
+
+Running tokenizer on dataset #8:  28%|██▊       | 8/29 [00:14<00:37,  1.79s/ba][A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+Running tokenizer on dataset #9:  28%|██▊       | 8/29 [00:14<00:37,  1.77s/ba][A[A[A[A[A[A[A[A[A
+
+
+
+
+
+Running tokenizer on dataset #6:  28%|██▊       | 8/29 [00:14<00:37,  1.79s/ba][A[A[A[A[A[A
+
+Running tokenizer on dataset #2:  31%|███       | 9/29 [00:14<00:32,  1.62s/ba][A[A
+Running tokenizer on dataset #1:  31%|███       | 9/29 [00:15<00:33,  1.70s/ba][ARunning tokenizer on dataset #0:  31%|███       | 9/29 [00:15<00:33,  1.69s/ba]
+
+
+Running tokenizer on dataset #3:  31%|███       | 9/29 [00:16<00:35,  1.80s/ba][A[A[A
+
+
+
+Running tokenizer on dataset #4:  31%|███       | 9/29 [00:16<00:35,  1.78s/ba][A[A[A[A
+
+
+
+
+Running tokenizer on dataset #5:  31%|███       | 9/29 [00:16<00:35,  1.79s/ba][A[A[A[A[A
+
+
+
+
+
+
+
+Running tokenizer on dataset #8:  31%|███       | 9/29 [00:16<00:35,  1.77s/ba][A[A[A[A[A[A[A[A
+
+
+
+
+
+
+Running tokenizer on dataset #7:  31%|███       | 9/29 [00:16<00:35,  1.77s/ba][A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+Running tokenizer on dataset #9:  31%|███       | 9/29 [00:16<00:35,  1.76s/ba][A[A[A[A[A[A[A[A[A
+
+Running tokenizer on dataset #2:  34%|███▍      | 10/29 [00:16<00:30,  1.63s/ba][A[A
+
+
+
+
+
+Running tokenizer on dataset #6:  31%|███       | 9/29 [00:16<00:35,  1.79s/ba][A[A[A[A[A[A
+Running tokenizer on dataset #1:  34%|███▍      | 10/29 [00:16<00:31,  1.68s/ba][ARunning tokenizer on dataset #0:  34%|███▍      | 10/29 [00:17<00:32,  1.70s/ba]
+
+
+Running tokenizer on dataset #3:  34%|███▍      | 10/29 [00:17<00:34,  1.81s/ba][A[A[A
+
+
+
+Running tokenizer on dataset #4:  34%|███▍      | 10/29 [00:17<00:33,  1.78s/ba][A[A[A[A
+
+
+
+
+Running tokenizer on dataset #5:  34%|███▍      | 10/29 [00:18<00:34,  1.80s/ba][A[A[A[A[A
+
+Running tokenizer on dataset #2:  38%|███▊      | 11/29 [00:18<00:29,  1.64s/ba][A[A
+
+
+
+
+
+
+Running tokenizer on dataset #7:  34%|███▍      | 10/29 [00:17<00:33,  1.77s/ba][A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+Running tokenizer on dataset #9:  34%|███▍      | 10/29 [00:17<00:33,  1.76s/ba][A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+Running tokenizer on dataset #8:  34%|███▍      | 10/29 [00:17<00:33,  1.78s/ba][A[A[A[A[A[A[A[A
+
+
+
+
+
+Running tokenizer on dataset #6:  34%|███▍      | 10/29 [00:18<00:33,  1.78s/ba][A[A[A[A[A[A
+Running tokenizer on dataset #1:  38%|███▊      | 11/29 [00:18<00:30,  1.67s/ba][ARunning tokenizer on dataset #0:  38%|███▊      | 11/29 [00:19<00:30,  1.69s/ba]
+
+
+Running tokenizer on dataset #3:  38%|███▊      | 11/29 [00:19<00:32,  1.80s/ba][A[A[A
+
+
+
+Running tokenizer on dataset #4:  38%|███▊      | 11/29 [00:19<00:32,  1.79s/ba][A[A[A[A
+
+
+
+
+Running tokenizer on dataset #5:  38%|███▊      | 11/29 [00:19<00:32,  1.79s/ba][A[A[A[A[A
+
+
+
+
+
+
+
+
+Running tokenizer on dataset #9:  38%|███▊      | 11/29 [00:19<00:31,  1.75s/ba][A[A[A[A[A[A[A[A[A
+
+Running tokenizer on dataset #2:  41%|████▏     | 12/29 [00:19<00:28,  1.69s/ba][A[A
+
+
+
+
+
+
+
+Running tokenizer on dataset #8:  38%|███▊      | 11/29 [00:19<00:32,  1.78s/ba][A[A[A[A[A[A[A[A
+
+
+
+
+
+
+Running tokenizer on dataset #7:  38%|███▊      | 11/29 [00:19<00:32,  1.79s/ba][A[A[A[A[A[A[A
+
+
+
+
+
+Running tokenizer on dataset #6:  38%|███▊      | 11/29 [00:20<00:32,  1.78s/ba][A[A[A[A[A[A
+Running tokenizer on dataset #1:  41%|████▏     | 12/29 [00:20<00:29,  1.72s/ba][ARunning tokenizer on dataset #0:  41%|████▏     | 12/29 [00:20<00:29,  1.73s/ba]
+
+Running tokenizer on dataset #2:  45%|████▍     | 13/29 [00:21<00:26,  1.67s/ba][A[A
+
+
+Running tokenizer on dataset #3:  41%|████▏     | 12/29 [00:21<00:32,  1.89s/ba][A[A[A
+
+
+
+
+Running tokenizer on dataset #5:  41%|████▏     | 12/29 [00:21<00:31,  1.87s/ba][A[A[A[A[A
+
+
+
+
+
+
+
+
+Running tokenizer on dataset #9:  41%|████▏     | 12/29 [00:21<00:31,  1.83s/ba][A[A[A[A[A[A[A[A[A
+
+
+
+Running tokenizer on dataset #4:  41%|████▏     | 12/29 [00:21<00:31,  1.88s/ba][A[A[A[A
+
+
+
+
+
+
+
+Running tokenizer on dataset #8:  41%|████▏     | 12/29 [00:21<00:31,  1.85s/ba][A[A[A[A[A[A[A[A
+Running tokenizer on dataset #1:  45%|████▍     | 13/29 [00:22<00:27,  1.72s/ba][A
+
+
+
+
+
+
+Running tokenizer on dataset #7:  41%|████▏     | 12/29 [00:22<00:34,  2.04s/ba][A[A[A[A[A[A[A
+
+
+
+
+
+Running tokenizer on dataset #6:  41%|████▏     | 12/29 [00:22<00:33,  2.00s/ba][A[A[A[A[A[ARunning tokenizer on dataset #0:  45%|████▍     | 13/29 [00:22<00:28,  1.78s/ba]
+
+Running tokenizer on dataset #2:  48%|████▊     | 14/29 [00:23<00:25,  1.69s/ba][A[A
+
+
+Running tokenizer on dataset #3:  45%|████▍     | 13/29 [00:23<00:29,  1.87s/ba][A[A[A
+
+
+
+
+
+
+
+
+Running tokenizer on dataset #9:  45%|████▍     | 13/29 [00:23<00:29,  1.82s/ba][A[A[A[A[A[A[A[A[A
+
+
+
+
+Running tokenizer on dataset #5:  45%|████▍     | 13/29 [00:23<00:29,  1.85s/ba][A[A[A[A[A
+
+
+
+Running tokenizer on dataset #4:  45%|████▍     | 13/29 [00:23<00:29,  1.85s/ba][A[A[A[A
+
+
+
+
+
+
+
+Running tokenizer on dataset #8:  45%|████▍     | 13/29 [00:23<00:29,  1.83s/ba][A[A[A[A[A[A[A[A
+Running tokenizer on dataset #1:  48%|████▊     | 14/29 [00:23<00:25,  1.70s/ba][ARunning tokenizer on dataset #0:  48%|████▊     | 14/29 [00:24<00:26,  1.74s/ba]
+
+
+
+
+
+
+Running tokenizer on dataset #7:  45%|████▍     | 13/29 [00:24<00:32,  2.00s/ba][A[A[A[A[A[A[A
+
+
+
+
+
+Running tokenizer on dataset #6:  45%|████▍     | 13/29 [00:24<00:31,  1.99s/ba][A[A[A[A[A[A
+
+Running tokenizer on dataset #2:  52%|█████▏    | 15/29 [00:24<00:23,  1.69s/ba][A[A
+
+
+Running tokenizer on dataset #3:  48%|████▊     | 14/29 [00:25<00:27,  1.84s/ba][A[A[A
+Running tokenizer on dataset #1:  52%|█████▏    | 15/29 [00:25<00:23,  1.69s/ba][A
+
+
+
+
+
+
+
+
+Running tokenizer on dataset #9:  48%|████▊     | 14/29 [00:25<00:26,  1.79s/ba][A[A[A[A[A[A[A[A[A
+
+
+
+
+Running tokenizer on dataset #5:  48%|████▊     | 14/29 [00:25<00:27,  1.83s/ba][A[A[A[A[A
+
+
+
+
+
+
+
+Running tokenizer on dataset #8:  48%|████▊     | 14/29 [00:25<00:27,  1.81s/ba][A[A[A[A[A[A[A[A
+
+
+
+Running tokenizer on dataset #4:  48%|████▊     | 14/29 [00:25<00:27,  1.84s/ba][A[A[A[ARunning tokenizer on dataset #0:  52%|█████▏    | 15/29 [00:26<00:24,  1.72s/ba]
+
+
+
+
+
+
+Running tokenizer on dataset #7:  48%|████▊     | 14/29 [00:26<00:29,  1.93s/ba][A[A[A[A[A[A[A
+
+
+
+
+
+Running tokenizer on dataset #6:  48%|████▊     | 14/29 [00:26<00:28,  1.93s/ba][A[A[A[A[A[A
+
+Running tokenizer on dataset #2:  55%|█████▌    | 16/29 [00:26<00:21,  1.68s/ba][A[A
+Running tokenizer on dataset #1:  55%|█████▌    | 16/29 [00:27<00:21,  1.68s/ba][A
+
+
+Running tokenizer on dataset #3:  52%|█████▏    | 15/29 [00:27<00:25,  1.83s/ba][A[A[A
+
+
+
+
+
+
+
+
+Running tokenizer on dataset #9:  52%|█████▏    | 15/29 [00:26<00:24,  1.78s/ba][A[A[A[A[A[A[A[A[A
+
+
+
+
+Running tokenizer on dataset #5:  52%|█████▏    | 15/29 [00:27<00:25,  1.81s/ba][A[A[A[A[A
+
+
+
+Running tokenizer on dataset #4:  52%|█████▏    | 15/29 [00:27<00:25,  1.82s/ba][A[A[A[A
+
+
+
+
+
+
+
+Running tokenizer on dataset #8:  52%|█████▏    | 15/29 [00:27<00:25,  1.81s/ba][A[A[A[A[A[A[A[ARunning tokenizer on dataset #0:  55%|█████▌    | 16/29 [00:27<00:22,  1.70s/ba]
+
+
+
+
+
+
+Running tokenizer on dataset #7:  52%|█████▏    | 15/29 [00:27<00:26,  1.90s/ba][A[A[A[A[A[A[A
+
+
+
+
+
+Running tokenizer on dataset #6:  52%|█████▏    | 15/29 [00:27<00:26,  1.88s/ba][A[A[A[A[A[A
+
+Running tokenizer on dataset #2:  59%|█████▊    | 17/29 [00:28<00:19,  1.66s/ba][A[A
+Running tokenizer on dataset #1:  59%|█████▊    | 17/29 [00:28<00:20,  1.69s/ba][A
+
+
+Running tokenizer on dataset #3:  55%|█████▌    | 16/29 [00:28<00:23,  1.82s/ba][A[A[A
+
+
+
+
+
+
+
+
+Running tokenizer on dataset #9:  55%|█████▌    | 16/29 [00:28<00:23,  1.79s/ba][A[A[A[A[A[A[A[A[A
+
+
+
+
+Running tokenizer on dataset #5:  55%|█████▌    | 16/29 [00:28<00:23,  1.81s/ba][A[A[A[A[A
+
+
+
+Running tokenizer on dataset #4:  55%|█████▌    | 16/29 [00:29<00:23,  1.82s/ba][A[A[A[A
+
+
+
+
+
+
+
+Running tokenizer on dataset #8:  55%|█████▌    | 16/29 [00:29<00:24,  1.86s/ba][A[A[A[A[A[A[A[ARunning tokenizer on dataset #0:  59%|█████▊    | 17/29 [00:29<00:20,  1.69s/ba]
+
+Running tokenizer on dataset #2:  62%|██████▏   | 18/29 [00:29<00:18,  1.64s/ba][A[A
+
+
+
+
+
+Running tokenizer on dataset #6:  55%|█████▌    | 16/29 [00:29<00:23,  1.84s/ba][A[A[A[A[A[A
+
+
+
+
+
+
+Running tokenizer on dataset #7:  55%|█████▌    | 16/29 [00:29<00:24,  1.89s/ba][A[A[A[A[A[A[A
+Running tokenizer on dataset #1:  62%|██████▏   | 18/29 [00:30<00:19,  1.75s/ba][A
+
+
+
+
+
+
+
+
+Running tokenizer on dataset #9:  59%|█████▊    | 17/29 [00:30<00:21,  1.77s/ba][A[A[A[A[A[A[A[A[A
+
+
+
+
+Running tokenizer on dataset #5:  59%|█████▊    | 17/29 [00:30<00:21,  1.82s/ba][A[A[A[A[A
+
+
+
+Running tokenizer on dataset #4:  59%|█████▊    | 17/29 [00:30<00:21,  1.83s/ba][A[A[A[A
+
+
+
+
+
+
+
+Running tokenizer on dataset #8:  59%|█████▊    | 17/29 [00:30<00:22,  1.83s/ba][A[A[A[A[A[A[A[ARunning tokenizer on dataset #0:  62%|██████▏   | 18/29 [00:31<00:18,  1.71s/ba]
+
+
+Running tokenizer on dataset #3:  59%|█████▊    | 17/29 [00:31<00:23,  1.97s/ba][A[A[A
+
+Running tokenizer on dataset #2:  66%|██████▌   | 19/29 [00:31<00:16,  1.67s/ba][A[A
+
+
+
+
+
+Running tokenizer on dataset #6:  59%|█████▊    | 17/29 [00:31<00:21,  1.81s/ba][A[A[A[A[A[A
+
+
+
+
+
+
+Running tokenizer on dataset #7:  59%|█████▊    | 17/29 [00:31<00:22,  1.86s/ba][A[A[A[A[A[A[A
+Running tokenizer on dataset #1:  66%|██████▌   | 19/29 [00:32<00:17,  1.74s/ba][A
+
+
+
+
+Running tokenizer on dataset #5:  62%|██████▏   | 18/29 [00:32<00:19,  1.81s/ba][A[A[A[A[A
+
+
+
+Running tokenizer on dataset #4:  62%|██████▏   | 18/29 [00:32<00:20,  1.83s/ba][A[A[A[A
+
+
+
+
+
+
+
+Running tokenizer on dataset #8:  62%|██████▏   | 18/29 [00:32<00:20,  1.82s/ba][A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+Running tokenizer on dataset #9:  62%|██████▏   | 18/29 [00:32<00:20,  1.91s/ba][A[A[A[A[A[A[A[A[ARunning tokenizer on dataset #0:  66%|██████▌   | 19/29 [00:33<00:17,  1.74s/ba]
+
+Running tokenizer on dataset #2:  69%|██████▉   | 20/29 [00:33<00:14,  1.66s/ba][A[A
+
+
+Running tokenizer on dataset #3:  62%|██████▏   | 18/29 [00:33<00:22,  2.01s/ba][A[A[A
+
+
+
+
+
+Running tokenizer on dataset #6:  62%|██████▏   | 18/29 [00:33<00:19,  1.81s/ba][A[A[A[A[A[A
+
+
+
+
+
+
+Running tokenizer on dataset #7:  62%|██████▏   | 18/29 [00:33<00:20,  1.83s/ba][A[A[A[A[A[A[A
+Running tokenizer on dataset #1:  69%|██████▉   | 20/29 [00:34<00:15,  1.73s/ba][A
+
+
+
+
+Running tokenizer on dataset #5:  66%|██████▌   | 19/29 [00:34<00:18,  1.81s/ba][A[A[A[A[ARunning tokenizer on dataset #0:  69%|██████▉   | 20/29 [00:34<00:15,  1.72s/ba]
+
+
+
+
+
+
+
+Running tokenizer on dataset #8:  66%|██████▌   | 19/29 [00:34<00:18,  1.81s/ba][A[A[A[A[A[A[A[A
+
+
+
+Running tokenizer on dataset #4:  66%|██████▌   | 19/29 [00:34<00:18,  1.85s/ba][A[A[A[A
+
+
+
+
+
+
+
+
+Running tokenizer on dataset #9:  66%|██████▌   | 19/29 [00:34<00:18,  1.88s/ba][A[A[A[A[A[A[A[A[A
+
+Running tokenizer on dataset #2:  72%|███████▏  | 21/29 [00:34<00:13,  1.65s/ba][A[A
+
+
+
+
+
+Running tokenizer on dataset #6:  66%|██████▌   | 19/29 [00:35<00:18,  1.81s/ba][A[A[A[A[A[A
+
+
+Running tokenizer on dataset #3:  66%|██████▌   | 19/29 [00:35<00:19,  1.98s/ba][A[A[A
+
+
+
+
+
+
+Running tokenizer on dataset #7:  66%|██████▌   | 19/29 [00:35<00:18,  1.83s/ba][A[A[A[A[A[A[A
+Running tokenizer on dataset #1:  72%|███████▏  | 21/29 [00:35<00:13,  1.72s/ba][A
+
+
+
+
+Running tokenizer on dataset #5:  69%|██████▉   | 20/29 [00:36<00:16,  1.83s/ba][A[A[A[A[ARunning tokenizer on dataset #0:  72%|███████▏  | 21/29 [00:36<00:14,  1.75s/ba]
+
+
+
+
+
+
+
+Running tokenizer on dataset #8:  69%|██████▉   | 20/29 [00:36<00:16,  1.81s/ba][A[A[A[A[A[A[A[A
+
+
+
+Running tokenizer on dataset #4:  69%|██████▉   | 20/29 [00:36<00:16,  1.87s/ba][A[A[A[A
+
+
+
+
+
+
+
+
+Running tokenizer on dataset #9:  69%|██████▉   | 20/29 [00:36<00:16,  1.88s/ba][A[A[A[A[A[A[A[A[A
+
+Running tokenizer on dataset #2:  76%|███████▌  | 22/29 [00:36<00:12,  1.72s/ba][A[A
+
+
+
+
+
+Running tokenizer on dataset #6:  69%|██████▉   | 20/29 [00:36<00:16,  1.80s/ba][A[A[A[A[A[A
+
+
+
+
+
+
+Running tokenizer on dataset #7:  69%|██████▉   | 20/29 [00:36<00:16,  1.81s/ba][A[A[A[A[A[A[A
+
+
+Running tokenizer on dataset #3:  69%|██████▉   | 20/29 [00:37<00:18,  2.05s/ba][A[A[A
+Running tokenizer on dataset #1:  76%|███████▌  | 22/29 [00:37<00:12,  1.74s/ba][A
+
+
+
+
+
+
+
+Running tokenizer on dataset #8:  72%|███████▏  | 21/29 [00:38<00:14,  1.81s/ba][A[A[A[A[A[A[A[ARunning tokenizer on dataset #0:  76%|███████▌  | 22/29 [00:38<00:12,  1.77s/ba]
+
+Running tokenizer on dataset #2:  79%|███████▉  | 23/29 [00:38<00:10,  1.70s/ba][A[A
+
+
+
+Running tokenizer on dataset #4:  72%|███████▏  | 21/29 [00:38<00:14,  1.86s/ba][A[A[A[A
+
+
+
+
+Running tokenizer on dataset #5:  72%|███████▏  | 21/29 [00:38<00:15,  1.91s/ba][A[A[A[A[A
+
+
+
+
+
+
+
+
+Running tokenizer on dataset #9:  72%|███████▏  | 21/29 [00:38<00:15,  1.91s/ba][A[A[A[A[A[A[A[A[A
+
+
+
+
+
+Running tokenizer on dataset #6:  72%|███████▏  | 21/29 [00:38<00:14,  1.79s/ba][A[A[A[A[A[A
+
+
+
+
+
+
+Running tokenizer on dataset #7:  72%|███████▏  | 21/29 [00:38<00:14,  1.79s/ba][A[A[A[A[A[A[A
+Running tokenizer on dataset #1:  79%|███████▉  | 23/29 [00:39<00:10,  1.75s/ba][A
+
+
+Running tokenizer on dataset #3:  72%|███████▏  | 21/29 [00:39<00:16,  2.05s/ba][A[A[A
+
+Running tokenizer on dataset #2:  83%|████████▎ | 24/29 [00:40<00:08,  1.69s/ba][A[A
+
+
+
+
+
+
+
+Running tokenizer on dataset #8:  76%|███████▌  | 22/29 [00:39<00:12,  1.80s/ba][A[A[A[A[A[A[A[ARunning tokenizer on dataset #0:  79%|███████▉  | 23/29 [00:40<00:10,  1.79s/ba]
+
+
+
+
+
+
+
+
+Running tokenizer on dataset #9:  76%|███████▌  | 22/29 [00:40<00:13,  1.87s/ba][A[A[A[A[A[A[A[A[A
+
+
+
+Running tokenizer on dataset #4:  76%|███████▌  | 22/29 [00:40<00:13,  1.92s/ba][A[A[A[A
+
+
+
+
+Running tokenizer on dataset #5:  76%|███████▌  | 22/29 [00:40<00:13,  1.96s/ba][A[A[A[A[A
+
+
+
+
+
+Running tokenizer on dataset #6:  76%|███████▌  | 22/29 [00:40<00:12,  1.80s/ba][A[A[A[A[A[A
+
+
+
+
+
+
+Running tokenizer on dataset #7:  76%|███████▌  | 22/29 [00:40<00:12,  1.78s/ba][A[A[A[A[A[A[A
+Running tokenizer on dataset #1:  83%|████████▎ | 24/29 [00:41<00:09,  1.82s/ba][A
+
+
+Running tokenizer on dataset #3:  76%|███████▌  | 22/29 [00:41<00:14,  2.05s/ba][A[A[A
+
+Running tokenizer on dataset #2:  86%|████████▌ | 25/29 [00:41<00:06,  1.68s/ba][A[ARunning tokenizer on dataset #0:  83%|████████▎ | 24/29 [00:41<00:08,  1.76s/ba]
+
+
+
+
+
+
+
+Running tokenizer on dataset #8:  79%|███████▉  | 23/29 [00:41<00:10,  1.79s/ba][A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+Running tokenizer on dataset #9:  79%|███████▉  | 23/29 [00:42<00:11,  1.88s/ba][A[A[A[A[A[A[A[A[A
+
+
+
+
+
+Running tokenizer on dataset #6:  79%|███████▉  | 23/29 [00:42<00:10,  1.80s/ba][A[A[A[A[A[A
+
+
+
+
+
+
+Running tokenizer on dataset #7:  79%|███████▉  | 23/29 [00:42<00:10,  1.79s/ba][A[A[A[A[A[A[A
+
+
+
+
+Running tokenizer on dataset #5:  79%|███████▉  | 23/29 [00:42<00:11,  1.93s/ba][A[A[A[A[A
+
+
+
+Running tokenizer on dataset #4:  79%|███████▉  | 23/29 [00:42<00:11,  2.00s/ba][A[A[A[A
+Running tokenizer on dataset #1:  86%|████████▌ | 25/29 [00:43<00:07,  1.79s/ba][A
+
+Running tokenizer on dataset #2:  90%|████████▉ | 26/29 [00:43<00:05,  1.68s/ba][A[ARunning tokenizer on dataset #0:  86%|████████▌ | 25/29 [00:43<00:07,  1.76s/ba]
+
+
+
+
+
+
+
+Running tokenizer on dataset #8:  83%|████████▎ | 24/29 [00:43<00:08,  1.78s/ba][A[A[A[A[A[A[A[A
+
+
+Running tokenizer on dataset #3:  79%|███████▉  | 23/29 [00:43<00:12,  2.11s/ba][A[A[A
+
+
+
+
+
+Running tokenizer on dataset #6:  83%|████████▎ | 24/29 [00:44<00:08,  1.79s/ba][A[A[A[A[A[A
+
+
+
+
+
+
+Running tokenizer on dataset #7:  83%|████████▎ | 24/29 [00:44<00:08,  1.79s/ba][A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+Running tokenizer on dataset #9:  83%|████████▎ | 24/29 [00:44<00:09,  1.94s/ba][A[A[A[A[A[A[A[A[A
+
+
+
+
+Running tokenizer on dataset #5:  83%|████████▎ | 24/29 [00:44<00:09,  1.96s/ba][A[A[A[A[A
+
+
+
+Running tokenizer on dataset #4:  83%|████████▎ | 24/29 [00:44<00:09,  1.99s/ba][A[A[A[A
+Running tokenizer on dataset #1:  90%|████████▉ | 26/29 [00:44<00:05,  1.76s/ba][A
+
+Running tokenizer on dataset #2:  93%|█████████▎| 27/29 [00:45<00:03,  1.71s/ba][A[ARunning tokenizer on dataset #0:  90%|████████▉ | 26/29 [00:45<00:05,  1.76s/ba]
+
+
+
+
+
+
+
+Running tokenizer on dataset #8:  86%|████████▌ | 25/29 [00:45<00:07,  1.78s/ba][A[A[A[A[A[A[A[A
+
+
+Running tokenizer on dataset #3:  83%|████████▎ | 24/29 [00:45<00:10,  2.09s/ba][A[A[A
+
+
+
+
+
+Running tokenizer on dataset #6:  86%|████████▌ | 25/29 [00:45<00:07,  1.79s/ba][A[A[A[A[A[A
+
+
+
+
+
+
+Running tokenizer on dataset #7:  86%|████████▌ | 25/29 [00:45<00:07,  1.78s/ba][A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+Running tokenizer on dataset #9:  86%|████████▌ | 25/29 [00:45<00:07,  1.92s/ba][A[A[A[A[A[A[A[A[A
+
+
+
+
+Running tokenizer on dataset #5:  86%|████████▌ | 25/29 [00:46<00:07,  1.96s/ba][A[A[A[A[A
+
+
+
+Running tokenizer on dataset #4:  86%|████████▌ | 25/29 [00:46<00:07,  1.93s/ba][A[A[A[A
+Running tokenizer on dataset #1:  93%|█████████▎| 27/29 [00:46<00:03,  1.74s/ba][ARunning tokenizer on dataset #0:  93%|█████████▎| 27/29 [00:47<00:03,  1.74s/ba]
+
+Running tokenizer on dataset #2:  97%|█████████▋| 28/29 [00:47<00:01,  1.79s/ba][A[A
+
+
+
+
+
+
+
+Running tokenizer on dataset #8:  90%|████████▉ | 26/29 [00:46<00:05,  1.79s/ba][A[A[A[A[A[A[A[A
+
+
+
+
+
+
+Running tokenizer on dataset #7:  90%|████████▉ | 26/29 [00:47<00:05,  1.77s/ba][A[A[A[A[A[A[A
+
+
+
+
+
+Running tokenizer on dataset #6:  90%|████████▉ | 26/29 [00:47<00:05,  1.80s/ba][A[A[A[A[A[A
+
+
+
+
+
+
+
+
+Running tokenizer on dataset #9:  90%|████████▉ | 26/29 [00:47<00:05,  1.89s/ba][A[A[A[A[A[A[A[A[A
+
+
+Running tokenizer on dataset #3:  86%|████████▌ | 25/29 [00:48<00:08,  2.14s/ba][A[A[A
+
+
+
+
+Running tokenizer on dataset #5:  90%|████████▉ | 26/29 [00:48<00:05,  1.90s/ba][A[A[A[A[A
+Running tokenizer on dataset #1:  97%|█████████▋| 28/29 [00:48<00:01,  1.80s/ba][A
+
+
+
+Running tokenizer on dataset #4:  90%|████████▉ | 26/29 [00:48<00:05,  1.95s/ba][A[A[A[A
+
+Running tokenizer on dataset #2: 100%|██████████| 29/29 [00:48<00:00,  1.65s/ba][A[ARunning tokenizer on dataset #2: 100%|██████████| 29/29 [00:48<00:00,  1.67s/ba]
+
+
+
+
+
+
+
+
+Running tokenizer on dataset #8:  93%|█████████▎| 27/29 [00:48<00:03,  1.78s/ba][A[A[A[A[A[A[A[ARunning tokenizer on dataset #0:  97%|█████████▋| 28/29 [00:48<00:01,  1.79s/ba]
+
+
+
+
+
+
+Running tokenizer on dataset #7:  93%|█████████▎| 27/29 [00:49<00:03,  1.76s/ba][A[A[A[A[A[A[A
+
+
+
+
+
+Running tokenizer on dataset #6:  93%|█████████▎| 27/29 [00:49<00:03,  1.81s/ba][A[A[A[A[A[A
+Running tokenizer on dataset #1: 100%|██████████| 29/29 [00:49<00:00,  1.62s/ba][ARunning tokenizer on dataset #1: 100%|██████████| 29/29 [00:49<00:00,  1.71s/ba]
+
+
+
+
+
+
+
+
+
+Running tokenizer on dataset #9:  93%|█████████▎| 27/29 [00:49<00:03,  1.90s/ba][A[A[A[A[A[A[A[A[A
+
+
+
+
+Running tokenizer on dataset #5:  93%|█████████▎| 27/29 [00:50<00:03,  1.91s/ba][A[A[A[A[A
+
+
+Running tokenizer on dataset #3:  90%|████████▉ | 26/29 [00:50<00:06,  2.12s/ba][A[A[ARunning tokenizer on dataset #0: 100%|██████████| 29/29 [00:50<00:00,  1.64s/ba]Running tokenizer on dataset #0: 100%|██████████| 29/29 [00:50<00:00,  1.73s/ba]
+
+
+
+
+Running tokenizer on dataset #4:  93%|█████████▎| 27/29 [00:50<00:03,  1.96s/ba][A[A[A[A
+
+
+
+
+
+
+
+Running tokenizer on dataset #8:  97%|█████████▋| 28/29 [00:50<00:01,  1.82s/ba][A[A[A[A[A[A[A[A
+
+
+
+
+
+
+Running tokenizer on dataset #7:  97%|█████████▋| 28/29 [00:51<00:01,  1.80s/ba][A[A[A[A[A[A[A
+
+
+
+
+
+Running tokenizer on dataset #6:  97%|█████████▋| 28/29 [00:51<00:01,  1.84s/ba][A[A[A[A[A[A
+
+
+
+
+
+
+
+
+Running tokenizer on dataset #9:  97%|█████████▋| 28/29 [00:51<00:01,  1.91s/ba][A[A[A[A[A[A[A[A[A
+
+
+Running tokenizer on dataset #3:  93%|█████████▎| 27/29 [00:52<00:04,  2.04s/ba][A[A[A
+
+
+
+
+Running tokenizer on dataset #5:  97%|█████████▋| 28/29 [00:52<00:01,  1.93s/ba][A[A[A[A[A
+
+
+
+
+
+
+
+Running tokenizer on dataset #8: 100%|██████████| 29/29 [00:51<00:00,  1.65s/ba][A[A[A[A[A[A[A[ARunning tokenizer on dataset #8: 100%|██████████| 29/29 [00:51<00:00,  1.79s/ba]
+
+
+
+
+Running tokenizer on dataset #4:  97%|█████████▋| 28/29 [00:52<00:01,  1.97s/ba][A[A[A[A
+
+
+
+
+
+
+Running tokenizer on dataset #7: 100%|██████████| 29/29 [00:52<00:00,  1.63s/ba][A[A[A[A[A[A[ARunning tokenizer on dataset #7: 100%|██████████| 29/29 [00:52<00:00,  1.81s/ba]
+
+
+
+
+
+
+Running tokenizer on dataset #6: 100%|██████████| 29/29 [00:52<00:00,  1.64s/ba][A[A[A[A[A[ARunning tokenizer on dataset #6: 100%|██████████| 29/29 [00:52<00:00,  1.81s/ba]
+
+
+
+
+
+
+
+
+
+Running tokenizer on dataset #9: 100%|██████████| 29/29 [00:52<00:00,  1.73s/ba][A[A[A[A[A[A[A[A[ARunning tokenizer on dataset #9: 100%|██████████| 29/29 [00:52<00:00,  1.83s/ba]
+
+
+
+
+
+Running tokenizer on dataset #5: 100%|██████████| 29/29 [00:53<00:00,  1.72s/ba][A[A[A[A[ARunning tokenizer on dataset #5: 100%|██████████| 29/29 [00:53<00:00,  1.84s/ba]
+
+
+
+
+Running tokenizer on dataset #4: 100%|██████████| 29/29 [00:53<00:00,  1.74s/ba][A[A[A[ARunning tokenizer on dataset #4: 100%|██████████| 29/29 [00:53<00:00,  1.85s/ba]
+
+
+
+Running tokenizer on dataset #3:  97%|█████████▋| 28/29 [00:54<00:02,  2.03s/ba][A[A[A
+
+
+Running tokenizer on dataset #3: 100%|██████████| 29/29 [00:55<00:00,  1.82s/ba][A[A[ARunning tokenizer on dataset #3: 100%|██████████| 29/29 [00:55<00:00,  1.91s/ba]
+Running tokenizer on dataset #0:   0%|          | 0/2 [00:00<?, ?ba/s]
+Running tokenizer on dataset #1:   0%|          | 0/2 [00:00<?, ?ba/s][A
+
+Running tokenizer on dataset #2:   0%|          | 0/2 [00:00<?, ?ba/s][A[A
+
+
+Running tokenizer on dataset #3:   0%|          | 0/2 [00:00<?, ?ba/s][A[A[A
+
+
+
+Running tokenizer on dataset #4:   0%|          | 0/2 [00:00<?, ?ba/s][A[A[A[A
+
+
+
+
+Running tokenizer on dataset #5:   0%|          | 0/2 [00:00<?, ?ba/s][A[A[A[A[A
+
+
+
+
+
+Running tokenizer on dataset #6:   0%|          | 0/2 [00:00<?, ?ba/s][A[A[A[A[A[A
+
+
+
+
+
+
+Running tokenizer on dataset #7:   0%|          | 0/2 [00:00<?, ?ba/s][A[A[A[A[A[A[A
+
+
+
+
+
+
+
+Running tokenizer on dataset #8:   0%|          | 0/2 [00:00<?, ?ba/s][A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+Running tokenizer on dataset #9:   0%|          | 0/2 [00:00<?, ?ba/s][A[A[A[A[A[A[A[A[A
+
+Running tokenizer on dataset #2:  50%|█████     | 1/2 [00:01<00:01,  1.86s/ba][A[A
+
+
+
+Running tokenizer on dataset #4:  50%|█████     | 1/2 [00:01<00:01,  1.84s/ba][A[A[A[ARunning tokenizer on dataset #0:  50%|█████     | 1/2 [00:02<00:02,  2.05s/ba]
+Running tokenizer on dataset #1:  50%|█████     | 1/2 [00:02<00:02,  2.04s/ba][A
+
+
+
+
+
+
+Running tokenizer on dataset #7:  50%|█████     | 1/2 [00:01<00:01,  1.86s/ba][A[A[A[A[A[A[A
+
+
+Running tokenizer on dataset #3:  50%|█████     | 1/2 [00:02<00:02,  2.12s/ba][A[A[A
+
+
+
+
+
+Running tokenizer on dataset #6:  50%|█████     | 1/2 [00:01<00:01,  2.00s/ba][A[A[A[A[A[A
+
+
+
+
+Running tokenizer on dataset #5:  50%|█████     | 1/2 [00:02<00:02,  2.10s/ba][A[A[A[A[A
+
+
+
+
+
+
+
+Running tokenizer on dataset #8:  50%|█████     | 1/2 [00:02<00:02,  2.16s/ba][A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+Running tokenizer on dataset #9:  50%|█████     | 1/2 [00:02<00:02,  2.15s/ba][A[A[A[A[A[A[A[A[A
+
+Running tokenizer on dataset #2: 100%|██████████| 2/2 [00:02<00:00,  1.12s/ba][A[ARunning tokenizer on dataset #2: 100%|██████████| 2/2 [00:02<00:00,  1.23s/ba]
+
+
+
+
+Running tokenizer on dataset #4: 100%|██████████| 2/2 [00:02<00:00,  1.15s/ba][A[A[A[ARunning tokenizer on dataset #4: 100%|██████████| 2/2 [00:02<00:00,  1.25s/ba]
+Running tokenizer on dataset #0: 100%|██████████| 2/2 [00:02<00:00,  1.18s/ba]Running tokenizer on dataset #0: 100%|██████████| 2/2 [00:02<00:00,  1.31s/ba]
+
+Running tokenizer on dataset #1: 100%|██████████| 2/2 [00:02<00:00,  1.20s/ba][ARunning tokenizer on dataset #1: 100%|██████████| 2/2 [00:02<00:00,  1.33s/ba]
+
+
+
+Running tokenizer on dataset #3: 100%|██████████| 2/2 [00:02<00:00,  1.21s/ba][A[A[ARunning tokenizer on dataset #3: 100%|██████████| 2/2 [00:02<00:00,  1.35s/ba]
+
+
+
+
+
+
+
+Running tokenizer on dataset #7: 100%|██████████| 2/2 [00:02<00:00,  1.16s/ba][A[A[A[A[A[A[ARunning tokenizer on dataset #7: 100%|██████████| 2/2 [00:02<00:00,  1.26s/ba]
+
+
+
+
+
+
+Running tokenizer on dataset #6: 100%|██████████| 2/2 [00:02<00:00,  1.22s/ba][A[A[A[A[A[ARunning tokenizer on dataset #6: 100%|██████████| 2/2 [00:02<00:00,  1.33s/ba]
+
+
+
+
+
+Running tokenizer on dataset #5: 100%|██████████| 2/2 [00:02<00:00,  1.26s/ba][A[A[A[A[ARunning tokenizer on dataset #5: 100%|██████████| 2/2 [00:02<00:00,  1.39s/ba]
+
+
+
+
+
+
+
+
+Running tokenizer on dataset #8: 100%|██████████| 2/2 [00:02<00:00,  1.24s/ba][A[A[A[A[A[A[A[ARunning tokenizer on dataset #8: 100%|██████████| 2/2 [00:02<00:00,  1.38s/ba]
+
+
+
+
+
+
+
+
+
+Running tokenizer on dataset #9: 100%|██████████| 2/2 [00:02<00:00,  1.28s/ba][A[A[A[A[A[A[A[A[ARunning tokenizer on dataset #9: 100%|██████████| 2/2 [00:02<00:00,  1.41s/ba]
+Running tokenizer on dataset #0:   0%|          | 0/2 [00:00<?, ?ba/s]
+Running tokenizer on dataset #1:   0%|          | 0/2 [00:00<?, ?ba/s][A
+
+Running tokenizer on dataset #2:   0%|          | 0/2 [00:00<?, ?ba/s][A[A
+
+
+Running tokenizer on dataset #3:   0%|          | 0/2 [00:00<?, ?ba/s][A[A[A
+
+
+
+Running tokenizer on dataset #4:   0%|          | 0/2 [00:00<?, ?ba/s][A[A[A[A
+
+
+
+
+Running tokenizer on dataset #5:   0%|          | 0/2 [00:00<?, ?ba/s][A[A[A[A[A
+
+
+
+
+
+Running tokenizer on dataset #6:   0%|          | 0/2 [00:00<?, ?ba/s][A[A[A[A[A[A
+
+
+
+
+
+
+Running tokenizer on dataset #7:   0%|          | 0/2 [00:00<?, ?ba/s][A[A[A[A[A[A[A
+
+
+
+
+
+
+
+Running tokenizer on dataset #8:   0%|          | 0/2 [00:00<?, ?ba/s][A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+Running tokenizer on dataset #9:   0%|          | 0/2 [00:00<?, ?ba/s][A[A[A[A[A[A[A[A[ARunning tokenizer on dataset #0:  50%|█████     | 1/2 [00:01<00:01,  1.71s/ba]
+
+Running tokenizer on dataset #2:  50%|█████     | 1/2 [00:01<00:01,  1.91s/ba][A[A
+
+
+
+Running tokenizer on dataset #4:  50%|█████     | 1/2 [00:01<00:01,  1.86s/ba][A[A[A[A
+
+
+Running tokenizer on dataset #3:  50%|█████     | 1/2 [00:01<00:01,  1.91s/ba][A[A[ARunning tokenizer on dataset #0: 100%|██████████| 2/2 [00:02<00:00,  1.14ba/s]Running tokenizer on dataset #0: 100%|██████████| 2/2 [00:02<00:00,  1.00s/ba]
+
+
+
+
+
+
+Running tokenizer on dataset #6:  50%|█████     | 1/2 [00:01<00:01,  1.89s/ba][A[A[A[A[A[A
+
+
+
+
+Running tokenizer on dataset #5:  50%|█████     | 1/2 [00:01<00:01,  1.99s/ba][A[A[A[A[A
+
+
+
+
+
+
+Running tokenizer on dataset #7:  50%|█████     | 1/2 [00:01<00:01,  1.97s/ba][A[A[A[A[A[A[A
+Running tokenizer on dataset #1:  50%|█████     | 1/2 [00:02<00:02,  2.21s/ba][A
+
+Running tokenizer on dataset #2: 100%|██████████| 2/2 [00:02<00:00,  1.04ba/s][A[ARunning tokenizer on dataset #2: 100%|██████████| 2/2 [00:02<00:00,  1.10s/ba]
+
+
+
+
+Running tokenizer on dataset #4: 100%|██████████| 2/2 [00:02<00:00,  1.06ba/s][A[A[A[ARunning tokenizer on dataset #4: 100%|██████████| 2/2 [00:02<00:00,  1.08s/ba]
+
+
+
+
+
+
+
+
+
+Running tokenizer on dataset #9:  50%|█████     | 1/2 [00:01<00:01,  1.90s/ba][A[A[A[A[A[A[A[A[A
+
+
+Running tokenizer on dataset #3: 100%|██████████| 2/2 [00:02<00:00,  1.03ba/s][A[A[ARunning tokenizer on dataset #3: 100%|██████████| 2/2 [00:02<00:00,  1.11s/ba]
+
+
+
+
+
+
+
+
+Running tokenizer on dataset #8:  50%|█████     | 1/2 [00:02<00:02,  2.01s/ba][A[A[A[A[A[A[A[A
+
+
+
+
+
+Running tokenizer on dataset #6: 100%|██████████| 2/2 [00:02<00:00,  1.07ba/s][A[A[A[A[A[ARunning tokenizer on dataset #6: 100%|██████████| 2/2 [00:02<00:00,  1.08s/ba]
+
+
+
+
+
+Running tokenizer on dataset #5: 100%|██████████| 2/2 [00:02<00:00,  1.02ba/s][A[A[A[A[ARunning tokenizer on dataset #5: 100%|██████████| 2/2 [00:02<00:00,  1.13s/ba]
+
+
+
+
+
+
+
+Running tokenizer on dataset #7: 100%|██████████| 2/2 [00:02<00:00,  1.04ba/s][A[A[A[A[A[A[ARunning tokenizer on dataset #7: 100%|██████████| 2/2 [00:02<00:00,  1.11s/ba]
+
+Running tokenizer on dataset #1: 100%|██████████| 2/2 [00:02<00:00,  1.08s/ba][ARunning tokenizer on dataset #1: 100%|██████████| 2/2 [00:02<00:00,  1.25s/ba]
+
+
+
+
+
+
+
+
+
+Running tokenizer on dataset #9: 100%|██████████| 2/2 [00:02<00:00,  1.06ba/s][A[A[A[A[A[A[A[A[ARunning tokenizer on dataset #9: 100%|██████████| 2/2 [00:02<00:00,  1.08s/ba]
+
+
+
+
+
+
+
+
+Running tokenizer on dataset #8: 100%|██████████| 2/2 [00:02<00:00,  1.01ba/s][A[A[A[A[A[A[A[ARunning tokenizer on dataset #8: 100%|██████████| 2/2 [00:02<00:00,  1.14s/ba]
+/home/sshukla7/.local/lib/python3.9/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+  0%|          | 0/400 [00:00<?, ?it/s]Traceback (most recent call last):
+  File "/home/sshukla7/sshukla7/DQ_BART/run_summarization_no_trainer_1.py", line 905, in <module>
+    main()
+  File "/home/sshukla7/sshukla7/DQ_BART/run_summarization_no_trainer_1.py", line 686, in main
+    student_outputs = student_model(**batch, output_attentions=True, output_hidden_states=True)
+  File "/opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/sshukla7/sshukla7/DQ_BART/quant/modeling_bart_quant.py", line 1384, in forward
+    outputs = self.model(
+  File "/opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/sshukla7/sshukla7/DQ_BART/quant/modeling_bart_quant.py", line 1253, in forward
+    encoder_outputs = self.encoder(
+  File "/opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/sshukla7/sshukla7/DQ_BART/quant/modeling_bart_quant.py", line 876, in forward
+    layer_outputs = encoder_layer(
+  File "/opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/sshukla7/sshukla7/DQ_BART/quant/modeling_bart_quant.py", line 349, in forward
+    hidden_states, attn_weights, _ = self.self_attn(
+  File "/opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/sshukla7/sshukla7/DQ_BART/quant/modeling_bart_quant.py", line 288, in forward
+    attn_probs = self.act_quantizaer.apply(attn_probs, self.clip_attn, self.input_bits, True)
+  File "/home/sshukla7/sshukla7/DQ_BART/quant/utils_quant.py", line 49, in forward
+    output = torch.round(input * s).div(s)
+RuntimeError: CUDA out of memory. Tried to allocate 6.00 GiB (GPU 0; 79.35 GiB total capacity; 67.86 GiB already allocated; 4.62 GiB free; 73.28 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+wandb: Waiting for W&B process to finish... (failed 1).
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /home/sshukla7/sshukla7/DQ_BART/wandb/offline-run-20230403_150244-qkq7splk
+wandb: Find logs at: ./wandb/offline-run-20230403_150244-qkq7splk/logs

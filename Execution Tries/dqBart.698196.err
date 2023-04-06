@@ -1,0 +1,22 @@
+
+Lmod is automatically replacing "gnu9/9.3.0" with "gnu10/10.3.0-ya".
+
+
+Inactive Modules:
+  1) hwloc/2.1.0     2) libfabric     3) openmpi4     4) ucx
+
+wandb: ERROR api_key not configured (no-tty). call wandb.login(key=[your_api_key])
+Traceback (most recent call last):
+  File "/home/sshukla7/sshukla7/DQ_BART/run_summarization_no_trainer_1.py", line 904, in <module>
+    main()
+  File "/home/sshukla7/sshukla7/DQ_BART/run_summarization_no_trainer_1.py", line 375, in main
+    wandb.init(project=task, name=run, config=args)
+  File "/home/sshukla7/.local/lib/python3.9/site-packages/wandb/sdk/wandb_init.py", line 1140, in init
+    wi.setup(kwargs)
+  File "/home/sshukla7/.local/lib/python3.9/site-packages/wandb/sdk/wandb_init.py", line 288, in setup
+    wandb_login._login(
+  File "/home/sshukla7/.local/lib/python3.9/site-packages/wandb/sdk/wandb_login.py", line 298, in _login
+    wlogin.prompt_api_key()
+  File "/home/sshukla7/.local/lib/python3.9/site-packages/wandb/sdk/wandb_login.py", line 228, in prompt_api_key
+    raise UsageError("api_key not configured (no-tty). call " + directive)
+wandb.errors.UsageError: api_key not configured (no-tty). call wandb.login(key=[your_api_key])

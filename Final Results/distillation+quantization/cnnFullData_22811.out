@@ -1,0 +1,217 @@
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: pip in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (23.0.1)
+Defaulting to user installation because normal site-packages is not writeable
+Collecting transformers==4.17.0
+  Downloading transformers-4.17.0-py3-none-any.whl (3.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.8/3.8 MB 68.1 MB/s eta 0:00:00
+Collecting datasets==1.18.4
+  Downloading datasets-1.18.4-py3-none-any.whl (312 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 312.1/312.1 kB 14.0 MB/s eta 0:00:00
+Collecting sacrebleu==2.0
+  Downloading sacrebleu-2.0.0-py3-none-any.whl (90 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 90.7/90.7 kB 3.5 MB/s eta 0:00:00
+Collecting wandb
+  Downloading wandb-0.14.0-py3-none-any.whl (2.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 57.7 MB/s eta 0:00:00
+Requirement already satisfied: nltk in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from -r requirements.txt (line 5)) (3.6.7)
+Collecting accelerate==0.5.1
+  Downloading accelerate-0.5.1-py3-none-any.whl (58 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 58.0/58.0 kB 2.4 MB/s eta 0:00:00
+Requirement already satisfied: tensorboard in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from -r requirements.txt (line 7)) (2.8.0)
+Collecting setuptools<50
+  Downloading setuptools-49.6.0-py3-none-any.whl (803 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 803.3/803.3 kB 28.2 MB/s eta 0:00:00
+Collecting rouge_score
+  Downloading rouge_score-0.1.2.tar.gz (17 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Requirement already satisfied: packaging>=20.0 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from transformers==4.17.0->-r requirements.txt (line 1)) (21.3)
+Requirement already satisfied: numpy>=1.17 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from transformers==4.17.0->-r requirements.txt (line 1)) (1.22.3)
+Requirement already satisfied: pyyaml>=5.1 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from transformers==4.17.0->-r requirements.txt (line 1)) (6.0)
+Requirement already satisfied: requests in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from transformers==4.17.0->-r requirements.txt (line 1)) (2.27.1)
+Collecting sacremoses
+  Downloading sacremoses-0.0.53.tar.gz (880 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 880.6/880.6 kB 31.0 MB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Requirement already satisfied: tqdm>=4.27 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from transformers==4.17.0->-r requirements.txt (line 1)) (4.63.1)
+Collecting tokenizers!=0.11.3,>=0.11.1
+  Downloading tokenizers-0.13.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (7.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.6/7.6 MB 102.2 MB/s eta 0:00:00
+Requirement already satisfied: regex!=2019.12.17 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from transformers==4.17.0->-r requirements.txt (line 1)) (2022.3.15)
+Requirement already satisfied: filelock in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from transformers==4.17.0->-r requirements.txt (line 1)) (3.6.0)
+Collecting huggingface-hub<1.0,>=0.1.0
+  Downloading huggingface_hub-0.13.3-py3-none-any.whl (199 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 199.8/199.8 kB 9.0 MB/s eta 0:00:00
+Collecting multiprocess
+  Downloading multiprocess-0.70.14-py39-none-any.whl (132 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 132.9/132.9 kB 5.9 MB/s eta 0:00:00
+Collecting responses<0.19
+  Downloading responses-0.18.0-py3-none-any.whl (38 kB)
+Collecting xxhash
+  Downloading xxhash-3.2.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (212 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 212.2/212.2 kB 9.8 MB/s eta 0:00:00
+Collecting pyarrow!=4.0.0,>=3.0.0
+  Downloading pyarrow-11.0.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (34.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 34.9/34.9 MB 66.6 MB/s eta 0:00:00
+Collecting dill
+  Downloading dill-0.3.6-py3-none-any.whl (110 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 110.5/110.5 kB 4.4 MB/s eta 0:00:00
+Collecting fsspec[http]>=2021.05.0
+  Downloading fsspec-2023.3.0-py3-none-any.whl (145 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 145.4/145.4 kB 6.0 MB/s eta 0:00:00
+Requirement already satisfied: pandas in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from datasets==1.18.4->-r requirements.txt (line 2)) (1.3.5)
+Collecting aiohttp
+  Downloading aiohttp-3.8.4-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 37.5 MB/s eta 0:00:00
+Collecting tabulate>=0.8.9
+  Downloading tabulate-0.9.0-py3-none-any.whl (35 kB)
+Collecting portalocker
+  Downloading portalocker-2.7.0-py2.py3-none-any.whl (15 kB)
+Requirement already satisfied: colorama in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from sacrebleu==2.0->-r requirements.txt (line 3)) (0.4.4)
+Requirement already satisfied: torch>=1.4.0 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from accelerate==0.5.1->-r requirements.txt (line 6)) (1.12.1+cu113)
+Requirement already satisfied: protobuf!=4.21.0,<5,>=3.15.0 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from wandb->-r requirements.txt (line 4)) (3.19.4)
+Requirement already satisfied: Click!=8.0.0,>=7.0 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from wandb->-r requirements.txt (line 4)) (8.0.4)
+Requirement already satisfied: sentry-sdk>=1.0.0 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from wandb->-r requirements.txt (line 4)) (1.5.8)
+Collecting pathtools
+  Downloading pathtools-0.1.2.tar.gz (11 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting setproctitle
+  Downloading setproctitle-1.3.2-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (30 kB)
+Collecting docker-pycreds>=0.4.0
+  Downloading docker_pycreds-0.4.0-py2.py3-none-any.whl (9.0 kB)
+Requirement already satisfied: appdirs>=1.4.3 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from wandb->-r requirements.txt (line 4)) (1.4.4)
+Requirement already satisfied: psutil>=5.0.0 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from wandb->-r requirements.txt (line 4)) (5.9.0)
+Requirement already satisfied: typing-extensions in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from wandb->-r requirements.txt (line 4)) (4.1.1)
+Collecting GitPython!=3.1.29,>=1.0.0
+  Downloading GitPython-3.1.31-py3-none-any.whl (184 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 184.3/184.3 kB 8.6 MB/s eta 0:00:00
+Requirement already satisfied: joblib in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from nltk->-r requirements.txt (line 5)) (1.1.0)
+Requirement already satisfied: tensorboard-plugin-wit>=1.6.0 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from tensorboard->-r requirements.txt (line 7)) (1.8.1)
+Requirement already satisfied: werkzeug>=0.11.15 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from tensorboard->-r requirements.txt (line 7)) (2.0.3)
+Requirement already satisfied: grpcio>=1.24.3 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from tensorboard->-r requirements.txt (line 7)) (1.44.0)
+Requirement already satisfied: tensorboard-data-server<0.7.0,>=0.6.0 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from tensorboard->-r requirements.txt (line 7)) (0.6.1)
+Requirement already satisfied: google-auth-oauthlib<0.5,>=0.4.1 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from tensorboard->-r requirements.txt (line 7)) (0.4.6)
+Requirement already satisfied: wheel>=0.26 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from tensorboard->-r requirements.txt (line 7)) (0.37.1)
+Requirement already satisfied: markdown>=2.6.8 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from tensorboard->-r requirements.txt (line 7)) (3.3.6)
+Requirement already satisfied: absl-py>=0.4 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from tensorboard->-r requirements.txt (line 7)) (1.0.0)
+Requirement already satisfied: google-auth<3,>=1.6.3 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from tensorboard->-r requirements.txt (line 7)) (1.35.0)
+Requirement already satisfied: six>=1.14.0 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from rouge_score->-r requirements.txt (line 9)) (1.16.0)
+Collecting multidict<7.0,>=4.5
+  Downloading multidict-6.0.4-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (114 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 114.2/114.2 kB 5.6 MB/s eta 0:00:00
+Collecting async-timeout<5.0,>=4.0.0a3
+  Downloading async_timeout-4.0.2-py3-none-any.whl (5.8 kB)
+Collecting yarl<2.0,>=1.0
+  Downloading yarl-1.8.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (264 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 264.6/264.6 kB 10.9 MB/s eta 0:00:00
+Requirement already satisfied: attrs>=17.3.0 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from aiohttp->datasets==1.18.4->-r requirements.txt (line 2)) (21.4.0)
+Requirement already satisfied: charset-normalizer<4.0,>=2.0 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from aiohttp->datasets==1.18.4->-r requirements.txt (line 2)) (2.0.12)
+Collecting frozenlist>=1.1.1
+  Downloading frozenlist-1.3.3-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (158 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 158.8/158.8 kB 7.9 MB/s eta 0:00:00
+Collecting aiosignal>=1.1.2
+  Downloading aiosignal-1.3.1-py3-none-any.whl (7.6 kB)
+Collecting gitdb<5,>=4.0.1
+  Downloading gitdb-4.0.10-py3-none-any.whl (62 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.7/62.7 kB 2.7 MB/s eta 0:00:00
+Requirement already satisfied: pyasn1-modules>=0.2.1 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from google-auth<3,>=1.6.3->tensorboard->-r requirements.txt (line 7)) (0.2.8)
+Requirement already satisfied: rsa<5,>=3.1.4 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from google-auth<3,>=1.6.3->tensorboard->-r requirements.txt (line 7)) (4.8)
+Requirement already satisfied: cachetools<5.0,>=2.0.0 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from google-auth<3,>=1.6.3->tensorboard->-r requirements.txt (line 7)) (4.2.4)
+Requirement already satisfied: requests-oauthlib>=0.7.0 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from google-auth-oauthlib<0.5,>=0.4.1->tensorboard->-r requirements.txt (line 7)) (1.3.1)
+Requirement already satisfied: importlib-metadata>=4.4 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from markdown>=2.6.8->tensorboard->-r requirements.txt (line 7)) (4.11.3)
+Requirement already satisfied: pyparsing!=3.0.5,>=2.0.2 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from packaging>=20.0->transformers==4.17.0->-r requirements.txt (line 1)) (3.0.7)
+Requirement already satisfied: idna<4,>=2.5 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from requests->transformers==4.17.0->-r requirements.txt (line 1)) (3.3)
+Requirement already satisfied: certifi>=2017.4.17 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from requests->transformers==4.17.0->-r requirements.txt (line 1)) (2021.10.8)
+Requirement already satisfied: urllib3<1.27,>=1.21.1 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from requests->transformers==4.17.0->-r requirements.txt (line 1)) (1.26.9)
+Requirement already satisfied: python-dateutil>=2.7.3 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from pandas->datasets==1.18.4->-r requirements.txt (line 2)) (2.8.1)
+Requirement already satisfied: pytz>=2017.3 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from pandas->datasets==1.18.4->-r requirements.txt (line 2)) (2019.3)
+Collecting smmap<6,>=3.0.1
+  Downloading smmap-5.0.0-py3-none-any.whl (24 kB)
+Requirement already satisfied: zipp>=0.5 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from importlib-metadata>=4.4->markdown>=2.6.8->tensorboard->-r requirements.txt (line 7)) (3.7.0)
+Requirement already satisfied: pyasn1<0.5.0,>=0.4.6 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from pyasn1-modules>=0.2.1->google-auth<3,>=1.6.3->tensorboard->-r requirements.txt (line 7)) (0.4.8)
+Requirement already satisfied: oauthlib>=3.0.0 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from requests-oauthlib>=0.7.0->google-auth-oauthlib<0.5,>=0.4.1->tensorboard->-r requirements.txt (line 7)) (3.2.0)
+Building wheels for collected packages: rouge_score, pathtools, sacremoses
+  Building wheel for rouge_score (setup.py): started
+  Building wheel for rouge_score (setup.py): finished with status 'done'
+  Created wheel for rouge_score: filename=rouge_score-0.1.2-py3-none-any.whl size=24955 sha256=099faf9ad1f98b85aa6d1cc17afad0582362212284c5148553a423a503477f4a
+  Stored in directory: /home/smanturg/.cache/pip/wheels/9b/3d/39/09558097d3119ca0a4d462df68f22c6f3c1b345ac63a09b86e
+  Building wheel for pathtools (setup.py): started
+  Building wheel for pathtools (setup.py): finished with status 'done'
+  Created wheel for pathtools: filename=pathtools-0.1.2-py3-none-any.whl size=8806 sha256=bb5c90086dab5e07dfa967fa92e5144a63d143b4fa65d4433df6368512d5df69
+  Stored in directory: /home/smanturg/.cache/pip/wheels/b7/0a/67/ada2a22079218c75a88361c0782855cc72aebc4d18d0289d05
+  Building wheel for sacremoses (setup.py): started
+  Building wheel for sacremoses (setup.py): finished with status 'done'
+  Created wheel for sacremoses: filename=sacremoses-0.0.53-py3-none-any.whl size=895260 sha256=0eefe3eb8f17213393961b85a2370a5c596aaa837c39473ac19d0eb5af318108
+  Stored in directory: /home/smanturg/.cache/pip/wheels/12/1c/3d/46cf06718d63a32ff798a89594b61e7f345ab6b36d909ce033
+Successfully built rouge_score pathtools sacremoses
+Installing collected packages: tokenizers, pathtools, xxhash, tabulate, smmap, setuptools, setproctitle, sacremoses, pyarrow, portalocker, multidict, fsspec, frozenlist, docker-pycreds, dill, async-timeout, yarl, sacrebleu, rouge_score, responses, multiprocess, huggingface-hub, gitdb, aiosignal, accelerate, transformers, GitPython, aiohttp, wandb, datasets
+Successfully installed GitPython-3.1.31 accelerate-0.5.1 aiohttp-3.8.4 aiosignal-1.3.1 async-timeout-4.0.2 datasets-1.18.4 dill-0.3.6 docker-pycreds-0.4.0 frozenlist-1.3.3 fsspec-2023.3.0 gitdb-4.0.10 huggingface-hub-0.13.3 multidict-6.0.4 multiprocess-0.70.14 pathtools-0.1.2 portalocker-2.7.0 pyarrow-11.0.0 responses-0.18.0 rouge_score-0.1.2 sacrebleu-2.0.0 sacremoses-0.0.53 setproctitle-1.3.2 setuptools-49.6.0 smmap-5.0.0 tabulate-0.9.0 tokenizers-0.13.2 transformers-4.17.0 wandb-0.14.0 xxhash-3.2.0 yarl-1.8.2
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: datasets in /home/smanturg/.local/lib/python3.9/site-packages (1.18.4)
+Requirement already satisfied: transformers in /home/smanturg/.local/lib/python3.9/site-packages (4.17.0)
+Requirement already satisfied: accelerate in /home/smanturg/.local/lib/python3.9/site-packages (0.5.1)
+Requirement already satisfied: fsspec[http]>=2021.05.0 in /home/smanturg/.local/lib/python3.9/site-packages (from datasets) (2023.3.0)
+Requirement already satisfied: xxhash in /home/smanturg/.local/lib/python3.9/site-packages (from datasets) (3.2.0)
+Requirement already satisfied: aiohttp in /home/smanturg/.local/lib/python3.9/site-packages (from datasets) (3.8.4)
+Requirement already satisfied: huggingface-hub<1.0.0,>=0.1.0 in /home/smanturg/.local/lib/python3.9/site-packages (from datasets) (0.13.3)
+Requirement already satisfied: pyarrow!=4.0.0,>=3.0.0 in /home/smanturg/.local/lib/python3.9/site-packages (from datasets) (11.0.0)
+Requirement already satisfied: dill in /home/smanturg/.local/lib/python3.9/site-packages (from datasets) (0.3.6)
+Requirement already satisfied: requests>=2.19.0 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from datasets) (2.27.1)
+Requirement already satisfied: pandas in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from datasets) (1.3.5)
+Requirement already satisfied: packaging in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from datasets) (21.3)
+Requirement already satisfied: tqdm>=4.62.1 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from datasets) (4.63.1)
+Requirement already satisfied: multiprocess in /home/smanturg/.local/lib/python3.9/site-packages (from datasets) (0.70.14)
+Requirement already satisfied: responses<0.19 in /home/smanturg/.local/lib/python3.9/site-packages (from datasets) (0.18.0)
+Requirement already satisfied: numpy>=1.17 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from datasets) (1.22.3)
+Requirement already satisfied: sacremoses in /home/smanturg/.local/lib/python3.9/site-packages (from transformers) (0.0.53)
+Requirement already satisfied: regex!=2019.12.17 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from transformers) (2022.3.15)
+Requirement already satisfied: filelock in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from transformers) (3.6.0)
+Requirement already satisfied: tokenizers!=0.11.3,>=0.11.1 in /home/smanturg/.local/lib/python3.9/site-packages (from transformers) (0.13.2)
+Requirement already satisfied: pyyaml>=5.1 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from transformers) (6.0)
+Requirement already satisfied: torch>=1.4.0 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from accelerate) (1.12.1+cu113)
+Requirement already satisfied: attrs>=17.3.0 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from aiohttp->datasets) (21.4.0)
+Requirement already satisfied: async-timeout<5.0,>=4.0.0a3 in /home/smanturg/.local/lib/python3.9/site-packages (from aiohttp->datasets) (4.0.2)
+Requirement already satisfied: multidict<7.0,>=4.5 in /home/smanturg/.local/lib/python3.9/site-packages (from aiohttp->datasets) (6.0.4)
+Requirement already satisfied: frozenlist>=1.1.1 in /home/smanturg/.local/lib/python3.9/site-packages (from aiohttp->datasets) (1.3.3)
+Requirement already satisfied: aiosignal>=1.1.2 in /home/smanturg/.local/lib/python3.9/site-packages (from aiohttp->datasets) (1.3.1)
+Requirement already satisfied: charset-normalizer<4.0,>=2.0 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from aiohttp->datasets) (2.0.12)
+Requirement already satisfied: yarl<2.0,>=1.0 in /home/smanturg/.local/lib/python3.9/site-packages (from aiohttp->datasets) (1.8.2)
+Requirement already satisfied: typing-extensions>=3.7.4.3 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from huggingface-hub<1.0.0,>=0.1.0->datasets) (4.1.1)
+Requirement already satisfied: pyparsing!=3.0.5,>=2.0.2 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from packaging->datasets) (3.0.7)
+Requirement already satisfied: idna<4,>=2.5 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from requests>=2.19.0->datasets) (3.3)
+Requirement already satisfied: urllib3<1.27,>=1.21.1 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from requests>=2.19.0->datasets) (1.26.9)
+Requirement already satisfied: certifi>=2017.4.17 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from requests>=2.19.0->datasets) (2021.10.8)
+Requirement already satisfied: python-dateutil>=2.7.3 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from pandas->datasets) (2.8.1)
+Requirement already satisfied: pytz>=2017.3 in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from pandas->datasets) (2019.3)
+Requirement already satisfied: six in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from sacremoses->transformers) (1.16.0)
+Requirement already satisfied: joblib in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from sacremoses->transformers) (1.1.0)
+Requirement already satisfied: click in /opt/sw/spack/apps/linux-rhel8-x86_64_v2/gcc-10.3.0/python-3.9.9-jh/lib/python3.9/site-packages (from sacremoses->transformers) (8.0.4)
+04/05/2023 01:43:57 - INFO - __main__ -   Distributed environment: NO
+Num processes: 1
+Process index: 0
+Local process index: 0
+Device: cuda
+Use FP16 precision: False
+
+04/05/2023 01:43:57 - WARNING - __main__ -   Namespace(dataset_name='cnn_dailymail', dataset_config_name='3.0.0', train_file=None, validation_file=None, ignore_pad_token_for_loss=True, max_source_length=1024, source_prefix=None, preprocessing_num_workers=None, overwrite_cache=None, max_target_length=128, val_max_target_length=None, pad_to_max_length=False, model_name_or_path='ainize/bart-base-cnn', config_name=None, tokenizer_name=None, text_column=None, summary_column=None, use_slow_tokenizer=False, per_device_train_batch_size=8, per_device_eval_batch_size=4, learning_rate=3e-05, weight_decay=0.0, num_train_epochs=5, max_train_steps=None, gradient_accumulation_steps=2, lr_scheduler_type=<SchedulerType.LINEAR: 'linear'>, warmup_ratio=0.05, output_dir='./output_cnn_dailymail/2_8_1_1_5_3e-05_fp16', seed=42, model_type=None, teacher_model='ainize/bart-base-cnn', student_model='ainize/bart-base-cnn', pred_distill=True, intermediate_distill=True, weight_bits=2, input_bits=8, clip_val=2.5, length_penalty=2.0, max_length=142, min_length=56, num_beams=4, do_train=True, do_test=True, test_teacher=False, distill_encoder=1, distill_decoder=1, log_steps=20, local_rank=0, weighted=False, new_distill_map=False, task_weight=1, logits_weight=1, hid_weight=1)
+Downloading and preparing dataset cnn_dailymail/3.0.0 (download: 558.32 MiB, generated: 1.28 GiB, post-processed: Unknown size, total: 1.82 GiB) to /home/smanturg/.cache/huggingface/datasets/cnn_dailymail/3.0.0/3.0.0/3cb851bf7cf5826e45d49db2863f627cba583cbc32342df7349dfe6c38060234...
+Dataset cnn_dailymail downloaded and prepared to /home/smanturg/.cache/huggingface/datasets/cnn_dailymail/3.0.0/3.0.0/3cb851bf7cf5826e45d49db2863f627cba583cbc32342df7349dfe6c38060234. Subsequent calls will reuse this data.
+init quantize emb
+04/05/2023 02:22:54 - WARNING - datasets.fingerprint -   Parameter 'function'=<function main.<locals>.preprocess_function at 0x7f060a471040> of the transform datasets.arrow_dataset.Dataset._map_single couldn't be hashed properly, a random hash was used instead. Make sure your transforms and parameters are serializable with pickle or dill for the dataset fingerprinting and caching to work. If you reuse this transform, the caching mechanism will consider it to be different from the previous calls and recompute everything. This warning is only showed once. Subsequent hashing failures won't be showed.
+datasets size, train: 287113, validate: 13368, test: 11490
+04/05/2023 02:23:54 - INFO - __main__ -   Sample 198461 of the training set: {'input_ids': [0, 2765, 479, 18148, 272, 4717, 479, 29731, 7976, 14849, 1691, 35, 479, 14722, 35, 2983, 12936, 6, 361, 644, 1014, 479, 1721, 479, 121, 44964, 35, 479, 14722, 35, 2983, 12936, 6, 361, 644, 1014, 479, 15507, 15760, 39416, 34, 326, 10434, 7, 63, 3912, 672, 13, 80, 107, 111, 8, 10780, 503, 109, 45, 1057, 7, 972, 49, 3247, 13, 7789, 15, 86, 454, 5, 253, 9, 5, 2202, 4, 20, 7988, 606, 1135, 5, 2443, 9, 708, 7, 3754, 984, 3272, 4, 245, 9026, 88, 5, 5569, 1546, 111, 61, 40, 2703, 484, 55, 107, 9, 2680, 12, 428, 19171, 425, 10204, 4, 767, 7, 414, 703, 30, 3658, 9586, 6, 2341, 15760, 39416, 34, 393, 6566, 1348, 63, 1002, 9, 8403, 4, 245, 228, 715, 6, 8, 3359, 23, 95, 5663, 4, 246, 228, 715, 11, 759, 73, 17704, 1125, 4, 1801, 80, 9, 5, 379, 940, 5569, 5990, 478, 5, 15760, 39416, 1002, 11, 5, 665, 675, 6, 19, 484, 111, 1605, 167, 878, 251, 12, 27861, 2301, 111, 5492, 2415, 9, 117, 357, 87, 1812, 228, 715, 4, 14687, 3894, 39416, 35, 20, 2440, 516, 924, 99, 10301, 9, 7717, 5240, 15, 86, 353, 12, 1409, 12, 2151, 131, 5, 1275, 516, 924, 10, 1375, 1013, 674, 131, 8, 5, 2272, 516, 924, 5, 7717, 7789, 624, 65, 2289, 9, 3078, 479, 20, 2415, 638, 10, 2341, 25, 145, 628, 114, 24, 16, 55, 87, 292, 728, 639, 3078, 13, 10, 765, 12, 27861, 544, 6, 50, 158, 728, 13, 251, 12, 27861, 4, 22439, 6732, 14978, 141, 747, 7717, 2035, 624, 65, 2289, 9, 49, 1768, 86, 311, 14, 95, 4981, 4, 134, 228, 715, 9, 544, 32, 12810, 15, 86, 111, 10, 346, 3064, 7, 3492, 4, 466, 228, 715, 13, 251, 12, 27861, 518, 4, 520, 17731, 585, 63, 709, 708, 13, 777, 12, 1646, 6, 24, 2641, 14, 5, 8403, 4, 245, 228, 715, 1002, 74, 45, 28, 1145, 454, 5, 253, 9, 14, 675, 4, 20, 138, 18993, 1164, 7, 278, 10, 55, 8263, 1002, 111, 8, 2449, 14, 128, 32313, 352, 29367, 196, 108, 7717, 74, 146, 24, 543, 7, 146, 143, 617, 2017, 15, 15760, 39416, 4, 32408, 35, 188, 708, 7, 6662, 1444, 18, 2341, 1743, 33, 57, 585, 30, 3658, 9586, 479, 128, 170, 236, 7, 109, 357, 87, 14, 6, 53, 52, 32, 2114, 62, 7, 103, 1272, 14, 283, 19, 1282, 111, 14, 16, 6, 55, 7717, 8, 55, 3670, 15, 41, 3150, 29367, 196, 1546, 1598, 10, 1565, 26, 4, 128, 8170, 5, 15654, 4646, 23, 3610, 498, 64, 1303, 10, 31228, 1683, 61, 12414, 29, 3670, 484, 722, 423, 6, 2213, 9, 1788, 409, 955, 2285, 5, 2988, 7, 712, 5, 346, 9, 7717, 7789, 15, 86, 81, 5, 375, 80, 107, 6, 17731, 18, 708, 13, 1444, 18, 7717, 6876, 14, 18688, 40, 535, 7, 1430, 30, 65, 228, 715, 1065, 2680, 4, 3139, 3552, 13, 5, 220, 707, 107, 21, 585, 2350, 6, 95, 360, 71, 144, 18688, 439, 62, 30, 41, 674, 9, 204, 4, 176, 228, 715, 4, 83, 299, 10780, 781, 26, 5, 563, 21, 10597, 15, 18688, 2227, 349, 76, 23, 10, 731, 9, 65, 228, 715, 1065, 5, 248, 11337, 2680, 731, 6, 8, 355, 14, 143, 464, 7, 14, 15480, 74, 2703, 10, 2514, 17761, 31, 5, 11827, 4, 20, 17761, 16, 1386, 1768, 7, 1136, 7, 117, 55, 87, 984, 176, 4, 466, 9026, 30, 954, 6, 159, 31, 984, 306, 4, 245, 9026, 10, 2202, 656, 4, 31589, 15020, 35, 17731, 1991, 7, 6581, 12641, 6, 151, 1823, 3202, 15, 5, 662, 17620, 479, 6211, 5, 1836, 9, 5, 632, 3781, 8, 5, 1621, 18, 2720, 7, 2358, 15498, 6, 5118, 32, 3752, 7, 7213, 49, 768, 15, 4881, 5, 17761, 4, 20, 17731, 563, 13, 777, 12, 1646, 40, 694, 12641, 6, 151, 1823, 662, 24279, 3202, 23, 4996, 498, 6, 217, 10, 291, 228, 715, 712, 15, 518, 88, 1353, 928, 4, 20, 933, 67, 24012, 3443, 15751, 4416, 55, 3670, 228, 76, 7290, 30, 954, 6, 8, 37415, 6, 151, 55, 7717, 11, 544, 4, 37699, 1377, 680, 1337, 17995, 5000, 10419, 6, 215, 25, 5, 2860, 2027, 8, 4079, 1245, 4326, 17217, 6, 1992, 5139, 23, 8353, 8, 4913, 6, 8, 769, 12211, 1105, 1788, 9, 24396, 11, 3430, 1367, 223, 5, 1456, 7529, 154, 2599, 654, 107, 536, 4, 17731, 834, 1031, 5348, 871, 19422, 2449, 14, 5, 10780, 1546, 56, 128, 1342, 3215, 41, 3567, 9, 721, 12, 10816, 108, 8, 74, 33, 7, 7932, 81, 5, 1337, 4501, 156, 15, 24, 4, 128, 41084, 7913, 352, 52, 33, 7, 2394, 5, 240, 7, 1119, 55, 2112, 6, 422, 7717, 15, 86, 8, 847, 1042, 6, 8, 11, 171, 911, 5717, 40, 240, 7, 28, 156, 1598, 37, 26, 4, 2], 'attention_mask': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 'labels': [0, 6785, 5663, 4, 246, 207, 9, 7717, 2035, 15, 86, 11, 719, 1135, 8403, 4, 245, 207, 1002, 479, 50118, 40283, 9586, 13835, 1002, 40, 45, 28, 1145, 454, 954, 479, 50118, 597, 5347, 40, 535, 7, 1430, 30, 248, 11337, 2704, 112, 207, 13, 1079, 9, 5, 2202, 479, 2]}.
+Yes, cuda is available, Found device: NVIDIA A100-SXM-80GB, n_gpu: 1
+04/05/2023 02:23:58 - INFO - __main__ -   ***** Running training *****
+04/05/2023 02:23:58 - INFO - __main__ -     Num examples = 287113
+04/05/2023 02:23:58 - INFO - __main__ -     Num Epochs = 5
+04/05/2023 02:23:58 - INFO - __main__ -     Instantaneous batch size per device = 8
+04/05/2023 02:23:58 - INFO - __main__ -     Total train batch size (w. parallel, distributed & accumulation) = 16
+04/05/2023 02:23:58 - INFO - __main__ -     Gradient Accumulation steps = 2
+04/05/2023 02:23:58 - INFO - __main__ -     Total optimization steps = 89725
+04/05/2023 02:23:58 - INFO - __main__ -     student encoder layers = 1
+04/05/2023 02:23:58 - INFO - __main__ -     student decoder layers = 1
+04/05/2023 02:23:58 - INFO - __main__ -     student encoder layers [0] is mapped with teacher encoder layers [5]
+04/05/2023 02:23:58 - INFO - __main__ -     student decoder layers [0] is mapped with teacher decoder layers [5]
+04/05/2023 05:00:21 - INFO - __main__ -   evaluation result: {'eval/rouge1': 26.5381, 'eval/rouge2': 5.8182, 'eval/rougeL': 17.1938, 'eval/rougeLsum': 25.0233} 
