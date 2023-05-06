@@ -1,0 +1,10 @@
+transformers==4.17.0
+datasets==2.11.0
+sacrebleu==2.0
+wandb
+nltk
+accelerate==0.18.0
+tensorboard
+setuptools
+rouge_score
+sentencepiece

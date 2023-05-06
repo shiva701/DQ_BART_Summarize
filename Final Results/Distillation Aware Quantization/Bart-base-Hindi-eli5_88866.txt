@@ -1,0 +1,16 @@
+wandb: Run summary:
+wandb:             eval/rouge1 20.3072
+wandb:             eval/rouge2 2.8451
+wandb:             eval/rougeL 13.1907
+wandb:          eval/rougeLsum 18.4461
+wandb:      train/crs_att_loss 1.73122
+wandb:      train/dec_att_loss 0.01161
+wandb:      train/dec_hid_loss 1.75728
+wandb:      train/enc_att_loss 0.05386
+wandb: train/enc_hid_last_loss 0.2003
+wandb:      train/enc_hid_loss 0.4095
+wandb:       train/logits_loss 4.27779
+wandb:              train/loss 11.89877
+wandb:                train/lr 5e-05
+wandb:              train/step 59
+wandb:         train/task_loss 5.10187
