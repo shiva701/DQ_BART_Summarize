@@ -1,0 +1,128 @@
+
+#with manual files
+!python run_summarization_no_trainer_cnnDutch.py --model_name_or_path facebook/bart-base --pred_distill --intermediate_distill --num_train_epochs 4 --weight_bits 8 --do_train --do_test --distill_encoder 6 --distill_decoder 6 --learning_rate 5e-5 --per_device_train_batch_size 8 --train_file /content/drive/MyDrive/NLP_Project/DQ_BART/Datasets/eli5_Dataset/Russian/eli5_train_russian.csv --test_file /content/drive/MyDrive/NLP_Project/DQ_BART/Datasets/eli5_Dataset/Russian/eli5_test_russian.csv --validation_file /content/drive/MyDrive/NLP_Project/DQ_BART/Datasets/eli5_Dataset/Russian/eli5_validation_russian.csv --seed 42
+
+2023-05-07 19:21:07.728115: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+here!!
+05/07/2023 19:21:11 - INFO - __main__ -   Distributed environment: NO
+Num processes: 1
+Process index: 0
+Local process index: 0
+Device: cuda
+
+Mixed precision type: no
+
+05/07/2023 19:21:11 - WARNING - __main__ -   Namespace(dataset_name=None, dataset_config_name=None, train_file='/content/drive/MyDrive/NLP_Project/DQ_BART/Datasets/eli5_Dataset/Russian/eli5_train_russian.csv', test_file='/content/drive/MyDrive/NLP_Project/DQ_BART/Datasets/eli5_Dataset/Russian/eli5_test_russian.csv', validation_file='/content/drive/MyDrive/NLP_Project/DQ_BART/Datasets/eli5_Dataset/Russian/eli5_validation_russian.csv', ignore_pad_token_for_loss=True, max_source_length=1024, source_prefix=None, preprocessing_num_workers=None, overwrite_cache=None, max_target_length=128, val_max_target_length=None, pad_to_max_length=False, model_name_or_path='facebook/bart-base', config_name=None, tokenizer_name=None, text_column=None, summary_column=None, use_slow_tokenizer=False, per_device_train_batch_size=8, per_device_eval_batch_size=4, learning_rate=5e-05, weight_decay=0.0, num_train_epochs=10, max_train_steps=None, gradient_accumulation_steps=2, lr_scheduler_type=<SchedulerType.LINEAR: 'linear'>, warmup_ratio=0.05, output_dir='./output_eli5Translated/8_8_6_6_10_5e-05_fp16', seed=42, model_type=None, teacher_model='facebook/bart-base', student_model='facebook/bart-base', pred_distill=True, intermediate_distill=True, weight_bits=8, input_bits=8, clip_val=2.5, length_penalty=1.0, max_length=160, min_length=50, num_beams=4, do_train=True, do_test=True, test_teacher=False, distill_encoder=6, distill_decoder=6, log_steps=20, local_rank=0, weighted=False, new_distill_map=False, task_weight=1, logits_weight=1, hid_weight=1)
+
+
+the arguments are:  Namespace(dataset_name=None, dataset_config_name=None, train_file='/content/drive/MyDrive/NLP_Project/DQ_BART/Datasets/eli5_Dataset/Russian/eli5_train_russian.csv', test_file='/content/drive/MyDrive/NLP_Project/DQ_BART/Datasets/eli5_Dataset/Russian/eli5_test_russian.csv', validation_file='/content/drive/MyDrive/NLP_Project/DQ_BART/Datasets/eli5_Dataset/Russian/eli5_validation_russian.csv', ignore_pad_token_for_loss=True, max_source_length=1024, source_prefix=None, preprocessing_num_workers=None, overwrite_cache=None, max_target_length=128, val_max_target_length=None, pad_to_max_length=False, model_name_or_path='facebook/bart-base', config_name=None, tokenizer_name=None, text_column=None, summary_column=None, use_slow_tokenizer=False, per_device_train_batch_size=8, per_device_eval_batch_size=4, learning_rate=5e-05, weight_decay=0.0, num_train_epochs=10, max_train_steps=None, gradient_accumulation_steps=2, lr_scheduler_type=<SchedulerType.LINEAR: 'linear'>, warmup_ratio=0.05, output_dir='./output_eli5Translated/8_8_6_6_10_5e-05_fp16', seed=42, model_type=None, teacher_model='facebook/bart-base', student_model='facebook/bart-base', pred_distill=True, intermediate_distill=True, weight_bits=8, input_bits=8, clip_val=2.5, length_penalty=1.0, max_length=160, min_length=50, num_beams=4, do_train=True, do_test=True, test_teacher=False, distill_encoder=6, distill_decoder=6, log_steps=20, local_rank=0, weighted=False, new_distill_map=False, task_weight=1, logits_weight=1, hid_weight=1)
+
+
+the args output_dir is:  ./output_eli5Translated/8_8_6_6_10_5e-05_fp16
+
+Model config BartConfig {
+  "_name_or_path": "facebook/bart-base",
+  "activation_dropout": 0.1,
+  "activation_function": "gelu",
+  "add_bias_logits": false,
+  "add_final_layer_norm": false,
+  "architectures": [
+    "BartModel"
+  ],
+  "attention_dropout": 0.1,
+  "bos_token_id": 0,
+  "classif_dropout": 0.1,
+  "classifier_dropout": 0.0,
+  "d_model": 768,
+  "decoder_attention_heads": 12,
+  "decoder_ffn_dim": 3072,
+  "decoder_layerdrop": 0.0,
+  "decoder_layers": 6,
+  "decoder_start_token_id": 2,
+  "dropout": 0.1,
+  "early_stopping": true,
+  "encoder_attention_heads": 12,
+  "encoder_ffn_dim": 3072,
+  "encoder_layerdrop": 0.0,
+  "encoder_layers": 6,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2"
+  },
+  "init_std": 0.02,
+  "is_encoder_decoder": true,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2
+  },
+  "max_position_embeddings": 1024,
+  "model_type": "bart",
+  "no_repeat_ngram_size": 3,
+  "normalize_before": false,
+  "normalize_embedding": true,
+  "num_beams": 4,
+  "num_hidden_layers": 6,
+  "pad_token_id": 1,
+  "scale_embedding": false,
+  "task_specific_params": {
+    "summarization": {
+      "length_penalty": 1.0,
+      "max_length": 128,
+      "min_length": 12,
+      "num_beams": 4
+    },
+    "summarization_cnn": {
+      "length_penalty": 2.0,
+      "max_length": 142,
+      "min_length": 56,
+      "num_beams": 4
+    },
+    "summarization_xsum": {
+      "length_penalty": 1.0,
+      "max_length": 62,
+      "min_length": 11,
+      "num_beams": 6
+    }
+  },
+  "torch_dtype": "float32",
+  "transformers_version": "4.28.1",
+  "use_cache": true,
+  "vocab_size": 50265
+}
+
+
+
+***** Running training *****
+05/07/2023 19:21:40 - INFO - __main__ -     Num examples = 1000
+05/07/2023 19:21:40 - INFO - __main__ -     Num Epochs = 10
+05/07/2023 19:21:40 - INFO - __main__ -     Instantaneous batch size per device = 8
+05/07/2023 19:21:40 - INFO - __main__ -     Total train batch size (w. parallel, distributed & accumulation) = 16
+05/07/2023 19:21:40 - INFO - __main__ -     Gradient Accumulation steps = 2
+05/07/2023 19:21:40 - INFO - __main__ -     Total optimization steps = 630
+05/07/2023 19:21:40 - INFO - __main__ -     student encoder layers = 6
+05/07/2023 19:21:40 - INFO - __main__ -     student decoder layers = 6
+05/07/2023 19:21:40 - INFO - __main__ -     student encoder layers [0, 1, 2, 3, 4, 5] is mapped with teacher encoder layers [0, 1, 2, 3, 4, 5]
+05/07/2023 19:21:40 - INFO - __main__ -     student decoder layers [0, 1, 2, 3, 4, 5] is mapped with teacher decoder layers [0, 1, 2, 3, 4, 5]
+
+wandb: Run summary:
+wandb:             eval/rouge1 20.2863
+wandb:             eval/rouge2 2.4719
+wandb:             eval/rougeL 13.2611
+wandb:          eval/rougeLsum 18.5108
+wandb:      train/crs_att_loss 1.73919
+wandb:      train/dec_att_loss 0.01173
+wandb:      train/dec_hid_loss 1.73574
+wandb:      train/enc_att_loss 0.05268
+wandb: train/enc_hid_last_loss 0.20001
+wandb:      train/enc_hid_loss 0.40625
+wandb:       train/logits_loss 4.23748
+wandb:              train/loss 11.778
+wandb:                train/lr 5e-05
+wandb:              train/step 59
+wandb:         train/task_loss 5.04715
