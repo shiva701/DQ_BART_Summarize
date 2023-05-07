@@ -1,0 +1,949 @@
+
+Lmod is automatically replacing "gnu9/9.3.0" with "gnu10/10.3.0-ya".
+
+
+Inactive Modules:
+  1) hwloc/2.1.0     2) libfabric     3) openmpi4     4) ucx
+
+2023-05-06 11:10:16.851861: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-05-06 11:10:20.491709: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+wandb: Tracking run with wandb version 0.15.0
+wandb: W&B syncing is set to `offline` in this directory.  
+wandb: Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+Downloading data files:   0%|          | 0/3 [00:00<?, ?it/s]Downloading data files: 100%|██████████| 3/3 [00:00<00:00, 8594.89it/s]
+Extracting data files:   0%|          | 0/3 [00:00<?, ?it/s]Extracting data files:  33%|███▎      | 1/3 [00:00<00:00,  6.18it/s]Extracting data files: 100%|██████████| 3/3 [00:00<00:00, 17.25it/s]
+Generating train split: 0 examples [00:00, ? examples/s]                                                        Generating validation split: 0 examples [00:00, ? examples/s]                                                             Generating test split: 0 examples [00:00, ? examples/s]                                                         0%|          | 0/3 [00:00<?, ?it/s]100%|██████████| 3/3 [00:00<00:00, 195.08it/s]
+Downloading (…)lve/main/config.json:   0%|          | 0.00/1.39k [00:00<?, ?B/s]Downloading (…)lve/main/config.json: 100%|██████████| 1.39k/1.39k [00:00<00:00, 6.03MB/s]
+loading configuration file config.json from cache at /home/sshukla7/.cache/huggingface/hub/models--ml6team--mbart-large-cc25-cnn-dailymail-xsum-nl/snapshots/c64279de2b23d3b081cd4c44edf45dc090d02a03/config.json
+Model config MBartConfig {
+  "_name_or_path": "ml6team/mbart-large-cc25-cnn-dailymail-xsum-nl",
+  "_num_labels": 3,
+  "activation_dropout": 0.0,
+  "activation_function": "gelu",
+  "add_bias_logits": false,
+  "add_final_layer_norm": true,
+  "architectures": [
+    "MBartForConditionalGeneration"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 0,
+  "classif_dropout": 0.0,
+  "classifier_dropout": 0.0,
+  "d_model": 1024,
+  "decoder_attention_heads": 16,
+  "decoder_ffn_dim": 4096,
+  "decoder_layerdrop": 0.0,
+  "decoder_layers": 12,
+  "dropout": 0.1,
+  "encoder_attention_heads": 16,
+  "encoder_ffn_dim": 4096,
+  "encoder_layerdrop": 0.0,
+  "encoder_layers": 12,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2"
+  },
+  "init_std": 0.02,
+  "is_encoder_decoder": true,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2
+  },
+  "max_length": 1024,
+  "max_position_embeddings": 1024,
+  "model_type": "mbart",
+  "normalize_before": true,
+  "normalize_embedding": true,
+  "num_beams": 5,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 1,
+  "scale_embedding": true,
+  "static_position_embeddings": false,
+  "task_specific_params": {
+    "translation_en_to_ro": {
+      "decoder_start_token_id": 250020
+    }
+  },
+  "torch_dtype": "float32",
+  "transformers_version": "4.28.1",
+  "use_cache": true,
+  "vocab_size": 250027
+}
+
+Could not locate the tokenizer configuration file, will try to use the model config instead.
+Downloading (…)lve/main/config.json:   0%|          | 0.00/1.19k [00:00<?, ?B/s]Downloading (…)lve/main/config.json: 100%|██████████| 1.19k/1.19k [00:00<00:00, 5.66MB/s]
+loading configuration file config.json from cache at /home/sshukla7/.cache/huggingface/hub/models--facebook--mbart-large-cc25/snapshots/f417e5563320b2cc8aabe4329d986b238809067f/config.json
+Model config MBartConfig {
+  "_name_or_path": "facebook/mbart-large-cc25",
+  "_num_labels": 3,
+  "activation_dropout": 0.0,
+  "activation_function": "gelu",
+  "add_bias_logits": false,
+  "add_final_layer_norm": true,
+  "architectures": [
+    "MBartForConditionalGeneration"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 0,
+  "classif_dropout": 0.0,
+  "classifier_dropout": 0.0,
+  "d_model": 1024,
+  "decoder_attention_heads": 16,
+  "decoder_ffn_dim": 4096,
+  "decoder_layerdrop": 0.0,
+  "decoder_layers": 12,
+  "dropout": 0.1,
+  "encoder_attention_heads": 16,
+  "encoder_ffn_dim": 4096,
+  "encoder_layerdrop": 0.0,
+  "encoder_layers": 12,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2"
+  },
+  "init_std": 0.02,
+  "is_encoder_decoder": true,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2
+  },
+  "max_length": 1024,
+  "max_position_embeddings": 1024,
+  "model_type": "mbart",
+  "normalize_before": true,
+  "normalize_embedding": true,
+  "num_beams": 5,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 1,
+  "scale_embedding": true,
+  "static_position_embeddings": false,
+  "task_specific_params": {
+    "translation_en_to_ro": {
+      "decoder_start_token_id": 250020
+    }
+  },
+  "transformers_version": "4.28.1",
+  "use_cache": true,
+  "vocab_size": 250027
+}
+
+Downloading (…)tencepiece.bpe.model:   0%|          | 0.00/5.07M [00:00<?, ?B/s]Downloading (…)tencepiece.bpe.model: 100%|██████████| 5.07M/5.07M [00:00<00:00, 56.4MB/s]
+Downloading (…)/main/tokenizer.json:   0%|          | 0.00/9.10M [00:00<?, ?B/s]Downloading (…)/main/tokenizer.json: 100%|██████████| 9.10M/9.10M [00:00<00:00, 198MB/s]
+loading file sentencepiece.bpe.model from cache at /home/sshukla7/.cache/huggingface/hub/models--facebook--mbart-large-cc25/snapshots/f417e5563320b2cc8aabe4329d986b238809067f/sentencepiece.bpe.model
+loading file tokenizer.json from cache at /home/sshukla7/.cache/huggingface/hub/models--facebook--mbart-large-cc25/snapshots/f417e5563320b2cc8aabe4329d986b238809067f/tokenizer.json
+loading file added_tokens.json from cache at None
+loading file special_tokens_map.json from cache at None
+loading file tokenizer_config.json from cache at None
+loading configuration file config.json from cache at /home/sshukla7/.cache/huggingface/hub/models--facebook--mbart-large-cc25/snapshots/f417e5563320b2cc8aabe4329d986b238809067f/config.json
+Model config MBartConfig {
+  "_name_or_path": "facebook/mbart-large-cc25",
+  "_num_labels": 3,
+  "activation_dropout": 0.0,
+  "activation_function": "gelu",
+  "add_bias_logits": false,
+  "add_final_layer_norm": true,
+  "architectures": [
+    "MBartForConditionalGeneration"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 0,
+  "classif_dropout": 0.0,
+  "classifier_dropout": 0.0,
+  "d_model": 1024,
+  "decoder_attention_heads": 16,
+  "decoder_ffn_dim": 4096,
+  "decoder_layerdrop": 0.0,
+  "decoder_layers": 12,
+  "dropout": 0.1,
+  "encoder_attention_heads": 16,
+  "encoder_ffn_dim": 4096,
+  "encoder_layerdrop": 0.0,
+  "encoder_layers": 12,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2"
+  },
+  "init_std": 0.02,
+  "is_encoder_decoder": true,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2
+  },
+  "max_length": 1024,
+  "max_position_embeddings": 1024,
+  "model_type": "mbart",
+  "normalize_before": true,
+  "normalize_embedding": true,
+  "num_beams": 5,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 1,
+  "scale_embedding": true,
+  "static_position_embeddings": false,
+  "task_specific_params": {
+    "translation_en_to_ro": {
+      "decoder_start_token_id": 250020
+    }
+  },
+  "transformers_version": "4.28.1",
+  "use_cache": true,
+  "vocab_size": 250027
+}
+
+Assigning ['ar_AR', 'cs_CZ', 'de_DE', 'en_XX', 'es_XX', 'et_EE', 'fi_FI', 'fr_XX', 'gu_IN', 'hi_IN', 'it_IT', 'ja_XX', 'kk_KZ', 'ko_KR', 'lt_LT', 'lv_LV', 'my_MM', 'ne_NP', 'nl_XX', 'ro_RO', 'ru_RU', 'si_LK', 'tr_TR', 'vi_VN', 'zh_CN'] to the additional_special_tokens key of the tokenizer
+Downloading pytorch_model.bin:   0%|          | 0.00/2.44G [00:00<?, ?B/s]Downloading pytorch_model.bin:   1%|          | 21.0M/2.44G [00:00<00:20, 120MB/s]Downloading pytorch_model.bin:   2%|▏         | 41.9M/2.44G [00:00<00:22, 106MB/s]Downloading pytorch_model.bin:   3%|▎         | 62.9M/2.44G [00:00<00:29, 79.4MB/s]Downloading pytorch_model.bin:   3%|▎         | 73.4M/2.44G [00:00<00:33, 70.9MB/s]Downloading pytorch_model.bin:   4%|▍         | 94.4M/2.44G [00:01<00:29, 79.7MB/s]Downloading pytorch_model.bin:   5%|▍         | 115M/2.44G [00:01<00:26, 88.0MB/s] Downloading pytorch_model.bin:   5%|▌         | 126M/2.44G [00:01<00:30, 77.0MB/s]Downloading pytorch_model.bin:   6%|▌         | 147M/2.44G [00:01<00:25, 91.2MB/s]Downloading pytorch_model.bin:   7%|▋         | 168M/2.44G [00:01<00:24, 93.5MB/s]Downloading pytorch_model.bin:   7%|▋         | 178M/2.44G [00:02<00:27, 82.7MB/s]Downloading pytorch_model.bin:   8%|▊         | 199M/2.44G [00:02<00:28, 79.0MB/s]Downloading pytorch_model.bin:   9%|▉         | 220M/2.44G [00:02<00:24, 90.0MB/s]Downloading pytorch_model.bin:  10%|▉         | 241M/2.44G [00:02<00:24, 90.4MB/s]Downloading pytorch_model.bin:  10%|█         | 252M/2.44G [00:03<00:29, 75.4MB/s]Downloading pytorch_model.bin:  11%|█         | 262M/2.44G [00:03<00:29, 75.2MB/s]Downloading pytorch_model.bin:  11%|█         | 273M/2.44G [00:03<00:33, 64.3MB/s]Downloading pytorch_model.bin:  12%|█▏        | 294M/2.44G [00:03<00:26, 80.6MB/s]Downloading pytorch_model.bin:  12%|█▏        | 304M/2.44G [00:03<00:28, 74.6MB/s]Downloading pytorch_model.bin:  13%|█▎        | 315M/2.44G [00:03<00:29, 73.1MB/s]Downloading pytorch_model.bin:  13%|█▎        | 325M/2.44G [00:04<00:39, 53.8MB/s]Downloading pytorch_model.bin:  14%|█▍        | 346M/2.44G [00:04<00:32, 64.7MB/s]Downloading pytorch_model.bin:  15%|█▍        | 357M/2.44G [00:04<00:30, 67.6MB/s]Downloading pytorch_model.bin:  15%|█▌        | 377M/2.44G [00:04<00:25, 82.2MB/s]Downloading pytorch_model.bin:  16%|█▋        | 398M/2.44G [00:05<00:23, 86.3MB/s]Downloading pytorch_model.bin:  17%|█▋        | 419M/2.44G [00:05<00:19, 103MB/s] Downloading pytorch_model.bin:  18%|█▊        | 440M/2.44G [00:05<00:19, 105MB/s]Downloading pytorch_model.bin:  19%|█▉        | 461M/2.44G [00:05<00:17, 111MB/s]Downloading pytorch_model.bin:  20%|█▉        | 482M/2.44G [00:05<00:20, 96.9MB/s]Downloading pytorch_model.bin:  20%|██        | 493M/2.44G [00:05<00:21, 90.4MB/s]Downloading pytorch_model.bin:  21%|██        | 503M/2.44G [00:06<00:22, 87.6MB/s]Downloading pytorch_model.bin:  21%|██▏       | 524M/2.44G [00:06<00:22, 86.6MB/s]Downloading pytorch_model.bin:  22%|██▏       | 545M/2.44G [00:06<00:23, 82.0MB/s]Downloading pytorch_model.bin:  23%|██▎       | 556M/2.44G [00:06<00:28, 66.9MB/s]Downloading pytorch_model.bin:  24%|██▎       | 577M/2.44G [00:07<00:29, 64.3MB/s]Downloading pytorch_model.bin:  24%|██▍       | 598M/2.44G [00:07<00:25, 71.1MB/s]Downloading pytorch_model.bin:  25%|██▍       | 608M/2.44G [00:07<00:25, 72.5MB/s]Downloading pytorch_model.bin:  26%|██▌       | 629M/2.44G [00:07<00:23, 76.3MB/s]Downloading pytorch_model.bin:  27%|██▋       | 650M/2.44G [00:08<00:22, 81.2MB/s]Downloading pytorch_model.bin:  27%|██▋       | 661M/2.44G [00:08<00:23, 77.3MB/s]Downloading pytorch_model.bin:  28%|██▊       | 682M/2.44G [00:08<00:21, 81.6MB/s]Downloading pytorch_model.bin:  29%|██▊       | 703M/2.44G [00:08<00:21, 82.1MB/s]Downloading pytorch_model.bin:  30%|██▉       | 724M/2.44G [00:08<00:17, 98.3MB/s]Downloading pytorch_model.bin:  30%|███       | 744M/2.44G [00:09<00:20, 84.3MB/s]Downloading pytorch_model.bin:  31%|███       | 755M/2.44G [00:09<00:23, 73.0MB/s]Downloading pytorch_model.bin:  32%|███▏      | 776M/2.44G [00:09<00:20, 81.0MB/s]Downloading pytorch_model.bin:  32%|███▏      | 786M/2.44G [00:09<00:21, 77.5MB/s]Downloading pytorch_model.bin:  33%|███▎      | 807M/2.44G [00:10<00:22, 73.7MB/s]Downloading pytorch_model.bin:  34%|███▍      | 828M/2.44G [00:10<00:18, 85.9MB/s]Downloading pytorch_model.bin:  34%|███▍      | 839M/2.44G [00:10<00:19, 84.5MB/s]Downloading pytorch_model.bin:  35%|███▌      | 860M/2.44G [00:10<00:20, 78.6MB/s]Downloading pytorch_model.bin:  36%|███▌      | 881M/2.44G [00:10<00:17, 90.8MB/s]Downloading pytorch_model.bin:  36%|███▋      | 891M/2.44G [00:10<00:17, 86.5MB/s]Downloading pytorch_model.bin:  37%|███▋      | 912M/2.44G [00:11<00:17, 88.4MB/s]Downloading pytorch_model.bin:  38%|███▊      | 933M/2.44G [00:11<00:18, 81.3MB/s]Downloading pytorch_model.bin:  39%|███▉      | 954M/2.44G [00:11<00:17, 84.0MB/s]Downloading pytorch_model.bin:  39%|███▉      | 965M/2.44G [00:11<00:17, 85.9MB/s]Downloading pytorch_model.bin:  40%|████      | 986M/2.44G [00:12<00:17, 83.5MB/s]Downloading pytorch_model.bin:  41%|████      | 1.01G/2.44G [00:12<00:14, 96.6MB/s]Downloading pytorch_model.bin:  42%|████▏     | 1.02G/2.44G [00:12<00:16, 85.7MB/s]Downloading pytorch_model.bin:  42%|████▏     | 1.04G/2.44G [00:12<00:18, 76.8MB/s]Downloading pytorch_model.bin:  43%|████▎     | 1.06G/2.44G [00:13<00:18, 76.7MB/s]Downloading pytorch_model.bin:  44%|████▍     | 1.07G/2.44G [00:13<00:23, 58.6MB/s]Downloading pytorch_model.bin:  45%|████▍     | 1.09G/2.44G [00:13<00:18, 71.6MB/s]Downloading pytorch_model.bin:  45%|████▌     | 1.11G/2.44G [00:13<00:17, 76.1MB/s]Downloading pytorch_model.bin:  46%|████▋     | 1.13G/2.44G [00:14<00:19, 68.7MB/s]Downloading pytorch_model.bin:  47%|████▋     | 1.15G/2.44G [00:14<00:15, 84.5MB/s]Downloading pytorch_model.bin:  48%|████▊     | 1.16G/2.44G [00:14<00:16, 77.9MB/s]Downloading pytorch_model.bin:  48%|████▊     | 1.18G/2.44G [00:14<00:13, 91.1MB/s]Downloading pytorch_model.bin:  49%|████▉     | 1.20G/2.44G [00:14<00:15, 83.0MB/s]Downloading pytorch_model.bin:  50%|████▉     | 1.22G/2.44G [00:15<00:14, 84.8MB/s]Downloading pytorch_model.bin:  51%|█████     | 1.24G/2.44G [00:15<00:13, 86.8MB/s]Downloading pytorch_model.bin:  51%|█████     | 1.25G/2.44G [00:15<00:14, 82.8MB/s]Downloading pytorch_model.bin:  52%|█████▏    | 1.27G/2.44G [00:15<00:14, 82.0MB/s]Downloading pytorch_model.bin:  53%|█████▎    | 1.29G/2.44G [00:15<00:14, 78.5MB/s]Downloading pytorch_model.bin:  54%|█████▎    | 1.31G/2.44G [00:16<00:13, 87.0MB/s]Downloading pytorch_model.bin:  54%|█████▍    | 1.32G/2.44G [00:16<00:15, 72.9MB/s]Downloading pytorch_model.bin:  55%|█████▍    | 1.34G/2.44G [00:16<00:14, 75.0MB/s]Downloading pytorch_model.bin:  56%|█████▌    | 1.36G/2.44G [00:16<00:13, 79.3MB/s]Downloading pytorch_model.bin:  56%|█████▌    | 1.37G/2.44G [00:17<00:14, 74.8MB/s]Downloading pytorch_model.bin:  57%|█████▋    | 1.39G/2.44G [00:17<00:14, 70.0MB/s]Downloading pytorch_model.bin:  58%|█████▊    | 1.42G/2.44G [00:17<00:13, 74.9MB/s]Downloading pytorch_model.bin:  59%|█████▉    | 1.44G/2.44G [00:17<00:12, 82.9MB/s]Downloading pytorch_model.bin:  59%|█████▉    | 1.45G/2.44G [00:18<00:13, 73.6MB/s]Downloading pytorch_model.bin:  60%|██████    | 1.47G/2.44G [00:18<00:10, 88.8MB/s]Downloading pytorch_model.bin:  61%|██████    | 1.49G/2.44G [00:18<00:10, 89.3MB/s]Downloading pytorch_model.bin:  61%|██████▏   | 1.50G/2.44G [00:18<00:10, 86.3MB/s]Downloading pytorch_model.bin:  62%|██████▏   | 1.52G/2.44G [00:18<00:11, 83.2MB/s]Downloading pytorch_model.bin:  63%|██████▎   | 1.54G/2.44G [00:19<00:10, 86.1MB/s]Downloading pytorch_model.bin:  63%|██████▎   | 1.55G/2.44G [00:19<00:10, 83.2MB/s]Downloading pytorch_model.bin:  64%|██████▍   | 1.57G/2.44G [00:19<00:09, 92.5MB/s]Downloading pytorch_model.bin:  65%|██████▌   | 1.59G/2.44G [00:19<00:10, 81.7MB/s]Downloading pytorch_model.bin:  66%|██████▌   | 1.60G/2.44G [00:19<00:10, 77.6MB/s]Downloading pytorch_model.bin:  66%|██████▋   | 1.63G/2.44G [00:20<00:10, 78.1MB/s]Downloading pytorch_model.bin:  67%|██████▋   | 1.64G/2.44G [00:20<00:10, 76.8MB/s]Downloading pytorch_model.bin:  67%|██████▋   | 1.65G/2.44G [00:20<00:11, 67.4MB/s]Downloading pytorch_model.bin:  68%|██████▊   | 1.67G/2.44G [00:20<00:09, 81.5MB/s]Downloading pytorch_model.bin:  69%|██████▊   | 1.68G/2.44G [00:20<00:11, 67.7MB/s]Downloading pytorch_model.bin:  69%|██████▉   | 1.70G/2.44G [00:21<00:09, 79.3MB/s]Downloading pytorch_model.bin:  70%|███████   | 1.72G/2.44G [00:21<00:08, 84.1MB/s]Downloading pytorch_model.bin:  71%|███████   | 1.73G/2.44G [00:21<00:08, 81.2MB/s]Downloading pytorch_model.bin:  72%|███████▏  | 1.75G/2.44G [00:21<00:08, 86.2MB/s]Downloading pytorch_model.bin:  72%|███████▏  | 1.77G/2.44G [00:21<00:07, 86.0MB/s]Downloading pytorch_model.bin:  73%|███████▎  | 1.78G/2.44G [00:22<00:08, 82.3MB/s]Downloading pytorch_model.bin:  74%|███████▍  | 1.80G/2.44G [00:22<00:07, 90.7MB/s]Downloading pytorch_model.bin:  75%|███████▍  | 1.82G/2.44G [00:22<00:06, 95.4MB/s]Downloading pytorch_model.bin:  75%|███████▌  | 1.85G/2.44G [00:22<00:05, 102MB/s] Downloading pytorch_model.bin:  76%|███████▋  | 1.87G/2.44G [00:22<00:04, 116MB/s]Downloading pytorch_model.bin:  77%|███████▋  | 1.89G/2.44G [00:22<00:04, 125MB/s]Downloading pytorch_model.bin:  78%|███████▊  | 1.91G/2.44G [00:23<00:04, 123MB/s]Downloading pytorch_model.bin:  79%|███████▉  | 1.93G/2.44G [00:23<00:03, 137MB/s]Downloading pytorch_model.bin:  80%|███████▉  | 1.95G/2.44G [00:23<00:04, 101MB/s]Downloading pytorch_model.bin:  81%|████████  | 1.97G/2.44G [00:23<00:04, 110MB/s]Downloading pytorch_model.bin:  81%|████████▏ | 1.99G/2.44G [00:23<00:04, 99.9MB/s]Downloading pytorch_model.bin:  82%|████████▏ | 2.01G/2.44G [00:24<00:04, 96.6MB/s]Downloading pytorch_model.bin:  83%|████████▎ | 2.03G/2.44G [00:24<00:04, 83.8MB/s]Downloading pytorch_model.bin:  84%|████████▍ | 2.06G/2.44G [00:24<00:04, 83.9MB/s]Downloading pytorch_model.bin:  85%|████████▍ | 2.08G/2.44G [00:24<00:04, 85.5MB/s]Downloading pytorch_model.bin:  85%|████████▌ | 2.09G/2.44G [00:25<00:04, 78.1MB/s]Downloading pytorch_model.bin:  86%|████████▌ | 2.11G/2.44G [00:25<00:04, 76.5MB/s]Downloading pytorch_model.bin:  87%|████████▋ | 2.13G/2.44G [00:25<00:03, 89.7MB/s]Downloading pytorch_model.bin:  88%|████████▊ | 2.15G/2.44G [00:25<00:02, 106MB/s] Downloading pytorch_model.bin:  89%|████████▉ | 2.17G/2.44G [00:25<00:02, 96.2MB/s]Downloading pytorch_model.bin:  90%|████████▉ | 2.19G/2.44G [00:26<00:02, 94.2MB/s]Downloading pytorch_model.bin:  90%|█████████ | 2.20G/2.44G [00:26<00:02, 93.1MB/s]Downloading pytorch_model.bin:  91%|█████████ | 2.21G/2.44G [00:26<00:02, 93.5MB/s]Downloading pytorch_model.bin:  91%|█████████▏| 2.23G/2.44G [00:26<00:02, 91.2MB/s]Downloading pytorch_model.bin:  92%|█████████▏| 2.25G/2.44G [00:26<00:01, 101MB/s] Downloading pytorch_model.bin:  93%|█████████▎| 2.26G/2.44G [00:26<00:01, 98.5MB/s]Downloading pytorch_model.bin:  94%|█████████▎| 2.29G/2.44G [00:27<00:01, 89.3MB/s]Downloading pytorch_model.bin:  94%|█████████▍| 2.31G/2.44G [00:27<00:01, 106MB/s] Downloading pytorch_model.bin:  95%|█████████▌| 2.33G/2.44G [00:27<00:01, 112MB/s]Downloading pytorch_model.bin:  96%|█████████▌| 2.35G/2.44G [00:27<00:00, 121MB/s]Downloading pytorch_model.bin:  97%|█████████▋| 2.37G/2.44G [00:27<00:00, 110MB/s]Downloading pytorch_model.bin:  98%|█████████▊| 2.39G/2.44G [00:28<00:00, 107MB/s]Downloading pytorch_model.bin:  99%|█████████▊| 2.41G/2.44G [00:28<00:00, 90.3MB/s]Downloading pytorch_model.bin: 100%|█████████▉| 2.43G/2.44G [00:28<00:00, 92.3MB/s]Downloading pytorch_model.bin: 100%|█████████▉| 2.44G/2.44G [00:28<00:00, 84.8MB/s]Downloading pytorch_model.bin: 100%|██████████| 2.44G/2.44G [00:28<00:00, 84.8MB/s]
+loading weights file pytorch_model.bin from cache at /home/sshukla7/.cache/huggingface/hub/models--ml6team--mbart-large-cc25-cnn-dailymail-xsum-nl/snapshots/c64279de2b23d3b081cd4c44edf45dc090d02a03/pytorch_model.bin
+Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+All model checkpoint weights were used when initializing MBartForConditionalGeneration.
+
+All the weights of MBartForConditionalGeneration were initialized from the model checkpoint at ml6team/mbart-large-cc25-cnn-dailymail-xsum-nl.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use MBartForConditionalGeneration for predictions without further training.
+Generation config file not found, using a generation config created from the model config.
+/home/sshukla7/.local/lib/python3.10/site-packages/huggingface_hub/file_download.py:649: FutureWarning: 'cached_download' is the legacy way to download files from the HF hub, please consider upgrading to 'hf_hub_download'
+  warnings.warn(
+Downloading (…)lve/main/config.json:   0%|          | 0.00/1.39k [00:00<?, ?B/s]Downloading (…)lve/main/config.json: 100%|██████████| 1.39k/1.39k [00:00<00:00, 10.3MB/s]
+Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+Running tokenizer on dataset (num_proc=10):   0%|          | 0/1000 [00:00<?, ? examples/s]Running tokenizer on dataset (num_proc=10):  10%|█         | 100/1000 [00:00<00:05, 168.83 examples/s]Running tokenizer on dataset (num_proc=10):  70%|███████   | 700/1000 [00:00<00:00, 1120.16 examples/s]                                                                                                       Running tokenizer on dataset (num_proc=10):   0%|          | 0/200 [00:00<?, ? examples/s]Running tokenizer on dataset (num_proc=10):  10%|█         | 20/200 [00:00<00:04, 40.99 examples/s]Running tokenizer on dataset (num_proc=10):  30%|███       | 60/200 [00:00<00:01, 121.23 examples/s]Running tokenizer on dataset (num_proc=10):  90%|█████████ | 180/200 [00:00<00:00, 347.10 examples/s]                                                                                                     Running tokenizer on dataset (num_proc=10):   0%|          | 0/200 [00:00<?, ? examples/s]Running tokenizer on dataset (num_proc=10):  10%|█         | 20/200 [00:00<00:04, 36.14 examples/s]Running tokenizer on dataset (num_proc=10):  60%|██████    | 120/200 [00:00<00:00, 212.99 examples/s]Running tokenizer on dataset (num_proc=10):  90%|█████████ | 180/200 [00:00<00:00, 281.97 examples/s]                                                                                                     /home/sshukla7/.local/lib/python3.10/site-packages/accelerate/accelerator.py:498: FutureWarning: The `use_fp16` property is deprecated and will be removed in version 1.0 of Accelerate use `Accelerator.mixed_precision == 'fp16'` instead.
+  warnings.warn(
+/home/sshukla7/.local/lib/python3.10/site-packages/transformers/optimization.py:391: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+/home/sshukla7/sshukla7/DQ_BART/run_summarization_no_trainer_eli5Hindi.py:702: FutureWarning: load_metric is deprecated and will be removed in the next major version of datasets. Use 'evaluate.load' instead, from the new library 🤗 Evaluate: https://huggingface.co/docs/evaluate
+  metric = load_metric("rouge")
+  0%|          | 0/630 [00:00<?, ?it/s]You're using a MBartTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+  0%|          | 1/630 [00:03<34:32,  3.30s/it]  1%|          | 5/630 [00:05<10:32,  1.01s/it]  1%|▏         | 9/630 [00:08<08:12,  1.26it/s]  2%|▏         | 13/630 [00:10<07:21,  1.40it/s]  3%|▎         | 17/630 [00:13<06:54,  1.48it/s]  3%|▎         | 21/630 [00:15<06:38,  1.53it/s]  4%|▍         | 25/630 [00:18<06:26,  1.56it/s]  5%|▍         | 29/630 [00:20<06:19,  1.58it/s]  5%|▌         | 33/630 [00:22<06:14,  1.60it/s]  6%|▌         | 37/630 [00:25<06:09,  1.60it/s]  7%|▋         | 41/630 [00:27<06:05,  1.61it/s]  7%|▋         | 45/630 [00:30<06:01,  1.62it/s]  8%|▊         | 49/630 [00:32<05:57,  1.62it/s]  8%|▊         | 53/630 [00:35<05:54,  1.63it/s]  9%|▉         | 57/630 [00:37<05:51,  1.63it/s] 10%|▉         | 61/630 [00:40<05:48,  1.63it/s]
+  0%|          | 0/50 [00:00<?, ?it/s][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+ 10%|█         | 63/630 [00:52<05:47,  1.63it/s]
+  2%|▏         | 1/50 [00:14<11:40, 14.29s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+  4%|▍         | 2/50 [00:27<10:49, 13.53s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+  6%|▌         | 3/50 [00:40<10:22, 13.23s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+  8%|▊         | 4/50 [00:53<10:04, 13.14s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 10%|█         | 5/50 [01:06<09:48, 13.07s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 12%|█▏        | 6/50 [01:19<09:32, 13.02s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 14%|█▍        | 7/50 [01:32<09:19, 13.00s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 16%|█▌        | 8/50 [01:44<09:05, 12.99s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 18%|█▊        | 9/50 [01:57<08:51, 12.97s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 20%|██        | 10/50 [02:10<08:38, 12.96s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 22%|██▏       | 11/50 [02:23<08:25, 12.95s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 24%|██▍       | 12/50 [02:36<08:12, 12.95s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 26%|██▌       | 13/50 [02:49<07:58, 12.94s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 28%|██▊       | 14/50 [03:02<07:45, 12.94s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 30%|███       | 15/50 [03:15<07:32, 12.94s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 32%|███▏      | 16/50 [03:28<07:19, 12.94s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 34%|███▍      | 17/50 [03:41<07:06, 12.93s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 36%|███▌      | 18/50 [03:54<06:53, 12.92s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 38%|███▊      | 19/50 [04:07<06:40, 12.93s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 40%|████      | 20/50 [04:20<06:28, 12.95s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 42%|████▏     | 21/50 [04:33<06:15, 12.95s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 44%|████▍     | 22/50 [04:46<06:03, 12.97s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 46%|████▌     | 23/50 [04:59<05:50, 12.97s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 48%|████▊     | 24/50 [05:12<05:37, 12.98s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 50%|█████     | 25/50 [05:25<05:24, 12.96s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 52%|█████▏    | 26/50 [05:38<05:10, 12.95s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 54%|█████▍    | 27/50 [05:50<04:57, 12.95s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 56%|█████▌    | 28/50 [06:03<04:44, 12.95s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 58%|█████▊    | 29/50 [06:16<04:31, 12.93s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 60%|██████    | 30/50 [06:29<04:18, 12.93s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 62%|██████▏   | 31/50 [06:42<04:05, 12.92s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 64%|██████▍   | 32/50 [06:55<03:53, 12.95s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 66%|██████▌   | 33/50 [07:08<03:39, 12.94s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 68%|██████▊   | 34/50 [07:21<03:26, 12.93s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 70%|███████   | 35/50 [07:34<03:13, 12.93s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 72%|███████▏  | 36/50 [07:47<03:00, 12.92s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 74%|███████▍  | 37/50 [08:00<02:48, 12.93s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 76%|███████▌  | 38/50 [08:13<02:35, 12.93s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 78%|███████▊  | 39/50 [08:26<02:22, 12.92s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 80%|████████  | 40/50 [08:39<02:09, 12.94s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 82%|████████▏ | 41/50 [08:51<01:56, 12.93s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 84%|████████▍ | 42/50 [09:04<01:43, 12.94s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 86%|████████▌ | 43/50 [09:17<01:30, 12.93s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 88%|████████▊ | 44/50 [09:30<01:17, 12.94s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 90%|█████████ | 45/50 [09:43<01:04, 12.95s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 92%|█████████▏| 46/50 [09:56<00:51, 12.94s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 94%|█████████▍| 47/50 [10:09<00:38, 12.93s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 96%|█████████▌| 48/50 [10:22<00:25, 12.95s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 98%|█████████▊| 49/50 [10:35<00:12, 12.96s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "max_length": 1024,
+  "num_beams": 5,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+100%|██████████| 50/50 [10:48<00:00, 12.95s/it][A100%|██████████| 50/50 [10:48<00:00, 12.97s/it]
+Traceback (most recent call last):
+  File "/home/sshukla7/sshukla7/DQ_BART/run_summarization_no_trainer_eli5Hindi.py", line 980, in <module>
+    main()
+  File "/home/sshukla7/sshukla7/DQ_BART/run_summarization_no_trainer_eli5Hindi.py", line 906, in main
+    unwrapped_model.save_pretrained(args.output_dir, save_function=accelerator.save)
+  File "/home/sshukla7/.local/lib/python3.10/site-packages/transformers/modeling_utils.py", line 1756, in save_pretrained
+    model_to_save.config.save_pretrained(save_directory)
+  File "/home/sshukla7/.local/lib/python3.10/site-packages/transformers/configuration_utils.py", line 456, in save_pretrained
+    self.to_json_file(output_config_file, use_diff=True)
+TypeError: BartConfig.to_json_file() got an unexpected keyword argument 'use_diff'
+wandb: Waiting for W&B process to finish... (failed 1).
+wandb: 
+wandb: Run history:
+wandb:             eval/rouge1 ▁
+wandb:             eval/rouge2 ▁
+wandb:             eval/rougeL ▁
+wandb:          eval/rougeLsum ▁
+wandb:      train/crs_att_loss ▆▁█
+wandb:      train/dec_att_loss █▅▁
+wandb:      train/dec_hid_loss ██▁
+wandb:      train/enc_att_loss █▁▃
+wandb: train/enc_hid_last_loss ▁▂█
+wandb:      train/enc_hid_loss ▆▁█
+wandb:       train/logits_loss █▃▁
+wandb:              train/loss █▂▁
+wandb:                train/lr ▁█▇
+wandb:              train/step ▁▅█
+wandb:         train/task_loss █▁▂
+wandb: 
+wandb: Run summary:
+wandb:             eval/rouge1 0.1706
+wandb:             eval/rouge2 0.0
+wandb:             eval/rougeL 0.165
+wandb:          eval/rougeLsum 0.1688
+wandb:      train/crs_att_loss 1.88146
+wandb:      train/dec_att_loss 0.01866
+wandb:      train/dec_hid_loss 79.75685
+wandb:      train/enc_att_loss 0.05669
+wandb: train/enc_hid_last_loss 3.60349
+wandb:      train/enc_hid_loss 120.79215
+wandb:       train/logits_loss 1640.99077
+wandb:              train/loss 1856.51506
+wandb:                train/lr 5e-05
+wandb:              train/step 59
+wandb:         train/task_loss 11.20237
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /home/sshukla7/sshukla7/DQ_BART/wandb/offline-run-20230506_111030-i7v127d5
+wandb: Find logs at: ./wandb/offline-run-20230506_111030-i7v127d5/logs
