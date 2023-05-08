@@ -1,0 +1,18 @@
+
+Lmod is automatically replacing "gnu9/9.3.0" with "gnu10/10.3.0-ya".
+
+
+Inactive Modules:
+  1) hwloc/2.1.0     2) libfabric     3) openmpi4     4) ucx
+
+2023-05-03 06:29:22.872115: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-05-03 06:29:26.175228: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Traceback (most recent call last):
+  File "/home/sshukla7/sshukla7/DQ_BART/run_summarization_no_trainer_xSumDutch.py", line 58, in <module>
+    from quant.modeling_bart_quant import BartForConditionalGeneration as QBart
+  File "/home/sshukla7/sshukla7/DQ_BART/quant/modeling_bart_quant.py", line 46, in <module>
+    from transformers.modeling_utils import PreTrainedModel
+  File "/home/sshukla7/.local/lib/python3.10/site-packages/transformers/modeling_utils.py", line 76, in <module>
+    from accelerate import dispatch_model, infer_auto_device_map, init_empty_weights
+ImportError: cannot import name 'dispatch_model' from 'accelerate' (/home/sshukla7/.local/lib/python3.10/site-packages/accelerate/__init__.py)

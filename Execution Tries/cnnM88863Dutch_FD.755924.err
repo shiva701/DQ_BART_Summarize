@@ -1,0 +1,233 @@
+
+Lmod is automatically replacing "gnu9/9.3.0" with "gnu10/10.3.0-ya".
+
+
+Inactive Modules:
+  1) hwloc/2.1.0     2) libfabric     3) openmpi4     4) ucx
+
+2023-05-01 19:32:50.447673: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-05-01 19:32:55.232571: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+wandb: Tracking run with wandb version 0.15.0
+wandb: W&B syncing is set to `offline` in this directory.  
+wandb: Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+  0%|          | 0/3 [00:00<?, ?it/s] 33%|███▎      | 1/3 [00:00<00:01,  1.31it/s]100%|██████████| 3/3 [00:00<00:00,  3.64it/s]
+loading configuration file https://huggingface.co/ml6team/mbart-large-cc25-cnn-dailymail-xsum-nl/resolve/main/config.json from cache at /home/sshukla7/.cache/huggingface/transformers/59b78858281cd51b95e0e516d522745ea1b5cceddf393b9924adf18cffa18649.50d4c165622078f11e287b8feffe721d1b22c39ce210fa7b64055bea6d5b4d6c
+Model config MBartConfig {
+  "_name_or_path": "ml6team/mbart-large-cc25-cnn-dailymail-xsum-nl",
+  "_num_labels": 3,
+  "activation_dropout": 0.0,
+  "activation_function": "gelu",
+  "add_bias_logits": false,
+  "add_final_layer_norm": true,
+  "architectures": [
+    "MBartForConditionalGeneration"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 0,
+  "classif_dropout": 0.0,
+  "classifier_dropout": 0.0,
+  "d_model": 1024,
+  "decoder_attention_heads": 16,
+  "decoder_ffn_dim": 4096,
+  "decoder_layerdrop": 0.0,
+  "decoder_layers": 12,
+  "dropout": 0.1,
+  "encoder_attention_heads": 16,
+  "encoder_ffn_dim": 4096,
+  "encoder_layerdrop": 0.0,
+  "encoder_layers": 12,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2"
+  },
+  "init_std": 0.02,
+  "is_encoder_decoder": true,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2
+  },
+  "max_length": 1024,
+  "max_position_embeddings": 1024,
+  "model_type": "mbart",
+  "normalize_before": true,
+  "normalize_embedding": true,
+  "num_beams": 5,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 1,
+  "scale_embedding": true,
+  "static_position_embeddings": false,
+  "task_specific_params": {
+    "translation_en_to_ro": {
+      "decoder_start_token_id": 250020
+    }
+  },
+  "torch_dtype": "float32",
+  "transformers_version": "4.17.0",
+  "use_cache": true,
+  "vocab_size": 250027
+}
+
+Could not locate the tokenizer configuration file, will try to use the model config instead.
+loading configuration file https://huggingface.co/facebook/mbart-large-cc25/resolve/main/config.json from cache at /home/sshukla7/.cache/huggingface/transformers/36135304685d914515720daa48fc1adae57803e32ab82d5bde85ef78479e9765.b548f7e307531070391a881374674824b374f829e5d8f68857012de63fe2681a
+Model config MBartConfig {
+  "_name_or_path": "facebook/mbart-large-cc25",
+  "_num_labels": 3,
+  "activation_dropout": 0.0,
+  "activation_function": "gelu",
+  "add_bias_logits": false,
+  "add_final_layer_norm": true,
+  "architectures": [
+    "MBartForConditionalGeneration"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 0,
+  "classif_dropout": 0.0,
+  "classifier_dropout": 0.0,
+  "d_model": 1024,
+  "decoder_attention_heads": 16,
+  "decoder_ffn_dim": 4096,
+  "decoder_layerdrop": 0.0,
+  "decoder_layers": 12,
+  "dropout": 0.1,
+  "encoder_attention_heads": 16,
+  "encoder_ffn_dim": 4096,
+  "encoder_layerdrop": 0.0,
+  "encoder_layers": 12,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2"
+  },
+  "init_std": 0.02,
+  "is_encoder_decoder": true,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2
+  },
+  "max_length": 1024,
+  "max_position_embeddings": 1024,
+  "model_type": "mbart",
+  "normalize_before": true,
+  "normalize_embedding": true,
+  "num_beams": 5,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 1,
+  "scale_embedding": true,
+  "static_position_embeddings": false,
+  "task_specific_params": {
+    "translation_en_to_ro": {
+      "decoder_start_token_id": 250020
+    }
+  },
+  "transformers_version": "4.17.0",
+  "use_cache": true,
+  "vocab_size": 250027
+}
+
+loading file https://huggingface.co/facebook/mbart-large-cc25/resolve/main/sentencepiece.bpe.model from cache at /home/sshukla7/.cache/huggingface/transformers/83d419fb34e90155a8d95f7799f7a7316a327dc28c7ee6bee15b5a62d3c5ca6b.00628a9eeb8baf4080d44a0abe9fe8057893de20c7cb6e6423cddbf452f7d4d8
+loading file https://huggingface.co/facebook/mbart-large-cc25/resolve/main/tokenizer.json from cache at /home/sshukla7/.cache/huggingface/transformers/16e85cac0e7a8c2938ac468199d0adff7483341305c7e848063b72dcf5f22538.39607a8bede9bcd2666ea442230a9d382f57e4fea127c9cc5b6fc6caf527d682
+loading file https://huggingface.co/facebook/mbart-large-cc25/resolve/main/added_tokens.json from cache at None
+loading file https://huggingface.co/facebook/mbart-large-cc25/resolve/main/special_tokens_map.json from cache at None
+loading file https://huggingface.co/facebook/mbart-large-cc25/resolve/main/tokenizer_config.json from cache at None
+loading configuration file https://huggingface.co/facebook/mbart-large-cc25/resolve/main/config.json from cache at /home/sshukla7/.cache/huggingface/transformers/36135304685d914515720daa48fc1adae57803e32ab82d5bde85ef78479e9765.b548f7e307531070391a881374674824b374f829e5d8f68857012de63fe2681a
+Model config MBartConfig {
+  "_name_or_path": "facebook/mbart-large-cc25",
+  "_num_labels": 3,
+  "activation_dropout": 0.0,
+  "activation_function": "gelu",
+  "add_bias_logits": false,
+  "add_final_layer_norm": true,
+  "architectures": [
+    "MBartForConditionalGeneration"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 0,
+  "classif_dropout": 0.0,
+  "classifier_dropout": 0.0,
+  "d_model": 1024,
+  "decoder_attention_heads": 16,
+  "decoder_ffn_dim": 4096,
+  "decoder_layerdrop": 0.0,
+  "decoder_layers": 12,
+  "dropout": 0.1,
+  "encoder_attention_heads": 16,
+  "encoder_ffn_dim": 4096,
+  "encoder_layerdrop": 0.0,
+  "encoder_layers": 12,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2"
+  },
+  "init_std": 0.02,
+  "is_encoder_decoder": true,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2
+  },
+  "max_length": 1024,
+  "max_position_embeddings": 1024,
+  "model_type": "mbart",
+  "normalize_before": true,
+  "normalize_embedding": true,
+  "num_beams": 5,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 1,
+  "scale_embedding": true,
+  "static_position_embeddings": false,
+  "task_specific_params": {
+    "translation_en_to_ro": {
+      "decoder_start_token_id": 250020
+    }
+  },
+  "transformers_version": "4.17.0",
+  "use_cache": true,
+  "vocab_size": 250027
+}
+
+Assigning ['ar_AR', 'cs_CZ', 'de_DE', 'en_XX', 'es_XX', 'et_EE', 'fi_FI', 'fr_XX', 'gu_IN', 'hi_IN', 'it_IT', 'ja_XX', 'kk_KZ', 'ko_KR', 'lt_LT', 'lv_LV', 'my_MM', 'ne_NP', 'nl_XX', 'ro_RO', 'ru_RU', 'si_LK', 'tr_TR', 'vi_VN', 'zh_CN'] to the additional_special_tokens key of the tokenizer
+loading weights file https://huggingface.co/ml6team/mbart-large-cc25-cnn-dailymail-xsum-nl/resolve/main/pytorch_model.bin from cache at /home/sshukla7/.cache/huggingface/transformers/4b004e1d7bcef58422317f6ea8b15b75971e5f490ceeefad5baafc9fd756870f.95bef7eadd9669200273f2d88fa759398f7ca026a631169f2b27d530280273a8
+All model checkpoint weights were used when initializing MBartForConditionalGeneration.
+
+All the weights of MBartForConditionalGeneration were initialized from the model checkpoint at ml6team/mbart-large-cc25-cnn-dailymail-xsum-nl.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use MBartForConditionalGeneration for predictions without further training.
+/home/sshukla7/.local/lib/python3.10/site-packages/huggingface_hub/file_download.py:649: FutureWarning: 'cached_download' is the legacy way to download files from the HF hub, please consider upgrading to 'hf_hub_download'
+  warnings.warn(
+Running tokenizer on dataset (num_proc=10):   0%|          | 0/287113 [00:00<?, ? examples/s]Running tokenizer on dataset (num_proc=10):   0%|          | 1000/287113 [00:03<14:48, 321.93 examples/s]Running tokenizer on dataset (num_proc=10):   1%|          | 2000/287113 [00:03<06:33, 724.33 examples/s]Running tokenizer on dataset (num_proc=10):   1%|▏         | 4000/287113 [00:03<02:36, 1812.92 examples/s]Running tokenizer on dataset (num_proc=10):   3%|▎         | 9000/287113 [00:03<00:54, 5090.51 examples/s]Running tokenizer on dataset (num_proc=10):   4%|▍         | 11000/287113 [00:05<02:02, 2258.41 examples/s]Running tokenizer on dataset (num_proc=10):   5%|▍         | 13000/287113 [00:05<01:36, 2841.72 examples/s]Running tokenizer on dataset (num_proc=10):   6%|▋         | 18000/287113 [00:06<00:53, 5036.86 examples/s]Running tokenizer on dataset (num_proc=10):   7%|▋         | 20000/287113 [00:06<00:59, 4517.72 examples/s]Running tokenizer on dataset (num_proc=10):   8%|▊         | 22000/287113 [00:08<01:34, 2797.02 examples/s]Running tokenizer on dataset (num_proc=10):   9%|▉         | 27000/287113 [00:08<00:53, 4869.09 examples/s]Running tokenizer on dataset (num_proc=10):  10%|█         | 29000/287113 [00:09<00:57, 4464.60 examples/s]Running tokenizer on dataset (num_proc=10):  11%|█         | 31000/287113 [00:10<01:28, 2887.99 examples/s]Running tokenizer on dataset (num_proc=10):  11%|█▏        | 33000/287113 [00:10<01:10, 3590.78 examples/s]Running tokenizer on dataset (num_proc=10):  12%|█▏        | 35000/287113 [00:10<00:55, 4561.19 examples/s]Running tokenizer on dataset (num_proc=10):  13%|█▎        | 38000/287113 [00:11<00:42, 5813.93 examples/s]Running tokenizer on dataset (num_proc=10):  14%|█▍        | 40000/287113 [00:11<00:58, 4249.04 examples/s]Running tokenizer on dataset (num_proc=10):  14%|█▍        | 41000/287113 [00:13<01:29, 2755.19 examples/s]Running tokenizer on dataset (num_proc=10):  15%|█▍        | 43000/287113 [00:13<01:05, 3722.15 examples/s]Running tokenizer on dataset (num_proc=10):  16%|█▌        | 45000/287113 [00:13<00:51, 4705.31 examples/s]Running tokenizer on dataset (num_proc=10):  17%|█▋        | 48000/287113 [00:13<00:39, 6038.20 examples/s]Running tokenizer on dataset (num_proc=10):  17%|█▋        | 50000/287113 [00:14<00:58, 4059.09 examples/s]Running tokenizer on dataset (num_proc=10):  18%|█▊        | 51000/287113 [00:15<01:23, 2830.06 examples/s]Running tokenizer on dataset (num_proc=10):  19%|█▉        | 54000/287113 [00:15<00:57, 4058.05 examples/s]Running tokenizer on dataset (num_proc=10):  20%|█▉        | 57000/287113 [00:15<00:39, 5841.17 examples/s]Running tokenizer on dataset (num_proc=10):  21%|██        | 59000/287113 [00:16<00:53, 4293.00 examples/s]Running tokenizer on dataset (num_proc=10):  21%|██        | 60000/287113 [00:16<00:56, 4024.16 examples/s]Running tokenizer on dataset (num_proc=10):  21%|██        | 61000/287113 [00:17<01:20, 2804.34 examples/s]Running tokenizer on dataset (num_proc=10):  22%|██▏       | 64000/287113 [00:18<00:53, 4192.91 examples/s]Running tokenizer on dataset (num_proc=10):  23%|██▎       | 67000/287113 [00:18<00:36, 6046.31 examples/s]Running tokenizer on dataset (num_proc=10):  24%|██▍       | 69000/287113 [00:19<00:53, 4054.74 examples/s]Running tokenizer on dataset (num_proc=10):  24%|██▍       | 70000/287113 [00:19<00:53, 4029.38 examples/s]Running tokenizer on dataset (num_proc=10):  25%|██▍       | 71000/287113 [00:20<01:14, 2887.86 examples/s]Running tokenizer on dataset (num_proc=10):  25%|██▌       | 73000/287113 [00:20<00:54, 3939.03 examples/s]Running tokenizer on dataset (num_proc=10):  26%|██▌       | 74000/287113 [00:20<00:50, 4234.65 examples/s]Running tokenizer on dataset (num_proc=10):  27%|██▋       | 78000/287113 [00:20<00:30, 6773.13 examples/s]Running tokenizer on dataset (num_proc=10):  28%|██▊       | 79000/287113 [00:21<00:55, 3769.27 examples/s]Running tokenizer on dataset (num_proc=10):  28%|██▊       | 80000/287113 [00:21<00:52, 3929.12 examples/s]Running tokenizer on dataset (num_proc=10):  28%|██▊       | 81000/287113 [00:22<01:09, 2945.05 examples/s]Running tokenizer on dataset (num_proc=10):  29%|██▉       | 83000/287113 [00:22<00:52, 3899.76 examples/s]Running tokenizer on dataset (num_proc=10):  29%|██▉       | 84000/287113 [00:22<00:46, 4329.35 examples/s]Running tokenizer on dataset (num_proc=10):  31%|███       | 88000/287113 [00:23<00:30, 6497.33 examples/s]Running tokenizer on dataset (num_proc=10):  31%|███       | 89000/287113 [00:24<00:56, 3481.96 examples/s]Running tokenizer on dataset (num_proc=10):  31%|███▏      | 90000/287113 [00:24<00:49, 3962.37 examples/s]Running tokenizer on dataset (num_proc=10):  32%|███▏      | 91000/287113 [00:24<01:00, 3250.22 examples/s]Running tokenizer on dataset (num_proc=10):  32%|███▏      | 93000/287113 [00:25<00:47, 4068.99 examples/s]Running tokenizer on dataset (num_proc=10):  33%|███▎      | 94000/287113 [00:25<00:44, 4295.42 examples/s]Running tokenizer on dataset (num_proc=10):  34%|███▍      | 98000/287113 [00:25<00:28, 6639.16 examples/s]Running tokenizer on dataset (num_proc=10):  34%|███▍      | 99000/287113 [00:26<00:56, 3358.33 examples/s]Running tokenizer on dataset (num_proc=10):  35%|███▍      | 100000/287113 [00:26<00:48, 3825.81 examples/s]Running tokenizer on dataset (num_proc=10):  35%|███▌      | 101000/287113 [00:27<00:54, 3409.12 examples/s]Running tokenizer on dataset (num_proc=10):  36%|███▌      | 103000/287113 [00:27<00:43, 4260.94 examples/s]Running tokenizer on dataset (num_proc=10):  36%|███▌      | 104000/287113 [00:27<00:41, 4431.18 examples/s]Running tokenizer on dataset (num_proc=10):  38%|███▊      | 108000/287113 [00:28<00:26, 6710.60 examples/s]Running tokenizer on dataset (num_proc=10):  38%|███▊      | 109000/287113 [00:29<00:56, 3178.84 examples/s]Running tokenizer on dataset (num_proc=10):  39%|███▊      | 111000/287113 [00:29<00:50, 3505.40 examples/s]Running tokenizer on dataset (num_proc=10):  39%|███▉      | 113000/287113 [00:29<00:41, 4222.59 examples/s]Running tokenizer on dataset (num_proc=10):  40%|███▉      | 114000/287113 [00:30<00:38, 4502.34 examples/s]Running tokenizer on dataset (num_proc=10):  40%|████      | 116000/287113 [00:30<00:30, 5679.51 examples/s]Running tokenizer on dataset (num_proc=10):  41%|████      | 118000/287113 [00:30<00:26, 6295.90 examples/s]Running tokenizer on dataset (num_proc=10):  41%|████▏     | 119000/287113 [00:31<01:00, 2769.95 examples/s]Running tokenizer on dataset (num_proc=10):  42%|████▏     | 121000/287113 [00:31<00:46, 3556.02 examples/s]Running tokenizer on dataset (num_proc=10):  43%|████▎     | 123000/287113 [00:32<00:40, 4036.45 examples/s]Running tokenizer on dataset (num_proc=10):  43%|████▎     | 124000/287113 [00:32<00:38, 4276.15 examples/s]Running tokenizer on dataset (num_proc=10):  44%|████▍     | 127000/287113 [00:32<00:29, 5405.11 examples/s]Running tokenizer on dataset (num_proc=10):  45%|████▍     | 129000/287113 [00:34<00:50, 3131.87 examples/s]Running tokenizer on dataset (num_proc=10):  45%|████▌     | 130000/287113 [00:34<00:44, 3494.59 examples/s]Running tokenizer on dataset (num_proc=10):  46%|████▌     | 132000/287113 [00:34<00:32, 4704.16 examples/s]Running tokenizer on dataset (num_proc=10):  46%|████▋     | 133000/287113 [00:34<00:35, 4342.15 examples/s]Running tokenizer on dataset (num_proc=10):  47%|████▋     | 134000/287113 [00:34<00:33, 4572.61 examples/s]Running tokenizer on dataset (num_proc=10):  47%|████▋     | 136000/287113 [00:35<00:26, 5799.13 examples/s]Running tokenizer on dataset (num_proc=10):  48%|████▊     | 137000/287113 [00:35<00:29, 5058.89 examples/s]Running tokenizer on dataset (num_proc=10):  48%|████▊     | 138000/287113 [00:35<00:29, 5008.98 examples/s]Running tokenizer on dataset (num_proc=10):  48%|████▊     | 139000/287113 [00:36<00:59, 2507.73 examples/s]Running tokenizer on dataset (num_proc=10):  49%|████▉     | 140000/287113 [00:36<00:47, 3119.69 examples/s]Running tokenizer on dataset (num_proc=10):  49%|████▉     | 142000/287113 [00:36<00:30, 4723.99 examples/s]Running tokenizer on dataset (num_proc=10):  50%|████▉     | 143000/287113 [00:37<00:32, 4491.67 examples/s]Running tokenizer on dataset (num_proc=10):  50%|█████     | 144000/287113 [00:37<00:29, 4783.76 examples/s]Running tokenizer on dataset (num_proc=10):  51%|█████     | 145000/287113 [00:37<00:26, 5358.07 examples/s]Running tokenizer on dataset (num_proc=10):  51%|█████     | 146000/287113 [00:37<00:24, 5789.00 examples/s]Running tokenizer on dataset (num_proc=10):  51%|█████     | 147000/287113 [00:37<00:33, 4127.07 examples/s]Running tokenizer on dataset (num_proc=10):  52%|█████▏    | 148000/287113 [00:38<00:28, 4829.83 examples/s]Running tokenizer on dataset (num_proc=10):  52%|█████▏    | 149000/287113 [00:39<00:58, 2349.51 examples/s]Running tokenizer on dataset (num_proc=10):  53%|█████▎    | 151000/287113 [00:39<00:37, 3586.70 examples/s]Running tokenizer on dataset (num_proc=10):  53%|█████▎    | 153000/287113 [00:39<00:32, 4083.01 examples/s]Running tokenizer on dataset (num_proc=10):  54%|█████▍    | 155000/287113 [00:39<00:24, 5504.19 examples/s]Running tokenizer on dataset (num_proc=10):  54%|█████▍    | 156000/287113 [00:39<00:23, 5589.57 examples/s]Running tokenizer on dataset (num_proc=10):  55%|█████▍    | 157000/287113 [00:40<00:29, 4354.34 examples/s]Running tokenizer on dataset (num_proc=10):  55%|█████▌    | 158000/287113 [00:40<00:28, 4463.53 examples/s]Running tokenizer on dataset (num_proc=10):  55%|█████▌    | 159000/287113 [00:41<00:50, 2539.48 examples/s]Running tokenizer on dataset (num_proc=10):  56%|█████▌    | 161000/287113 [00:41<00:34, 3604.23 examples/s]Running tokenizer on dataset (num_proc=10):  57%|█████▋    | 163000/287113 [00:42<00:30, 4068.71 examples/s]Running tokenizer on dataset (num_proc=10):  57%|█████▋    | 165000/287113 [00:42<00:22, 5533.69 examples/s]Running tokenizer on dataset (num_proc=10):  58%|█████▊    | 166000/287113 [00:42<00:21, 5667.58 examples/s]Running tokenizer on dataset (num_proc=10):  58%|█████▊    | 167000/287113 [00:42<00:28, 4198.49 examples/s]Running tokenizer on dataset (num_proc=10):  59%|█████▊    | 168000/287113 [00:42<00:27, 4293.06 examples/s]Running tokenizer on dataset (num_proc=10):  59%|█████▉    | 169000/287113 [00:43<00:42, 2757.32 examples/s]Running tokenizer on dataset (num_proc=10):  59%|█████▉    | 170000/287113 [00:43<00:38, 3050.41 examples/s]Running tokenizer on dataset (num_proc=10):  60%|█████▉    | 171000/287113 [00:44<00:30, 3750.18 examples/s]Running tokenizer on dataset (num_proc=10):  60%|█████▉    | 172000/287113 [00:44<00:26, 4269.31 examples/s]Running tokenizer on dataset (num_proc=10):  60%|██████    | 173000/287113 [00:44<00:25, 4437.17 examples/s]Running tokenizer on dataset (num_proc=10):  61%|██████    | 175000/287113 [00:44<00:18, 6106.83 examples/s]Running tokenizer on dataset (num_proc=10):  61%|██████▏   | 176000/287113 [00:44<00:18, 5926.49 examples/s]Running tokenizer on dataset (num_proc=10):  62%|██████▏   | 177000/287113 [00:45<00:25, 4319.94 examples/s]Running tokenizer on dataset (num_proc=10):  62%|██████▏   | 178000/287113 [00:45<00:26, 4162.73 examples/s]Running tokenizer on dataset (num_proc=10):  62%|██████▏   | 179000/287113 [00:46<00:38, 2834.52 examples/s]Running tokenizer on dataset (num_proc=10):  63%|██████▎   | 180000/287113 [00:46<00:36, 2963.09 examples/s]Running tokenizer on dataset (num_proc=10):  63%|██████▎   | 182000/287113 [00:46<00:26, 3948.45 examples/s]Running tokenizer on dataset (num_proc=10):  64%|██████▎   | 183000/287113 [00:46<00:23, 4472.39 examples/s]Running tokenizer on dataset (num_proc=10):  64%|██████▍   | 185000/287113 [00:47<00:16, 6029.74 examples/s]Running tokenizer on dataset (num_proc=10):  65%|██████▍   | 186000/287113 [00:47<00:18, 5502.94 examples/s]Running tokenizer on dataset (num_proc=10):  65%|██████▌   | 187000/287113 [00:47<00:23, 4184.99 examples/s]Running tokenizer on dataset (num_proc=10):  65%|██████▌   | 188000/287113 [00:47<00:25, 3955.05 examples/s]Running tokenizer on dataset (num_proc=10):  66%|██████▌   | 189000/287113 [00:48<00:32, 3056.47 examples/s]Running tokenizer on dataset (num_proc=10):  66%|██████▌   | 190000/287113 [00:48<00:33, 2921.74 examples/s]Running tokenizer on dataset (num_proc=10):  67%|██████▋   | 192000/287113 [00:49<00:25, 3676.94 examples/s]Running tokenizer on dataset (num_proc=10):  68%|██████▊   | 195000/287113 [00:49<00:15, 5858.23 examples/s]Running tokenizer on dataset (num_proc=10):  68%|██████▊   | 196000/287113 [00:49<00:16, 5413.68 examples/s]Running tokenizer on dataset (num_proc=10):  69%|██████▊   | 197000/287113 [00:50<00:21, 4118.22 examples/s]Running tokenizer on dataset (num_proc=10):  69%|██████▉   | 198000/287113 [00:50<00:21, 4115.43 examples/s]Running tokenizer on dataset (num_proc=10):  69%|██████▉   | 199000/287113 [00:50<00:26, 3352.27 examples/s]Running tokenizer on dataset (num_proc=10):  70%|██████▉   | 200000/287113 [00:51<00:30, 2837.89 examples/s]Running tokenizer on dataset (num_proc=10):  70%|███████   | 202000/287113 [00:51<00:22, 3704.43 examples/s]Running tokenizer on dataset (num_proc=10):  71%|███████   | 204000/287113 [00:51<00:15, 5242.39 examples/s]Running tokenizer on dataset (num_proc=10):  72%|███████▏  | 206000/287113 [00:52<00:14, 5462.46 examples/s]Running tokenizer on dataset (num_proc=10):  72%|███████▏  | 207000/287113 [00:52<00:20, 3985.01 examples/s]Running tokenizer on dataset (num_proc=10):  72%|███████▏  | 208000/287113 [00:52<00:17, 4494.80 examples/s]Running tokenizer on dataset (num_proc=10):  73%|███████▎  | 209000/287113 [00:53<00:21, 3643.32 examples/s]Running tokenizer on dataset (num_proc=10):  73%|███████▎  | 210000/287113 [00:53<00:25, 2980.56 examples/s]Running tokenizer on dataset (num_proc=10):  73%|███████▎  | 211000/287113 [00:53<00:21, 3600.59 examples/s]Running tokenizer on dataset (num_proc=10):  74%|███████▍  | 212000/287113 [00:54<00:19, 3855.74 examples/s]Running tokenizer on dataset (num_proc=10):  75%|███████▍  | 214000/287113 [00:54<00:13, 5314.79 examples/s]Running tokenizer on dataset (num_proc=10):  75%|███████▌  | 216000/287113 [00:54<00:11, 5962.03 examples/s]Running tokenizer on dataset (num_proc=10):  76%|███████▌  | 217000/287113 [00:55<00:18, 3834.37 examples/s]Running tokenizer on dataset (num_proc=10):  76%|███████▋  | 219000/287113 [00:55<00:15, 4348.48 examples/s]Running tokenizer on dataset (num_proc=10):  77%|███████▋  | 220000/287113 [00:56<00:21, 3188.03 examples/s]Running tokenizer on dataset (num_proc=10):  77%|███████▋  | 221000/287113 [00:56<00:18, 3503.09 examples/s]Running tokenizer on dataset (num_proc=10):  77%|███████▋  | 222000/287113 [00:56<00:16, 3883.20 examples/s]Running tokenizer on dataset (num_proc=10):  78%|███████▊  | 224000/287113 [00:56<00:11, 5319.00 examples/s]Running tokenizer on dataset (num_proc=10):  78%|███████▊  | 225000/287113 [00:56<00:11, 5593.69 examples/s]Running tokenizer on dataset (num_proc=10):  79%|███████▊  | 226000/287113 [00:56<00:09, 6156.87 examples/s]Running tokenizer on dataset (num_proc=10):  79%|███████▉  | 227000/287113 [00:57<00:17, 3525.50 examples/s]Running tokenizer on dataset (num_proc=10):  80%|███████▉  | 229000/287113 [00:57<00:13, 4367.47 examples/s]Running tokenizer on dataset (num_proc=10):  80%|████████  | 230000/287113 [00:58<00:19, 2945.03 examples/s]Running tokenizer on dataset (num_proc=10):  80%|████████  | 231000/287113 [00:58<00:16, 3334.77 examples/s]Running tokenizer on dataset (num_proc=10):  81%|████████  | 232000/287113 [00:58<00:15, 3633.27 examples/s]Running tokenizer on dataset (num_proc=10):  82%|████████▏ | 235000/287113 [00:59<00:09, 5220.36 examples/s]Running tokenizer on dataset (num_proc=10):  83%|████████▎ | 237000/287113 [00:59<00:12, 4111.25 examples/s]Running tokenizer on dataset (num_proc=10):  83%|████████▎ | 239000/287113 [01:00<00:12, 3980.37 examples/s]Running tokenizer on dataset (num_proc=10):  84%|████████▎ | 240000/287113 [01:01<00:15, 3040.66 examples/s]Running tokenizer on dataset (num_proc=10):  84%|████████▍ | 242000/287113 [01:01<00:12, 3498.91 examples/s]Running tokenizer on dataset (num_proc=10):  85%|████████▌ | 245000/287113 [01:01<00:08, 4921.69 examples/s]Running tokenizer on dataset (num_proc=10):  86%|████████▌ | 246000/287113 [01:01<00:07, 5296.36 examples/s]Running tokenizer on dataset (num_proc=10):  86%|████████▌ | 247000/287113 [01:02<00:11, 3633.56 examples/s]Running tokenizer on dataset (num_proc=10):  87%|████████▋ | 249000/287113 [01:02<00:08, 4498.06 examples/s]Running tokenizer on dataset (num_proc=10):  87%|████████▋ | 250000/287113 [01:03<00:12, 2995.16 examples/s]Running tokenizer on dataset (num_proc=10):  87%|████████▋ | 251000/287113 [01:03<00:11, 3196.97 examples/s]Running tokenizer on dataset (num_proc=10):  88%|████████▊ | 253000/287113 [01:04<00:07, 4483.33 examples/s]Running tokenizer on dataset (num_proc=10):  89%|████████▉ | 255000/287113 [01:04<00:06, 4732.09 examples/s]Running tokenizer on dataset (num_proc=10):  89%|████████▉ | 256000/287113 [01:04<00:06, 4720.87 examples/s]Running tokenizer on dataset (num_proc=10):  90%|████████▉ | 257000/287113 [01:05<00:07, 3787.44 examples/s]Running tokenizer on dataset (num_proc=10):  90%|█████████ | 259000/287113 [01:05<00:05, 5428.63 examples/s]Running tokenizer on dataset (num_proc=10):  91%|█████████ | 260000/287113 [01:06<00:09, 2991.82 examples/s]Running tokenizer on dataset (num_proc=10):  91%|█████████ | 261000/287113 [01:06<00:08, 3251.20 examples/s]Running tokenizer on dataset (num_proc=10):  92%|█████████▏| 263000/287113 [01:06<00:05, 4661.75 examples/s]Running tokenizer on dataset (num_proc=10):  92%|█████████▏| 265000/287113 [01:06<00:04, 4935.12 examples/s]Running tokenizer on dataset (num_proc=10):  93%|█████████▎| 266000/287113 [01:07<00:04, 4330.91 examples/s]Running tokenizer on dataset (num_proc=10):  93%|█████████▎| 267000/287113 [01:07<00:05, 3746.66 examples/s]Running tokenizer on dataset (num_proc=10):  94%|█████████▍| 270000/287113 [01:08<00:05, 3383.41 examples/s]Running tokenizer on dataset (num_proc=10):  94%|█████████▍| 271000/287113 [01:08<00:04, 3686.21 examples/s]Running tokenizer on dataset (num_proc=10):  95%|█████████▍| 272000/287113 [01:08<00:03, 4139.93 examples/s]Running tokenizer on dataset (num_proc=10):  96%|█████████▌| 275000/287113 [01:09<00:02, 5233.56 examples/s]Running tokenizer on dataset (num_proc=10):  96%|█████████▋| 276712/287113 [01:09<00:02, 4373.95 examples/s]Running tokenizer on dataset (num_proc=10):  97%|█████████▋| 277712/287113 [01:10<00:02, 4388.61 examples/s]Running tokenizer on dataset (num_proc=10):  97%|█████████▋| 279423/287113 [01:10<00:01, 4734.64 examples/s]Running tokenizer on dataset (num_proc=10):  98%|█████████▊| 280135/287113 [01:10<00:01, 4383.16 examples/s]Running tokenizer on dataset (num_proc=10):  98%|█████████▊| 280846/287113 [01:10<00:01, 4709.65 examples/s]Running tokenizer on dataset (num_proc=10):  98%|█████████▊| 282269/287113 [01:10<00:00, 5041.00 examples/s]Running tokenizer on dataset (num_proc=10):  99%|█████████▊| 283269/287113 [01:11<00:00, 5084.16 examples/s]Running tokenizer on dataset (num_proc=10):  99%|█████████▉| 283980/287113 [01:11<00:01, 2825.91 examples/s]Running tokenizer on dataset (num_proc=10):  99%|█████████▉| 284691/287113 [01:11<00:00, 3261.55 examples/s]Running tokenizer on dataset (num_proc=10): 100%|█████████▉| 285691/287113 [01:12<00:00, 2303.14 examples/s]Running tokenizer on dataset (num_proc=10): 100%|█████████▉| 286402/287113 [01:12<00:00, 2331.09 examples/s]Running tokenizer on dataset (num_proc=10): 100%|██████████| 287113/287113 [01:14<00:00, 1083.06 examples/s]                                                                                                            Running tokenizer on dataset (num_proc=10):   0%|          | 0/13368 [00:00<?, ? examples/s]Running tokenizer on dataset (num_proc=10):   7%|▋         | 1000/13368 [00:03<00:37, 333.17 examples/s]Running tokenizer on dataset (num_proc=10):  22%|██▏       | 3000/13368 [00:03<00:08, 1214.53 examples/s]Running tokenizer on dataset (num_proc=10):  45%|████▍     | 6000/13368 [00:03<00:02, 2634.80 examples/s]Running tokenizer on dataset (num_proc=10):  67%|██████▋   | 9000/13368 [00:03<00:00, 4390.87 examples/s]Running tokenizer on dataset (num_proc=10):  77%|███████▋  | 10337/13368 [00:03<00:00, 4601.60 examples/s]Running tokenizer on dataset (num_proc=10):  87%|████████▋ | 11683/13368 [00:04<00:00, 4973.87 examples/s]Running tokenizer on dataset (num_proc=10):  95%|█████████▍| 12694/13368 [00:04<00:00, 3955.52 examples/s]                                                                                                          Running tokenizer on dataset (num_proc=10):   0%|          | 0/11490 [00:00<?, ? examples/s]Running tokenizer on dataset (num_proc=10):   9%|▊         | 1000/11490 [00:02<00:31, 333.92 examples/s]Running tokenizer on dataset (num_proc=10):  17%|█▋        | 2000/11490 [00:03<00:12, 762.36 examples/s]Running tokenizer on dataset (num_proc=10):  27%|██▋       | 3149/11490 [00:03<00:06, 1216.67 examples/s]Running tokenizer on dataset (num_proc=10):  54%|█████▎    | 6149/11490 [00:03<00:01, 3190.25 examples/s]Running tokenizer on dataset (num_proc=10):  72%|███████▏  | 8298/11490 [00:03<00:00, 4793.24 examples/s]Running tokenizer on dataset (num_proc=10):  91%|█████████ | 10447/11490 [00:03<00:00, 6005.75 examples/s]                                                                                                          /home/sshukla7/.local/lib/python3.10/site-packages/accelerate/accelerator.py:498: FutureWarning: The `use_fp16` property is deprecated and will be removed in version 1.0 of Accelerate use `Accelerator.mixed_precision == 'fp16'` instead.
+  warnings.warn(
+/home/sshukla7/.local/lib/python3.10/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+/home/sshukla7/sshukla7/DQ_BART/run_summarization_no_trainer_cnnDutch.py:675: FutureWarning: load_metric is deprecated and will be removed in the next major version of datasets. Use 'evaluate.load' instead, from the new library 🤗 Evaluate: https://huggingface.co/docs/evaluate
+  metric = load_metric("rouge")
+  0%|          | 0/179460 [00:00<?, ?it/s]  0%|          | 1/179460 [00:06<327:25:17,  6.57s/it]  0%|          | 2/179460 [00:10<240:16:38,  4.82s/it]Traceback (most recent call last):
+  File "/home/sshukla7/sshukla7/DQ_BART/run_summarization_no_trainer_cnnDutch.py", line 953, in <module>
+    main()
+  File "/home/sshukla7/sshukla7/DQ_BART/run_summarization_no_trainer_cnnDutch.py", line 738, in main
+    teacher_outputs = teacher_model(**batch, output_attentions=True, output_hidden_states=True)
+  File "/opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/sshukla7/.local/lib/python3.10/site-packages/transformers/models/mbart/modeling_mbart.py", line 1340, in forward
+    lm_logits = self.lm_head(outputs[0]) + self.final_logits_bias
+  File "/opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages/torch/nn/modules/linear.py", line 114, in forward
+    return F.linear(input, self.weight, self.bias)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 1.91 GiB (GPU 0; 79.35 GiB total capacity; 69.10 GiB already allocated; 1.24 GiB free; 76.71 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+wandb: Waiting for W&B process to finish... (failed 1).
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /home/sshukla7/sshukla7/DQ_BART/wandb/offline-run-20230501_193305-ffy4mz7d
+wandb: Find logs at: ./wandb/offline-run-20230501_193305-ffy4mz7d/logs

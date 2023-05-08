@@ -1,0 +1,223 @@
+
+Lmod is automatically replacing "gnu9/9.3.0" with "gnu10/10.3.0-ya".
+
+
+Inactive Modules:
+  1) hwloc/2.1.0     2) libfabric     3) openmpi4     4) ucx
+
+2023-04-30 14:01:41.798958: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-04-30 14:01:44.882931: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+wandb: Tracking run with wandb version 0.15.0
+wandb: W&B syncing is set to `offline` in this directory.  
+wandb: Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+  0%|          | 0/3 [00:00<?, ?it/s] 33%|███▎      | 1/3 [00:00<00:01,  1.56it/s]100%|██████████| 3/3 [00:00<00:00,  4.30it/s]
+loading configuration file https://huggingface.co/facebook/mbart-large-cc25/resolve/main/config.json from cache at /home/sshukla7/.cache/huggingface/transformers/36135304685d914515720daa48fc1adae57803e32ab82d5bde85ef78479e9765.b548f7e307531070391a881374674824b374f829e5d8f68857012de63fe2681a
+Model config MBartConfig {
+  "_name_or_path": "facebook/mbart-large-cc25",
+  "_num_labels": 3,
+  "activation_dropout": 0.0,
+  "activation_function": "gelu",
+  "add_bias_logits": false,
+  "add_final_layer_norm": true,
+  "architectures": [
+    "MBartForConditionalGeneration"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 0,
+  "classif_dropout": 0.0,
+  "classifier_dropout": 0.0,
+  "d_model": 1024,
+  "decoder_attention_heads": 16,
+  "decoder_ffn_dim": 4096,
+  "decoder_layerdrop": 0.0,
+  "decoder_layers": 12,
+  "dropout": 0.1,
+  "encoder_attention_heads": 16,
+  "encoder_ffn_dim": 4096,
+  "encoder_layerdrop": 0.0,
+  "encoder_layers": 12,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2"
+  },
+  "init_std": 0.02,
+  "is_encoder_decoder": true,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2
+  },
+  "max_length": 1024,
+  "max_position_embeddings": 1024,
+  "model_type": "mbart",
+  "normalize_before": true,
+  "normalize_embedding": true,
+  "num_beams": 5,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 1,
+  "scale_embedding": true,
+  "static_position_embeddings": false,
+  "task_specific_params": {
+    "translation_en_to_ro": {
+      "decoder_start_token_id": 250020
+    }
+  },
+  "transformers_version": "4.17.0",
+  "use_cache": true,
+  "vocab_size": 250027
+}
+
+Could not locate the tokenizer configuration file, will try to use the model config instead.
+loading configuration file https://huggingface.co/facebook/mbart-large-cc25/resolve/main/config.json from cache at /home/sshukla7/.cache/huggingface/transformers/36135304685d914515720daa48fc1adae57803e32ab82d5bde85ef78479e9765.b548f7e307531070391a881374674824b374f829e5d8f68857012de63fe2681a
+Model config MBartConfig {
+  "_name_or_path": "facebook/mbart-large-cc25",
+  "_num_labels": 3,
+  "activation_dropout": 0.0,
+  "activation_function": "gelu",
+  "add_bias_logits": false,
+  "add_final_layer_norm": true,
+  "architectures": [
+    "MBartForConditionalGeneration"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 0,
+  "classif_dropout": 0.0,
+  "classifier_dropout": 0.0,
+  "d_model": 1024,
+  "decoder_attention_heads": 16,
+  "decoder_ffn_dim": 4096,
+  "decoder_layerdrop": 0.0,
+  "decoder_layers": 12,
+  "dropout": 0.1,
+  "encoder_attention_heads": 16,
+  "encoder_ffn_dim": 4096,
+  "encoder_layerdrop": 0.0,
+  "encoder_layers": 12,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2"
+  },
+  "init_std": 0.02,
+  "is_encoder_decoder": true,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2
+  },
+  "max_length": 1024,
+  "max_position_embeddings": 1024,
+  "model_type": "mbart",
+  "normalize_before": true,
+  "normalize_embedding": true,
+  "num_beams": 5,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 1,
+  "scale_embedding": true,
+  "static_position_embeddings": false,
+  "task_specific_params": {
+    "translation_en_to_ro": {
+      "decoder_start_token_id": 250020
+    }
+  },
+  "transformers_version": "4.17.0",
+  "use_cache": true,
+  "vocab_size": 250027
+}
+
+loading file https://huggingface.co/facebook/mbart-large-cc25/resolve/main/sentencepiece.bpe.model from cache at /home/sshukla7/.cache/huggingface/transformers/83d419fb34e90155a8d95f7799f7a7316a327dc28c7ee6bee15b5a62d3c5ca6b.00628a9eeb8baf4080d44a0abe9fe8057893de20c7cb6e6423cddbf452f7d4d8
+loading file https://huggingface.co/facebook/mbart-large-cc25/resolve/main/tokenizer.json from cache at /home/sshukla7/.cache/huggingface/transformers/16e85cac0e7a8c2938ac468199d0adff7483341305c7e848063b72dcf5f22538.39607a8bede9bcd2666ea442230a9d382f57e4fea127c9cc5b6fc6caf527d682
+loading file https://huggingface.co/facebook/mbart-large-cc25/resolve/main/added_tokens.json from cache at None
+loading file https://huggingface.co/facebook/mbart-large-cc25/resolve/main/special_tokens_map.json from cache at None
+loading file https://huggingface.co/facebook/mbart-large-cc25/resolve/main/tokenizer_config.json from cache at None
+loading configuration file https://huggingface.co/facebook/mbart-large-cc25/resolve/main/config.json from cache at /home/sshukla7/.cache/huggingface/transformers/36135304685d914515720daa48fc1adae57803e32ab82d5bde85ef78479e9765.b548f7e307531070391a881374674824b374f829e5d8f68857012de63fe2681a
+Model config MBartConfig {
+  "_name_or_path": "facebook/mbart-large-cc25",
+  "_num_labels": 3,
+  "activation_dropout": 0.0,
+  "activation_function": "gelu",
+  "add_bias_logits": false,
+  "add_final_layer_norm": true,
+  "architectures": [
+    "MBartForConditionalGeneration"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 0,
+  "classif_dropout": 0.0,
+  "classifier_dropout": 0.0,
+  "d_model": 1024,
+  "decoder_attention_heads": 16,
+  "decoder_ffn_dim": 4096,
+  "decoder_layerdrop": 0.0,
+  "decoder_layers": 12,
+  "dropout": 0.1,
+  "encoder_attention_heads": 16,
+  "encoder_ffn_dim": 4096,
+  "encoder_layerdrop": 0.0,
+  "encoder_layers": 12,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2"
+  },
+  "init_std": 0.02,
+  "is_encoder_decoder": true,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2
+  },
+  "max_length": 1024,
+  "max_position_embeddings": 1024,
+  "model_type": "mbart",
+  "normalize_before": true,
+  "normalize_embedding": true,
+  "num_beams": 5,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 1,
+  "scale_embedding": true,
+  "static_position_embeddings": false,
+  "task_specific_params": {
+    "translation_en_to_ro": {
+      "decoder_start_token_id": 250020
+    }
+  },
+  "transformers_version": "4.17.0",
+  "use_cache": true,
+  "vocab_size": 250027
+}
+
+Assigning ['ar_AR', 'cs_CZ', 'de_DE', 'en_XX', 'es_XX', 'et_EE', 'fi_FI', 'fr_XX', 'gu_IN', 'hi_IN', 'it_IT', 'ja_XX', 'kk_KZ', 'ko_KR', 'lt_LT', 'lv_LV', 'my_MM', 'ne_NP', 'nl_XX', 'ro_RO', 'ru_RU', 'si_LK', 'tr_TR', 'vi_VN', 'zh_CN'] to the additional_special_tokens key of the tokenizer
+https://huggingface.co/facebook/mbart-large-cc25/resolve/main/pytorch_model.bin not found in cache or force_download set to True, downloading to /home/sshukla7/.cache/huggingface/transformers/tmpwho3v0qr
+Downloading:   0%|          | 0.00/2.28G [00:00<?, ?B/s]Downloading:   0%|          | 3.11M/2.28G [00:00<01:14, 32.6MB/s]Downloading:   1%|          | 14.3M/2.28G [00:00<00:30, 80.8MB/s]Downloading:   1%|          | 22.0M/2.28G [00:00<00:42, 57.5MB/s]Downloading:   1%|          | 28.0M/2.28G [00:00<00:49, 48.6MB/s]Downloading:   1%|▏         | 33.0M/2.28G [00:00<00:55, 43.1MB/s]Downloading:   2%|▏         | 40.0M/2.28G [00:00<00:50, 47.5MB/s]Downloading:   2%|▏         | 48.0M/2.28G [00:01<00:49, 48.0MB/s]Downloading:   2%|▏         | 55.8M/2.28G [00:01<00:43, 55.0MB/s]Downloading:   3%|▎         | 61.4M/2.28G [00:01<00:45, 52.4MB/s]Downloading:   3%|▎         | 66.6M/2.28G [00:01<00:57, 41.0MB/s]Downloading:   3%|▎         | 70.9M/2.28G [00:01<01:00, 39.2MB/s]Downloading:   3%|▎         | 74.9M/2.28G [00:01<01:02, 38.0MB/s]Downloading:   3%|▎         | 80.0M/2.28G [00:01<00:57, 40.7MB/s]Downloading:   4%|▍         | 88.0M/2.28G [00:02<01:03, 36.8MB/s]Downloading:   4%|▍         | 96.0M/2.28G [00:02<00:56, 41.6MB/s]Downloading:   4%|▍         | 101M/2.28G [00:02<00:56, 41.3MB/s] Downloading:   5%|▍         | 105M/2.28G [00:02<00:58, 39.7MB/s]Downloading:   5%|▍         | 110M/2.28G [00:02<01:02, 37.3MB/s]Downloading:   5%|▍         | 114M/2.28G [00:02<01:05, 35.5MB/s]Downloading:   5%|▌         | 120M/2.28G [00:02<00:58, 39.3MB/s]Downloading:   5%|▌         | 126M/2.28G [00:03<00:51, 45.3MB/s]Downloading:   6%|▌         | 131M/2.28G [00:03<00:51, 44.5MB/s]Downloading:   6%|▌         | 139M/2.28G [00:03<00:42, 54.4MB/s]Downloading:   6%|▌         | 144M/2.28G [00:03<00:46, 49.8MB/s]Downloading:   7%|▋         | 152M/2.28G [00:03<00:41, 55.3MB/s]Downloading:   7%|▋         | 160M/2.28G [00:03<00:41, 55.3MB/s]Downloading:   7%|▋         | 167M/2.28G [00:03<00:39, 57.0MB/s]Downloading:   7%|▋         | 172M/2.28G [00:03<00:44, 50.4MB/s]Downloading:   8%|▊         | 177M/2.28G [00:04<01:00, 37.6MB/s]Downloading:   8%|▊         | 184M/2.28G [00:04<00:59, 37.8MB/s]Downloading:   8%|▊         | 192M/2.28G [00:04<00:48, 46.7MB/s]Downloading:   8%|▊         | 197M/2.28G [00:04<00:51, 43.5MB/s]Downloading:   9%|▊         | 202M/2.28G [00:04<01:03, 35.2MB/s]Downloading:   9%|▉         | 209M/2.28G [00:04<00:51, 43.2MB/s]Downloading:   9%|▉         | 216M/2.28G [00:05<00:55, 39.7MB/s]Downloading:  10%|▉         | 223M/2.28G [00:05<00:54, 40.3MB/s]Downloading:  10%|▉         | 227M/2.28G [00:05<00:57, 38.1MB/s]Downloading:  10%|▉         | 232M/2.28G [00:05<00:56, 38.8MB/s]Downloading:  10%|█         | 240M/2.28G [00:05<00:45, 48.7MB/s]Downloading:  11%|█         | 248M/2.28G [00:05<00:41, 53.2MB/s]Downloading:  11%|█         | 255M/2.28G [00:05<00:40, 53.2MB/s]Downloading:  11%|█         | 260M/2.28G [00:06<00:44, 48.5MB/s]Downloading:  11%|█▏        | 265M/2.28G [00:06<00:58, 37.1MB/s]Downloading:  12%|█▏        | 273M/2.28G [00:06<00:45, 47.1MB/s]Downloading:  12%|█▏        | 280M/2.28G [00:06<00:49, 43.6MB/s]Downloading:  12%|█▏        | 288M/2.28G [00:06<00:46, 46.0MB/s]Downloading:  13%|█▎        | 298M/2.28G [00:06<00:36, 58.7MB/s]Downloading:  13%|█▎        | 305M/2.28G [00:07<00:40, 52.6MB/s]Downloading:  13%|█▎        | 311M/2.28G [00:07<00:37, 56.2MB/s]Downloading:  14%|█▎        | 317M/2.28G [00:07<00:37, 56.5MB/s]Downloading:  14%|█▍        | 323M/2.28G [00:07<00:46, 45.0MB/s]Downloading:  14%|█▍        | 328M/2.28G [00:07<00:51, 40.8MB/s]Downloading:  14%|█▍        | 334M/2.28G [00:07<00:46, 45.2MB/s]Downloading:  15%|█▍        | 339M/2.28G [00:07<00:49, 42.0MB/s]Downloading:  15%|█▍        | 344M/2.28G [00:07<00:48, 43.3MB/s]Downloading:  15%|█▌        | 352M/2.28G [00:08<00:59, 35.1MB/s]Downloading:  15%|█▌        | 356M/2.28G [00:08<01:07, 30.7MB/s]Downloading:  15%|█▌        | 360M/2.28G [00:08<01:03, 32.4MB/s]Downloading:  16%|█▌        | 368M/2.28G [00:08<00:47, 42.9MB/s]Downloading:  16%|█▌        | 376M/2.28G [00:08<00:39, 51.4MB/s]Downloading:  16%|█▋        | 384M/2.28G [00:08<00:34, 59.1MB/s]Downloading:  17%|█▋        | 392M/2.28G [00:09<00:41, 48.8MB/s]Downloading:  17%|█▋        | 400M/2.28G [00:09<00:36, 55.5MB/s]Downloading:  17%|█▋        | 406M/2.28G [00:09<00:38, 52.9MB/s]Downloading:  18%|█▊        | 411M/2.28G [00:09<00:51, 39.0MB/s]Downloading:  18%|█▊        | 416M/2.28G [00:09<00:57, 34.8MB/s]Downloading:  18%|█▊        | 424M/2.28G [00:09<00:45, 43.6MB/s]Downloading:  18%|█▊        | 429M/2.28G [00:10<00:44, 44.7MB/s]Downloading:  19%|█▊        | 434M/2.28G [00:10<00:47, 41.6MB/s]Downloading:  19%|█▉        | 440M/2.28G [00:10<00:48, 41.1MB/s]Downloading:  19%|█▉        | 444M/2.28G [00:10<00:56, 35.3MB/s]Downloading:  19%|█▉        | 451M/2.28G [00:10<00:50, 38.8MB/s]Downloading:  20%|█▉        | 457M/2.28G [00:10<00:46, 42.0MB/s]Downloading:  20%|██        | 470M/2.28G [00:10<00:31, 62.9MB/s]Downloading:  20%|██        | 476M/2.28G [00:11<00:37, 51.6MB/s]Downloading:  21%|██        | 482M/2.28G [00:11<00:36, 53.8MB/s]Downloading:  21%|██        | 488M/2.28G [00:11<00:44, 43.7MB/s]Downloading:  21%|██▏       | 496M/2.28G [00:11<00:41, 46.7MB/s]Downloading:  22%|██▏       | 503M/2.28G [00:11<00:40, 47.2MB/s]Downloading:  22%|██▏       | 508M/2.28G [00:11<00:42, 44.6MB/s]Downloading:  22%|██▏       | 512M/2.28G [00:12<00:48, 39.5MB/s]Downloading:  22%|██▏       | 520M/2.28G [00:12<00:47, 40.2MB/s]Downloading:  23%|██▎       | 526M/2.28G [00:12<00:49, 37.9MB/s]Downloading:  23%|██▎       | 530M/2.28G [00:12<00:55, 34.1MB/s]Downloading:  23%|██▎       | 536M/2.28G [00:12<00:48, 38.6MB/s]Downloading:  23%|██▎       | 542M/2.28G [00:12<00:46, 40.4MB/s]Downloading:  23%|██▎       | 546M/2.28G [00:12<00:47, 39.1MB/s]Downloading:  24%|██▍       | 555M/2.28G [00:13<00:36, 51.2MB/s]Downloading:  24%|██▍       | 560M/2.28G [00:13<00:37, 49.2MB/s]Downloading:  24%|██▍       | 568M/2.28G [00:13<00:35, 52.5MB/s]Downloading:  25%|██▍       | 576M/2.28G [00:13<00:31, 57.8MB/s]Downloading:  25%|██▌       | 584M/2.28G [00:13<00:28, 63.7MB/s]Downloading:  25%|██▌       | 592M/2.28G [00:13<00:30, 59.8MB/s]Downloading:  26%|██▌       | 600M/2.28G [00:13<00:29, 60.8MB/s]Downloading:  26%|██▌       | 608M/2.28G [00:13<00:29, 60.5MB/s]Downloading:  26%|██▋       | 616M/2.28G [00:14<00:30, 59.0MB/s]Downloading:  27%|██▋       | 624M/2.28G [00:14<00:29, 61.3MB/s]Downloading:  27%|██▋       | 630M/2.28G [00:14<00:32, 54.4MB/s]Downloading:  27%|██▋       | 636M/2.28G [00:14<00:34, 51.9MB/s]Downloading:  27%|██▋       | 641M/2.28G [00:14<00:34, 50.9MB/s]Downloading:  28%|██▊       | 648M/2.28G [00:14<00:35, 49.8MB/s]Downloading:  28%|██▊       | 656M/2.28G [00:15<00:37, 47.3MB/s]Downloading:  28%|██▊       | 663M/2.28G [00:15<00:36, 48.3MB/s]Downloading:  29%|██▊       | 667M/2.28G [00:15<00:37, 46.4MB/s]Downloading:  29%|██▉       | 672M/2.28G [00:15<00:38, 45.4MB/s]Downloading:  29%|██▉       | 680M/2.28G [00:15<00:38, 44.8MB/s]Downloading:  29%|██▉       | 684M/2.28G [00:15<00:49, 34.7MB/s]Downloading:  30%|██▉       | 688M/2.28G [00:15<00:48, 35.3MB/s]Downloading:  30%|██▉       | 696M/2.28G [00:16<00:39, 43.2MB/s]Downloading:  30%|███       | 704M/2.28G [00:16<00:35, 48.2MB/s]Downloading:  30%|███       | 709M/2.28G [00:16<00:37, 45.6MB/s]Downloading:  31%|███       | 714M/2.28G [00:16<00:43, 39.2MB/s]Downloading:  31%|███       | 720M/2.28G [00:16<00:41, 40.9MB/s]Downloading:  31%|███       | 728M/2.28G [00:16<00:39, 42.7MB/s]Downloading:  31%|███▏      | 734M/2.28G [00:17<00:41, 40.6MB/s]Downloading:  32%|███▏      | 738M/2.28G [00:17<00:45, 36.4MB/s]Downloading:  32%|███▏      | 742M/2.28G [00:17<00:47, 34.7MB/s]Downloading:  32%|███▏      | 746M/2.28G [00:17<00:50, 32.8MB/s]Downloading:  32%|███▏      | 752M/2.28G [00:17<00:44, 36.9MB/s]Downloading:  33%|███▎      | 760M/2.28G [00:17<00:39, 41.5MB/s]Downloading:  33%|███▎      | 768M/2.28G [00:17<00:32, 49.9MB/s]Downloading:  33%|███▎      | 775M/2.28G [00:17<00:29, 55.5MB/s]Downloading:  33%|███▎      | 781M/2.28G [00:18<00:29, 54.9MB/s]Downloading:  34%|███▎      | 786M/2.28G [00:18<00:34, 46.6MB/s]Downloading:  34%|███▍      | 791M/2.28G [00:18<00:37, 43.1MB/s]Downloading:  34%|███▍      | 795M/2.28G [00:18<00:36, 44.2MB/s]Downloading:  34%|███▍      | 800M/2.28G [00:18<00:38, 41.3MB/s]Downloading:  35%|███▍      | 808M/2.28G [00:18<00:33, 47.6MB/s]Downloading:  35%|███▌      | 816M/2.28G [00:18<00:27, 56.9MB/s]Downloading:  35%|███▌      | 824M/2.28G [00:18<00:24, 63.3MB/s]Downloading:  36%|███▌      | 830M/2.28G [00:19<00:26, 60.4MB/s]Downloading:  36%|███▌      | 836M/2.28G [00:19<00:27, 57.5MB/s]Downloading:  36%|███▌      | 842M/2.28G [00:19<00:30, 51.0MB/s]Downloading:  36%|███▋      | 847M/2.28G [00:19<00:31, 49.1MB/s]Downloading:  37%|███▋      | 852M/2.28G [00:19<00:33, 45.8MB/s]Downloading:  37%|███▋      | 856M/2.28G [00:19<00:37, 41.2MB/s]Downloading:  37%|███▋      | 863M/2.28G [00:19<00:31, 48.6MB/s]Downloading:  37%|███▋      | 868M/2.28G [00:19<00:32, 46.8MB/s]Downloading:  37%|███▋      | 873M/2.28G [00:20<00:36, 42.2MB/s]Downloading:  38%|███▊      | 880M/2.28G [00:20<00:32, 47.1MB/s]Downloading:  38%|███▊      | 888M/2.28G [00:20<00:27, 55.0MB/s]Downloading:  38%|███▊      | 895M/2.28G [00:20<00:28, 52.7MB/s]Downloading:  39%|███▊      | 900M/2.28G [00:20<00:28, 51.9MB/s]Downloading:  39%|███▉      | 905M/2.28G [00:20<00:42, 34.8MB/s]Downloading:  39%|███▉      | 911M/2.28G [00:21<00:40, 36.8MB/s]Downloading:  39%|███▉      | 916M/2.28G [00:21<00:35, 41.3MB/s]Downloading:  39%|███▉      | 921M/2.28G [00:21<00:42, 34.7MB/s]Downloading:  40%|███▉      | 925M/2.28G [00:21<00:39, 37.0MB/s]Downloading:  40%|███▉      | 930M/2.28G [00:21<00:37, 39.3MB/s]Downloading:  40%|████      | 936M/2.28G [00:21<00:33, 43.3MB/s]Downloading:  40%|████      | 942M/2.28G [00:21<00:30, 48.1MB/s]Downloading:  41%|████      | 947M/2.28G [00:21<00:33, 43.8MB/s]Downloading:  41%|████      | 952M/2.28G [00:22<00:37, 38.8MB/s]Downloading:  41%|████      | 960M/2.28G [00:22<00:29, 48.9MB/s]Downloading:  42%|████▏     | 968M/2.28G [00:22<00:29, 47.9MB/s]Downloading:  42%|████▏     | 976M/2.28G [00:22<00:25, 55.8MB/s]Downloading:  42%|████▏     | 984M/2.28G [00:22<00:23, 59.9MB/s]Downloading:  43%|████▎     | 992M/2.28G [00:22<00:24, 57.7MB/s]Downloading:  43%|████▎     | 0.98G/2.28G [00:22<00:23, 59.8MB/s]Downloading:  43%|████▎     | 0.98G/2.28G [00:23<00:22, 60.8MB/s]Downloading:  44%|████▎     | 0.99G/2.28G [00:23<00:22, 60.6MB/s]Downloading:  44%|████▍     | 1.00G/2.28G [00:23<00:22, 60.0MB/s]Downloading:  44%|████▍     | 1.01G/2.28G [00:23<00:23, 58.4MB/s]Downloading:  45%|████▍     | 1.02G/2.28G [00:23<00:20, 66.1MB/s]Downloading:  45%|████▍     | 1.02G/2.28G [00:23<00:22, 60.4MB/s]Downloading:  45%|████▌     | 1.03G/2.28G [00:23<00:21, 63.6MB/s]Downloading:  46%|████▌     | 1.04G/2.28G [00:23<00:21, 62.0MB/s]Downloading:  46%|████▌     | 1.05G/2.28G [00:24<00:22, 59.5MB/s]Downloading:  46%|████▋     | 1.05G/2.28G [00:24<00:24, 53.6MB/s]Downloading:  47%|████▋     | 1.06G/2.28G [00:24<00:24, 53.8MB/s]Downloading:  47%|████▋     | 1.07G/2.28G [00:24<00:25, 50.3MB/s]Downloading:  47%|████▋     | 1.07G/2.28G [00:24<00:31, 41.3MB/s]Downloading:  47%|████▋     | 1.08G/2.28G [00:24<00:28, 44.8MB/s]Downloading:  48%|████▊     | 1.09G/2.28G [00:25<00:27, 47.3MB/s]Downloading:  48%|████▊     | 1.09G/2.28G [00:25<00:24, 51.8MB/s]Downloading:  48%|████▊     | 1.10G/2.28G [00:25<00:21, 58.3MB/s]Downloading:  49%|████▊     | 1.11G/2.28G [00:25<00:22, 55.8MB/s]Downloading:  49%|████▉     | 1.12G/2.28G [00:25<00:20, 61.3MB/s]Downloading:  49%|████▉     | 1.12G/2.28G [00:25<00:22, 54.2MB/s]Downloading:  50%|████▉     | 1.13G/2.28G [00:25<00:23, 53.4MB/s]Downloading:  50%|████▉     | 1.13G/2.28G [00:26<00:32, 38.3MB/s]Downloading:  50%|█████     | 1.14G/2.28G [00:26<00:29, 41.8MB/s]Downloading:  50%|█████     | 1.14G/2.28G [00:26<00:34, 34.9MB/s]Downloading:  50%|█████     | 1.15G/2.28G [00:26<00:37, 32.2MB/s]Downloading:  51%|█████     | 1.16G/2.28G [00:26<00:29, 40.2MB/s]Downloading:  51%|█████     | 1.16G/2.28G [00:26<00:29, 40.4MB/s]Downloading:  51%|█████▏    | 1.17G/2.28G [00:27<00:30, 38.5MB/s]Downloading:  51%|█████▏    | 1.17G/2.28G [00:27<00:29, 40.8MB/s]Downloading:  52%|█████▏    | 1.18G/2.28G [00:27<00:29, 40.4MB/s]Downloading:  52%|█████▏    | 1.18G/2.28G [00:27<00:25, 45.3MB/s]Downloading:  52%|█████▏    | 1.19G/2.28G [00:27<00:23, 50.1MB/s]Downloading:  53%|█████▎    | 1.20G/2.28G [00:27<00:20, 58.0MB/s]Downloading:  53%|█████▎    | 1.20G/2.28G [00:27<00:21, 54.1MB/s]Downloading:  53%|█████▎    | 1.21G/2.28G [00:27<00:20, 56.7MB/s]Downloading:  54%|█████▎    | 1.22G/2.28G [00:28<00:20, 55.2MB/s]Downloading:  54%|█████▍    | 1.22G/2.28G [00:28<00:23, 48.1MB/s]Downloading:  54%|█████▍    | 1.23G/2.28G [00:28<00:25, 43.7MB/s]Downloading:  54%|█████▍    | 1.23G/2.28G [00:28<00:28, 39.6MB/s]Downloading:  55%|█████▍    | 1.24G/2.28G [00:28<00:27, 41.0MB/s]Downloading:  55%|█████▍    | 1.25G/2.28G [00:28<00:26, 41.8MB/s]Downloading:  55%|█████▌    | 1.26G/2.28G [00:29<00:24, 45.5MB/s]Downloading:  55%|█████▌    | 1.26G/2.28G [00:29<00:26, 40.5MB/s]Downloading:  56%|█████▌    | 1.27G/2.28G [00:29<00:26, 41.5MB/s]Downloading:  56%|█████▌    | 1.27G/2.28G [00:29<00:25, 41.7MB/s]Downloading:  56%|█████▌    | 1.28G/2.28G [00:29<00:23, 44.7MB/s]Downloading:  56%|█████▋    | 1.28G/2.28G [00:29<00:25, 42.4MB/s]Downloading:  57%|█████▋    | 1.29G/2.28G [00:29<00:30, 34.4MB/s]Downloading:  57%|█████▋    | 1.29G/2.28G [00:30<00:32, 32.5MB/s]Downloading:  57%|█████▋    | 1.30G/2.28G [00:30<00:23, 44.4MB/s]Downloading:  57%|█████▋    | 1.30G/2.28G [00:30<00:23, 44.1MB/s]Downloading:  57%|█████▋    | 1.31G/2.28G [00:30<00:23, 44.1MB/s]Downloading:  58%|█████▊    | 1.31G/2.28G [00:30<00:20, 50.0MB/s]Downloading:  58%|█████▊    | 1.32G/2.28G [00:30<00:21, 47.3MB/s]Downloading:  58%|█████▊    | 1.32G/2.28G [00:30<00:25, 39.6MB/s]Downloading:  58%|█████▊    | 1.33G/2.28G [00:30<00:28, 36.3MB/s]Downloading:  59%|█████▊    | 1.33G/2.28G [00:31<00:23, 43.3MB/s]Downloading:  59%|█████▉    | 1.34G/2.28G [00:31<00:30, 32.6MB/s]Downloading:  59%|█████▉    | 1.34G/2.28G [00:31<00:30, 32.8MB/s]Downloading:  59%|█████▉    | 1.35G/2.28G [00:31<00:29, 33.7MB/s]Downloading:  59%|█████▉    | 1.35G/2.28G [00:31<00:25, 39.3MB/s]Downloading:  60%|█████▉    | 1.36G/2.28G [00:31<00:22, 43.0MB/s]Downloading:  60%|█████▉    | 1.37G/2.28G [00:31<00:21, 46.0MB/s]Downloading:  60%|██████    | 1.37G/2.28G [00:32<00:25, 38.7MB/s]Downloading:  60%|██████    | 1.37G/2.28G [00:32<00:24, 40.1MB/s]Downloading:  61%|██████    | 1.39G/2.28G [00:32<00:15, 63.2MB/s]Downloading:  61%|██████    | 1.39G/2.28G [00:32<00:15, 62.2MB/s]Downloading:  61%|██████▏   | 1.40G/2.28G [00:32<00:16, 58.8MB/s]Downloading:  62%|██████▏   | 1.41G/2.28G [00:32<00:18, 49.6MB/s]Downloading:  62%|██████▏   | 1.41G/2.28G [00:32<00:18, 49.5MB/s]Downloading:  62%|██████▏   | 1.42G/2.28G [00:33<00:23, 39.1MB/s]Downloading:  62%|██████▏   | 1.42G/2.28G [00:33<00:25, 36.0MB/s]Downloading:  63%|██████▎   | 1.43G/2.28G [00:33<00:22, 39.7MB/s]Downloading:  63%|██████▎   | 1.43G/2.28G [00:33<00:22, 39.7MB/s]Downloading:  63%|██████▎   | 1.44G/2.28G [00:33<00:17, 50.1MB/s]Downloading:  63%|██████▎   | 1.45G/2.28G [00:33<00:22, 40.0MB/s]Downloading:  64%|██████▍   | 1.45G/2.28G [00:33<00:19, 44.5MB/s]Downloading:  64%|██████▍   | 1.46G/2.28G [00:34<00:16, 52.9MB/s]Downloading:  64%|██████▍   | 1.46G/2.28G [00:34<00:18, 46.2MB/s]Downloading:  65%|██████▍   | 1.47G/2.28G [00:34<00:19, 44.6MB/s]Downloading:  65%|██████▍   | 1.48G/2.28G [00:34<00:19, 43.3MB/s]Downloading:  65%|██████▌   | 1.48G/2.28G [00:34<00:19, 43.1MB/s]Downloading:  65%|██████▌   | 1.49G/2.28G [00:34<00:21, 40.1MB/s]Downloading:  65%|██████▌   | 1.49G/2.28G [00:35<00:24, 33.8MB/s]Downloading:  66%|██████▌   | 1.49G/2.28G [00:35<00:26, 32.3MB/s]Downloading:  66%|██████▌   | 1.50G/2.28G [00:35<00:22, 37.0MB/s]Downloading:  66%|██████▌   | 1.51G/2.28G [00:35<00:20, 40.1MB/s]Downloading:  67%|██████▋   | 1.52G/2.28G [00:35<00:18, 43.7MB/s]Downloading:  67%|██████▋   | 1.52G/2.28G [00:35<00:16, 48.6MB/s]Downloading:  67%|██████▋   | 1.53G/2.28G [00:35<00:17, 46.9MB/s]Downloading:  67%|██████▋   | 1.53G/2.28G [00:36<00:18, 43.9MB/s]Downloading:  68%|██████▊   | 1.54G/2.28G [00:36<00:19, 41.4MB/s]Downloading:  68%|██████▊   | 1.55G/2.28G [00:36<00:17, 44.5MB/s]Downloading:  68%|██████▊   | 1.55G/2.28G [00:36<00:19, 40.6MB/s]Downloading:  68%|██████▊   | 1.55G/2.28G [00:36<00:21, 36.9MB/s]Downloading:  69%|██████▊   | 1.56G/2.28G [00:36<00:18, 42.0MB/s]Downloading:  69%|██████▉   | 1.57G/2.28G [00:36<00:16, 44.7MB/s]Downloading:  69%|██████▉   | 1.57G/2.28G [00:37<00:15, 48.2MB/s]Downloading:  69%|██████▉   | 1.58G/2.28G [00:37<00:16, 45.5MB/s]Downloading:  70%|██████▉   | 1.59G/2.28G [00:37<00:15, 48.1MB/s]Downloading:  70%|███████   | 1.59G/2.28G [00:37<00:14, 52.1MB/s]Downloading:  70%|███████   | 1.60G/2.28G [00:37<00:19, 37.6MB/s]Downloading:  70%|███████   | 1.60G/2.28G [00:37<00:19, 37.9MB/s]Downloading:  71%|███████   | 1.61G/2.28G [00:38<00:18, 39.7MB/s]Downloading:  71%|███████   | 1.62G/2.28G [00:38<00:14, 47.7MB/s]Downloading:  71%|███████▏  | 1.62G/2.28G [00:38<00:14, 46.8MB/s]Downloading:  72%|███████▏  | 1.63G/2.28G [00:38<00:14, 48.9MB/s]Downloading:  72%|███████▏  | 1.64G/2.28G [00:38<00:15, 44.8MB/s]Downloading:  72%|███████▏  | 1.64G/2.28G [00:38<00:18, 37.1MB/s]Downloading:  72%|███████▏  | 1.65G/2.28G [00:38<00:16, 40.8MB/s]Downloading:  73%|███████▎  | 1.65G/2.28G [00:39<00:16, 39.7MB/s]Downloading:  73%|███████▎  | 1.66G/2.28G [00:39<00:13, 50.3MB/s]Downloading:  73%|███████▎  | 1.66G/2.28G [00:39<00:15, 42.8MB/s]Downloading:  73%|███████▎  | 1.67G/2.28G [00:39<00:13, 46.5MB/s]Downloading:  74%|███████▍  | 1.68G/2.28G [00:39<00:14, 44.1MB/s]Downloading:  74%|███████▍  | 1.69G/2.28G [00:39<00:11, 56.5MB/s]Downloading:  74%|███████▍  | 1.70G/2.28G [00:39<00:12, 51.7MB/s]Downloading:  75%|███████▍  | 1.70G/2.28G [00:40<00:11, 54.6MB/s]Downloading:  75%|███████▍  | 1.71G/2.28G [00:40<00:12, 49.9MB/s]Downloading:  75%|███████▌  | 1.71G/2.28G [00:40<00:14, 43.0MB/s]Downloading:  76%|███████▌  | 1.72G/2.28G [00:40<00:11, 50.0MB/s]Downloading:  76%|███████▌  | 1.73G/2.28G [00:40<00:11, 51.9MB/s]Downloading:  76%|███████▌  | 1.73G/2.28G [00:40<00:10, 53.5MB/s]Downloading:  76%|███████▋  | 1.74G/2.28G [00:40<00:11, 48.7MB/s]Downloading:  77%|███████▋  | 1.74G/2.28G [00:41<00:13, 41.7MB/s]Downloading:  77%|███████▋  | 1.75G/2.28G [00:41<00:13, 42.3MB/s]Downloading:  77%|███████▋  | 1.76G/2.28G [00:41<00:12, 46.1MB/s]Downloading:  78%|███████▊  | 1.77G/2.28G [00:41<00:10, 53.5MB/s]Downloading:  78%|███████▊  | 1.77G/2.28G [00:41<00:11, 48.1MB/s]Downloading:  78%|███████▊  | 1.78G/2.28G [00:41<00:13, 40.3MB/s]Downloading:  78%|███████▊  | 1.78G/2.28G [00:41<00:12, 41.4MB/s]Downloading:  79%|███████▊  | 1.79G/2.28G [00:42<00:11, 45.8MB/s]Downloading:  79%|███████▊  | 1.79G/2.28G [00:42<00:12, 43.2MB/s]Downloading:  79%|███████▉  | 1.80G/2.28G [00:42<00:11, 43.1MB/s]Downloading:  79%|███████▉  | 1.80G/2.28G [00:42<00:11, 43.2MB/s]Downloading:  80%|███████▉  | 1.81G/2.28G [00:42<00:09, 51.8MB/s]Downloading:  80%|███████▉  | 1.82G/2.28G [00:42<00:08, 55.4MB/s]Downloading:  80%|████████  | 1.83G/2.28G [00:42<00:09, 51.8MB/s]Downloading:  80%|████████  | 1.83G/2.28G [00:43<00:11, 42.3MB/s]Downloading:  81%|████████  | 1.84G/2.28G [00:43<00:10, 43.4MB/s]Downloading:  81%|████████  | 1.84G/2.28G [00:43<00:09, 49.8MB/s]Downloading:  81%|████████  | 1.85G/2.28G [00:43<00:09, 49.9MB/s]Downloading:  81%|████████▏ | 1.85G/2.28G [00:43<00:08, 53.2MB/s]Downloading:  82%|████████▏ | 1.86G/2.28G [00:43<00:08, 53.0MB/s]Downloading:  82%|████████▏ | 1.86G/2.28G [00:43<00:08, 51.5MB/s]Downloading:  82%|████████▏ | 1.87G/2.28G [00:43<00:10, 41.9MB/s]Downloading:  82%|████████▏ | 1.87G/2.28G [00:44<00:09, 46.1MB/s]Downloading:  83%|████████▎ | 1.88G/2.28G [00:44<00:09, 45.6MB/s]Downloading:  83%|████████▎ | 1.89G/2.28G [00:44<00:08, 49.6MB/s]Downloading:  83%|████████▎ | 1.90G/2.28G [00:44<00:07, 51.8MB/s]Downloading:  84%|████████▎ | 1.91G/2.28G [00:44<00:07, 54.1MB/s]Downloading:  84%|████████▍ | 1.91G/2.28G [00:44<00:07, 50.7MB/s]Downloading:  84%|████████▍ | 1.92G/2.28G [00:45<00:09, 42.1MB/s]Downloading:  84%|████████▍ | 1.92G/2.28G [00:45<00:10, 37.1MB/s]Downloading:  85%|████████▍ | 1.92G/2.28G [00:45<00:11, 34.0MB/s]Downloading:  85%|████████▍ | 1.93G/2.28G [00:45<00:11, 32.1MB/s]Downloading:  85%|████████▌ | 1.94G/2.28G [00:45<00:08, 43.0MB/s]Downloading:  85%|████████▌ | 1.95G/2.28G [00:45<00:07, 45.9MB/s]Downloading:  86%|████████▌ | 1.95G/2.28G [00:45<00:06, 53.1MB/s]Downloading:  86%|████████▌ | 1.96G/2.28G [00:46<00:08, 42.0MB/s]Downloading:  86%|████████▌ | 1.96G/2.28G [00:46<00:09, 36.7MB/s]Downloading:  87%|████████▋ | 1.97G/2.28G [00:46<00:07, 46.7MB/s]Downloading:  87%|████████▋ | 1.98G/2.28G [00:46<00:06, 48.9MB/s]Downloading:  87%|████████▋ | 1.98G/2.28G [00:46<00:05, 52.6MB/s]Downloading:  87%|████████▋ | 1.99G/2.28G [00:46<00:06, 46.8MB/s]Downloading:  88%|████████▊ | 1.99G/2.28G [00:46<00:07, 39.3MB/s]Downloading:  88%|████████▊ | 2.00G/2.28G [00:47<00:06, 43.8MB/s]Downloading:  88%|████████▊ | 2.00G/2.28G [00:47<00:07, 40.1MB/s]Downloading:  88%|████████▊ | 2.01G/2.28G [00:47<00:07, 39.3MB/s]Downloading:  89%|████████▊ | 2.02G/2.28G [00:47<00:05, 48.3MB/s]Downloading:  89%|████████▉ | 2.02G/2.28G [00:47<00:05, 53.7MB/s]Downloading:  89%|████████▉ | 2.03G/2.28G [00:47<00:04, 55.0MB/s]Downloading:  90%|████████▉ | 2.04G/2.28G [00:47<00:04, 57.8MB/s]Downloading:  90%|████████▉ | 2.05G/2.28G [00:48<00:04, 55.5MB/s]Downloading:  90%|█████████ | 2.05G/2.28G [00:48<00:04, 58.1MB/s]Downloading:  90%|█████████ | 2.06G/2.28G [00:48<00:04, 53.3MB/s]Downloading:  91%|█████████ | 2.06G/2.28G [00:48<00:07, 30.3MB/s]Downloading:  91%|█████████ | 2.07G/2.28G [00:48<00:07, 31.4MB/s]Downloading:  91%|█████████ | 2.07G/2.28G [00:48<00:06, 32.8MB/s]Downloading:  91%|█████████▏| 2.08G/2.28G [00:49<00:04, 43.9MB/s]Downloading:  92%|█████████▏| 2.09G/2.28G [00:49<00:05, 38.7MB/s]Downloading:  92%|█████████▏| 2.09G/2.28G [00:49<00:05, 38.4MB/s]Downloading:  92%|█████████▏| 2.10G/2.28G [00:49<00:04, 44.2MB/s]Downloading:  93%|█████████▎| 2.11G/2.28G [00:49<00:03, 51.2MB/s]Downloading:  93%|█████████▎| 2.11G/2.28G [00:49<00:04, 41.6MB/s]Downloading:  93%|█████████▎| 2.12G/2.28G [00:50<00:04, 40.8MB/s]Downloading:  93%|█████████▎| 2.12G/2.28G [00:50<00:03, 44.8MB/s]Downloading:  94%|█████████▎| 2.13G/2.28G [00:50<00:04, 34.0MB/s]Downloading:  94%|█████████▍| 2.14G/2.28G [00:50<00:03, 40.7MB/s]Downloading:  94%|█████████▍| 2.14G/2.28G [00:50<00:02, 53.1MB/s]Downloading:  94%|█████████▍| 2.15G/2.28G [00:50<00:02, 49.4MB/s]Downloading:  95%|█████████▍| 2.16G/2.28G [00:50<00:02, 43.6MB/s]Downloading:  95%|█████████▍| 2.16G/2.28G [00:51<00:02, 43.9MB/s]Downloading:  95%|█████████▌| 2.17G/2.28G [00:51<00:02, 40.4MB/s]Downloading:  95%|█████████▌| 2.17G/2.28G [00:51<00:02, 41.6MB/s]Downloading:  96%|█████████▌| 2.18G/2.28G [00:51<00:02, 45.3MB/s]Downloading:  96%|█████████▌| 2.19G/2.28G [00:51<00:02, 47.1MB/s]Downloading:  96%|█████████▋| 2.19G/2.28G [00:51<00:02, 43.4MB/s]Downloading:  97%|█████████▋| 2.20G/2.28G [00:51<00:01, 46.7MB/s]Downloading:  97%|█████████▋| 2.20G/2.28G [00:52<00:01, 40.9MB/s]Downloading:  97%|█████████▋| 2.21G/2.28G [00:52<00:01, 45.6MB/s]Downloading:  97%|█████████▋| 2.22G/2.28G [00:52<00:01, 51.9MB/s]Downloading:  98%|█████████▊| 2.23G/2.28G [00:52<00:01, 48.9MB/s]Downloading:  98%|█████████▊| 2.23G/2.28G [00:52<00:00, 51.1MB/s]Downloading:  98%|█████████▊| 2.24G/2.28G [00:52<00:00, 45.2MB/s]Downloading:  99%|█████████▉| 2.25G/2.28G [00:53<00:00, 43.8MB/s]Downloading:  99%|█████████▉| 2.25G/2.28G [00:53<00:00, 40.1MB/s]Downloading:  99%|█████████▉| 2.26G/2.28G [00:53<00:00, 40.2MB/s]Downloading: 100%|█████████▉| 2.27G/2.28G [00:53<00:00, 42.3MB/s]Downloading: 100%|█████████▉| 2.27G/2.28G [00:53<00:00, 47.9MB/s]Downloading: 100%|██████████| 2.28G/2.28G [00:53<00:00, 45.5MB/s]
+storing https://huggingface.co/facebook/mbart-large-cc25/resolve/main/pytorch_model.bin in cache at /home/sshukla7/.cache/huggingface/transformers/58963b41815ac5618d9910411e018d60a3ae7d4540a66e6cf70adf29a748ca1b.bef0d2e3352d6c4bf1213c6207738ec5ecf458de355c65b2aead6671bc612138
+creating metadata file for /home/sshukla7/.cache/huggingface/transformers/58963b41815ac5618d9910411e018d60a3ae7d4540a66e6cf70adf29a748ca1b.bef0d2e3352d6c4bf1213c6207738ec5ecf458de355c65b2aead6671bc612138
+loading weights file https://huggingface.co/facebook/mbart-large-cc25/resolve/main/pytorch_model.bin from cache at /home/sshukla7/.cache/huggingface/transformers/58963b41815ac5618d9910411e018d60a3ae7d4540a66e6cf70adf29a748ca1b.bef0d2e3352d6c4bf1213c6207738ec5ecf458de355c65b2aead6671bc612138
+All model checkpoint weights were used when initializing MBartForConditionalGeneration.
+
+All the weights of MBartForConditionalGeneration were initialized from the model checkpoint at facebook/mbart-large-cc25.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use MBartForConditionalGeneration for predictions without further training.
+/home/sshukla7/.local/lib/python3.10/site-packages/huggingface_hub/file_download.py:649: FutureWarning: 'cached_download' is the legacy way to download files from the HF hub, please consider upgrading to 'hf_hub_download'
+  warnings.warn(
+Downloading (…)lve/main/config.json:   0%|          | 0.00/1.19k [00:00<?, ?B/s]Downloading (…)lve/main/config.json: 100%|██████████| 1.19k/1.19k [00:00<00:00, 3.29MB/s]
+Traceback (most recent call last):
+  File "/home/sshukla7/sshukla7/DQ_BART/run_summarization_no_trainer_cnnDutch.py", line 952, in <module>
+    main()
+  File "/home/sshukla7/sshukla7/DQ_BART/run_summarization_no_trainer_cnnDutch.py", line 529, in main
+    raise ValueError("Make sure that `config.decoder_start_token_id` is correctly defined")
+ValueError: Make sure that `config.decoder_start_token_id` is correctly defined
+wandb: Waiting for W&B process to finish... (failed 1).
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /home/sshukla7/sshukla7/DQ_BART/wandb/offline-run-20230430_140152-fqxmf3j8
+wandb: Find logs at: ./wandb/offline-run-20230430_140152-fqxmf3j8/logs

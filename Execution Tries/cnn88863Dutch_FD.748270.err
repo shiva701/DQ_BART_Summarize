@@ -1,0 +1,273 @@
+
+Lmod is automatically replacing "gnu9/9.3.0" with "gnu10/10.3.0-ya".
+
+
+Inactive Modules:
+  1) hwloc/2.1.0     2) libfabric     3) openmpi4     4) ucx
+
+2023-04-27 00:31:42.949807: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-04-27 00:31:46.997948: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+wandb: Tracking run with wandb version 0.15.0
+wandb: W&B syncing is set to `offline` in this directory.  
+wandb: Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+  0%|          | 0/3 [00:00<?, ?it/s] 33%|███▎      | 1/3 [00:00<00:01,  1.50it/s]100%|██████████| 3/3 [00:00<00:00,  4.11it/s]
+loading configuration file https://huggingface.co/ml6team/mbart-large-cc25-cnn-dailymail-xsum-nl/resolve/main/config.json from cache at /home/sshukla7/.cache/huggingface/transformers/59b78858281cd51b95e0e516d522745ea1b5cceddf393b9924adf18cffa18649.50d4c165622078f11e287b8feffe721d1b22c39ce210fa7b64055bea6d5b4d6c
+Model config MBartConfig {
+  "_name_or_path": "ml6team/mbart-large-cc25-cnn-dailymail-xsum-nl",
+  "_num_labels": 3,
+  "activation_dropout": 0.0,
+  "activation_function": "gelu",
+  "add_bias_logits": false,
+  "add_final_layer_norm": true,
+  "architectures": [
+    "MBartForConditionalGeneration"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 0,
+  "classif_dropout": 0.0,
+  "classifier_dropout": 0.0,
+  "d_model": 1024,
+  "decoder_attention_heads": 16,
+  "decoder_ffn_dim": 4096,
+  "decoder_layerdrop": 0.0,
+  "decoder_layers": 12,
+  "dropout": 0.1,
+  "encoder_attention_heads": 16,
+  "encoder_ffn_dim": 4096,
+  "encoder_layerdrop": 0.0,
+  "encoder_layers": 12,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2"
+  },
+  "init_std": 0.02,
+  "is_encoder_decoder": true,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2
+  },
+  "max_length": 1024,
+  "max_position_embeddings": 1024,
+  "model_type": "mbart",
+  "normalize_before": true,
+  "normalize_embedding": true,
+  "num_beams": 5,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 1,
+  "scale_embedding": true,
+  "static_position_embeddings": false,
+  "task_specific_params": {
+    "translation_en_to_ro": {
+      "decoder_start_token_id": 250020
+    }
+  },
+  "torch_dtype": "float32",
+  "transformers_version": "4.17.0",
+  "use_cache": true,
+  "vocab_size": 250027
+}
+
+Could not locate the tokenizer configuration file, will try to use the model config instead.
+https://huggingface.co/facebook/mbart-large-cc25/resolve/main/config.json not found in cache or force_download set to True, downloading to /home/sshukla7/.cache/huggingface/transformers/tmpdxc89fib
+Downloading:   0%|          | 0.00/1.16k [00:00<?, ?B/s]Downloading: 100%|██████████| 1.16k/1.16k [00:00<00:00, 2.26MB/s]
+storing https://huggingface.co/facebook/mbart-large-cc25/resolve/main/config.json in cache at /home/sshukla7/.cache/huggingface/transformers/36135304685d914515720daa48fc1adae57803e32ab82d5bde85ef78479e9765.b548f7e307531070391a881374674824b374f829e5d8f68857012de63fe2681a
+creating metadata file for /home/sshukla7/.cache/huggingface/transformers/36135304685d914515720daa48fc1adae57803e32ab82d5bde85ef78479e9765.b548f7e307531070391a881374674824b374f829e5d8f68857012de63fe2681a
+loading configuration file https://huggingface.co/facebook/mbart-large-cc25/resolve/main/config.json from cache at /home/sshukla7/.cache/huggingface/transformers/36135304685d914515720daa48fc1adae57803e32ab82d5bde85ef78479e9765.b548f7e307531070391a881374674824b374f829e5d8f68857012de63fe2681a
+Model config MBartConfig {
+  "_name_or_path": "facebook/mbart-large-cc25",
+  "_num_labels": 3,
+  "activation_dropout": 0.0,
+  "activation_function": "gelu",
+  "add_bias_logits": false,
+  "add_final_layer_norm": true,
+  "architectures": [
+    "MBartForConditionalGeneration"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 0,
+  "classif_dropout": 0.0,
+  "classifier_dropout": 0.0,
+  "d_model": 1024,
+  "decoder_attention_heads": 16,
+  "decoder_ffn_dim": 4096,
+  "decoder_layerdrop": 0.0,
+  "decoder_layers": 12,
+  "dropout": 0.1,
+  "encoder_attention_heads": 16,
+  "encoder_ffn_dim": 4096,
+  "encoder_layerdrop": 0.0,
+  "encoder_layers": 12,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2"
+  },
+  "init_std": 0.02,
+  "is_encoder_decoder": true,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2
+  },
+  "max_length": 1024,
+  "max_position_embeddings": 1024,
+  "model_type": "mbart",
+  "normalize_before": true,
+  "normalize_embedding": true,
+  "num_beams": 5,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 1,
+  "scale_embedding": true,
+  "static_position_embeddings": false,
+  "task_specific_params": {
+    "translation_en_to_ro": {
+      "decoder_start_token_id": 250020
+    }
+  },
+  "transformers_version": "4.17.0",
+  "use_cache": true,
+  "vocab_size": 250027
+}
+
+https://huggingface.co/facebook/mbart-large-cc25/resolve/main/sentencepiece.bpe.model not found in cache or force_download set to True, downloading to /home/sshukla7/.cache/huggingface/transformers/tmpw0xzaa6r
+Downloading:   0%|          | 0.00/4.83M [00:00<?, ?B/s]Downloading: 100%|██████████| 4.83M/4.83M [00:00<00:00, 118MB/s]
+storing https://huggingface.co/facebook/mbart-large-cc25/resolve/main/sentencepiece.bpe.model in cache at /home/sshukla7/.cache/huggingface/transformers/83d419fb34e90155a8d95f7799f7a7316a327dc28c7ee6bee15b5a62d3c5ca6b.00628a9eeb8baf4080d44a0abe9fe8057893de20c7cb6e6423cddbf452f7d4d8
+creating metadata file for /home/sshukla7/.cache/huggingface/transformers/83d419fb34e90155a8d95f7799f7a7316a327dc28c7ee6bee15b5a62d3c5ca6b.00628a9eeb8baf4080d44a0abe9fe8057893de20c7cb6e6423cddbf452f7d4d8
+https://huggingface.co/facebook/mbart-large-cc25/resolve/main/tokenizer.json not found in cache or force_download set to True, downloading to /home/sshukla7/.cache/huggingface/transformers/tmpl8n82ymx
+Downloading:   0%|          | 0.00/8.68M [00:00<?, ?B/s]Downloading: 100%|██████████| 8.68M/8.68M [00:00<00:00, 118MB/s]
+storing https://huggingface.co/facebook/mbart-large-cc25/resolve/main/tokenizer.json in cache at /home/sshukla7/.cache/huggingface/transformers/16e85cac0e7a8c2938ac468199d0adff7483341305c7e848063b72dcf5f22538.39607a8bede9bcd2666ea442230a9d382f57e4fea127c9cc5b6fc6caf527d682
+creating metadata file for /home/sshukla7/.cache/huggingface/transformers/16e85cac0e7a8c2938ac468199d0adff7483341305c7e848063b72dcf5f22538.39607a8bede9bcd2666ea442230a9d382f57e4fea127c9cc5b6fc6caf527d682
+loading file https://huggingface.co/facebook/mbart-large-cc25/resolve/main/sentencepiece.bpe.model from cache at /home/sshukla7/.cache/huggingface/transformers/83d419fb34e90155a8d95f7799f7a7316a327dc28c7ee6bee15b5a62d3c5ca6b.00628a9eeb8baf4080d44a0abe9fe8057893de20c7cb6e6423cddbf452f7d4d8
+loading file https://huggingface.co/facebook/mbart-large-cc25/resolve/main/tokenizer.json from cache at /home/sshukla7/.cache/huggingface/transformers/16e85cac0e7a8c2938ac468199d0adff7483341305c7e848063b72dcf5f22538.39607a8bede9bcd2666ea442230a9d382f57e4fea127c9cc5b6fc6caf527d682
+loading file https://huggingface.co/facebook/mbart-large-cc25/resolve/main/added_tokens.json from cache at None
+loading file https://huggingface.co/facebook/mbart-large-cc25/resolve/main/special_tokens_map.json from cache at None
+loading file https://huggingface.co/facebook/mbart-large-cc25/resolve/main/tokenizer_config.json from cache at None
+loading configuration file https://huggingface.co/facebook/mbart-large-cc25/resolve/main/config.json from cache at /home/sshukla7/.cache/huggingface/transformers/36135304685d914515720daa48fc1adae57803e32ab82d5bde85ef78479e9765.b548f7e307531070391a881374674824b374f829e5d8f68857012de63fe2681a
+Model config MBartConfig {
+  "_name_or_path": "facebook/mbart-large-cc25",
+  "_num_labels": 3,
+  "activation_dropout": 0.0,
+  "activation_function": "gelu",
+  "add_bias_logits": false,
+  "add_final_layer_norm": true,
+  "architectures": [
+    "MBartForConditionalGeneration"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 0,
+  "classif_dropout": 0.0,
+  "classifier_dropout": 0.0,
+  "d_model": 1024,
+  "decoder_attention_heads": 16,
+  "decoder_ffn_dim": 4096,
+  "decoder_layerdrop": 0.0,
+  "decoder_layers": 12,
+  "dropout": 0.1,
+  "encoder_attention_heads": 16,
+  "encoder_ffn_dim": 4096,
+  "encoder_layerdrop": 0.0,
+  "encoder_layers": 12,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2"
+  },
+  "init_std": 0.02,
+  "is_encoder_decoder": true,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2
+  },
+  "max_length": 1024,
+  "max_position_embeddings": 1024,
+  "model_type": "mbart",
+  "normalize_before": true,
+  "normalize_embedding": true,
+  "num_beams": 5,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 1,
+  "scale_embedding": true,
+  "static_position_embeddings": false,
+  "task_specific_params": {
+    "translation_en_to_ro": {
+      "decoder_start_token_id": 250020
+    }
+  },
+  "transformers_version": "4.17.0",
+  "use_cache": true,
+  "vocab_size": 250027
+}
+
+Assigning ['ar_AR', 'cs_CZ', 'de_DE', 'en_XX', 'es_XX', 'et_EE', 'fi_FI', 'fr_XX', 'gu_IN', 'hi_IN', 'it_IT', 'ja_XX', 'kk_KZ', 'ko_KR', 'lt_LT', 'lv_LV', 'my_MM', 'ne_NP', 'nl_XX', 'ro_RO', 'ru_RU', 'si_LK', 'tr_TR', 'vi_VN', 'zh_CN'] to the additional_special_tokens key of the tokenizer
+loading weights file https://huggingface.co/ml6team/mbart-large-cc25-cnn-dailymail-xsum-nl/resolve/main/pytorch_model.bin from cache at /home/sshukla7/.cache/huggingface/transformers/4b004e1d7bcef58422317f6ea8b15b75971e5f490ceeefad5baafc9fd756870f.95bef7eadd9669200273f2d88fa759398f7ca026a631169f2b27d530280273a8
+All model checkpoint weights were used when initializing MBartForConditionalGeneration.
+
+All the weights of MBartForConditionalGeneration were initialized from the model checkpoint at ml6team/mbart-large-cc25-cnn-dailymail-xsum-nl.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use MBartForConditionalGeneration for predictions without further training.
+/home/sshukla7/.local/lib/python3.10/site-packages/huggingface_hub/file_download.py:649: FutureWarning: 'cached_download' is the legacy way to download files from the HF hub, please consider upgrading to 'hf_hub_download'
+  warnings.warn(
+Running tokenizer on dataset (num_proc=10):   0%|          | 0/287113 [00:00<?, ? examples/s]Running tokenizer on dataset (num_proc=10):   0%|          | 0/287113 [00:02<?, ? examples/s]Running tokenizer on dataset (num_proc=10):   0%|          | 0/287113 [00:03<?, ? examples/s]Running tokenizer on dataset (num_proc=10):   0%|          | 0/287113 [00:03<?, ? examples/s]Running tokenizer on dataset (num_proc=10):   0%|          | 0/287113 [00:03<?, ? examples/s]                                                                                             multiprocess.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/home/sshukla7/.local/lib/python3.10/site-packages/multiprocess/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/home/sshukla7/.local/lib/python3.10/site-packages/datasets/utils/py_utils.py", line 1353, in _write_generator_to_queue
+    for i, result in enumerate(func(**kwargs)):
+  File "/home/sshukla7/.local/lib/python3.10/site-packages/datasets/arrow_dataset.py", line 3380, in _map_single
+    batch = apply_function_on_filtered_inputs(
+  File "/home/sshukla7/.local/lib/python3.10/site-packages/datasets/arrow_dataset.py", line 3261, in apply_function_on_filtered_inputs
+    processed_inputs = function(*fn_args, *additional_args, **fn_kwargs)
+  File "/home/sshukla7/sshukla7/DQ_BART/run_summarization_no_trainer_cnnDutch.py", line 558, in preprocess_function
+    with tokenizer.as_target_tokenizer():
+  File "/opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/home/sshukla7/.local/lib/python3.10/site-packages/transformers/models/mbart/tokenization_mbart_fast.py", line 247, in as_target_tokenizer
+    self.set_tgt_lang_special_tokens(self.tgt_lang)
+  File "/home/sshukla7/.local/lib/python3.10/site-packages/transformers/models/mbart/tokenization_mbart_fast.py", line 273, in set_tgt_lang_special_tokens
+    suffix_tokens_str = self.convert_ids_to_tokens(self.suffix_tokens)
+  File "/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_fast.py", line 312, in convert_ids_to_tokens
+    index = int(index)
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/sshukla7/sshukla7/DQ_BART/run_summarization_no_trainer_cnnDutch.py", line 939, in <module>
+    main()
+  File "/home/sshukla7/sshukla7/DQ_BART/run_summarization_no_trainer_cnnDutch.py", line 572, in main
+    processed_datasets = raw_datasets.map(
+  File "/home/sshukla7/.local/lib/python3.10/site-packages/datasets/dataset_dict.py", line 851, in map
+    {
+  File "/home/sshukla7/.local/lib/python3.10/site-packages/datasets/dataset_dict.py", line 852, in <dictcomp>
+    k: dataset.map(
+  File "/home/sshukla7/.local/lib/python3.10/site-packages/datasets/arrow_dataset.py", line 563, in wrapper
+    out: Union["Dataset", "DatasetDict"] = func(self, *args, **kwargs)
+  File "/home/sshukla7/.local/lib/python3.10/site-packages/datasets/arrow_dataset.py", line 528, in wrapper
+    out: Union["Dataset", "DatasetDict"] = func(self, *args, **kwargs)
+  File "/home/sshukla7/.local/lib/python3.10/site-packages/datasets/arrow_dataset.py", line 3097, in map
+    for rank, done, content in iflatmap_unordered(
+  File "/home/sshukla7/.local/lib/python3.10/site-packages/datasets/utils/py_utils.py", line 1377, in iflatmap_unordered
+    [async_result.get() for async_result in async_results]
+  File "/home/sshukla7/.local/lib/python3.10/site-packages/datasets/utils/py_utils.py", line 1377, in <listcomp>
+    [async_result.get() for async_result in async_results]
+  File "/home/sshukla7/.local/lib/python3.10/site-packages/multiprocess/pool.py", line 774, in get
+    raise self._value
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+wandb: Waiting for W&B process to finish... (failed 1).
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /home/sshukla7/sshukla7/DQ_BART/wandb/offline-run-20230427_003155-y72f0f93
+wandb: Find logs at: ./wandb/offline-run-20230427_003155-y72f0f93/logs

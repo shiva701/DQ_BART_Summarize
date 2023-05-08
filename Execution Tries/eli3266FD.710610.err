@@ -1,0 +1,58 @@
+
+Lmod is automatically replacing "gnu9/9.3.0" with "gnu10/10.3.0-ya".
+
+
+Inactive Modules:
+  1) hwloc/2.1.0     2) libfabric     3) openmpi4     4) ucx
+
+usage: run_summarization_no_trainer_1_eli5.py [-h]
+                                              [--dataset_name DATASET_NAME]
+                                              [--dataset_config_name DATASET_CONFIG_NAME]
+                                              [--train_file TRAIN_FILE]
+                                              [--validation_file VALIDATION_FILE]
+                                              [--ignore_pad_token_for_loss IGNORE_PAD_TOKEN_FOR_LOSS]
+                                              [--max_source_length MAX_SOURCE_LENGTH]
+                                              [--source_prefix SOURCE_PREFIX]
+                                              [--preprocessing_num_workers PREPROCESSING_NUM_WORKERS]
+                                              [--overwrite_cache OVERWRITE_CACHE]
+                                              [--max_target_length MAX_TARGET_LENGTH]
+                                              [--val_max_target_length VAL_MAX_TARGET_LENGTH]
+                                              [--pad_to_max_length]
+                                              --model_name_or_path
+                                              MODEL_NAME_OR_PATH
+                                              [--config_name CONFIG_NAME]
+                                              [--tokenizer_name TOKENIZER_NAME]
+                                              [--text_column TEXT_COLUMN]
+                                              [--summary_column SUMMARY_COLUMN]
+                                              [--use_slow_tokenizer]
+                                              [--per_device_train_batch_size PER_DEVICE_TRAIN_BATCH_SIZE]
+                                              [--per_device_eval_batch_size PER_DEVICE_EVAL_BATCH_SIZE]
+                                              [--learning_rate LEARNING_RATE]
+                                              [--weight_decay WEIGHT_DECAY]
+                                              [--num_train_epochs NUM_TRAIN_EPOCHS]
+                                              [--max_train_steps MAX_TRAIN_STEPS]
+                                              [--gradient_accumulation_steps GRADIENT_ACCUMULATION_STEPS]
+                                              [--lr_scheduler_type {linear,cosine,cosine_with_restarts,polynomial,constant,constant_with_warmup}]
+                                              [--warmup_ratio WARMUP_RATIO]
+                                              [--output_dir OUTPUT_DIR]
+                                              [--seed SEED]
+                                              [--model_type {maskformer,poolformer,convnext,yoso,swin,vilt,vit_mae,nystromformer,xglm,imagegpt,qdqbert,fnet,segformer,vision-text-dual-encoder,perceiver,gptj,layoutlmv2,plbart,beit,rembert,visual_bert,canine,roformer,clip,bigbird_pegasus,deit,luke,detr,gpt_neo,big_bird,speech_to_text,vit,wav2vec2,m2m_100,convbert,led,blenderbot-small,retribert,ibert,mt5,t5,mobilebert,distilbert,albert,bert-generation,camembert,xlm-roberta-xl,xlm-roberta,pegasus,marian,mbart,megatron-bert,mpnet,bart,blenderbot,reformer,longformer,roberta,deberta-v2,deberta,flaubert,fsmt,squeezebert,hubert,bert,openai-gpt,gpt2,transfo-xl,xlnet,xlm-prophetnet,prophetnet,xlm,ctrl,electra,funnel,lxmert,dpr,layoutlm,tapas,splinter,sew-d,sew,unispeech-sat,unispeech,wavlm,data2vec-audio,data2vec-text}]
+                                              [--teacher_model TEACHER_MODEL]
+                                              [--student_model STUDENT_MODEL]
+                                              [--pred_distill]
+                                              [--intermediate_distill]
+                                              [--weight_bits {2,8,16}]
+                                              [--input_bits INPUT_BITS]
+                                              [--clip_val CLIP_VAL]
+                                              [--length_penalty LENGTH_PENALTY]
+                                              [--max_length MAX_LENGTH]
+                                              [--min_length MIN_LENGTH]
+                                              [--num_beams NUM_BEAMS]
+                                              [--do_train] [--do_test]
+                                              [--test_teacher]
+                                              [--distill_encoder DISTILL_ENCODER]
+                                              [--distill_decoder DISTILL_DECODER]
+                                              [--log_steps LOG_STEPS]
+                                              [--local_rank LOCAL_RANK]
+                                              [--weighted] [--new_distill_map]
+run_summarization_no_trainer_1_eli5.py: error: argument --weight_bits: invalid choice: 32 (choose from 2, 8, 16)

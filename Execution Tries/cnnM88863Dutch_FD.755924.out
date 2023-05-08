@@ -1,0 +1,190 @@
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: pip in /home/sshukla7/.local/lib/python3.10/site-packages (23.1.2)
+Defaulting to user installation because normal site-packages is not writeable
+Collecting transformers==4.17.0 (from -r requirements.txt (line 1))
+  Using cached transformers-4.17.0-py3-none-any.whl (3.8 MB)
+Requirement already satisfied: datasets==2.11.0 in /home/sshukla7/.local/lib/python3.10/site-packages (from -r requirements.txt (line 2)) (2.11.0)
+Requirement already satisfied: sacrebleu==2.0 in /home/sshukla7/.local/lib/python3.10/site-packages (from -r requirements.txt (line 3)) (2.0.0)
+Requirement already satisfied: wandb in /home/sshukla7/.local/lib/python3.10/site-packages (from -r requirements.txt (line 4)) (0.15.0)
+Requirement already satisfied: nltk in /home/sshukla7/.local/lib/python3.10/site-packages (from -r requirements.txt (line 5)) (3.8.1)
+Requirement already satisfied: accelerate==0.18.0 in /home/sshukla7/.local/lib/python3.10/site-packages (from -r requirements.txt (line 6)) (0.18.0)
+Requirement already satisfied: tensorboard in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from -r requirements.txt (line 7)) (2.12.2)
+Requirement already satisfied: setuptools in /home/sshukla7/.local/lib/python3.10/site-packages (from -r requirements.txt (line 8)) (49.6.0)
+Requirement already satisfied: rouge_score in /home/sshukla7/.local/lib/python3.10/site-packages (from -r requirements.txt (line 9)) (0.1.2)
+Requirement already satisfied: sentencepiece in /home/sshukla7/.local/lib/python3.10/site-packages (from -r requirements.txt (line 10)) (0.1.98)
+Requirement already satisfied: filelock in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from transformers==4.17.0->-r requirements.txt (line 1)) (3.12.0)
+Requirement already satisfied: huggingface-hub<1.0,>=0.1.0 in /home/sshukla7/.local/lib/python3.10/site-packages (from transformers==4.17.0->-r requirements.txt (line 1)) (0.14.1)
+Requirement already satisfied: numpy>=1.17 in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from transformers==4.17.0->-r requirements.txt (line 1)) (1.23.5)
+Requirement already satisfied: packaging>=20.0 in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from transformers==4.17.0->-r requirements.txt (line 1)) (23.1)
+Requirement already satisfied: pyyaml>=5.1 in /home/sshukla7/.local/lib/python3.10/site-packages (from transformers==4.17.0->-r requirements.txt (line 1)) (6.0)
+Requirement already satisfied: regex!=2019.12.17 in /home/sshukla7/.local/lib/python3.10/site-packages (from transformers==4.17.0->-r requirements.txt (line 1)) (2023.3.23)
+Requirement already satisfied: requests in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from transformers==4.17.0->-r requirements.txt (line 1)) (2.28.2)
+Requirement already satisfied: sacremoses in /home/sshukla7/.local/lib/python3.10/site-packages (from transformers==4.17.0->-r requirements.txt (line 1)) (0.0.53)
+Requirement already satisfied: tokenizers!=0.11.3,>=0.11.1 in /home/sshukla7/.local/lib/python3.10/site-packages (from transformers==4.17.0->-r requirements.txt (line 1)) (0.12.1)
+Requirement already satisfied: tqdm>=4.27 in /home/sshukla7/.local/lib/python3.10/site-packages (from transformers==4.17.0->-r requirements.txt (line 1)) (4.65.0)
+Requirement already satisfied: pyarrow>=8.0.0 in /home/sshukla7/.local/lib/python3.10/site-packages (from datasets==2.11.0->-r requirements.txt (line 2)) (11.0.0)
+Requirement already satisfied: dill<0.3.7,>=0.3.0 in /home/sshukla7/.local/lib/python3.10/site-packages (from datasets==2.11.0->-r requirements.txt (line 2)) (0.3.6)
+Requirement already satisfied: pandas in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from datasets==2.11.0->-r requirements.txt (line 2)) (2.0.1)
+Requirement already satisfied: xxhash in /home/sshukla7/.local/lib/python3.10/site-packages (from datasets==2.11.0->-r requirements.txt (line 2)) (3.2.0)
+Requirement already satisfied: multiprocess in /home/sshukla7/.local/lib/python3.10/site-packages (from datasets==2.11.0->-r requirements.txt (line 2)) (0.70.14)
+Requirement already satisfied: fsspec[http]>=2021.11.1 in /home/sshukla7/.local/lib/python3.10/site-packages (from datasets==2.11.0->-r requirements.txt (line 2)) (2023.4.0)
+Requirement already satisfied: aiohttp in /home/sshukla7/.local/lib/python3.10/site-packages (from datasets==2.11.0->-r requirements.txt (line 2)) (3.8.4)
+Requirement already satisfied: responses<0.19 in /home/sshukla7/.local/lib/python3.10/site-packages (from datasets==2.11.0->-r requirements.txt (line 2)) (0.18.0)
+Requirement already satisfied: portalocker in /home/sshukla7/.local/lib/python3.10/site-packages (from sacrebleu==2.0->-r requirements.txt (line 3)) (2.7.0)
+Requirement already satisfied: tabulate>=0.8.9 in /home/sshukla7/.local/lib/python3.10/site-packages (from sacrebleu==2.0->-r requirements.txt (line 3)) (0.9.0)
+Requirement already satisfied: colorama in /home/sshukla7/.local/lib/python3.10/site-packages (from sacrebleu==2.0->-r requirements.txt (line 3)) (0.4.6)
+Requirement already satisfied: psutil in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from accelerate==0.18.0->-r requirements.txt (line 6)) (5.9.5)
+Requirement already satisfied: torch>=1.4.0 in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from accelerate==0.18.0->-r requirements.txt (line 6)) (2.0.0)
+Requirement already satisfied: Click!=8.0.0,>=7.0 in /home/sshukla7/.local/lib/python3.10/site-packages (from wandb->-r requirements.txt (line 4)) (8.1.3)
+Requirement already satisfied: GitPython!=3.1.29,>=1.0.0 in /home/sshukla7/.local/lib/python3.10/site-packages (from wandb->-r requirements.txt (line 4)) (3.1.31)
+Requirement already satisfied: sentry-sdk>=1.0.0 in /home/sshukla7/.local/lib/python3.10/site-packages (from wandb->-r requirements.txt (line 4)) (1.21.0)
+Requirement already satisfied: docker-pycreds>=0.4.0 in /home/sshukla7/.local/lib/python3.10/site-packages (from wandb->-r requirements.txt (line 4)) (0.4.0)
+Requirement already satisfied: pathtools in /home/sshukla7/.local/lib/python3.10/site-packages (from wandb->-r requirements.txt (line 4)) (0.1.2)
+Requirement already satisfied: setproctitle in /home/sshukla7/.local/lib/python3.10/site-packages (from wandb->-r requirements.txt (line 4)) (1.3.2)
+Requirement already satisfied: appdirs>=1.4.3 in /home/sshukla7/.local/lib/python3.10/site-packages (from wandb->-r requirements.txt (line 4)) (1.4.4)
+Requirement already satisfied: protobuf!=4.21.0,<5,>=3.19.0 in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from wandb->-r requirements.txt (line 4)) (4.22.3)
+Requirement already satisfied: joblib in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from nltk->-r requirements.txt (line 5)) (1.2.0)
+Requirement already satisfied: absl-py>=0.4 in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from tensorboard->-r requirements.txt (line 7)) (1.4.0)
+Requirement already satisfied: grpcio>=1.48.2 in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from tensorboard->-r requirements.txt (line 7)) (1.54.0)
+Requirement already satisfied: google-auth<3,>=1.6.3 in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from tensorboard->-r requirements.txt (line 7)) (2.17.3)
+Requirement already satisfied: google-auth-oauthlib<1.1,>=0.5 in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from tensorboard->-r requirements.txt (line 7)) (1.0.0)
+Requirement already satisfied: markdown>=2.6.8 in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from tensorboard->-r requirements.txt (line 7)) (3.4.3)
+Requirement already satisfied: tensorboard-data-server<0.8.0,>=0.7.0 in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from tensorboard->-r requirements.txt (line 7)) (0.7.0)
+Requirement already satisfied: tensorboard-plugin-wit>=1.6.0 in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from tensorboard->-r requirements.txt (line 7)) (1.8.1)
+Requirement already satisfied: werkzeug>=1.0.1 in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from tensorboard->-r requirements.txt (line 7)) (2.2.3)
+Requirement already satisfied: wheel>=0.26 in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from tensorboard->-r requirements.txt (line 7)) (0.40.0)
+Requirement already satisfied: six>=1.14.0 in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from rouge_score->-r requirements.txt (line 9)) (1.16.0)
+Requirement already satisfied: attrs>=17.3.0 in /home/sshukla7/.local/lib/python3.10/site-packages (from aiohttp->datasets==2.11.0->-r requirements.txt (line 2)) (23.1.0)
+Requirement already satisfied: charset-normalizer<4.0,>=2.0 in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from aiohttp->datasets==2.11.0->-r requirements.txt (line 2)) (3.1.0)
+Requirement already satisfied: multidict<7.0,>=4.5 in /home/sshukla7/.local/lib/python3.10/site-packages (from aiohttp->datasets==2.11.0->-r requirements.txt (line 2)) (6.0.4)
+Requirement already satisfied: async-timeout<5.0,>=4.0.0a3 in /home/sshukla7/.local/lib/python3.10/site-packages (from aiohttp->datasets==2.11.0->-r requirements.txt (line 2)) (4.0.2)
+Requirement already satisfied: yarl<2.0,>=1.0 in /home/sshukla7/.local/lib/python3.10/site-packages (from aiohttp->datasets==2.11.0->-r requirements.txt (line 2)) (1.9.2)
+Requirement already satisfied: frozenlist>=1.1.1 in /home/sshukla7/.local/lib/python3.10/site-packages (from aiohttp->datasets==2.11.0->-r requirements.txt (line 2)) (1.3.3)
+Requirement already satisfied: aiosignal>=1.1.2 in /home/sshukla7/.local/lib/python3.10/site-packages (from aiohttp->datasets==2.11.0->-r requirements.txt (line 2)) (1.3.1)
+Requirement already satisfied: gitdb<5,>=4.0.1 in /home/sshukla7/.local/lib/python3.10/site-packages (from GitPython!=3.1.29,>=1.0.0->wandb->-r requirements.txt (line 4)) (4.0.10)
+Requirement already satisfied: cachetools<6.0,>=2.0.0 in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from google-auth<3,>=1.6.3->tensorboard->-r requirements.txt (line 7)) (5.3.0)
+Requirement already satisfied: pyasn1-modules>=0.2.1 in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from google-auth<3,>=1.6.3->tensorboard->-r requirements.txt (line 7)) (0.3.0)
+Requirement already satisfied: rsa<5,>=3.1.4 in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from google-auth<3,>=1.6.3->tensorboard->-r requirements.txt (line 7)) (4.9)
+Requirement already satisfied: requests-oauthlib>=0.7.0 in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from google-auth-oauthlib<1.1,>=0.5->tensorboard->-r requirements.txt (line 7)) (1.3.1)
+Requirement already satisfied: typing-extensions>=3.7.4.3 in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from huggingface-hub<1.0,>=0.1.0->transformers==4.17.0->-r requirements.txt (line 1)) (4.5.0)
+Requirement already satisfied: idna<4,>=2.5 in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from requests->transformers==4.17.0->-r requirements.txt (line 1)) (3.4)
+Requirement already satisfied: urllib3<1.27,>=1.21.1 in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from requests->transformers==4.17.0->-r requirements.txt (line 1)) (1.26.15)
+Requirement already satisfied: certifi>=2017.4.17 in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from requests->transformers==4.17.0->-r requirements.txt (line 1)) (2022.12.7)
+Requirement already satisfied: sympy in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from torch>=1.4.0->accelerate==0.18.0->-r requirements.txt (line 6)) (1.11.1)
+Requirement already satisfied: networkx in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from torch>=1.4.0->accelerate==0.18.0->-r requirements.txt (line 6)) (3.1)
+Requirement already satisfied: jinja2 in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from torch>=1.4.0->accelerate==0.18.0->-r requirements.txt (line 6)) (3.1.2)
+Requirement already satisfied: nvidia-cuda-nvrtc-cu11==11.7.99 in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from torch>=1.4.0->accelerate==0.18.0->-r requirements.txt (line 6)) (11.7.99)
+Requirement already satisfied: nvidia-cuda-runtime-cu11==11.7.99 in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from torch>=1.4.0->accelerate==0.18.0->-r requirements.txt (line 6)) (11.7.99)
+Requirement already satisfied: nvidia-cuda-cupti-cu11==11.7.101 in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from torch>=1.4.0->accelerate==0.18.0->-r requirements.txt (line 6)) (11.7.101)
+Requirement already satisfied: nvidia-cudnn-cu11==8.5.0.96 in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from torch>=1.4.0->accelerate==0.18.0->-r requirements.txt (line 6)) (8.5.0.96)
+Requirement already satisfied: nvidia-cublas-cu11==11.10.3.66 in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from torch>=1.4.0->accelerate==0.18.0->-r requirements.txt (line 6)) (11.10.3.66)
+Requirement already satisfied: nvidia-cufft-cu11==10.9.0.58 in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from torch>=1.4.0->accelerate==0.18.0->-r requirements.txt (line 6)) (10.9.0.58)
+Requirement already satisfied: nvidia-curand-cu11==10.2.10.91 in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from torch>=1.4.0->accelerate==0.18.0->-r requirements.txt (line 6)) (10.2.10.91)
+Requirement already satisfied: nvidia-cusolver-cu11==11.4.0.1 in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from torch>=1.4.0->accelerate==0.18.0->-r requirements.txt (line 6)) (11.4.0.1)
+Requirement already satisfied: nvidia-cusparse-cu11==11.7.4.91 in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from torch>=1.4.0->accelerate==0.18.0->-r requirements.txt (line 6)) (11.7.4.91)
+Requirement already satisfied: nvidia-nccl-cu11==2.14.3 in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from torch>=1.4.0->accelerate==0.18.0->-r requirements.txt (line 6)) (2.14.3)
+Requirement already satisfied: nvidia-nvtx-cu11==11.7.91 in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from torch>=1.4.0->accelerate==0.18.0->-r requirements.txt (line 6)) (11.7.91)
+Requirement already satisfied: triton==2.0.0 in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from torch>=1.4.0->accelerate==0.18.0->-r requirements.txt (line 6)) (2.0.0)
+Requirement already satisfied: cmake in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from triton==2.0.0->torch>=1.4.0->accelerate==0.18.0->-r requirements.txt (line 6)) (3.26.3)
+Requirement already satisfied: lit in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from triton==2.0.0->torch>=1.4.0->accelerate==0.18.0->-r requirements.txt (line 6)) (16.0.2)
+Requirement already satisfied: MarkupSafe>=2.1.1 in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from werkzeug>=1.0.1->tensorboard->-r requirements.txt (line 7)) (2.1.2)
+Requirement already satisfied: python-dateutil>=2.8.2 in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from pandas->datasets==2.11.0->-r requirements.txt (line 2)) (2.8.2)
+Requirement already satisfied: pytz>=2020.1 in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from pandas->datasets==2.11.0->-r requirements.txt (line 2)) (2023.3)
+Requirement already satisfied: tzdata>=2022.1 in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from pandas->datasets==2.11.0->-r requirements.txt (line 2)) (2023.3)
+Requirement already satisfied: smmap<6,>=3.0.1 in /home/sshukla7/.local/lib/python3.10/site-packages (from gitdb<5,>=4.0.1->GitPython!=3.1.29,>=1.0.0->wandb->-r requirements.txt (line 4)) (5.0.0)
+Requirement already satisfied: pyasn1<0.6.0,>=0.4.6 in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from pyasn1-modules>=0.2.1->google-auth<3,>=1.6.3->tensorboard->-r requirements.txt (line 7)) (0.5.0)
+Requirement already satisfied: oauthlib>=3.0.0 in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from requests-oauthlib>=0.7.0->google-auth-oauthlib<1.1,>=0.5->tensorboard->-r requirements.txt (line 7)) (3.2.2)
+Requirement already satisfied: mpmath>=0.19 in /opt/sw/spack/apps/linux-rhel8-x86_64/gcc-10.3.0/python-3.10.1-qb/lib/python3.10/site-packages (from sympy->torch>=1.4.0->accelerate==0.18.0->-r requirements.txt (line 6)) (1.3.0)
+Installing collected packages: transformers
+  Attempting uninstall: transformers
+    Found existing installation: transformers 4.20.0
+    Uninstalling transformers-4.20.0:
+      Successfully uninstalled transformers-4.20.0
+Successfully installed transformers-4.17.0
+05/01/2023 19:33:03 - INFO - __main__ -   Distributed environment: NO
+Num processes: 1
+Process index: 0
+Local process index: 0
+Device: cuda
+
+Mixed precision type: no
+
+05/01/2023 19:33:03 - WARNING - __main__ -   Namespace(dataset_name='ml6team/cnn_dailymail_nl', dataset_config_name='3.0.0', train_file=None, validation_file=None, ignore_pad_token_for_loss=True, max_source_length=1024, source_prefix=None, preprocessing_num_workers=None, overwrite_cache=None, max_target_length=128, val_max_target_length=None, pad_to_max_length=False, model_name_or_path='ml6team/mbart-large-cc25-cnn-dailymail-xsum-nl', config_name=None, tokenizer_name='facebook/mbart-large-cc25', text_column=None, summary_column=None, use_slow_tokenizer=False, per_device_train_batch_size=16, per_device_eval_batch_size=4, learning_rate=3e-05, weight_decay=0.0, num_train_epochs=20, max_train_steps=None, gradient_accumulation_steps=2, lr_scheduler_type=<SchedulerType.LINEAR: 'linear'>, warmup_ratio=0.05, output_dir='./output_ml6team_cnn_dailymail_nl/8_8_6_3_20_3e-05_fp16', seed=28, model_type=None, teacher_model='ml6team/mbart-large-cc25-cnn-dailymail-xsum-nl', student_model='ml6team/mbart-large-cc25-cnn-dailymail-xsum-nl', pred_distill=True, intermediate_distill=True, weight_bits=8, input_bits=8, clip_val=2.5, length_penalty=1.0, max_length=160, min_length=50, num_beams=4, do_train=True, do_test=True, test_teacher=False, distill_encoder=6, distill_decoder=3, log_steps=20, local_rank=0, weighted=False, new_distill_map=False, task_weight=1, logits_weight=1, hid_weight=1)
+
+
+the arguments are:  Namespace(dataset_name='ml6team/cnn_dailymail_nl', dataset_config_name='3.0.0', train_file=None, validation_file=None, ignore_pad_token_for_loss=True, max_source_length=1024, source_prefix=None, preprocessing_num_workers=None, overwrite_cache=None, max_target_length=128, val_max_target_length=None, pad_to_max_length=False, model_name_or_path='ml6team/mbart-large-cc25-cnn-dailymail-xsum-nl', config_name=None, tokenizer_name='facebook/mbart-large-cc25', text_column=None, summary_column=None, use_slow_tokenizer=False, per_device_train_batch_size=16, per_device_eval_batch_size=4, learning_rate=3e-05, weight_decay=0.0, num_train_epochs=20, max_train_steps=None, gradient_accumulation_steps=2, lr_scheduler_type=<SchedulerType.LINEAR: 'linear'>, warmup_ratio=0.05, output_dir='./output_ml6team_cnn_dailymail_nl/8_8_6_3_20_3e-05_fp16', seed=28, model_type=None, teacher_model='ml6team/mbart-large-cc25-cnn-dailymail-xsum-nl', student_model='ml6team/mbart-large-cc25-cnn-dailymail-xsum-nl', pred_distill=True, intermediate_distill=True, weight_bits=8, input_bits=8, clip_val=2.5, length_penalty=1.0, max_length=160, min_length=50, num_beams=4, do_train=True, do_test=True, test_teacher=False, distill_encoder=6, distill_decoder=3, log_steps=20, local_rank=0, weighted=False, new_distill_map=False, task_weight=1, logits_weight=1, hid_weight=1)
+
+
+the args output_dir is:  ./output_ml6team_cnn_dailymail_nl/8_8_6_3_20_3e-05_fp16
+
+
+
+
+dataset is not none
+
+
+
+
+dataset name is : ml6team/cnn_dailymail_nl and config name is: 3.0.0
+05/01/2023 19:33:05 - WARNING - datasets.builder -   Found cached dataset cnn_dailymail_nl (/home/sshukla7/.cache/huggingface/datasets/ml6team___cnn_dailymail_nl/3.0.0/0.0.0/73618cbc23f25331390bc0475f361e0531b47feee292c9cf84d396d6a3b9b608)
+
+
+
+
+Raw data set after loading the data is :  DatasetDict({
+    train: Dataset({
+        features: ['article', 'highlights', 'id'],
+        num_rows: 287113
+    })
+    validation: Dataset({
+        features: ['article', 'highlights', 'id'],
+        num_rows: 13368
+    })
+    test: Dataset({
+        features: ['article', 'highlights', 'id'],
+        num_rows: 11490
+    })
+})
+
+
+ ****** the tokenizer name is: ****** facebook/mbart-large-cc25
+
+
+
+ ******* updating the tokenizer ********* 
+
+
+
+init quantize emb
+
+
+
+
+ The raw datset is :  DatasetDict({
+    train: Dataset({
+        features: ['article', 'highlights', 'id'],
+        num_rows: 287113
+    })
+    validation: Dataset({
+        features: ['article', 'highlights', 'id'],
+        num_rows: 13368
+    })
+    test: Dataset({
+        features: ['article', 'highlights', 'id'],
+        num_rows: 11490
+    })
+})
+datasets size, train: 287113, validate: 13368, test: 11490
+05/01/2023 19:34:56 - INFO - __main__ -   Sample 59222 of the training set: {'input_ids': [20769, 6, 5, 51627, 14978, 6, 5, 37050, 429, 20628, 170, 12, 6, 5, 423, 34605, 50149, 4, 209, 13104, 1210, 6, 5, 6, 5, 6, 5, 11995, 429, 7797, 18, 12, 6, 5, 5098, 35315, 50149, 4, 534, 13104, 1210, 6, 5, 1446, 143, 510, 15546, 25, 7, 4884, 2610, 19585, 208600, 23, 293, 17340, 7864, 115914, 242, 118630, 1869, 92, 25, 23, 293, 210339, 214883, 3829, 452, 243243, 19, 2610, 195330, 22, 233, 98098, 624, 30666, 478, 5, 262, 493, 145750, 112, 54, 232, 4, 6, 120106, 71, 435, 293, 228, 7671, 22, 8, 84694, 4, 83, 23, 225, 214883, 131, 2907, 33876, 23, 2076, 68899, 5, 2501, 27802, 7, 4884, 1926, 98, 163988, 23475, 2373, 15414, 19585, 143, 510, 23, 225, 242, 111753, 53, 190819, 13, 25, 4, 111, 15546, 822, 783, 4, 22, 8, 52088, 23127, 19161, 14340, 607, 225, 58959, 8072, 11365, 117, 3325, 3778, 32902, 5, 1446, 143, 510, 12, 5018, 15546, 822, 783, 23, 225, 2076, 68899, 184, 2907, 5, 33876, 214883, 23, 123201, 5, 5018, 15546, 822, 783, 83, 293, 14980, 3829, 11120, 15546, 25, 7, 4884, 58721, 4, 106141, 452, 243243, 19, 4, 22, 932, 4148, 2373, 15414, 19585, 143, 510, 171, 92359, 22, 195330, 120, 2610, 5, 140265, 12, 5864, 2062, 525, 36661, 20974, 33, 1869, 92, 1978, 27423, 18, 72, 7143, 22, 66381, 293, 24760, 1926, 15546, 13099, 3188, 123918, 22, 225, 71411, 30573, 217, 4, 36457, 2529, 225, 293, 28949, 23, 225, 214883, 39870, 225, 106361, 225, 8562, 203, 30566, 11439, 5, 17354, 206, 12, 262, 97011, 509, 8366, 21297, 23, 8, 32910, 129765, 33, 4, 1476, 83, 144737, 3932, 104075, 6, 82788, 131, 8, 87050, 5, 1947, 2062, 525, 103551, 24259, 33, 1869, 92, 1978, 27423, 18, 1123, 22, 66381, 293, 24760, 1056, 15546, 13099, 3188, 123918, 22, 67830, 297, 225, 71411, 4, 225, 36457, 2529, 293, 28949, 23, 225, 214883, 39870, 225, 106361, 225, 8562, 203, 233, 75068, 5, 1947, 59729, 18, 58959, 8072, 111, 19014, 54457, 624, 225, 106361, 171, 1582, 225, 1869, 92, 120, 8297, 4, 39870, 8, 85782, 34353, 9604, 3188, 171, 37168, 28817, 10513, 120, 1978, 9858, 5, 360, 8, 54, 232, 83, 293, 59335, 68, 42858, 18, 8, 73654, 120963, 3857, 134157, 9931, 48049, 624, 8, 15546, 624, 69554, 65733, 5, 1947, 70543, 203, 1056, 737, 293, 6, 5, 242, 107, 3784, 6496, 4683, 25, 737, 73654, 7, 68, 131, 159885, 171682, 4884, 10205, 37192, 171, 1926, 15546, 25, 7, 10205, 120, 1248, 62226, 13099, 8072, 64532, 5, 241, 33605, 4, 737, 8, 85782, 1348, 10205, 1772, 18, 171, 435, 1926, 8562, 120, 2610, 3688, 21882, 71, 24, 8, 8072, 64532, 9931, 225, 2610, 19395, 52982, 71, 624, 30666, 478, 5, 262, 97011, 509, 8366, 21297, 23, 8, 32910, 129765, 33, 1476, 83, 144737, 3932, 104075, 6, 82788, 131, 8, 87050, 5, 262, 4831, 137448, 607, 225, 83, 131, 26213, 607, 23475, 225, 19554, 3899, 171, 120, 24591, 1225, 1926, 89043, 1056, 22, 607, 225, 19554, 3778, 98, 15143, 177, 71, 664, 23475, 19585, 208600, 23, 225, 15546, 822, 783, 5, 1004, 83, 1232, 120608, 607, 4, 142726, 8, 60289, 14491, 131, 225, 70543, 4, 95150, 7, 131, 23475, 111, 4052, 9018, 64974, 8, 15546, 4884, 645, 12475, 33, 23, 19891, 131, 73654, 7, 5, 262, 87050, 9, 10770, 86811, 13, 624, 8, 41948, 33, 131, 225, 27435, 60745, 607, 72, 15546, 11728, 33, 23, 8953, 3974, 1056, 4, 1476, 123201, 3188, 225, 42802, 435, 10078, 23, 225, 2923, 3551, 5, 89866, 3188, 2678, 4, 384, 8824, 1861, 1025, 5896, 4, 34854, 11, 26203, 29620, 148507, 344, 16329, 611, 4, 1261, 188, 58241, 69554, 4, 21229, 1025, 69554, 22, 106615, 4, 13666, 4, 567, 14817, 7, 53303, 4, 3453, 7636, 66, 4, 25730, 22, 35220, 2726, 1025, 3899, 38295, 21538, 90618, 172169, 3325, 5, 87050, 12, 1947, 87050, 9, 10770, 5097, 624, 8, 41948, 33, 131, 225, 27435, 60745, 607, 72, 15546, 11728, 33, 23, 8953, 3974, 1056, 4, 1476, 123201, 3188, 225, 42802, 435, 10078, 23, 225, 2923, 3551, 5, 105451, 12, 360, 8, 54, 232, 83, 293, 59335, 68, 42858, 18, 8, 73654, 120963, 3857, 134157, 9931, 48049, 624, 8, 15546, 624, 69554, 65733, 5, 9098, 12, 31901, 19, 624, 493, 143, 510, 15546, 25, 7, 23, 25356, 25, 66, 4, 7224, 66, 5134, 139530, 4, 9098, 5, 1947, 8155, 15546, 1869, 92, 131, 7224, 66, 5134, 146943, 1474, 11281, 23, 8366, 137073, 23, 25356, 25, 66, 144737, 5, 74106, 12, 24624, 1869, 1098, 1056, 293, 764, 126, 9, 82931, 77066, 23, 9098, 15014, 1518, 33, 700, 45578, 607, 8, 38246, 225, 43233, 131, 85782, 54823, 126660, 203, 143527, 33, 22, 664, 141386, 33, 198272, 777, 103669, 5, 6533, 22990, 198272, 64678, 131, 84339, 4, 89043, 493, 142795, 452, 243243, 19, 233, 493, 10164, 33, 64678, 68, 1348, 91037, 2610, 92359, 4, 58625, 8, 25051, 131, 14752, 98, 163988, 15546, 25, 7, 5, 262, 8155, 38246, 624, 493, 143, 510, 15546, 25, 7, 11281, 144737, 194580, 23, 25356, 25, 66, 4, 7224, 66, 5134, 139530, 4, 9098, 5, 24624, 1869, 1098, 1056, 293, 764, 126, 9, 429, 82931, 18, 26128, 77066, 23, 9098, 4, 15014, 1518, 33, 700, 45578, 607, 8, 38246, 203, 143527, 33, 225, 43233, 131, 85782, 54823, 126660, 22, 664, 141386, 33, 198272, 777, 103669, 5, 6533, 22990, 198272, 64678, 131, 84339, 4, 89043, 493, 142795, 452, 243243, 19, 233, 493, 10164, 33, 64678, 68, 1348, 91037, 2610, 92359, 4, 58625, 8, 25051, 131, 14752, 98, 163988, 15546, 25, 7, 5, 262, 120963, 203, 184, 56786, 60338, 42466, 3188, 42517, 854, 3325, 36311, 85006, 624, 35208, 171, 293, 63380, 624, 15546, 10683, 1098, 120, 18841, 5, 127425, 11697, 56950, 186, 73129, 22990, 1926, 163983, 664, 24477, 28605, 225, 214883, 120, 3283, 63758, 33, 5, 262, 15371, 12255, 611, 3325, 1937, 2610, 165599, 71, 4, 39870, 23475, 68, 23, 8, 157297, 6, 208600, 1056, 4, 1615, 33605, 4884, 8297, 1225, 1926, 333, 99651, 73654, 83, 737, 932, 85782, 1056, 5, 2, 250019], 'attention_mask': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 'labels': [262, 493, 145750, 112, 54, 232, 83, 23, 225, 2907, 33876, 9, 5556, 1098, 25660, 131, 2076, 68899, 5, 2501, 27802, 7, 4884, 1926, 98, 163988, 23475, 4148, 2373, 15414, 19585, 143, 510, 5, 2734, 8562, 13099, 69554, 65733, 10205, 75068, 13235, 9931, 225, 2610, 700, 1138, 6328, 11458, 5, 2, 250019]}.
+Yes, cuda is available, Found device: NVIDIA A100-SXM-80GB, n_gpu: 1
+05/01/2023 19:35:02 - INFO - __main__ -   ***** Running training *****
+05/01/2023 19:35:02 - INFO - __main__ -     Num examples = 287113
+05/01/2023 19:35:02 - INFO - __main__ -     Num Epochs = 20
+05/01/2023 19:35:02 - INFO - __main__ -     Instantaneous batch size per device = 16
+05/01/2023 19:35:02 - INFO - __main__ -     Total train batch size (w. parallel, distributed & accumulation) = 32
+05/01/2023 19:35:02 - INFO - __main__ -     Gradient Accumulation steps = 2
+05/01/2023 19:35:02 - INFO - __main__ -     Total optimization steps = 179460
+05/01/2023 19:35:02 - INFO - __main__ -     student encoder layers = 6
+05/01/2023 19:35:02 - INFO - __main__ -     student decoder layers = 3
+05/01/2023 19:35:02 - INFO - __main__ -     student encoder layers [0, 1, 2, 3, 4, 5] is mapped with teacher encoder layers [0, 1, 2, 3, 4, 5]
+05/01/2023 19:35:02 - INFO - __main__ -     student decoder layers [0, 1, 2] is mapped with teacher decoder layers [0, 2, 5]
