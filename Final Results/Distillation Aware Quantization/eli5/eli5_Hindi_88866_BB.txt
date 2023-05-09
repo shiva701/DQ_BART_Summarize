@@ -1,16 +1,3624 @@
+
+
+2023-05-09 03:02:58.326514: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+here!!
+05/09/2023 03:02:59 - INFO - __main__ -   Distributed environment: NO
+Num processes: 1
+Process index: 0
+Local process index: 0
+Device: cuda
+
+Mixed precision type: no
+
+05/09/2023 03:02:59 - WARNING - __main__ -   Namespace(dataset_name=None, dataset_config_name=None, train_file='/content/drive/MyDrive/CS678_NLP/Project/Datasets/eli5_Dataset/Hindi/eli5_train_hindi.csv', test_file='/content/drive/MyDrive/CS678_NLP/Project/Datasets/eli5_Dataset/Hindi/eli5_test_hindi.csv', validation_file='/content/drive/MyDrive/CS678_NLP/Project/Datasets/eli5_Dataset/Hindi/eli5_validation_hindi.csv', ignore_pad_token_for_loss=True, max_source_length=1024, source_prefix=None, preprocessing_num_workers=None, overwrite_cache=None, max_target_length=128, val_max_target_length=None, pad_to_max_length=False, model_name_or_path='facebook/bart-base', config_name=None, tokenizer_name=None, text_column=None, summary_column=None, use_slow_tokenizer=False, per_device_train_batch_size=8, per_device_eval_batch_size=4, learning_rate=5e-05, weight_decay=0.0, num_train_epochs=3, max_train_steps=None, gradient_accumulation_steps=2, lr_scheduler_type=<SchedulerType.LINEAR: 'linear'>, warmup_ratio=0.05, output_dir='./output_eli5Translated/8_8_6_6_3_5e-05_fp16', seed=42, model_type=None, teacher_model='facebook/bart-base', student_model='facebook/bart-base', pred_distill=True, intermediate_distill=True, weight_bits=8, input_bits=8, clip_val=2.5, length_penalty=1.0, max_length=160, min_length=50, num_beams=4, do_train=True, do_test=True, test_teacher=False, distill_encoder=6, distill_decoder=6, log_steps=20, local_rank=0, weighted=False, new_distill_map=False, task_weight=1, logits_weight=1, hid_weight=1)
+
+
+the arguments are:  Namespace(dataset_name=None, dataset_config_name=None, train_file='/content/drive/MyDrive/CS678_NLP/Project/Datasets/eli5_Dataset/Hindi/eli5_train_hindi.csv', test_file='/content/drive/MyDrive/CS678_NLP/Project/Datasets/eli5_Dataset/Hindi/eli5_test_hindi.csv', validation_file='/content/drive/MyDrive/CS678_NLP/Project/Datasets/eli5_Dataset/Hindi/eli5_validation_hindi.csv', ignore_pad_token_for_loss=True, max_source_length=1024, source_prefix=None, preprocessing_num_workers=None, overwrite_cache=None, max_target_length=128, val_max_target_length=None, pad_to_max_length=False, model_name_or_path='facebook/bart-base', config_name=None, tokenizer_name=None, text_column=None, summary_column=None, use_slow_tokenizer=False, per_device_train_batch_size=8, per_device_eval_batch_size=4, learning_rate=5e-05, weight_decay=0.0, num_train_epochs=3, max_train_steps=None, gradient_accumulation_steps=2, lr_scheduler_type=<SchedulerType.LINEAR: 'linear'>, warmup_ratio=0.05, output_dir='./output_eli5Translated/8_8_6_6_3_5e-05_fp16', seed=42, model_type=None, teacher_model='facebook/bart-base', student_model='facebook/bart-base', pred_distill=True, intermediate_distill=True, weight_bits=8, input_bits=8, clip_val=2.5, length_penalty=1.0, max_length=160, min_length=50, num_beams=4, do_train=True, do_test=True, test_teacher=False, distill_encoder=6, distill_decoder=6, log_steps=20, local_rank=0, weighted=False, new_distill_map=False, task_weight=1, logits_weight=1, hid_weight=1)
+
+
+the args output_dir is:  ./output_eli5Translated/8_8_6_6_3_5e-05_fp16
+wandb: Tracking run with wandb version 0.15.2
+wandb: W&B syncing is set to `offline` in this directory.  
+wandb: Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+05/09/2023 03:03:01 - WARNING - datasets.builder -   Found cached dataset csv (/root/.cache/huggingface/datasets/csv/default-99e11f72020df5da/0.0.0/6954658bab30a358235fa864b05cf819af0e179325c740e4bc853bcc7ec513e1)
+100% 3/3 [00:00<00:00, 830.99it/s]
+loading configuration file config.json from cache at /root/.cache/huggingface/hub/models--facebook--bart-base/snapshots/aadd2ab0ae0c8268c7c9693540e9904811f36177/config.json
+Model config BartConfig {
+  "_name_or_path": "facebook/bart-base",
+  "activation_dropout": 0.1,
+  "activation_function": "gelu",
+  "add_bias_logits": false,
+  "add_final_layer_norm": false,
+  "architectures": [
+    "BartModel"
+  ],
+  "attention_dropout": 0.1,
+  "bos_token_id": 0,
+  "classif_dropout": 0.1,
+  "classifier_dropout": 0.0,
+  "d_model": 768,
+  "decoder_attention_heads": 12,
+  "decoder_ffn_dim": 3072,
+  "decoder_layerdrop": 0.0,
+  "decoder_layers": 6,
+  "decoder_start_token_id": 2,
+  "dropout": 0.1,
+  "early_stopping": true,
+  "encoder_attention_heads": 12,
+  "encoder_ffn_dim": 3072,
+  "encoder_layerdrop": 0.0,
+  "encoder_layers": 6,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2"
+  },
+  "init_std": 0.02,
+  "is_encoder_decoder": true,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2
+  },
+  "max_position_embeddings": 1024,
+  "model_type": "bart",
+  "no_repeat_ngram_size": 3,
+  "normalize_before": false,
+  "normalize_embedding": true,
+  "num_beams": 4,
+  "num_hidden_layers": 6,
+  "pad_token_id": 1,
+  "scale_embedding": false,
+  "task_specific_params": {
+    "summarization": {
+      "length_penalty": 1.0,
+      "max_length": 128,
+      "min_length": 12,
+      "num_beams": 4
+    },
+    "summarization_cnn": {
+      "length_penalty": 2.0,
+      "max_length": 142,
+      "min_length": 56,
+      "num_beams": 4
+    },
+    "summarization_xsum": {
+      "length_penalty": 1.0,
+      "max_length": 62,
+      "min_length": 11,
+      "num_beams": 6
+    }
+  },
+  "torch_dtype": "float32",
+  "transformers_version": "4.28.1",
+  "use_cache": true,
+  "vocab_size": 50265
+}
+
+Could not locate the tokenizer configuration file, will try to use the model config instead.
+loading configuration file config.json from cache at /root/.cache/huggingface/hub/models--facebook--bart-base/snapshots/aadd2ab0ae0c8268c7c9693540e9904811f36177/config.json
+Model config BartConfig {
+  "_name_or_path": "facebook/bart-base",
+  "activation_dropout": 0.1,
+  "activation_function": "gelu",
+  "add_bias_logits": false,
+  "add_final_layer_norm": false,
+  "architectures": [
+    "BartModel"
+  ],
+  "attention_dropout": 0.1,
+  "bos_token_id": 0,
+  "classif_dropout": 0.1,
+  "classifier_dropout": 0.0,
+  "d_model": 768,
+  "decoder_attention_heads": 12,
+  "decoder_ffn_dim": 3072,
+  "decoder_layerdrop": 0.0,
+  "decoder_layers": 6,
+  "decoder_start_token_id": 2,
+  "dropout": 0.1,
+  "early_stopping": true,
+  "encoder_attention_heads": 12,
+  "encoder_ffn_dim": 3072,
+  "encoder_layerdrop": 0.0,
+  "encoder_layers": 6,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2"
+  },
+  "init_std": 0.02,
+  "is_encoder_decoder": true,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2
+  },
+  "max_position_embeddings": 1024,
+  "model_type": "bart",
+  "no_repeat_ngram_size": 3,
+  "normalize_before": false,
+  "normalize_embedding": true,
+  "num_beams": 4,
+  "num_hidden_layers": 6,
+  "pad_token_id": 1,
+  "scale_embedding": false,
+  "task_specific_params": {
+    "summarization": {
+      "length_penalty": 1.0,
+      "max_length": 128,
+      "min_length": 12,
+      "num_beams": 4
+    },
+    "summarization_cnn": {
+      "length_penalty": 2.0,
+      "max_length": 142,
+      "min_length": 56,
+      "num_beams": 4
+    },
+    "summarization_xsum": {
+      "length_penalty": 1.0,
+      "max_length": 62,
+      "min_length": 11,
+      "num_beams": 6
+    }
+  },
+  "torch_dtype": "float32",
+  "transformers_version": "4.28.1",
+  "use_cache": true,
+  "vocab_size": 50265
+}
+
+loading file vocab.json from cache at /root/.cache/huggingface/hub/models--facebook--bart-base/snapshots/aadd2ab0ae0c8268c7c9693540e9904811f36177/vocab.json
+loading file merges.txt from cache at /root/.cache/huggingface/hub/models--facebook--bart-base/snapshots/aadd2ab0ae0c8268c7c9693540e9904811f36177/merges.txt
+loading file tokenizer.json from cache at /root/.cache/huggingface/hub/models--facebook--bart-base/snapshots/aadd2ab0ae0c8268c7c9693540e9904811f36177/tokenizer.json
+loading file added_tokens.json from cache at None
+loading file special_tokens_map.json from cache at None
+loading file tokenizer_config.json from cache at None
+loading configuration file config.json from cache at /root/.cache/huggingface/hub/models--facebook--bart-base/snapshots/aadd2ab0ae0c8268c7c9693540e9904811f36177/config.json
+Model config BartConfig {
+  "_name_or_path": "facebook/bart-base",
+  "activation_dropout": 0.1,
+  "activation_function": "gelu",
+  "add_bias_logits": false,
+  "add_final_layer_norm": false,
+  "architectures": [
+    "BartModel"
+  ],
+  "attention_dropout": 0.1,
+  "bos_token_id": 0,
+  "classif_dropout": 0.1,
+  "classifier_dropout": 0.0,
+  "d_model": 768,
+  "decoder_attention_heads": 12,
+  "decoder_ffn_dim": 3072,
+  "decoder_layerdrop": 0.0,
+  "decoder_layers": 6,
+  "decoder_start_token_id": 2,
+  "dropout": 0.1,
+  "early_stopping": true,
+  "encoder_attention_heads": 12,
+  "encoder_ffn_dim": 3072,
+  "encoder_layerdrop": 0.0,
+  "encoder_layers": 6,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2"
+  },
+  "init_std": 0.02,
+  "is_encoder_decoder": true,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2
+  },
+  "max_position_embeddings": 1024,
+  "model_type": "bart",
+  "no_repeat_ngram_size": 3,
+  "normalize_before": false,
+  "normalize_embedding": true,
+  "num_beams": 4,
+  "num_hidden_layers": 6,
+  "pad_token_id": 1,
+  "scale_embedding": false,
+  "task_specific_params": {
+    "summarization": {
+      "length_penalty": 1.0,
+      "max_length": 128,
+      "min_length": 12,
+      "num_beams": 4
+    },
+    "summarization_cnn": {
+      "length_penalty": 2.0,
+      "max_length": 142,
+      "min_length": 56,
+      "num_beams": 4
+    },
+    "summarization_xsum": {
+      "length_penalty": 1.0,
+      "max_length": 62,
+      "min_length": 11,
+      "num_beams": 6
+    }
+  },
+  "torch_dtype": "float32",
+  "transformers_version": "4.28.1",
+  "use_cache": true,
+  "vocab_size": 50265
+}
+
+loading weights file pytorch_model.bin from cache at /root/.cache/huggingface/hub/models--facebook--bart-base/snapshots/aadd2ab0ae0c8268c7c9693540e9904811f36177/pytorch_model.bin
+Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+All model checkpoint weights were used when initializing BartForConditionalGeneration.
+
+All the weights of BartForConditionalGeneration were initialized from the model checkpoint at facebook/bart-base.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use BartForConditionalGeneration for predictions without further training.
+Generation config file not found, using a generation config created from the model config.
+
+
+ from_pretrained,  args output dir:  facebook/bart-base
+/usr/local/lib/python3.10/dist-packages/huggingface_hub/file_download.py:649: FutureWarning: 'cached_download' is the legacy way to download files from the HF hub, please consider upgrading to 'hf_hub_download'
+  warnings.warn(
+Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+init quantize emb
+
+
+
+ ***** The raw datset is: *****  DatasetDict({
+    train: Dataset({
+        features: ['query', 'answer', 'french_query', 'french_answer'],
+        num_rows: 1000
+    })
+    validation: Dataset({
+        features: ['query', 'answer', 'french_query', 'french_answer'],
+        num_rows: 200
+    })
+    test: Dataset({
+        features: ['query', 'answer', 'french_query', 'french_answer'],
+        num_rows: 200
+    })
+})
+Running tokenizer on dataset (num_proc=10):   0% 0/1000 [00:00<?, ? examples/s]/usr/local/lib/python3.10/dist-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+Running tokenizer on dataset (num_proc=10):  10% 100/1000 [00:00<00:07, 118.61 examples/s]/usr/local/lib/python3.10/dist-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+Running tokenizer on dataset (num_proc=10):  30% 300/1000 [00:01<00:02, 331.32 examples/s]/usr/local/lib/python3.10/dist-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+Running tokenizer on dataset (num_proc=10):  40% 400/1000 [00:01<00:01, 361.15 examples/s]/usr/local/lib/python3.10/dist-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+Running tokenizer on dataset (num_proc=10):  70% 700/1000 [00:01<00:00, 664.55 examples/s]/usr/local/lib/python3.10/dist-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+Running tokenizer on dataset (num_proc=10):  80% 800/1000 [00:01<00:00, 719.15 examples/s]/usr/local/lib/python3.10/dist-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+Running tokenizer on dataset (num_proc=10):   0% 0/200 [00:00<?, ? examples/s]/usr/local/lib/python3.10/dist-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+Running tokenizer on dataset (num_proc=10):  10% 20/200 [00:00<00:02, 60.19 examples/s]/usr/local/lib/python3.10/dist-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+Running tokenizer on dataset (num_proc=10):  20% 40/200 [00:00<00:01, 97.90 examples/s]/usr/local/lib/python3.10/dist-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+Running tokenizer on dataset (num_proc=10):  30% 60/200 [00:00<00:01, 90.90 examples/s]/usr/local/lib/python3.10/dist-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+Running tokenizer on dataset (num_proc=10):  40% 80/200 [00:00<00:01, 79.89 examples/s]/usr/local/lib/python3.10/dist-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+Running tokenizer on dataset (num_proc=10):  60% 120/200 [00:01<00:00, 132.25 examples/s]/usr/local/lib/python3.10/dist-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+Running tokenizer on dataset (num_proc=10):  80% 160/200 [00:01<00:00, 154.72 examples/s]/usr/local/lib/python3.10/dist-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+Running tokenizer on dataset (num_proc=10):   0% 0/200 [00:00<?, ? examples/s]/usr/local/lib/python3.10/dist-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+Running tokenizer on dataset (num_proc=10):  10% 20/200 [00:00<00:04, 37.02 examples/s]/usr/local/lib/python3.10/dist-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+Running tokenizer on dataset (num_proc=10):  30% 60/200 [00:00<00:01, 103.97 examples/s]/usr/local/lib/python3.10/dist-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+Running tokenizer on dataset (num_proc=10):  40% 80/200 [00:00<00:01, 111.44 examples/s]/usr/local/lib/python3.10/dist-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+Running tokenizer on dataset (num_proc=10):  50% 100/200 [00:00<00:00, 124.92 examples/s]/usr/local/lib/python3.10/dist-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+Running tokenizer on dataset (num_proc=10):  60% 120/200 [00:01<00:00, 130.63 examples/s]/usr/local/lib/python3.10/dist-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+Running tokenizer on dataset (num_proc=10):  80% 160/200 [00:01<00:00, 187.95 examples/s]/usr/local/lib/python3.10/dist-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+                                                                                         
+
+ ***** datasets size, train: 1000, validate: 200, test: 200 *****
+05/09/2023 03:03:15 - INFO - __main__ -   Sample 654 of the training set: {'input_ids': [0, 2264, 16, 5, 2759, 9, 5849, 116, 2], 'attention_mask': [1, 1, 1, 1, 1, 1, 1, 1, 1], 'labels': [0, 179, 6732, 6, 63, 182, 543, 7, 120, 41, 6089, 346, 4, 1993, 9, 5, 11840, 13, 1402, 6732, 283, 19, 14, 3724, 6, 10, 2759, 9, 5849, 4, 3139, 5072, 5, 1280, 9, 678, 37832, 11, 5, 1948, 4, 98, 291, 207, 19, 10, 2759, 9, 5849, 9, 195, 207, 839, 5, 3031, 1948, 115, 28, 31, 379, 27868, 1244, 207, 53, 63, 2299, 6152, 11, 89, 4, 100, 1017, 3608, 2600, 62, 15, 2759, 9, 5849, 25, 24, 16009, 7, 2166, 19851, 4, 85, 18, 3013, 7, 1346, 8, 10, 319, 55, 847, 359, 3841, 1118, 7, 5, 3418, 8, 19958, 10147, 443, 9, 35638, 4, 318, 38, 146, 10, 2166, 20104, 6, 224, 14978, 5, 5933, 9, 140, 18, 6463, 2549, 634, 10, 2]}.
+/usr/local/lib/python3.10/dist-packages/accelerate/accelerator.py:514: FutureWarning: The `use_fp16` property is deprecated and will be removed in version 1.0 of Accelerate use `Accelerator.mixed_precision == 'fp16'` instead.
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/transformers/optimization.py:391: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+Yes, cuda is available, Found device: Tesla T4, n_gpu: 1
+/content/drive/MyDrive/CS678_NLP/Project/run_summarization_no_trainer_cnnDutch.py:706: FutureWarning: load_metric is deprecated and will be removed in the next major version of datasets. Use 'evaluate.load' instead, from the new library 🤗 Evaluate: https://huggingface.co/docs/evaluate
+  metric = load_metric("rouge")
+05/09/2023 03:03:18 - INFO - __main__ -   
+
+***** Running training *****
+05/09/2023 03:03:18 - INFO - __main__ -     Num examples = 1000
+05/09/2023 03:03:18 - INFO - __main__ -     Num Epochs = 3
+05/09/2023 03:03:18 - INFO - __main__ -     Instantaneous batch size per device = 8
+05/09/2023 03:03:18 - INFO - __main__ -     Total train batch size (w. parallel, distributed & accumulation) = 16
+05/09/2023 03:03:18 - INFO - __main__ -     Gradient Accumulation steps = 2
+05/09/2023 03:03:18 - INFO - __main__ -     Total optimization steps = 189
+05/09/2023 03:03:18 - INFO - __main__ -     student encoder layers = 6
+05/09/2023 03:03:18 - INFO - __main__ -     student decoder layers = 6
+05/09/2023 03:03:18 - INFO - __main__ -     student encoder layers [0, 1, 2, 3, 4, 5] is mapped with teacher encoder layers [0, 1, 2, 3, 4, 5]
+05/09/2023 03:03:18 - INFO - __main__ -     student decoder layers [0, 1, 2, 3, 4, 5] is mapped with teacher decoder layers [0, 1, 2, 3, 4, 5]
+  0% 0/189 [00:00<?, ?it/s]You're using a BartTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+ 33% 62/189 [00:48<01:37,  1.30it/s]
+  0% 0/50 [00:00<?, ?it/s]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+  2% 1/50 [00:07<05:43,  7.01s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+ 33% 63/189 [01:02<01:37,  1.30it/s]
+  4% 2/50 [00:20<08:35, 10.74s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+  6% 3/50 [00:28<07:20,  9.38s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+  8% 4/50 [00:39<07:54, 10.31s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 10% 5/50 [00:47<07:01,  9.37s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 12% 6/50 [00:57<06:55,  9.45s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 14% 7/50 [01:06<06:41,  9.33s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 16% 8/50 [01:17<07:00, 10.02s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 18% 9/50 [01:25<06:17,  9.21s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 20% 10/50 [01:34<06:07,  9.19s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 22% 11/50 [01:52<07:41, 11.84s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 24% 12/50 [02:02<07:11, 11.35s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 26% 13/50 [02:14<07:06, 11.52s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 28% 14/50 [02:25<06:45, 11.27s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 30% 15/50 [02:32<05:55, 10.14s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 32% 16/50 [02:38<04:58,  8.79s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 34% 17/50 [02:45<04:30,  8.20s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 36% 18/50 [02:52<04:16,  8.01s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 38% 19/50 [03:01<04:18,  8.35s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 40% 20/50 [03:08<03:58,  7.94s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 42% 21/50 [03:15<03:40,  7.62s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 44% 22/50 [03:25<03:49,  8.19s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 46% 23/50 [03:34<03:48,  8.48s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 48% 24/50 [03:43<03:47,  8.76s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 50% 25/50 [03:51<03:34,  8.58s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 52% 26/50 [04:01<03:31,  8.83s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 54% 27/50 [04:06<02:57,  7.73s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 56% 28/50 [04:24<04:00, 10.92s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 58% 29/50 [04:37<04:00, 11.45s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 60% 30/50 [04:47<03:39, 10.97s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 62% 31/50 [04:54<03:04,  9.71s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 64% 32/50 [05:01<02:43,  9.06s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 66% 33/50 [05:10<02:30,  8.88s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 68% 34/50 [05:17<02:15,  8.48s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 70% 35/50 [05:24<02:00,  8.02s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 72% 36/50 [05:31<01:48,  7.78s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 74% 37/50 [05:44<02:00,  9.30s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 76% 38/50 [05:51<01:44,  8.72s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 78% 39/50 [06:00<01:34,  8.55s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 80% 40/50 [06:11<01:34,  9.41s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 82% 41/50 [06:19<01:20,  8.97s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 84% 42/50 [06:32<01:22, 10.32s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 86% 43/50 [06:42<01:09,  9.97s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 88% 44/50 [06:50<00:57,  9.55s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 90% 45/50 [06:57<00:43,  8.75s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 92% 46/50 [07:03<00:31,  7.79s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 94% 47/50 [07:12<00:24,  8.14s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 96% 48/50 [07:22<00:17,  8.95s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 98% 49/50 [07:32<00:09,  9.17s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+100% 50/50 [07:39<00:00,  9.19s/it]
+05/09/2023 03:11:49 - INFO - __main__ -   evaluation result: {'eval/rouge1': 20.1277, 'eval/rouge2': 2.5923, 'eval/rougeL': 13.1806, 'eval/rougeLsum': 18.5802} 
+
+
+ line 910, args output dir:  ./output_eli5Translated/8_8_6_6_3_5e-05_fp16
+Model weights saved in ./output_eli5Translated/8_8_6_6_3_5e-05_fp16/pytorch_model.bin
+ 66% 124/189 [09:24<00:55,  1.17it/s]
+  0% 0/50 [00:00<?, ?it/s]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+  2% 1/50 [00:08<06:54,  8.45s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+  4% 2/50 [00:16<06:23,  8.00s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+ 67% 126/189 [09:42<00:53,  1.17it/s]
+  6% 3/50 [00:22<05:42,  7.30s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+  8% 4/50 [00:39<08:25, 10.98s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 10% 5/50 [00:57<10:09, 13.54s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 12% 6/50 [01:12<10:24, 14.20s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 14% 7/50 [01:19<08:31, 11.89s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 16% 8/50 [01:28<07:29, 10.69s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 18% 9/50 [01:38<07:09, 10.47s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 20% 10/50 [01:42<05:50,  8.77s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 22% 11/50 [01:50<05:27,  8.39s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 24% 12/50 [02:00<05:35,  8.83s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 26% 13/50 [02:09<05:34,  9.05s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 28% 14/50 [02:17<05:12,  8.69s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 30% 15/50 [02:29<05:33,  9.52s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 32% 16/50 [02:36<04:58,  8.78s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 34% 17/50 [02:42<04:27,  8.12s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 36% 18/50 [02:49<04:08,  7.77s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 38% 19/50 [03:01<04:38,  8.98s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 40% 20/50 [03:10<04:25,  8.84s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 42% 21/50 [03:21<04:40,  9.68s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 44% 22/50 [03:32<04:42, 10.10s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 46% 23/50 [03:39<04:02,  8.97s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 48% 24/50 [03:46<03:37,  8.36s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 50% 25/50 [03:54<03:27,  8.30s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 52% 26/50 [04:05<03:38,  9.11s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 54% 27/50 [04:13<03:21,  8.78s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 56% 28/50 [04:21<03:09,  8.63s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 58% 29/50 [04:37<03:45, 10.74s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 60% 30/50 [04:44<03:16,  9.81s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 62% 31/50 [04:53<03:02,  9.60s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 64% 32/50 [05:00<02:36,  8.68s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 66% 33/50 [05:09<02:29,  8.80s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 68% 34/50 [05:17<02:15,  8.49s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 70% 35/50 [05:25<02:06,  8.45s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 72% 36/50 [05:32<01:52,  8.06s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 74% 37/50 [05:40<01:42,  7.90s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 76% 38/50 [05:49<01:40,  8.36s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 78% 39/50 [05:58<01:33,  8.53s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 80% 40/50 [06:09<01:32,  9.21s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 82% 41/50 [06:17<01:18,  8.70s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 84% 42/50 [06:28<01:15,  9.42s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 86% 43/50 [06:49<01:30, 12.91s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 88% 44/50 [06:54<01:04, 10.73s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 90% 45/50 [07:03<00:51, 10.26s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 92% 46/50 [07:09<00:35,  8.81s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 94% 47/50 [07:17<00:25,  8.64s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 96% 48/50 [07:26<00:17,  8.63s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 98% 49/50 [07:33<00:08,  8.21s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+100% 50/50 [07:40<00:00,  9.20s/it]
+05/09/2023 03:20:25 - INFO - __main__ -   evaluation result: {'eval/rouge1': 21.3827, 'eval/rouge2': 3.0102, 'eval/rougeL': 13.6866, 'eval/rougeLsum': 19.2406} 
+
+
+ line 910, args output dir:  ./output_eli5Translated/8_8_6_6_3_5e-05_fp16
+Model weights saved in ./output_eli5Translated/8_8_6_6_3_5e-05_fp16/pytorch_model.bin
+ 99% 187/189 [17:59<00:01,  1.17it/s]
+  0% 0/50 [00:00<?, ?it/s]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+  2% 1/50 [00:11<09:09, 11.21s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+100% 189/189 [18:12<00:00,  1.17it/s]
+  4% 2/50 [00:16<06:18,  7.89s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+  6% 3/50 [00:25<06:28,  8.27s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+  8% 4/50 [00:34<06:30,  8.49s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 10% 5/50 [00:41<05:54,  7.89s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 12% 6/50 [00:49<05:49,  7.95s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 14% 7/50 [00:55<05:18,  7.40s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 16% 8/50 [01:01<04:55,  7.04s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 18% 9/50 [01:13<05:43,  8.39s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 20% 10/50 [01:19<05:07,  7.68s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 22% 11/50 [01:33<06:20,  9.76s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 24% 12/50 [01:40<05:39,  8.94s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 26% 13/50 [01:54<06:19, 10.26s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 28% 14/50 [02:04<06:11, 10.33s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 30% 15/50 [02:14<06:01, 10.32s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 32% 16/50 [02:20<05:00,  8.84s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 34% 17/50 [02:26<04:24,  8.02s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 36% 18/50 [02:35<04:22,  8.21s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 38% 19/50 [02:49<05:15, 10.19s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 40% 20/50 [02:55<04:28,  8.95s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 42% 21/50 [03:08<04:54, 10.16s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 44% 22/50 [03:17<04:35,  9.85s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 46% 23/50 [03:32<05:04, 11.29s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 48% 24/50 [03:37<04:07,  9.51s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 50% 25/50 [03:44<03:37,  8.69s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 52% 26/50 [03:58<04:04, 10.17s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 54% 27/50 [04:04<03:28,  9.08s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 56% 28/50 [04:17<03:41, 10.09s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 58% 29/50 [04:23<03:08,  8.98s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 60% 30/50 [04:31<02:49,  8.49s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 62% 31/50 [04:36<02:25,  7.67s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 64% 32/50 [04:44<02:17,  7.66s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 66% 33/50 [04:52<02:11,  7.76s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 68% 34/50 [05:07<02:41, 10.07s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 70% 35/50 [05:14<02:15,  9.03s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 72% 36/50 [05:21<01:57,  8.36s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 74% 37/50 [05:30<01:50,  8.48s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 76% 38/50 [05:36<01:34,  7.83s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 78% 39/50 [05:44<01:25,  7.81s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 80% 40/50 [05:57<01:33,  9.39s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 82% 41/50 [06:05<01:20,  8.91s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 84% 42/50 [06:16<01:16,  9.59s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 86% 43/50 [06:26<01:09,  9.88s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 88% 44/50 [06:31<00:50,  8.40s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 90% 45/50 [06:36<00:36,  7.34s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 92% 46/50 [06:42<00:27,  6.78s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 94% 47/50 [06:56<00:27,  9.05s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 96% 48/50 [07:04<00:17,  8.70s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 98% 49/50 [07:10<00:08,  8.06s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+100% 50/50 [07:21<00:00,  8.82s/it]
+05/09/2023 03:28:41 - INFO - __main__ -   evaluation result: {'eval/rouge1': 21.9939, 'eval/rouge2': 3.4973, 'eval/rougeL': 13.9122, 'eval/rougeLsum': 19.8165} 
+
+
+ line 910, args output dir:  ./output_eli5Translated/8_8_6_6_3_5e-05_fp16
+Model weights saved in ./output_eli5Translated/8_8_6_6_3_5e-05_fp16/pytorch_model.bin
+
+
+ from_pretrained,  args output dir:  ./output_eli5Translated/8_8_6_6_3_5e-05_fp16
+
+
+ ****** fetching pre-trained model config from json file ***** 
+
+
+
+
+ ***** best model config in do_test: ***** 
+
+ {
+  "_commit_hash": null,
+  "_name_or_path": "bart-base",
+  "activation_dropout": 0.1,
+  "activation_function": "gelu",
+  "add_bias_logits": false,
+  "add_cross_attention": false,
+  "add_final_layer_norm": false,
+  "architectures": [
+    "BartForConditionalGeneration"
+  ],
+  "attention_dropout": 0.1,
+  "bad_words_ids": null,
+  "begin_suppress_tokens": null,
+  "bos_token_id": 0,
+  "chunk_size_feed_forward": 0,
+  "classif_dropout": 0.1,
+  "classifier_dropout": 0.0,
+  "clip_val": 2.5,
+  "cross_attention_hidden_size": null,
+  "d_model": 768,
+  "decoder_attention_heads": 12,
+  "decoder_ffn_dim": 3072,
+  "decoder_layerdrop": 0.0,
+  "decoder_layers": 6,
+  "decoder_start_token_id": 2,
+  "diversity_penalty": 0.0,
+  "do_sample": false,
+  "dropout": 0.1,
+  "early_stopping": true,
+  "encoder_attention_heads": 12,
+  "encoder_ffn_dim": 3072,
+  "encoder_layerdrop": 0.0,
+  "encoder_layers": 6,
+  "encoder_no_repeat_ngram_size": 0,
+  "eos_token_id": 2,
+  "exponential_decay_length_penalty": null,
+  "finetuning_task": null,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2"
+  },
+  "init_std": 0.02,
+  "input_bits": 8,
+  "is_decoder": false,
+  "is_encoder_decoder": true,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2
+  },
+  "length_penalty": 1.0,
+  "max_length": 20,
+  "max_position_embeddings": 1024,
+  "min_length": 0,
+  "model_type": "bart",
+  "no_repeat_ngram_size": 3,
+  "normalize_before": false,
+  "normalize_embedding": true,
+  "num_beam_groups": 1,
+  "num_beams": 4,
+  "num_hidden_layers": 6,
+  "num_return_sequences": 1,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "output_scores": false,
+  "pad_token_id": 1,
+  "prefix": null,
+  "problem_type": null,
+  "pruned_heads": {},
+  "quantize_act": true,
+  "remove_invalid_values": false,
+  "repetition_penalty": 1.0,
+  "return_dict": true,
+  "return_dict_in_generate": false,
+  "scale_embedding": false,
+  "sep_token_id": null,
+  "suppress_tokens": null,
+  "task_specific_params": {
+    "summarization": {
+      "length_penalty": 1.0,
+      "max_length": 128,
+      "min_length": 12,
+      "num_beams": 4
+    },
+    "summarization_cnn": {
+      "length_penalty": 2.0,
+      "max_length": 142,
+      "min_length": 56,
+      "num_beams": 4
+    },
+    "summarization_xsum": {
+      "length_penalty": 1.0,
+      "max_length": 62,
+      "min_length": 11,
+      "num_beams": 6
+    }
+  },
+  "temperature": 1.0,
+  "tf_legacy_loss": false,
+  "tie_encoder_decoder": false,
+  "tie_word_embeddings": true,
+  "tokenizer_class": null,
+  "top_k": 50,
+  "top_p": 1.0,
+  "torch_dtype": "float32",
+  "torchscript": false,
+  "transformers_version": "4.12.0.dev0",
+  "typical_p": 1.0,
+  "use_bfloat16": false,
+  "use_cache": true,
+  "vocab_size": 50265,
+  "vocab_size_or_config_json_file": -1,
+  "weight_bits": 8
+}
+
+Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+init quantize emb
+
+  0% 0/50 [00:00<?, ?it/s]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+  2% 1/50 [00:12<09:59, 12.23s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+  4% 2/50 [00:18<07:08,  8.92s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+  6% 3/50 [00:26<06:30,  8.32s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+  8% 4/50 [00:39<07:50, 10.23s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 10% 5/50 [00:53<08:39, 11.55s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 12% 6/50 [01:01<07:40, 10.46s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 14% 7/50 [01:11<07:21, 10.28s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 16% 8/50 [01:25<07:59, 11.42s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 18% 9/50 [01:30<06:26,  9.42s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 20% 10/50 [01:38<06:01,  9.04s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 22% 11/50 [01:58<08:00, 12.32s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 24% 12/50 [02:10<07:40, 12.13s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 26% 13/50 [02:22<07:32, 12.22s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 28% 14/50 [02:41<08:31, 14.21s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 30% 15/50 [02:49<07:13, 12.39s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 32% 16/50 [02:56<06:06, 10.79s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 34% 17/50 [03:03<05:15,  9.55s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 36% 18/50 [03:13<05:10,  9.69s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 38% 19/50 [03:17<04:09,  8.06s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 40% 20/50 [03:23<03:41,  7.39s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 42% 21/50 [03:39<04:51, 10.07s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 44% 22/50 [03:45<04:08,  8.86s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 46% 23/50 [03:54<03:53,  8.66s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 48% 24/50 [04:07<04:20, 10.01s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 50% 25/50 [04:13<03:42,  8.89s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 52% 26/50 [04:29<04:24, 11.04s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 54% 27/50 [04:38<03:57, 10.34s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 56% 28/50 [04:46<03:36,  9.85s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 58% 29/50 [04:56<03:25,  9.76s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 60% 30/50 [05:03<02:58,  8.94s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 62% 31/50 [05:10<02:36,  8.25s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 64% 32/50 [05:26<03:11, 10.64s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 66% 33/50 [05:34<02:45,  9.72s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 68% 34/50 [05:41<02:26,  9.16s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 70% 35/50 [05:54<02:33, 10.23s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 72% 36/50 [06:09<02:44, 11.74s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 74% 37/50 [06:15<02:09,  9.94s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 76% 38/50 [06:24<01:55,  9.59s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 78% 39/50 [06:30<01:32,  8.43s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 80% 40/50 [06:47<01:51, 11.11s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 82% 41/50 [06:56<01:34, 10.50s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 84% 42/50 [07:02<01:13,  9.16s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 86% 43/50 [07:14<01:10, 10.12s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 88% 44/50 [07:19<00:51,  8.56s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 90% 45/50 [07:26<00:39,  7.99s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 92% 46/50 [07:32<00:28,  7.24s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 94% 47/50 [07:51<00:32, 10.77s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 96% 48/50 [07:56<00:18,  9.32s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 98% 49/50 [08:12<00:11, 11.32s/it]Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+100% 50/50 [08:24<00:00, 10.09s/it]
+05/09/2023 03:37:17 - INFO - __main__ -   test result: {'test/rouge1': 22.7009, 'test/rouge2': 3.3537, 'test/rougeL': 14.0036, 'test/rougeLsum': 20.1602}
+100% 189/189 [33:59<00:00, 10.79s/it]
+wandb: Waiting for W&B process to finish... (success).
+wandb: 
+wandb: Run history:
+wandb:             eval/rouge1 ▁▆█
+wandb:             eval/rouge2 ▁▄█
+wandb:             eval/rougeL ▁▆█
+wandb:          eval/rougeLsum ▁▅█
+wandb:             test/rouge1 ▁
+wandb:             test/rouge2 ▁
+wandb:             test/rougeL ▁
+wandb:          test/rougeLsum ▁
+wandb:      train/crs_att_loss ▇██▇▄▃▂▁▂
+wandb:      train/dec_att_loss ▅█▅▃▂▂▂▂▁
+wandb:      train/dec_hid_loss █▄▃▂▂▁▁▁▁
+wandb:      train/enc_att_loss █▇▆▆▄▃▃▁▃
+wandb: train/enc_hid_last_loss ██▇▅▃▂▂▁▁
+wandb:      train/enc_hid_loss █▇▅▄▃▂▁▁▁
+wandb:       train/logits_loss █▃▂▂▁▁▁▁▁
+wandb:              train/loss █▃▂▂▁▁▁▁▁
+wandb:                train/lr █▇▆▅▅▄▃▂▁
+wandb:              train/step ▁▂▃▄▅▅▆▇█
+wandb:         train/task_loss █▃▂▂▁▁▁▁▁
+wandb: 
 wandb: Run summary:
-wandb:             eval/rouge1 20.3072
-wandb:             eval/rouge2 2.8451
-wandb:             eval/rougeL 13.1907
-wandb:          eval/rougeLsum 18.4461
-wandb:      train/crs_att_loss 1.73122
-wandb:      train/dec_att_loss 0.01161
-wandb:      train/dec_hid_loss 1.75728
-wandb:      train/enc_att_loss 0.05386
-wandb: train/enc_hid_last_loss 0.2003
-wandb:      train/enc_hid_loss 0.4095
-wandb:       train/logits_loss 4.27779
-wandb:              train/loss 11.89877
-wandb:                train/lr 5e-05
-wandb:              train/step 59
-wandb:         train/task_loss 5.10187
+wandb:             eval/rouge1 21.9939
+wandb:             eval/rouge2 3.4973
+wandb:             eval/rougeL 13.9122
+wandb:          eval/rougeLsum 19.8165
+wandb:             test/rouge1 22.7009
+wandb:             test/rouge2 3.3537
+wandb:             test/rougeL 14.0036
+wandb:          test/rougeLsum 20.1602
+wandb:      train/crs_att_loss 1.36877
+wandb:      train/dec_att_loss 0.00957
+wandb:      train/dec_hid_loss 1.40355
+wandb:      train/enc_att_loss 0.04714
+wandb: train/enc_hid_last_loss 0.15657
+wandb:      train/enc_hid_loss 0.35416
+wandb:       train/logits_loss 3.33954
+wandb:              train/loss 9.90746
+wandb:                train/lr 0.0
+wandb:              train/step 184
+wandb:         train/task_loss 4.52849
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /content/drive/MyDrive/CS678_NLP/Project/wandb/offline-run-20230509_030300-386xxevr
+wandb: Find logs at: ./wandb/offline-run-20230509_030300-386xxevr/logs
+
