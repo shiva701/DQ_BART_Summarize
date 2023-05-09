@@ -5,13 +5,13 @@ Lmod is automatically replacing "gnu9/9.3.0" with "gnu10/10.3.0-ya".
 Inactive Modules:
   1) hwloc/2.1.0     2) libfabric     3) openmpi4     4) ucx
 
-2023-05-09 00:35:52.206237: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+2023-05-09 01:23:46.153439: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
 To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-2023-05-09 00:35:54.889090: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2023-05-09 01:23:48.698724: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
 wandb: Tracking run with wandb version 0.15.0
 wandb: W&B syncing is set to `offline` in this directory.  
 wandb: Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
-  0%|          | 0/3 [00:00<?, ?it/s] 33%|███▎      | 1/3 [00:00<00:00,  5.69it/s]100%|██████████| 3/3 [00:00<00:00, 16.52it/s]
+  0%|          | 0/3 [00:00<?, ?it/s] 33%|███▎      | 1/3 [00:00<00:00,  5.55it/s]100%|██████████| 3/3 [00:00<00:00, 16.08it/s]
 loading configuration file config.json from cache at /home/sshukla7/.cache/huggingface/hub/models--facebook--bart-base/snapshots/aadd2ab0ae0c8268c7c9693540e9904811f36177/config.json
 Model config BartConfig {
   "_name_or_path": "facebook/bart-base",
@@ -294,25 +294,7 @@ Generate config GenerationConfig {
   warnings.warn(
 /home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
   warnings.warn(
-/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
-  warnings.warn(
-/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
-  warnings.warn(
-Running tokenizer on dataset (num_proc=10):  10%|█         | 100/1000 [00:00<00:02, 419.27 examples/s]/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
-  warnings.warn(
-/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
-  warnings.warn(
-/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
-  warnings.warn(
-/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
-  warnings.warn(
-Running tokenizer on dataset (num_proc=10):  80%|████████  | 800/1000 [00:00<00:00, 2863.61 examples/s]                                                                                                       Running tokenizer on dataset (num_proc=10):   0%|          | 0/200 [00:00<?, ? examples/s]/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
-  warnings.warn(
-/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
-  warnings.warn(
-/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
-  warnings.warn(
-Running tokenizer on dataset (num_proc=10):  10%|█         | 20/200 [00:00<00:01, 140.47 examples/s]/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+Running tokenizer on dataset (num_proc=10):  10%|█         | 100/1000 [00:00<00:01, 489.11 examples/s]/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
   warnings.warn(
 /home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
   warnings.warn(
@@ -322,7 +304,25 @@ Generate config GenerationConfig {
   warnings.warn(
 /home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
   warnings.warn(
-Running tokenizer on dataset (num_proc=10):  70%|███████   | 140/200 [00:00<00:00, 636.19 examples/s]/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+Running tokenizer on dataset (num_proc=10):  90%|█████████ | 900/1000 [00:00<00:00, 3562.67 examples/s]                                                                                                       Running tokenizer on dataset (num_proc=10):   0%|          | 0/200 [00:00<?, ? examples/s]/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+Running tokenizer on dataset (num_proc=10):  10%|█         | 20/200 [00:00<00:01, 159.93 examples/s]/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+Running tokenizer on dataset (num_proc=10):  70%|███████   | 140/200 [00:00<00:00, 704.89 examples/s]/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
   warnings.warn(
 /home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
   warnings.warn(
@@ -332,7 +332,7 @@ Generate config GenerationConfig {
   warnings.warn(
 /home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
   warnings.warn(
-Running tokenizer on dataset (num_proc=10):  10%|█         | 20/200 [00:00<00:01, 130.80 examples/s]/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+Running tokenizer on dataset (num_proc=10):  10%|█         | 20/200 [00:00<00:01, 136.12 examples/s]/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
   warnings.warn(
 /home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
   warnings.warn(
@@ -342,9 +342,9 @@ Generate config GenerationConfig {
   warnings.warn(
 /home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
   warnings.warn(
-Running tokenizer on dataset (num_proc=10):  70%|███████   | 140/200 [00:00<00:00, 626.53 examples/s]/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
-  warnings.warn(
 /home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+Running tokenizer on dataset (num_proc=10):  80%|████████  | 160/200 [00:00<00:00, 692.41 examples/s]/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
   warnings.warn(
                                                                                                      /home/sshukla7/.local/lib/python3.10/site-packages/accelerate/accelerator.py:498: FutureWarning: The `use_fp16` property is deprecated and will be removed in version 1.0 of Accelerate use `Accelerator.mixed_precision == 'fp16'` instead.
   warnings.warn(
@@ -353,7 +353,7 @@ Generate config GenerationConfig {
 /home/sshukla7/sshukla7/DQ_BART/eli5MultiLanguage_trainer.py:706: FutureWarning: load_metric is deprecated and will be removed in the next major version of datasets. Use 'evaluate.load' instead, from the new library 🤗 Evaluate: https://huggingface.co/docs/evaluate
   metric = load_metric("rouge")
   0%|          | 0/252 [00:00<?, ?it/s]You're using a BartTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
-  0%|          | 1/252 [00:02<08:35,  2.05s/it]  5%|▍         | 12/252 [00:04<01:13,  3.24it/s]  9%|▉         | 23/252 [00:06<00:55,  4.14it/s] 13%|█▎        | 34/252 [00:08<00:48,  4.52it/s] 18%|█▊        | 45/252 [00:10<00:43,  4.79it/s] 22%|██▏       | 56/252 [00:12<00:39,  4.97it/s]
+  1%|          | 2/252 [00:02<04:13,  1.01s/it]  8%|▊         | 19/252 [00:04<00:43,  5.31it/s] 14%|█▍        | 36/252 [00:06<00:32,  6.68it/s] 21%|██        | 53/252 [00:08<00:27,  7.32it/s]
   0%|          | 0/50 [00:00<?, ?it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
@@ -369,7 +369,7 @@ Generate config GenerationConfig {
 }
 
 
-  2%|▏         | 1/50 [00:02<02:00,  2.47s/it][AGenerate config GenerationConfig {
+  2%|▏         | 1/50 [00:01<00:52,  1.08s/it][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -384,7 +384,7 @@ Generate config GenerationConfig {
 }
 
 
-  4%|▍         | 2/50 [00:04<01:36,  2.00s/it][AGenerate config GenerationConfig {
+  4%|▍         | 2/50 [00:02<00:59,  1.24s/it][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -399,7 +399,7 @@ Generate config GenerationConfig {
 }
 
 
-  6%|▌         | 3/50 [00:05<01:28,  1.88s/it][AGenerate config GenerationConfig {
+  6%|▌         | 3/50 [00:03<00:52,  1.12s/it][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -414,7 +414,7 @@ Generate config GenerationConfig {
 }
 
 
-  8%|▊         | 4/50 [00:07<01:26,  1.87s/it][AGenerate config GenerationConfig {
+  8%|▊         | 4/50 [00:04<00:52,  1.15s/it][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -429,7 +429,7 @@ Generate config GenerationConfig {
 }
 
 
- 10%|█         | 5/50 [00:11<01:47,  2.38s/it][AGenerate config GenerationConfig {
+ 10%|█         | 5/50 [00:05<00:48,  1.09s/it][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -444,7 +444,7 @@ Generate config GenerationConfig {
 }
 
 
- 12%|█▏        | 6/50 [00:12<01:35,  2.18s/it][AGenerate config GenerationConfig {
+ 12%|█▏        | 6/50 [00:06<00:44,  1.00s/it][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -459,22 +459,7 @@ Generate config GenerationConfig {
 }
 
 
- 14%|█▍        | 7/50 [00:14<01:25,  1.99s/it][AGenerate config GenerationConfig {
-  "_from_model_config": true,
-  "bos_token_id": 0,
-  "decoder_start_token_id": 2,
-  "early_stopping": true,
-  "eos_token_id": 2,
-  "forced_bos_token_id": 0,
-  "forced_eos_token_id": 2,
-  "no_repeat_ngram_size": 3,
-  "num_beams": 4,
-  "pad_token_id": 1,
-  "transformers_version": "4.28.1"
-}
-
- 25%|██▌       | 63/252 [00:29<00:38,  4.97it/s]
- 16%|█▌        | 8/50 [00:16<01:21,  1.94s/it][AGenerate config GenerationConfig {
+ 14%|█▍        | 7/50 [00:07<00:40,  1.06it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -489,7 +474,7 @@ Generate config GenerationConfig {
 }
 
 
- 18%|█▊        | 9/50 [00:17<01:13,  1.79s/it][AGenerate config GenerationConfig {
+ 16%|█▌        | 8/50 [00:08<00:41,  1.01it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -504,7 +489,7 @@ Generate config GenerationConfig {
 }
 
 
- 20%|██        | 10/50 [00:19<01:07,  1.69s/it][AGenerate config GenerationConfig {
+ 18%|█▊        | 9/50 [00:09<00:43,  1.05s/it][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -519,7 +504,22 @@ Generate config GenerationConfig {
 }
 
 
- 22%|██▏       | 11/50 [00:21<01:11,  1.84s/it][AGenerate config GenerationConfig {
+ 20%|██        | 10/50 [00:10<00:43,  1.09s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+ 25%|██▌       | 63/252 [00:20<00:25,  7.32it/s]
+ 22%|██▏       | 11/50 [00:11<00:40,  1.04s/it][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -534,7 +534,7 @@ Generate config GenerationConfig {
 }
 
 
- 24%|██▍       | 12/50 [00:22<01:07,  1.78s/it][AGenerate config GenerationConfig {
+ 24%|██▍       | 12/50 [00:12<00:39,  1.03s/it][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -549,7 +549,7 @@ Generate config GenerationConfig {
 }
 
 
- 26%|██▌       | 13/50 [00:25<01:09,  1.88s/it][AGenerate config GenerationConfig {
+ 26%|██▌       | 13/50 [00:13<00:38,  1.04s/it][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -564,7 +564,7 @@ Generate config GenerationConfig {
 }
 
 
- 28%|██▊       | 14/50 [00:27<01:18,  2.18s/it][AGenerate config GenerationConfig {
+ 28%|██▊       | 14/50 [00:14<00:37,  1.03s/it][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -579,7 +579,7 @@ Generate config GenerationConfig {
 }
 
 
- 30%|███       | 15/50 [00:29<01:13,  2.09s/it][AGenerate config GenerationConfig {
+ 30%|███       | 15/50 [00:15<00:36,  1.05s/it][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -594,7 +594,7 @@ Generate config GenerationConfig {
 }
 
 
- 32%|███▏      | 16/50 [00:31<01:05,  1.93s/it][AGenerate config GenerationConfig {
+ 32%|███▏      | 16/50 [00:16<00:33,  1.00it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -609,7 +609,7 @@ Generate config GenerationConfig {
 }
 
 
- 34%|███▍      | 17/50 [00:33<01:00,  1.85s/it][AGenerate config GenerationConfig {
+ 34%|███▍      | 17/50 [00:17<00:31,  1.04it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -624,7 +624,7 @@ Generate config GenerationConfig {
 }
 
 
- 36%|███▌      | 18/50 [00:34<00:57,  1.79s/it][AGenerate config GenerationConfig {
+ 36%|███▌      | 18/50 [00:18<00:30,  1.03it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -639,7 +639,7 @@ Generate config GenerationConfig {
 }
 
 
- 38%|███▊      | 19/50 [00:36<00:56,  1.83s/it][AGenerate config GenerationConfig {
+ 38%|███▊      | 19/50 [00:19<00:28,  1.07it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -654,7 +654,7 @@ Generate config GenerationConfig {
 }
 
 
- 40%|████      | 20/50 [00:38<00:54,  1.81s/it][AGenerate config GenerationConfig {
+ 40%|████      | 20/50 [00:20<00:30,  1.01s/it][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -669,7 +669,7 @@ Generate config GenerationConfig {
 }
 
 
- 42%|████▏     | 21/50 [00:40<00:50,  1.76s/it][AGenerate config GenerationConfig {
+ 42%|████▏     | 21/50 [00:21<00:31,  1.10s/it][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -684,7 +684,7 @@ Generate config GenerationConfig {
 }
 
 
- 44%|████▍     | 22/50 [00:41<00:50,  1.82s/it][AGenerate config GenerationConfig {
+ 44%|████▍     | 22/50 [00:22<00:29,  1.07s/it][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -699,7 +699,7 @@ Generate config GenerationConfig {
 }
 
 
- 46%|████▌     | 23/50 [00:43<00:48,  1.81s/it][AGenerate config GenerationConfig {
+ 46%|████▌     | 23/50 [00:23<00:28,  1.06s/it][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -714,7 +714,7 @@ Generate config GenerationConfig {
 }
 
 
- 48%|████▊     | 24/50 [00:45<00:43,  1.69s/it][AGenerate config GenerationConfig {
+ 48%|████▊     | 24/50 [00:25<00:29,  1.15s/it][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -729,7 +729,7 @@ Generate config GenerationConfig {
 }
 
 
- 50%|█████     | 25/50 [00:46<00:40,  1.61s/it][AGenerate config GenerationConfig {
+ 50%|█████     | 25/50 [00:26<00:28,  1.14s/it][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -744,7 +744,7 @@ Generate config GenerationConfig {
 }
 
 
- 52%|█████▏    | 26/50 [00:48<00:40,  1.70s/it][AGenerate config GenerationConfig {
+ 52%|█████▏    | 26/50 [00:27<00:25,  1.08s/it][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -759,7 +759,7 @@ Generate config GenerationConfig {
 }
 
 
- 54%|█████▍    | 27/50 [00:50<00:40,  1.77s/it][AGenerate config GenerationConfig {
+ 54%|█████▍    | 27/50 [00:28<00:23,  1.02s/it][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -774,7 +774,7 @@ Generate config GenerationConfig {
 }
 
 
- 56%|█████▌    | 28/50 [00:51<00:37,  1.69s/it][AGenerate config GenerationConfig {
+ 56%|█████▌    | 28/50 [00:29<00:21,  1.04it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -789,7 +789,7 @@ Generate config GenerationConfig {
 }
 
 
- 58%|█████▊    | 29/50 [00:54<00:38,  1.82s/it][AGenerate config GenerationConfig {
+ 58%|█████▊    | 29/50 [00:29<00:19,  1.08it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -804,7 +804,7 @@ Generate config GenerationConfig {
 }
 
 
- 60%|██████    | 30/50 [00:55<00:34,  1.75s/it][AGenerate config GenerationConfig {
+ 60%|██████    | 30/50 [00:30<00:18,  1.10it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -819,7 +819,7 @@ Generate config GenerationConfig {
 }
 
 
- 62%|██████▏   | 31/50 [00:57<00:32,  1.71s/it][AGenerate config GenerationConfig {
+ 62%|██████▏   | 31/50 [00:31<00:17,  1.09it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -834,7 +834,7 @@ Generate config GenerationConfig {
 }
 
 
- 64%|██████▍   | 32/50 [00:59<00:32,  1.79s/it][AGenerate config GenerationConfig {
+ 64%|██████▍   | 32/50 [00:32<00:16,  1.07it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -849,7 +849,7 @@ Generate config GenerationConfig {
 }
 
 
- 66%|██████▌   | 33/50 [01:01<00:30,  1.80s/it][AGenerate config GenerationConfig {
+ 66%|██████▌   | 33/50 [00:33<00:15,  1.07it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -864,7 +864,7 @@ Generate config GenerationConfig {
 }
 
 
- 68%|██████▊   | 34/50 [01:03<00:32,  2.04s/it][AGenerate config GenerationConfig {
+ 68%|██████▊   | 34/50 [00:34<00:14,  1.11it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -879,7 +879,7 @@ Generate config GenerationConfig {
 }
 
 
- 70%|███████   | 35/50 [01:05<00:31,  2.12s/it][AGenerate config GenerationConfig {
+ 70%|███████   | 35/50 [00:35<00:13,  1.08it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -894,7 +894,7 @@ Generate config GenerationConfig {
 }
 
 
- 72%|███████▏  | 36/50 [01:07<00:28,  2.02s/it][AGenerate config GenerationConfig {
+ 72%|███████▏  | 36/50 [00:36<00:13,  1.06it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -909,7 +909,7 @@ Generate config GenerationConfig {
 }
 
 
- 74%|███████▍  | 37/50 [01:09<00:24,  1.88s/it][AGenerate config GenerationConfig {
+ 74%|███████▍  | 37/50 [00:37<00:11,  1.11it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -924,7 +924,7 @@ Generate config GenerationConfig {
 }
 
 
- 76%|███████▌  | 38/50 [01:11<00:22,  1.86s/it][AGenerate config GenerationConfig {
+ 76%|███████▌  | 38/50 [00:38<00:11,  1.09it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -939,7 +939,7 @@ Generate config GenerationConfig {
 }
 
 
- 78%|███████▊  | 39/50 [01:12<00:19,  1.80s/it][AGenerate config GenerationConfig {
+ 78%|███████▊  | 39/50 [00:39<00:10,  1.06it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -954,7 +954,7 @@ Generate config GenerationConfig {
 }
 
 
- 80%|████████  | 40/50 [01:14<00:16,  1.69s/it][AGenerate config GenerationConfig {
+ 80%|████████  | 40/50 [00:40<00:10,  1.01s/it][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -969,7 +969,7 @@ Generate config GenerationConfig {
 }
 
 
- 82%|████████▏ | 41/50 [01:16<00:16,  1.81s/it][AGenerate config GenerationConfig {
+ 82%|████████▏ | 41/50 [00:41<00:08,  1.00it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -984,7 +984,7 @@ Generate config GenerationConfig {
 }
 
 
- 84%|████████▍ | 42/50 [01:17<00:13,  1.65s/it][AGenerate config GenerationConfig {
+ 84%|████████▍ | 42/50 [00:42<00:08,  1.01s/it][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -999,7 +999,7 @@ Generate config GenerationConfig {
 }
 
 
- 86%|████████▌ | 43/50 [01:19<00:11,  1.62s/it][AGenerate config GenerationConfig {
+ 86%|████████▌ | 43/50 [00:43<00:06,  1.01it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1014,7 +1014,7 @@ Generate config GenerationConfig {
 }
 
 
- 88%|████████▊ | 44/50 [01:20<00:10,  1.68s/it][AGenerate config GenerationConfig {
+ 88%|████████▊ | 44/50 [00:44<00:05,  1.05it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1029,7 +1029,7 @@ Generate config GenerationConfig {
 }
 
 
- 90%|█████████ | 45/50 [01:22<00:08,  1.64s/it][AGenerate config GenerationConfig {
+ 90%|█████████ | 45/50 [00:45<00:04,  1.03it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1044,7 +1044,7 @@ Generate config GenerationConfig {
 }
 
 
- 92%|█████████▏| 46/50 [01:23<00:06,  1.57s/it][AGenerate config GenerationConfig {
+ 92%|█████████▏| 46/50 [00:46<00:04,  1.03s/it][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1059,7 +1059,7 @@ Generate config GenerationConfig {
 }
 
 
- 94%|█████████▍| 47/50 [01:25<00:05,  1.71s/it][AGenerate config GenerationConfig {
+ 94%|█████████▍| 47/50 [00:47<00:03,  1.02s/it][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1074,7 +1074,7 @@ Generate config GenerationConfig {
 }
 
 
- 96%|█████████▌| 48/50 [01:27<00:03,  1.62s/it][AGenerate config GenerationConfig {
+ 96%|█████████▌| 48/50 [00:48<00:02,  1.05s/it][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1089,7 +1089,7 @@ Generate config GenerationConfig {
 }
 
 
- 98%|█████████▊| 49/50 [01:29<00:01,  1.69s/it][AGenerate config GenerationConfig {
+ 98%|█████████▊| 49/50 [00:49<00:01,  1.01s/it][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1104,9 +1104,9 @@ Generate config GenerationConfig {
 }
 
 
-100%|██████████| 50/50 [01:30<00:00,  1.66s/it][A100%|██████████| 50/50 [01:30<00:00,  1.82s/it]
-Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_model.bin
- 25%|██▌       | 64/252 [01:46<10:26,  3.33s/it] 30%|██▉       | 75/252 [01:48<06:36,  2.24s/it] 34%|███▎      | 85/252 [01:50<04:28,  1.61s/it] 38%|███▊      | 95/252 [01:52<03:04,  1.17s/it] 42%|████▏     | 106/252 [01:54<02:04,  1.17it/s] 46%|████▋     | 117/252 [01:56<01:26,  1.55it/s]
+100%|██████████| 50/50 [00:50<00:00,  1.03s/it][A100%|██████████| 50/50 [00:50<00:00,  1.01s/it]
+Model weights saved in ./output_eli5Translated/2_8_1_1_4_5e-05_fp16/pytorch_model.bin
+ 25%|██▌       | 64/252 [01:01<04:43,  1.51s/it] 32%|███▏      | 81/252 [01:03<02:44,  1.04it/s] 39%|███▉      | 98/252 [01:05<01:41,  1.52it/s] 46%|████▌     | 115/252 [01:07<01:05,  2.10it/s]
   0%|          | 0/50 [00:00<?, ?it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
@@ -1122,7 +1122,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
-  2%|▏         | 1/50 [00:01<01:09,  1.42s/it][AGenerate config GenerationConfig {
+  2%|▏         | 1/50 [00:01<00:55,  1.13s/it][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1137,7 +1137,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
-  4%|▍         | 2/50 [00:03<01:36,  2.00s/it][AGenerate config GenerationConfig {
+  4%|▍         | 2/50 [00:01<00:44,  1.07it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1152,7 +1152,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
-  6%|▌         | 3/50 [00:05<01:31,  1.96s/it][AGenerate config GenerationConfig {
+  6%|▌         | 3/50 [00:03<00:47,  1.00s/it][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1167,7 +1167,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
-  8%|▊         | 4/50 [00:08<01:38,  2.15s/it][AGenerate config GenerationConfig {
+  8%|▊         | 4/50 [00:04<00:50,  1.10s/it][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1182,22 +1182,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 10%|█         | 5/50 [00:11<01:48,  2.40s/it][AGenerate config GenerationConfig {
-  "_from_model_config": true,
-  "bos_token_id": 0,
-  "decoder_start_token_id": 2,
-  "early_stopping": true,
-  "eos_token_id": 2,
-  "forced_bos_token_id": 0,
-  "forced_eos_token_id": 2,
-  "no_repeat_ngram_size": 3,
-  "num_beams": 4,
-  "pad_token_id": 1,
-  "transformers_version": "4.28.1"
-}
-
- 50%|█████     | 126/252 [02:09<01:21,  1.55it/s]
- 12%|█▏        | 6/50 [00:13<01:48,  2.46s/it][AGenerate config GenerationConfig {
+ 10%|█         | 5/50 [00:05<00:47,  1.05s/it][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1212,7 +1197,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 14%|█▍        | 7/50 [00:15<01:41,  2.36s/it][AGenerate config GenerationConfig {
+ 12%|█▏        | 6/50 [00:06<00:45,  1.04s/it][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1227,7 +1212,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 16%|█▌        | 8/50 [00:18<01:46,  2.54s/it][AGenerate config GenerationConfig {
+ 14%|█▍        | 7/50 [00:07<00:42,  1.01it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1242,7 +1227,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 18%|█▊        | 9/50 [00:20<01:37,  2.38s/it][AGenerate config GenerationConfig {
+ 16%|█▌        | 8/50 [00:08<00:41,  1.00it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1257,7 +1242,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 20%|██        | 10/50 [00:23<01:39,  2.48s/it][AGenerate config GenerationConfig {
+ 18%|█▊        | 9/50 [00:08<00:38,  1.06it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1272,7 +1257,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 22%|██▏       | 11/50 [00:25<01:33,  2.40s/it][AGenerate config GenerationConfig {
+ 20%|██        | 10/50 [00:09<00:36,  1.10it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1287,7 +1272,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 24%|██▍       | 12/50 [00:28<01:36,  2.55s/it][AGenerate config GenerationConfig {
+ 22%|██▏       | 11/50 [00:10<00:35,  1.10it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1302,7 +1287,22 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 26%|██▌       | 13/50 [00:30<01:31,  2.47s/it][AGenerate config GenerationConfig {
+ 24%|██▍       | 12/50 [00:11<00:34,  1.09it/s][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+ 50%|█████     | 126/252 [01:20<01:00,  2.10it/s]
+ 26%|██▌       | 13/50 [00:12<00:32,  1.13it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1317,7 +1317,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 28%|██▊       | 14/50 [00:33<01:34,  2.63s/it][AGenerate config GenerationConfig {
+ 28%|██▊       | 14/50 [00:13<00:31,  1.15it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1332,7 +1332,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 30%|███       | 15/50 [00:36<01:29,  2.56s/it][AGenerate config GenerationConfig {
+ 30%|███       | 15/50 [00:14<00:30,  1.13it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1347,7 +1347,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 32%|███▏      | 16/50 [00:37<01:15,  2.23s/it][AGenerate config GenerationConfig {
+ 32%|███▏      | 16/50 [00:15<00:29,  1.14it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1362,7 +1362,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 34%|███▍      | 17/50 [00:40<01:15,  2.29s/it][AGenerate config GenerationConfig {
+ 34%|███▍      | 17/50 [00:15<00:29,  1.13it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1377,7 +1377,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 36%|███▌      | 18/50 [00:41<01:07,  2.10s/it][AGenerate config GenerationConfig {
+ 36%|███▌      | 18/50 [00:16<00:28,  1.14it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1392,7 +1392,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 38%|███▊      | 19/50 [00:44<01:09,  2.23s/it][AGenerate config GenerationConfig {
+ 38%|███▊      | 19/50 [00:17<00:27,  1.15it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1407,7 +1407,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 40%|████      | 20/50 [00:46<01:05,  2.18s/it][AGenerate config GenerationConfig {
+ 40%|████      | 20/50 [00:18<00:27,  1.09it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1422,7 +1422,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 42%|████▏     | 21/50 [00:48<01:02,  2.16s/it][AGenerate config GenerationConfig {
+ 42%|████▏     | 21/50 [00:19<00:26,  1.09it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1437,7 +1437,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 44%|████▍     | 22/50 [00:51<01:09,  2.46s/it][AGenerate config GenerationConfig {
+ 44%|████▍     | 22/50 [00:20<00:28,  1.03s/it][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1452,7 +1452,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 46%|████▌     | 23/50 [00:53<00:58,  2.15s/it][AGenerate config GenerationConfig {
+ 46%|████▌     | 23/50 [00:21<00:26,  1.03it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1467,7 +1467,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 48%|████▊     | 24/50 [00:55<00:54,  2.11s/it][AGenerate config GenerationConfig {
+ 48%|████▊     | 24/50 [00:22<00:24,  1.06it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1482,7 +1482,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 50%|█████     | 25/50 [00:56<00:50,  2.00s/it][AGenerate config GenerationConfig {
+ 50%|█████     | 25/50 [00:23<00:22,  1.10it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1497,7 +1497,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 52%|█████▏    | 26/50 [00:59<00:52,  2.18s/it][AGenerate config GenerationConfig {
+ 52%|█████▏    | 26/50 [00:24<00:21,  1.14it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1512,7 +1512,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 54%|█████▍    | 27/50 [01:01<00:49,  2.14s/it][AGenerate config GenerationConfig {
+ 54%|█████▍    | 27/50 [00:25<00:19,  1.18it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1527,7 +1527,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 56%|█████▌    | 28/50 [01:03<00:49,  2.23s/it][AGenerate config GenerationConfig {
+ 56%|█████▌    | 28/50 [00:26<00:19,  1.13it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1542,7 +1542,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 58%|█████▊    | 29/50 [01:06<00:51,  2.43s/it][AGenerate config GenerationConfig {
+ 58%|█████▊    | 29/50 [00:26<00:18,  1.16it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1557,7 +1557,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 60%|██████    | 30/50 [01:09<00:48,  2.41s/it][AGenerate config GenerationConfig {
+ 60%|██████    | 30/50 [00:27<00:17,  1.16it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1572,7 +1572,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 62%|██████▏   | 31/50 [01:11<00:46,  2.45s/it][AGenerate config GenerationConfig {
+ 62%|██████▏   | 31/50 [00:28<00:16,  1.18it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1587,7 +1587,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 64%|██████▍   | 32/50 [01:13<00:39,  2.19s/it][AGenerate config GenerationConfig {
+ 64%|██████▍   | 32/50 [00:29<00:15,  1.13it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1602,7 +1602,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 66%|██████▌   | 33/50 [01:17<00:46,  2.73s/it][AGenerate config GenerationConfig {
+ 66%|██████▌   | 33/50 [00:30<00:15,  1.11it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1617,7 +1617,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 68%|██████▊   | 34/50 [01:19<00:42,  2.66s/it][AGenerate config GenerationConfig {
+ 68%|██████▊   | 34/50 [00:31<00:14,  1.09it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1632,7 +1632,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 70%|███████   | 35/50 [01:22<00:40,  2.70s/it][AGenerate config GenerationConfig {
+ 70%|███████   | 35/50 [00:32<00:13,  1.13it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1647,7 +1647,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 72%|███████▏  | 36/50 [01:24<00:33,  2.40s/it][AGenerate config GenerationConfig {
+ 72%|███████▏  | 36/50 [00:33<00:12,  1.10it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1662,7 +1662,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 74%|███████▍  | 37/50 [01:26<00:29,  2.25s/it][AGenerate config GenerationConfig {
+ 74%|███████▍  | 37/50 [00:34<00:12,  1.06it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1677,7 +1677,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 76%|███████▌  | 38/50 [01:28<00:28,  2.35s/it][AGenerate config GenerationConfig {
+ 76%|███████▌  | 38/50 [00:34<00:10,  1.11it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1692,7 +1692,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 78%|███████▊  | 39/50 [01:31<00:26,  2.39s/it][AGenerate config GenerationConfig {
+ 78%|███████▊  | 39/50 [00:35<00:10,  1.09it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1707,7 +1707,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 80%|████████  | 40/50 [01:32<00:21,  2.18s/it][AGenerate config GenerationConfig {
+ 80%|████████  | 40/50 [00:36<00:08,  1.12it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1722,7 +1722,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 82%|████████▏ | 41/50 [01:35<00:21,  2.42s/it][AGenerate config GenerationConfig {
+ 82%|████████▏ | 41/50 [00:37<00:08,  1.12it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1737,7 +1737,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 84%|████████▍ | 42/50 [01:38<00:18,  2.35s/it][AGenerate config GenerationConfig {
+ 84%|████████▍ | 42/50 [00:38<00:07,  1.12it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1752,7 +1752,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 86%|████████▌ | 43/50 [01:41<00:17,  2.54s/it][AGenerate config GenerationConfig {
+ 86%|████████▌ | 43/50 [00:39<00:06,  1.16it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1767,7 +1767,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 88%|████████▊ | 44/50 [01:43<00:15,  2.65s/it][AGenerate config GenerationConfig {
+ 88%|████████▊ | 44/50 [00:40<00:05,  1.16it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1782,7 +1782,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 90%|█████████ | 45/50 [01:46<00:13,  2.69s/it][AGenerate config GenerationConfig {
+ 90%|█████████ | 45/50 [00:41<00:04,  1.16it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1797,7 +1797,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 92%|█████████▏| 46/50 [01:48<00:09,  2.38s/it][AGenerate config GenerationConfig {
+ 92%|█████████▏| 46/50 [00:41<00:03,  1.16it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1812,7 +1812,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 94%|█████████▍| 47/50 [01:50<00:07,  2.37s/it][AGenerate config GenerationConfig {
+ 94%|█████████▍| 47/50 [00:42<00:02,  1.17it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1827,7 +1827,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 96%|█████████▌| 48/50 [01:52<00:04,  2.17s/it][AGenerate config GenerationConfig {
+ 96%|█████████▌| 48/50 [00:43<00:01,  1.13it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1842,7 +1842,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 98%|█████████▊| 49/50 [01:54<00:02,  2.22s/it][AGenerate config GenerationConfig {
+ 98%|█████████▊| 49/50 [00:44<00:00,  1.13it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1857,9 +1857,9 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
-100%|██████████| 50/50 [01:57<00:00,  2.32s/it][A100%|██████████| 50/50 [01:57<00:00,  2.35s/it]
-Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_model.bin
- 50%|█████     | 127/252 [03:57<08:18,  3.99s/it] 54%|█████▍    | 137/252 [03:59<05:30,  2.87s/it] 59%|█████▊    | 148/252 [04:01<03:30,  2.02s/it] 63%|██████▎   | 159/252 [04:04<02:15,  1.45s/it] 67%|██████▋   | 170/252 [04:06<01:27,  1.07s/it] 72%|███████▏  | 181/252 [04:08<00:56,  1.25it/s]
+100%|██████████| 50/50 [00:45<00:00,  1.12it/s][A100%|██████████| 50/50 [00:45<00:00,  1.10it/s]
+Model weights saved in ./output_eli5Translated/2_8_1_1_4_5e-05_fp16/pytorch_model.bin
+ 50%|█████     | 127/252 [01:55<02:52,  1.38s/it] 57%|█████▋    | 144/252 [01:57<01:42,  1.05it/s] 64%|██████▍   | 161/252 [01:59<01:01,  1.47it/s] 71%|███████   | 178/252 [02:01<00:37,  2.00it/s]
   0%|          | 0/50 [00:00<?, ?it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
@@ -1875,7 +1875,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
-  2%|▏         | 1/50 [00:02<01:39,  2.04s/it][AGenerate config GenerationConfig {
+  2%|▏         | 1/50 [00:00<00:40,  1.22it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1890,7 +1890,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
-  4%|▍         | 2/50 [00:03<01:34,  1.97s/it][AGenerate config GenerationConfig {
+  4%|▍         | 2/50 [00:01<00:44,  1.09it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1905,7 +1905,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
-  6%|▌         | 3/50 [00:05<01:33,  1.98s/it][AGenerate config GenerationConfig {
+  6%|▌         | 3/50 [00:02<00:42,  1.11it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1920,22 +1920,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
-  8%|▊         | 4/50 [00:09<01:54,  2.50s/it][AGenerate config GenerationConfig {
-  "_from_model_config": true,
-  "bos_token_id": 0,
-  "decoder_start_token_id": 2,
-  "early_stopping": true,
-  "eos_token_id": 2,
-  "forced_bos_token_id": 0,
-  "forced_eos_token_id": 2,
-  "no_repeat_ngram_size": 3,
-  "num_beams": 4,
-  "pad_token_id": 1,
-  "transformers_version": "4.28.1"
-}
-
- 75%|███████▌  | 189/252 [04:19<00:50,  1.25it/s]
- 10%|█         | 5/50 [00:11<01:54,  2.54s/it][AGenerate config GenerationConfig {
+  8%|▊         | 4/50 [00:03<00:41,  1.12it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1950,7 +1935,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 12%|█▏        | 6/50 [00:14<01:52,  2.55s/it][AGenerate config GenerationConfig {
+ 10%|█         | 5/50 [00:04<00:38,  1.17it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1965,7 +1950,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 14%|█▍        | 7/50 [00:16<01:38,  2.29s/it][AGenerate config GenerationConfig {
+ 12%|█▏        | 6/50 [00:05<00:38,  1.15it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1980,7 +1965,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 16%|█▌        | 8/50 [00:17<01:27,  2.08s/it][AGenerate config GenerationConfig {
+ 14%|█▍        | 7/50 [00:06<00:40,  1.07it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -1995,7 +1980,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 18%|█▊        | 9/50 [00:20<01:30,  2.21s/it][AGenerate config GenerationConfig {
+ 16%|█▌        | 8/50 [00:07<00:37,  1.11it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2010,7 +1995,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 20%|██        | 10/50 [00:22<01:22,  2.06s/it][AGenerate config GenerationConfig {
+ 18%|█▊        | 9/50 [00:07<00:35,  1.14it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2025,7 +2010,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 22%|██▏       | 11/50 [00:24<01:20,  2.06s/it][AGenerate config GenerationConfig {
+ 20%|██        | 10/50 [00:08<00:34,  1.17it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2040,7 +2025,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 24%|██▍       | 12/50 [00:26<01:18,  2.07s/it][AGenerate config GenerationConfig {
+ 22%|██▏       | 11/50 [00:09<00:32,  1.18it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2055,7 +2040,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 26%|██▌       | 13/50 [00:28<01:24,  2.28s/it][AGenerate config GenerationConfig {
+ 24%|██▍       | 12/50 [00:10<00:33,  1.14it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2070,7 +2055,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 28%|██▊       | 14/50 [00:31<01:29,  2.50s/it][AGenerate config GenerationConfig {
+ 26%|██▌       | 13/50 [00:11<00:31,  1.17it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2085,7 +2070,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 30%|███       | 15/50 [00:33<01:21,  2.34s/it][AGenerate config GenerationConfig {
+ 28%|██▊       | 14/50 [00:12<00:31,  1.16it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2100,7 +2085,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 32%|███▏      | 16/50 [00:36<01:25,  2.52s/it][AGenerate config GenerationConfig {
+ 30%|███       | 15/50 [00:13<00:30,  1.16it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2115,7 +2100,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 34%|███▍      | 17/50 [00:39<01:19,  2.42s/it][AGenerate config GenerationConfig {
+ 32%|███▏      | 16/50 [00:13<00:29,  1.16it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2130,7 +2115,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 36%|███▌      | 18/50 [00:41<01:14,  2.34s/it][AGenerate config GenerationConfig {
+ 34%|███▍      | 17/50 [00:14<00:28,  1.17it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2145,7 +2130,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 38%|███▊      | 19/50 [00:43<01:15,  2.45s/it][AGenerate config GenerationConfig {
+ 36%|███▌      | 18/50 [00:15<00:27,  1.14it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2160,7 +2145,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 40%|████      | 20/50 [00:46<01:12,  2.42s/it][AGenerate config GenerationConfig {
+ 38%|███▊      | 19/50 [00:16<00:26,  1.17it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2175,7 +2160,22 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 42%|████▏     | 21/50 [00:48<01:11,  2.47s/it][AGenerate config GenerationConfig {
+ 40%|████      | 20/50 [00:17<00:25,  1.19it/s][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+ 75%|███████▌  | 189/252 [02:20<00:31,  2.00it/s]
+ 42%|████▏     | 21/50 [00:18<00:24,  1.18it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2190,7 +2190,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 44%|████▍     | 22/50 [00:51<01:14,  2.64s/it][AGenerate config GenerationConfig {
+ 44%|████▍     | 22/50 [00:19<00:23,  1.17it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2205,7 +2205,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 46%|████▌     | 23/50 [00:53<01:03,  2.35s/it][AGenerate config GenerationConfig {
+ 46%|████▌     | 23/50 [00:19<00:23,  1.17it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2220,7 +2220,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 48%|████▊     | 24/50 [00:55<01:00,  2.33s/it][AGenerate config GenerationConfig {
+ 48%|████▊     | 24/50 [00:20<00:22,  1.18it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2235,7 +2235,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 50%|█████     | 25/50 [00:57<00:54,  2.18s/it][AGenerate config GenerationConfig {
+ 50%|█████     | 25/50 [00:21<00:21,  1.15it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2250,7 +2250,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 52%|█████▏    | 26/50 [01:00<00:54,  2.28s/it][AGenerate config GenerationConfig {
+ 52%|█████▏    | 26/50 [00:22<00:20,  1.18it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2265,7 +2265,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 54%|█████▍    | 27/50 [01:02<00:50,  2.18s/it][AGenerate config GenerationConfig {
+ 54%|█████▍    | 27/50 [00:23<00:19,  1.20it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2280,7 +2280,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 56%|█████▌    | 28/50 [01:05<00:52,  2.40s/it][AGenerate config GenerationConfig {
+ 56%|█████▌    | 28/50 [00:24<00:18,  1.18it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2295,7 +2295,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 58%|█████▊    | 29/50 [01:07<00:51,  2.45s/it][AGenerate config GenerationConfig {
+ 58%|█████▊    | 29/50 [00:24<00:17,  1.20it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2310,7 +2310,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 60%|██████    | 30/50 [01:11<00:54,  2.74s/it][AGenerate config GenerationConfig {
+ 60%|██████    | 30/50 [00:25<00:16,  1.20it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2325,7 +2325,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 62%|██████▏   | 31/50 [01:14<00:56,  2.96s/it][AGenerate config GenerationConfig {
+ 62%|██████▏   | 31/50 [00:26<00:15,  1.20it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2340,7 +2340,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 64%|██████▍   | 32/50 [01:16<00:48,  2.70s/it][AGenerate config GenerationConfig {
+ 64%|██████▍   | 32/50 [00:27<00:14,  1.20it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2355,7 +2355,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 66%|██████▌   | 33/50 [01:19<00:47,  2.81s/it][AGenerate config GenerationConfig {
+ 66%|██████▌   | 33/50 [00:28<00:14,  1.20it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2370,7 +2370,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 68%|██████▊   | 34/50 [01:21<00:40,  2.54s/it][AGenerate config GenerationConfig {
+ 68%|██████▊   | 34/50 [00:29<00:13,  1.21it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2385,7 +2385,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 70%|███████   | 35/50 [01:24<00:39,  2.60s/it][AGenerate config GenerationConfig {
+ 70%|███████   | 35/50 [00:29<00:12,  1.21it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2400,7 +2400,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 72%|███████▏  | 36/50 [01:26<00:35,  2.55s/it][AGenerate config GenerationConfig {
+ 72%|███████▏  | 36/50 [00:30<00:11,  1.21it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2415,7 +2415,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 74%|███████▍  | 37/50 [01:29<00:32,  2.52s/it][AGenerate config GenerationConfig {
+ 74%|███████▍  | 37/50 [00:31<00:10,  1.21it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2430,7 +2430,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 76%|███████▌  | 38/50 [01:31<00:29,  2.46s/it][AGenerate config GenerationConfig {
+ 76%|███████▌  | 38/50 [00:32<00:11,  1.05it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2445,7 +2445,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 78%|███████▊  | 39/50 [01:34<00:27,  2.50s/it][AGenerate config GenerationConfig {
+ 78%|███████▊  | 39/50 [00:33<00:09,  1.11it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2460,7 +2460,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 80%|████████  | 40/50 [01:35<00:22,  2.23s/it][AGenerate config GenerationConfig {
+ 80%|████████  | 40/50 [00:34<00:08,  1.14it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2475,7 +2475,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 82%|████████▏ | 41/50 [01:38<00:20,  2.27s/it][AGenerate config GenerationConfig {
+ 82%|████████▏ | 41/50 [00:35<00:07,  1.17it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2490,7 +2490,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 84%|████████▍ | 42/50 [01:40<00:17,  2.24s/it][AGenerate config GenerationConfig {
+ 84%|████████▍ | 42/50 [00:36<00:06,  1.15it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2505,7 +2505,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 86%|████████▌ | 43/50 [01:42<00:16,  2.29s/it][AGenerate config GenerationConfig {
+ 86%|████████▌ | 43/50 [00:37<00:06,  1.14it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2520,7 +2520,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 88%|████████▊ | 44/50 [01:45<00:14,  2.42s/it][AGenerate config GenerationConfig {
+ 88%|████████▊ | 44/50 [00:37<00:05,  1.17it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2535,7 +2535,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 90%|█████████ | 45/50 [01:47<00:11,  2.39s/it][AGenerate config GenerationConfig {
+ 90%|█████████ | 45/50 [00:38<00:04,  1.19it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2550,7 +2550,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 92%|█████████▏| 46/50 [01:49<00:09,  2.36s/it][AGenerate config GenerationConfig {
+ 92%|█████████▏| 46/50 [00:39<00:03,  1.16it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2565,7 +2565,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 94%|█████████▍| 47/50 [01:52<00:07,  2.43s/it][AGenerate config GenerationConfig {
+ 94%|█████████▍| 47/50 [00:40<00:02,  1.18it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2580,7 +2580,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 96%|█████████▌| 48/50 [01:55<00:05,  2.51s/it][AGenerate config GenerationConfig {
+ 96%|█████████▌| 48/50 [00:41<00:01,  1.19it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2595,7 +2595,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 98%|█████████▊| 49/50 [01:57<00:02,  2.53s/it][AGenerate config GenerationConfig {
+ 98%|█████████▊| 49/50 [00:42<00:00,  1.18it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2610,9 +2610,9 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
-100%|██████████| 50/50 [02:00<00:00,  2.63s/it][A100%|██████████| 50/50 [02:00<00:00,  2.41s/it]
-Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_model.bin
- 75%|███████▌  | 190/252 [06:12<04:21,  4.22s/it] 80%|███████▉  | 201/252 [06:14<02:30,  2.95s/it] 84%|████████▍ | 212/252 [06:16<01:23,  2.09s/it] 88%|████████▊ | 223/252 [06:18<00:43,  1.51s/it] 93%|█████████▎| 234/252 [06:20<00:19,  1.11s/it] 97%|█████████▋| 245/252 [06:22<00:05,  1.21it/s]
+100%|██████████| 50/50 [00:42<00:00,  1.21it/s][A100%|██████████| 50/50 [00:42<00:00,  1.17it/s]
+Model weights saved in ./output_eli5Translated/2_8_1_1_4_5e-05_fp16/pytorch_model.bin
+ 75%|███████▌  | 190/252 [02:46<01:20,  1.30s/it] 82%|████████▏ | 207/252 [02:48<00:41,  1.10it/s] 89%|████████▉ | 224/252 [02:51<00:18,  1.52it/s] 96%|█████████▌| 241/252 [02:53<00:05,  2.04it/s]
   0%|          | 0/50 [00:00<?, ?it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
@@ -2628,7 +2628,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
-  2%|▏         | 1/50 [00:02<02:10,  2.67s/it][AGenerate config GenerationConfig {
+  2%|▏         | 1/50 [00:00<00:42,  1.14it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2643,7 +2643,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
-  4%|▍         | 2/50 [00:04<01:54,  2.39s/it][AGenerate config GenerationConfig {
+  4%|▍         | 2/50 [00:01<00:43,  1.10it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2658,7 +2658,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
-  6%|▌         | 3/50 [00:06<01:36,  2.05s/it][AGenerate config GenerationConfig {
+  6%|▌         | 3/50 [00:02<00:44,  1.05it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2673,7 +2673,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
-  8%|▊         | 4/50 [00:08<01:36,  2.10s/it][AGenerate config GenerationConfig {
+  8%|▊         | 4/50 [00:03<00:43,  1.06it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2688,7 +2688,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 10%|█         | 5/50 [00:11<01:41,  2.25s/it][AGenerate config GenerationConfig {
+ 10%|█         | 5/50 [00:04<00:39,  1.13it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2703,22 +2703,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 12%|█▏        | 6/50 [00:13<01:41,  2.30s/it][AGenerate config GenerationConfig {
-  "_from_model_config": true,
-  "bos_token_id": 0,
-  "decoder_start_token_id": 2,
-  "early_stopping": true,
-  "eos_token_id": 2,
-  "forced_bos_token_id": 0,
-  "forced_eos_token_id": 2,
-  "no_repeat_ngram_size": 3,
-  "num_beams": 4,
-  "pad_token_id": 1,
-  "transformers_version": "4.28.1"
-}
-
-100%|██████████| 252/252 [06:39<00:00,  1.21it/s]
- 14%|█▍        | 7/50 [00:16<01:43,  2.40s/it][AGenerate config GenerationConfig {
+ 12%|█▏        | 6/50 [00:05<00:38,  1.15it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2733,7 +2718,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 16%|█▌        | 8/50 [00:18<01:41,  2.41s/it][AGenerate config GenerationConfig {
+ 14%|█▍        | 7/50 [00:06<00:39,  1.08it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2748,7 +2733,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 18%|█▊        | 9/50 [00:21<01:44,  2.56s/it][AGenerate config GenerationConfig {
+ 16%|█▌        | 8/50 [00:07<00:39,  1.06it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2763,7 +2748,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 20%|██        | 10/50 [00:23<01:39,  2.49s/it][AGenerate config GenerationConfig {
+ 18%|█▊        | 9/50 [00:08<00:36,  1.12it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2778,7 +2763,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 22%|██▏       | 11/50 [00:26<01:38,  2.53s/it][AGenerate config GenerationConfig {
+ 20%|██        | 10/50 [00:09<00:35,  1.13it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2793,7 +2778,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 24%|██▍       | 12/50 [00:29<01:38,  2.58s/it][AGenerate config GenerationConfig {
+ 22%|██▏       | 11/50 [00:09<00:33,  1.15it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2808,7 +2793,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 26%|██▌       | 13/50 [00:31<01:29,  2.41s/it][AGenerate config GenerationConfig {
+ 24%|██▍       | 12/50 [00:10<00:32,  1.16it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2823,7 +2808,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 28%|██▊       | 14/50 [00:33<01:28,  2.46s/it][AGenerate config GenerationConfig {
+ 26%|██▌       | 13/50 [00:11<00:31,  1.17it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2838,7 +2823,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 30%|███       | 15/50 [00:35<01:22,  2.36s/it][AGenerate config GenerationConfig {
+ 28%|██▊       | 14/50 [00:12<00:30,  1.17it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2853,7 +2838,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 32%|███▏      | 16/50 [00:38<01:23,  2.45s/it][AGenerate config GenerationConfig {
+ 30%|███       | 15/50 [00:13<00:30,  1.16it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2868,7 +2853,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 34%|███▍      | 17/50 [00:40<01:16,  2.33s/it][AGenerate config GenerationConfig {
+ 32%|███▏      | 16/50 [00:14<00:29,  1.14it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2883,7 +2868,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 36%|███▌      | 18/50 [00:42<01:07,  2.12s/it][AGenerate config GenerationConfig {
+ 34%|███▍      | 17/50 [00:15<00:28,  1.16it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2898,7 +2883,22 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 38%|███▊      | 19/50 [00:44<01:04,  2.09s/it][AGenerate config GenerationConfig {
+ 36%|███▌      | 18/50 [00:15<00:27,  1.18it/s][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+100%|██████████| 252/252 [03:10<00:00,  2.04it/s]
+ 38%|███▊      | 19/50 [00:16<00:26,  1.19it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2913,7 +2913,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 40%|████      | 20/50 [00:47<01:15,  2.53s/it][AGenerate config GenerationConfig {
+ 40%|████      | 20/50 [00:17<00:25,  1.17it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2928,7 +2928,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 42%|████▏     | 21/50 [00:50<01:16,  2.64s/it][AGenerate config GenerationConfig {
+ 42%|████▏     | 21/50 [00:18<00:24,  1.19it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2943,7 +2943,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 44%|████▍     | 22/50 [00:52<01:06,  2.37s/it][AGenerate config GenerationConfig {
+ 44%|████▍     | 22/50 [00:19<00:24,  1.14it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2958,7 +2958,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 46%|████▌     | 23/50 [00:55<01:07,  2.51s/it][AGenerate config GenerationConfig {
+ 46%|████▌     | 23/50 [00:20<00:24,  1.10it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2973,7 +2973,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 48%|████▊     | 24/50 [00:57<01:05,  2.52s/it][AGenerate config GenerationConfig {
+ 48%|████▊     | 24/50 [00:21<00:23,  1.12it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -2988,7 +2988,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 50%|█████     | 25/50 [01:00<01:03,  2.54s/it][AGenerate config GenerationConfig {
+ 50%|█████     | 25/50 [00:21<00:21,  1.15it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3003,7 +3003,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 52%|█████▏    | 26/50 [01:03<01:02,  2.62s/it][AGenerate config GenerationConfig {
+ 52%|█████▏    | 26/50 [00:22<00:20,  1.17it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3018,7 +3018,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 54%|█████▍    | 27/50 [01:05<01:00,  2.62s/it][AGenerate config GenerationConfig {
+ 54%|█████▍    | 27/50 [00:23<00:19,  1.19it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3033,7 +3033,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 56%|█████▌    | 28/50 [01:08<00:58,  2.66s/it][AGenerate config GenerationConfig {
+ 56%|█████▌    | 28/50 [00:24<00:18,  1.20it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3048,7 +3048,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 58%|█████▊    | 29/50 [01:10<00:50,  2.40s/it][AGenerate config GenerationConfig {
+ 58%|█████▊    | 29/50 [00:25<00:17,  1.22it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3063,7 +3063,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 60%|██████    | 30/50 [01:12<00:47,  2.36s/it][AGenerate config GenerationConfig {
+ 60%|██████    | 30/50 [00:25<00:16,  1.23it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3078,7 +3078,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 62%|██████▏   | 31/50 [01:14<00:43,  2.31s/it][AGenerate config GenerationConfig {
+ 62%|██████▏   | 31/50 [00:26<00:15,  1.22it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3093,7 +3093,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 64%|██████▍   | 32/50 [01:17<00:44,  2.46s/it][AGenerate config GenerationConfig {
+ 64%|██████▍   | 32/50 [00:27<00:15,  1.18it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3108,7 +3108,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 66%|██████▌   | 33/50 [01:20<00:41,  2.45s/it][AGenerate config GenerationConfig {
+ 66%|██████▌   | 33/50 [00:28<00:14,  1.20it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3123,7 +3123,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 68%|██████▊   | 34/50 [01:22<00:38,  2.42s/it][AGenerate config GenerationConfig {
+ 68%|██████▊   | 34/50 [00:29<00:13,  1.20it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3138,7 +3138,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 70%|███████   | 35/50 [01:25<00:40,  2.72s/it][AGenerate config GenerationConfig {
+ 70%|███████   | 35/50 [00:30<00:13,  1.12it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3153,7 +3153,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 72%|███████▏  | 36/50 [01:28<00:36,  2.61s/it][AGenerate config GenerationConfig {
+ 72%|███████▏  | 36/50 [00:31<00:12,  1.14it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3168,7 +3168,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 74%|███████▍  | 37/50 [01:30<00:33,  2.56s/it][AGenerate config GenerationConfig {
+ 74%|███████▍  | 37/50 [00:32<00:11,  1.16it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3183,7 +3183,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 76%|███████▌  | 38/50 [01:32<00:27,  2.30s/it][AGenerate config GenerationConfig {
+ 76%|███████▌  | 38/50 [00:32<00:10,  1.17it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3198,7 +3198,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 78%|███████▊  | 39/50 [01:34<00:25,  2.33s/it][AGenerate config GenerationConfig {
+ 78%|███████▊  | 39/50 [00:33<00:09,  1.16it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3213,7 +3213,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 80%|████████  | 40/50 [01:37<00:23,  2.35s/it][AGenerate config GenerationConfig {
+ 80%|████████  | 40/50 [00:34<00:08,  1.16it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3228,7 +3228,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 82%|████████▏ | 41/50 [01:39<00:21,  2.36s/it][AGenerate config GenerationConfig {
+ 82%|████████▏ | 41/50 [00:35<00:07,  1.18it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3243,7 +3243,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 84%|████████▍ | 42/50 [01:41<00:18,  2.27s/it][AGenerate config GenerationConfig {
+ 84%|████████▍ | 42/50 [00:36<00:06,  1.19it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3258,7 +3258,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 86%|████████▌ | 43/50 [01:43<00:15,  2.27s/it][AGenerate config GenerationConfig {
+ 86%|████████▌ | 43/50 [00:37<00:05,  1.21it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3273,7 +3273,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 88%|████████▊ | 44/50 [01:46<00:13,  2.29s/it][AGenerate config GenerationConfig {
+ 88%|████████▊ | 44/50 [00:37<00:04,  1.21it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3288,7 +3288,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 90%|█████████ | 45/50 [01:48<00:11,  2.31s/it][AGenerate config GenerationConfig {
+ 90%|█████████ | 45/50 [00:38<00:04,  1.22it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3303,7 +3303,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 92%|█████████▏| 46/50 [01:50<00:08,  2.10s/it][AGenerate config GenerationConfig {
+ 92%|█████████▏| 46/50 [00:39<00:03,  1.23it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3318,7 +3318,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 94%|█████████▍| 47/50 [01:52<00:06,  2.07s/it][AGenerate config GenerationConfig {
+ 94%|█████████▍| 47/50 [00:40<00:02,  1.22it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3333,7 +3333,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 96%|█████████▌| 48/50 [01:54<00:04,  2.12s/it][AGenerate config GenerationConfig {
+ 96%|█████████▌| 48/50 [00:41<00:01,  1.22it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3348,7 +3348,7 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
- 98%|█████████▊| 49/50 [01:56<00:02,  2.10s/it][AGenerate config GenerationConfig {
+ 98%|█████████▊| 49/50 [00:42<00:00,  1.20it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3363,8 +3363,8 @@ Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_mode
 }
 
 
-100%|██████████| 50/50 [01:58<00:00,  2.13s/it][A100%|██████████| 50/50 [01:58<00:00,  2.37s/it]
-Model weights saved in ./output_eli5Translated/8_8_6_3_4_5e-05_fp16/pytorch_model.bin
+100%|██████████| 50/50 [00:42<00:00,  1.20it/s][A100%|██████████| 50/50 [00:42<00:00,  1.17it/s]
+Model weights saved in ./output_eli5Translated/2_8_1_1_4_5e-05_fp16/pytorch_model.bin
 Generate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
@@ -3395,7 +3395,7 @@ Generate config GenerationConfig {
 }
 
 
-  2%|▏         | 1/50 [00:02<01:49,  2.24s/it][AGenerate config GenerationConfig {
+  2%|▏         | 1/50 [00:00<00:38,  1.28it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3410,7 +3410,7 @@ Generate config GenerationConfig {
 }
 
 
-  4%|▍         | 2/50 [00:05<02:13,  2.77s/it][AGenerate config GenerationConfig {
+  4%|▍         | 2/50 [00:01<00:36,  1.31it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3425,7 +3425,7 @@ Generate config GenerationConfig {
 }
 
 
-  6%|▌         | 3/50 [00:08<02:08,  2.74s/it][AGenerate config GenerationConfig {
+  6%|▌         | 3/50 [00:02<00:37,  1.25it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3440,7 +3440,7 @@ Generate config GenerationConfig {
 }
 
 
-  8%|▊         | 4/50 [00:11<02:23,  3.13s/it][AGenerate config GenerationConfig {
+  8%|▊         | 4/50 [00:03<00:36,  1.26it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3455,7 +3455,7 @@ Generate config GenerationConfig {
 }
 
 
- 10%|█         | 5/50 [00:15<02:23,  3.20s/it][AGenerate config GenerationConfig {
+ 10%|█         | 5/50 [00:03<00:35,  1.27it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3470,7 +3470,7 @@ Generate config GenerationConfig {
 }
 
 
- 12%|█▏        | 6/50 [00:17<02:11,  2.99s/it][AGenerate config GenerationConfig {
+ 12%|█▏        | 6/50 [00:04<00:36,  1.21it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3485,7 +3485,7 @@ Generate config GenerationConfig {
 }
 
 
- 14%|█▍        | 7/50 [00:20<02:04,  2.89s/it][AGenerate config GenerationConfig {
+ 14%|█▍        | 7/50 [00:05<00:34,  1.23it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3500,7 +3500,7 @@ Generate config GenerationConfig {
 }
 
 
- 16%|█▌        | 8/50 [00:23<02:01,  2.89s/it][AGenerate config GenerationConfig {
+ 16%|█▌        | 8/50 [00:06<00:33,  1.25it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3515,7 +3515,7 @@ Generate config GenerationConfig {
 }
 
 
- 18%|█▊        | 9/50 [00:25<01:54,  2.80s/it][AGenerate config GenerationConfig {
+ 18%|█▊        | 9/50 [00:07<00:32,  1.27it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3530,7 +3530,7 @@ Generate config GenerationConfig {
 }
 
 
- 20%|██        | 10/50 [00:29<01:55,  2.90s/it][AGenerate config GenerationConfig {
+ 20%|██        | 10/50 [00:07<00:31,  1.28it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3545,7 +3545,7 @@ Generate config GenerationConfig {
 }
 
 
- 22%|██▏       | 11/50 [00:31<01:52,  2.88s/it][AGenerate config GenerationConfig {
+ 22%|██▏       | 11/50 [00:08<00:30,  1.26it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3560,7 +3560,7 @@ Generate config GenerationConfig {
 }
 
 
- 24%|██▍       | 12/50 [00:34<01:45,  2.77s/it][AGenerate config GenerationConfig {
+ 24%|██▍       | 12/50 [00:09<00:30,  1.26it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3575,7 +3575,7 @@ Generate config GenerationConfig {
 }
 
 
- 26%|██▌       | 13/50 [00:37<01:46,  2.88s/it][AGenerate config GenerationConfig {
+ 26%|██▌       | 13/50 [00:10<00:29,  1.25it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3590,7 +3590,7 @@ Generate config GenerationConfig {
 }
 
 
- 28%|██▊       | 14/50 [00:41<01:51,  3.11s/it][AGenerate config GenerationConfig {
+ 28%|██▊       | 14/50 [00:11<00:28,  1.27it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3605,7 +3605,7 @@ Generate config GenerationConfig {
 }
 
 
- 30%|███       | 15/50 [00:44<01:50,  3.15s/it][AGenerate config GenerationConfig {
+ 30%|███       | 15/50 [00:11<00:27,  1.28it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3620,7 +3620,7 @@ Generate config GenerationConfig {
 }
 
 
- 32%|███▏      | 16/50 [00:47<01:44,  3.07s/it][AGenerate config GenerationConfig {
+ 32%|███▏      | 16/50 [00:12<00:26,  1.28it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3635,7 +3635,7 @@ Generate config GenerationConfig {
 }
 
 
- 34%|███▍      | 17/50 [00:50<01:39,  3.01s/it][AGenerate config GenerationConfig {
+ 34%|███▍      | 17/50 [00:13<00:25,  1.29it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3650,7 +3650,7 @@ Generate config GenerationConfig {
 }
 
 
- 36%|███▌      | 18/50 [00:53<01:44,  3.26s/it][AGenerate config GenerationConfig {
+ 36%|███▌      | 18/50 [00:14<00:24,  1.28it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3665,7 +3665,7 @@ Generate config GenerationConfig {
 }
 
 
- 38%|███▊      | 19/50 [00:57<01:39,  3.21s/it][AGenerate config GenerationConfig {
+ 38%|███▊      | 19/50 [00:15<00:24,  1.26it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3680,7 +3680,7 @@ Generate config GenerationConfig {
 }
 
 
- 40%|████      | 20/50 [01:00<01:40,  3.37s/it][AGenerate config GenerationConfig {
+ 40%|████      | 20/50 [00:15<00:23,  1.27it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3695,7 +3695,7 @@ Generate config GenerationConfig {
 }
 
 
- 42%|████▏     | 21/50 [01:03<01:33,  3.22s/it][AGenerate config GenerationConfig {
+ 42%|████▏     | 21/50 [00:16<00:22,  1.28it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3710,7 +3710,7 @@ Generate config GenerationConfig {
 }
 
 
- 44%|████▍     | 22/50 [01:06<01:26,  3.07s/it][AGenerate config GenerationConfig {
+ 44%|████▍     | 22/50 [00:17<00:21,  1.28it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3725,7 +3725,7 @@ Generate config GenerationConfig {
 }
 
 
- 46%|████▌     | 23/50 [01:09<01:18,  2.92s/it][AGenerate config GenerationConfig {
+ 46%|████▌     | 23/50 [00:18<00:21,  1.28it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3740,7 +3740,7 @@ Generate config GenerationConfig {
 }
 
 
- 48%|████▊     | 24/50 [01:11<01:11,  2.75s/it][AGenerate config GenerationConfig {
+ 48%|████▊     | 24/50 [00:18<00:20,  1.28it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3755,7 +3755,7 @@ Generate config GenerationConfig {
 }
 
 
- 50%|█████     | 25/50 [01:13<01:06,  2.64s/it][AGenerate config GenerationConfig {
+ 50%|█████     | 25/50 [00:19<00:19,  1.28it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3770,7 +3770,7 @@ Generate config GenerationConfig {
 }
 
 
- 52%|█████▏    | 26/50 [01:16<01:05,  2.71s/it][AGenerate config GenerationConfig {
+ 52%|█████▏    | 26/50 [00:20<00:18,  1.28it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3785,7 +3785,7 @@ Generate config GenerationConfig {
 }
 
 
- 54%|█████▍    | 27/50 [01:19<01:06,  2.90s/it][AGenerate config GenerationConfig {
+ 54%|█████▍    | 27/50 [00:21<00:17,  1.28it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3800,7 +3800,7 @@ Generate config GenerationConfig {
 }
 
 
- 56%|█████▌    | 28/50 [01:23<01:05,  2.96s/it][AGenerate config GenerationConfig {
+ 56%|█████▌    | 28/50 [00:22<00:17,  1.28it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3815,7 +3815,7 @@ Generate config GenerationConfig {
 }
 
 
- 58%|█████▊    | 29/50 [01:25<01:01,  2.95s/it][AGenerate config GenerationConfig {
+ 58%|█████▊    | 29/50 [00:22<00:16,  1.28it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3830,7 +3830,7 @@ Generate config GenerationConfig {
 }
 
 
- 60%|██████    | 30/50 [01:28<00:58,  2.94s/it][AGenerate config GenerationConfig {
+ 60%|██████    | 30/50 [00:23<00:15,  1.28it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3845,7 +3845,7 @@ Generate config GenerationConfig {
 }
 
 
- 62%|██████▏   | 31/50 [01:31<00:56,  2.98s/it][AGenerate config GenerationConfig {
+ 62%|██████▏   | 31/50 [00:24<00:15,  1.25it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3860,7 +3860,7 @@ Generate config GenerationConfig {
 }
 
 
- 64%|██████▍   | 32/50 [01:35<00:54,  3.05s/it][AGenerate config GenerationConfig {
+ 64%|██████▍   | 32/50 [00:25<00:14,  1.26it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3875,7 +3875,7 @@ Generate config GenerationConfig {
 }
 
 
- 66%|██████▌   | 33/50 [01:38<00:51,  3.06s/it][AGenerate config GenerationConfig {
+ 66%|██████▌   | 33/50 [00:26<00:13,  1.28it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3890,7 +3890,7 @@ Generate config GenerationConfig {
 }
 
 
- 68%|██████▊   | 34/50 [01:41<00:48,  3.06s/it][AGenerate config GenerationConfig {
+ 68%|██████▊   | 34/50 [00:26<00:12,  1.28it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3905,7 +3905,7 @@ Generate config GenerationConfig {
 }
 
 
- 70%|███████   | 35/50 [01:43<00:43,  2.87s/it][AGenerate config GenerationConfig {
+ 70%|███████   | 35/50 [00:27<00:11,  1.28it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3920,7 +3920,7 @@ Generate config GenerationConfig {
 }
 
 
- 72%|███████▏  | 36/50 [01:46<00:41,  2.98s/it][AGenerate config GenerationConfig {
+ 72%|███████▏  | 36/50 [00:28<00:10,  1.28it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3935,7 +3935,7 @@ Generate config GenerationConfig {
 }
 
 
- 74%|███████▍  | 37/50 [01:49<00:38,  2.99s/it][AGenerate config GenerationConfig {
+ 74%|███████▍  | 37/50 [00:29<00:10,  1.28it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3950,7 +3950,7 @@ Generate config GenerationConfig {
 }
 
 
- 76%|███████▌  | 38/50 [01:52<00:35,  2.99s/it][AGenerate config GenerationConfig {
+ 76%|███████▌  | 38/50 [00:29<00:09,  1.28it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3965,7 +3965,7 @@ Generate config GenerationConfig {
 }
 
 
- 78%|███████▊  | 39/50 [01:55<00:31,  2.85s/it][AGenerate config GenerationConfig {
+ 78%|███████▊  | 39/50 [00:30<00:08,  1.28it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3980,7 +3980,7 @@ Generate config GenerationConfig {
 }
 
 
- 80%|████████  | 40/50 [01:58<00:28,  2.83s/it][AGenerate config GenerationConfig {
+ 80%|████████  | 40/50 [00:31<00:07,  1.28it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -3995,7 +3995,7 @@ Generate config GenerationConfig {
 }
 
 
- 82%|████████▏ | 41/50 [02:01<00:25,  2.81s/it][AGenerate config GenerationConfig {
+ 82%|████████▏ | 41/50 [00:32<00:07,  1.28it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -4010,7 +4010,7 @@ Generate config GenerationConfig {
 }
 
 
- 84%|████████▍ | 42/50 [02:04<00:23,  2.91s/it][AGenerate config GenerationConfig {
+ 84%|████████▍ | 42/50 [00:33<00:06,  1.28it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -4025,7 +4025,7 @@ Generate config GenerationConfig {
 }
 
 
- 86%|████████▌ | 43/50 [02:07<00:20,  2.93s/it][AGenerate config GenerationConfig {
+ 86%|████████▌ | 43/50 [00:33<00:05,  1.28it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -4040,7 +4040,7 @@ Generate config GenerationConfig {
 }
 
 
- 88%|████████▊ | 44/50 [02:10<00:18,  3.02s/it][AGenerate config GenerationConfig {
+ 88%|████████▊ | 44/50 [00:34<00:04,  1.28it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -4055,7 +4055,7 @@ Generate config GenerationConfig {
 }
 
 
- 90%|█████████ | 45/50 [02:13<00:14,  2.98s/it][AGenerate config GenerationConfig {
+ 90%|█████████ | 45/50 [00:35<00:03,  1.26it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -4070,7 +4070,7 @@ Generate config GenerationConfig {
 }
 
 
- 92%|█████████▏| 46/50 [02:15<00:11,  2.89s/it][AGenerate config GenerationConfig {
+ 92%|█████████▏| 46/50 [00:36<00:03,  1.27it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -4085,7 +4085,7 @@ Generate config GenerationConfig {
 }
 
 
- 94%|█████████▍| 47/50 [02:19<00:09,  3.11s/it][AGenerate config GenerationConfig {
+ 94%|█████████▍| 47/50 [00:37<00:02,  1.26it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -4100,7 +4100,7 @@ Generate config GenerationConfig {
 }
 
 
- 96%|█████████▌| 48/50 [02:22<00:06,  3.07s/it][AGenerate config GenerationConfig {
+ 96%|█████████▌| 48/50 [00:37<00:01,  1.26it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -4115,7 +4115,7 @@ Generate config GenerationConfig {
 }
 
 
- 98%|█████████▊| 49/50 [02:25<00:03,  3.05s/it][AGenerate config GenerationConfig {
+ 98%|█████████▊| 49/50 [00:38<00:00,  1.25it/s][AGenerate config GenerationConfig {
   "_from_model_config": true,
   "bos_token_id": 0,
   "decoder_start_token_id": 2,
@@ -4130,52 +4130,52 @@ Generate config GenerationConfig {
 }
 
 
-100%|██████████| 50/50 [02:28<00:00,  3.04s/it][A100%|██████████| 50/50 [02:28<00:00,  2.97s/it]
-100%|██████████| 252/252 [10:56<00:00,  2.61s/it]
+100%|██████████| 50/50 [00:39<00:00,  1.26it/s][A100%|██████████| 50/50 [00:39<00:00,  1.27it/s]
+100%|██████████| 252/252 [04:20<00:00,  1.03s/it]
 wandb: Waiting for W&B process to finish... (success).
 wandb: 
 wandb: Run history:
-wandb:             eval/rouge1 ▁▄▇█
-wandb:             eval/rouge2 ▁▆▇█
-wandb:             eval/rougeL ▁▃▇█
-wandb:          eval/rougeLsum ▁▄▇█
+wandb:             eval/rouge1 ▂▁▃█
+wandb:             eval/rouge2 ▁▄▅█
+wandb:             eval/rougeL ▁█▄▇
+wandb:          eval/rougeLsum ▁▄▆█
 wandb:             test/rouge1 ▁
 wandb:             test/rouge2 ▁
 wandb:             test/rougeL ▁
 wandb:          test/rougeLsum ▁
-wandb:      train/crs_att_loss █▇▆▅▄▃▃▂▂▁▁▁
-wandb:      train/dec_att_loss ▁▇█▇▇▇▇▇▇▆▆▇
-wandb:      train/dec_hid_loss █▄▃▂▂▂▁▁▁▁▁▁
-wandb:      train/enc_att_loss █▇▆▅▄▃▃▃▁▂▂▁
-wandb: train/enc_hid_last_loss █▆▄▃▃▂▂▂▁▁▁▁
-wandb:      train/enc_hid_loss █▇▅▄▃▃▂▂▁▁▁▁
-wandb:       train/logits_loss █▃▂▂▂▁▁▁▁▁▁▁
-wandb:              train/loss █▄▃▂▂▂▁▁▁▁▁▁
+wandb:      train/crs_att_loss ▁▆██▄▇▇█▃▅▄▆
+wandb:      train/dec_att_loss ▂▁▇▆▃▅█▇▆▇▆█
+wandb:      train/dec_hid_loss █▄▂▂▁▁▁▁▁▁▁▁
+wandb:      train/enc_att_loss ▅▃▄▅▁▃▆█▁▄▁▅
+wandb: train/enc_hid_last_loss ▂▇█▇▇▆▅▄▃▂▁▁
+wandb:      train/enc_hid_loss ▃▇█▇▆▆▅▄▂▂▁▁
+wandb:       train/logits_loss █▃▂▂▁▁▁▁▁▁▁▁
+wandb:              train/loss █▃▂▂▁▁▁▁▁▁▁▁
 wandb:                train/lr █▇▇▆▅▅▄▄▃▂▂▁
 wandb:              train/step ▁▂▂▃▄▄▅▅▆▇▇█
-wandb:         train/task_loss █▄▃▂▂▂▁▁▁▁▁▁
+wandb:         train/task_loss █▂▁▁▁▁▁▁▁▁▁▁
 wandb: 
 wandb: Run summary:
-wandb:             eval/rouge1 19.1447
-wandb:             eval/rouge2 2.6461
-wandb:             eval/rougeL 12.7789
-wandb:          eval/rougeLsum 17.4802
-wandb:             test/rouge1 21.6152
-wandb:             test/rouge2 3.3215
-wandb:             test/rougeL 14.0886
-wandb:          test/rougeLsum 19.9122
-wandb:      train/crs_att_loss 0.58953
-wandb:      train/dec_att_loss 0.00691
-wandb:      train/dec_hid_loss 1.38904
-wandb:      train/enc_att_loss 0.04079
-wandb: train/enc_hid_last_loss 0.13597
-wandb:      train/enc_hid_loss 0.31466
-wandb:       train/logits_loss 3.8379
-wandb:              train/loss 10.94734
+wandb:             eval/rouge1 18.9871
+wandb:             eval/rouge2 0.9677
+wandb:             eval/rougeL 13.1766
+wandb:          eval/rougeLsum 17.6721
+wandb:             test/rouge1 18.3072
+wandb:             test/rouge2 0.8509
+wandb:             test/rougeL 12.8204
+wandb:          test/rougeLsum 17.4561
+wandb:      train/crs_att_loss 0.27989
+wandb:      train/dec_att_loss 0.00453
+wandb:      train/dec_hid_loss 1.84481
+wandb:      train/enc_att_loss 0.0203
+wandb: train/enc_hid_last_loss 0.58075
+wandb:      train/enc_hid_loss 0.10544
+wandb:       train/logits_loss 6.00369
+wandb:              train/loss 15.69796
 wandb:                train/lr 0.0
 wandb:              train/step 247
-wandb:         train/task_loss 5.19258
+wandb:         train/task_loss 7.12445
 wandb: 
 wandb: You can sync this run to the cloud by running:
-wandb: wandb sync /home/sshukla7/sshukla7/DQ_BART/wandb/offline-run-20230509_003601-lzda2em3
-wandb: Find logs at: ./wandb/offline-run-20230509_003601-lzda2em3/logs
+wandb: wandb sync /home/sshukla7/sshukla7/DQ_BART/wandb/offline-run-20230509_012355-h2oaq58l
+wandb: Find logs at: ./wandb/offline-run-20230509_012355-h2oaq58l/logs
