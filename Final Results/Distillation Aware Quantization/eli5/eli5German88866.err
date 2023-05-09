@@ -1,0 +1,4183 @@
+
+Lmod is automatically replacing "gnu9/9.3.0" with "gnu10/10.3.0-ya".
+
+
+Inactive Modules:
+  1) hwloc/2.1.0     2) libfabric     3) openmpi4     4) ucx
+
+2023-05-09 01:29:03.998791: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-05-09 01:29:06.592910: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+wandb: Tracking run with wandb version 0.15.0
+wandb: W&B syncing is set to `offline` in this directory.  
+wandb: Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+Downloading data files:   0%|          | 0/3 [00:00<?, ?it/s]Downloading data files: 100%|██████████| 3/3 [00:00<00:00, 11522.81it/s]
+Extracting data files:   0%|          | 0/3 [00:00<?, ?it/s]Extracting data files:  33%|███▎      | 1/3 [00:00<00:00,  6.12it/s]Extracting data files: 100%|██████████| 3/3 [00:00<00:00, 17.24it/s]
+Generating train split: 0 examples [00:00, ? examples/s]                                                        Generating validation split: 0 examples [00:00, ? examples/s]                                                             Generating test split: 0 examples [00:00, ? examples/s]                                                         0%|          | 0/3 [00:00<?, ?it/s]100%|██████████| 3/3 [00:00<00:00, 236.86it/s]
+loading configuration file config.json from cache at /home/sshukla7/.cache/huggingface/hub/models--facebook--bart-base/snapshots/aadd2ab0ae0c8268c7c9693540e9904811f36177/config.json
+Model config BartConfig {
+  "_name_or_path": "facebook/bart-base",
+  "activation_dropout": 0.1,
+  "activation_function": "gelu",
+  "add_bias_logits": false,
+  "add_final_layer_norm": false,
+  "architectures": [
+    "BartModel"
+  ],
+  "attention_dropout": 0.1,
+  "bos_token_id": 0,
+  "classif_dropout": 0.1,
+  "classifier_dropout": 0.0,
+  "d_model": 768,
+  "decoder_attention_heads": 12,
+  "decoder_ffn_dim": 3072,
+  "decoder_layerdrop": 0.0,
+  "decoder_layers": 6,
+  "decoder_start_token_id": 2,
+  "dropout": 0.1,
+  "early_stopping": true,
+  "encoder_attention_heads": 12,
+  "encoder_ffn_dim": 3072,
+  "encoder_layerdrop": 0.0,
+  "encoder_layers": 6,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2"
+  },
+  "init_std": 0.02,
+  "is_encoder_decoder": true,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2
+  },
+  "max_position_embeddings": 1024,
+  "model_type": "bart",
+  "no_repeat_ngram_size": 3,
+  "normalize_before": false,
+  "normalize_embedding": true,
+  "num_beams": 4,
+  "num_hidden_layers": 6,
+  "pad_token_id": 1,
+  "scale_embedding": false,
+  "task_specific_params": {
+    "summarization": {
+      "length_penalty": 1.0,
+      "max_length": 128,
+      "min_length": 12,
+      "num_beams": 4
+    },
+    "summarization_cnn": {
+      "length_penalty": 2.0,
+      "max_length": 142,
+      "min_length": 56,
+      "num_beams": 4
+    },
+    "summarization_xsum": {
+      "length_penalty": 1.0,
+      "max_length": 62,
+      "min_length": 11,
+      "num_beams": 6
+    }
+  },
+  "torch_dtype": "float32",
+  "transformers_version": "4.28.1",
+  "use_cache": true,
+  "vocab_size": 50265
+}
+
+Could not locate the tokenizer configuration file, will try to use the model config instead.
+loading configuration file config.json from cache at /home/sshukla7/.cache/huggingface/hub/models--facebook--bart-base/snapshots/aadd2ab0ae0c8268c7c9693540e9904811f36177/config.json
+Model config BartConfig {
+  "_name_or_path": "facebook/bart-base",
+  "activation_dropout": 0.1,
+  "activation_function": "gelu",
+  "add_bias_logits": false,
+  "add_final_layer_norm": false,
+  "architectures": [
+    "BartModel"
+  ],
+  "attention_dropout": 0.1,
+  "bos_token_id": 0,
+  "classif_dropout": 0.1,
+  "classifier_dropout": 0.0,
+  "d_model": 768,
+  "decoder_attention_heads": 12,
+  "decoder_ffn_dim": 3072,
+  "decoder_layerdrop": 0.0,
+  "decoder_layers": 6,
+  "decoder_start_token_id": 2,
+  "dropout": 0.1,
+  "early_stopping": true,
+  "encoder_attention_heads": 12,
+  "encoder_ffn_dim": 3072,
+  "encoder_layerdrop": 0.0,
+  "encoder_layers": 6,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2"
+  },
+  "init_std": 0.02,
+  "is_encoder_decoder": true,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2
+  },
+  "max_position_embeddings": 1024,
+  "model_type": "bart",
+  "no_repeat_ngram_size": 3,
+  "normalize_before": false,
+  "normalize_embedding": true,
+  "num_beams": 4,
+  "num_hidden_layers": 6,
+  "pad_token_id": 1,
+  "scale_embedding": false,
+  "task_specific_params": {
+    "summarization": {
+      "length_penalty": 1.0,
+      "max_length": 128,
+      "min_length": 12,
+      "num_beams": 4
+    },
+    "summarization_cnn": {
+      "length_penalty": 2.0,
+      "max_length": 142,
+      "min_length": 56,
+      "num_beams": 4
+    },
+    "summarization_xsum": {
+      "length_penalty": 1.0,
+      "max_length": 62,
+      "min_length": 11,
+      "num_beams": 6
+    }
+  },
+  "torch_dtype": "float32",
+  "transformers_version": "4.28.1",
+  "use_cache": true,
+  "vocab_size": 50265
+}
+
+loading file vocab.json from cache at /home/sshukla7/.cache/huggingface/hub/models--facebook--bart-base/snapshots/aadd2ab0ae0c8268c7c9693540e9904811f36177/vocab.json
+loading file merges.txt from cache at /home/sshukla7/.cache/huggingface/hub/models--facebook--bart-base/snapshots/aadd2ab0ae0c8268c7c9693540e9904811f36177/merges.txt
+loading file tokenizer.json from cache at /home/sshukla7/.cache/huggingface/hub/models--facebook--bart-base/snapshots/aadd2ab0ae0c8268c7c9693540e9904811f36177/tokenizer.json
+loading file added_tokens.json from cache at None
+loading file special_tokens_map.json from cache at None
+loading file tokenizer_config.json from cache at None
+loading configuration file config.json from cache at /home/sshukla7/.cache/huggingface/hub/models--facebook--bart-base/snapshots/aadd2ab0ae0c8268c7c9693540e9904811f36177/config.json
+Model config BartConfig {
+  "_name_or_path": "facebook/bart-base",
+  "activation_dropout": 0.1,
+  "activation_function": "gelu",
+  "add_bias_logits": false,
+  "add_final_layer_norm": false,
+  "architectures": [
+    "BartModel"
+  ],
+  "attention_dropout": 0.1,
+  "bos_token_id": 0,
+  "classif_dropout": 0.1,
+  "classifier_dropout": 0.0,
+  "d_model": 768,
+  "decoder_attention_heads": 12,
+  "decoder_ffn_dim": 3072,
+  "decoder_layerdrop": 0.0,
+  "decoder_layers": 6,
+  "decoder_start_token_id": 2,
+  "dropout": 0.1,
+  "early_stopping": true,
+  "encoder_attention_heads": 12,
+  "encoder_ffn_dim": 3072,
+  "encoder_layerdrop": 0.0,
+  "encoder_layers": 6,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2"
+  },
+  "init_std": 0.02,
+  "is_encoder_decoder": true,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2
+  },
+  "max_position_embeddings": 1024,
+  "model_type": "bart",
+  "no_repeat_ngram_size": 3,
+  "normalize_before": false,
+  "normalize_embedding": true,
+  "num_beams": 4,
+  "num_hidden_layers": 6,
+  "pad_token_id": 1,
+  "scale_embedding": false,
+  "task_specific_params": {
+    "summarization": {
+      "length_penalty": 1.0,
+      "max_length": 128,
+      "min_length": 12,
+      "num_beams": 4
+    },
+    "summarization_cnn": {
+      "length_penalty": 2.0,
+      "max_length": 142,
+      "min_length": 56,
+      "num_beams": 4
+    },
+    "summarization_xsum": {
+      "length_penalty": 1.0,
+      "max_length": 62,
+      "min_length": 11,
+      "num_beams": 6
+    }
+  },
+  "torch_dtype": "float32",
+  "transformers_version": "4.28.1",
+  "use_cache": true,
+  "vocab_size": 50265
+}
+
+loading weights file pytorch_model.bin from cache at /home/sshukla7/.cache/huggingface/hub/models--facebook--bart-base/snapshots/aadd2ab0ae0c8268c7c9693540e9904811f36177/pytorch_model.bin
+Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+All model checkpoint weights were used when initializing BartForConditionalGeneration.
+
+All the weights of BartForConditionalGeneration were initialized from the model checkpoint at facebook/bart-base.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use BartForConditionalGeneration for predictions without further training.
+Generation config file not found, using a generation config created from the model config.
+/home/sshukla7/.local/lib/python3.10/site-packages/huggingface_hub/file_download.py:649: FutureWarning: 'cached_download' is the legacy way to download files from the HF hub, please consider upgrading to 'hf_hub_download'
+  warnings.warn(
+Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+Running tokenizer on dataset (num_proc=10):   0%|          | 0/1000 [00:00<?, ? examples/s]/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+Running tokenizer on dataset (num_proc=10):  10%|█         | 100/1000 [00:00<00:02, 434.69 examples/s]/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+Running tokenizer on dataset (num_proc=10):  90%|█████████ | 900/1000 [00:00<00:00, 3093.07 examples/s]                                                                                                       Running tokenizer on dataset (num_proc=10):   0%|          | 0/200 [00:00<?, ? examples/s]/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+Running tokenizer on dataset (num_proc=10):  10%|█         | 20/200 [00:00<00:01, 142.40 examples/s]/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+Running tokenizer on dataset (num_proc=10):  70%|███████   | 140/200 [00:00<00:00, 668.51 examples/s]/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+                                                                                                     Running tokenizer on dataset (num_proc=10):   0%|          | 0/200 [00:00<?, ? examples/s]/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+Running tokenizer on dataset (num_proc=10):  10%|█         | 20/200 [00:00<00:01, 146.22 examples/s]/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+Running tokenizer on dataset (num_proc=10):  70%|███████   | 140/200 [00:00<00:00, 588.42 examples/s]/home/sshukla7/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3596: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+                                                                                                     /home/sshukla7/.local/lib/python3.10/site-packages/accelerate/accelerator.py:498: FutureWarning: The `use_fp16` property is deprecated and will be removed in version 1.0 of Accelerate use `Accelerator.mixed_precision == 'fp16'` instead.
+  warnings.warn(
+/home/sshukla7/.local/lib/python3.10/site-packages/transformers/optimization.py:391: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+/home/sshukla7/sshukla7/DQ_BART/eli5MultiLanguage_trainer.py:706: FutureWarning: load_metric is deprecated and will be removed in the next major version of datasets. Use 'evaluate.load' instead, from the new library 🤗 Evaluate: https://huggingface.co/docs/evaluate
+  metric = load_metric("rouge")
+  0%|          | 0/252 [00:00<?, ?it/s]You're using a BartTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+  0%|          | 1/252 [00:02<10:27,  2.50s/it]  4%|▍         | 10/252 [00:04<01:37,  2.47it/s]  8%|▊         | 19/252 [00:06<01:12,  3.22it/s] 11%|█         | 28/252 [00:09<01:02,  3.58it/s] 14%|█▍        | 36/252 [00:11<00:58,  3.72it/s] 17%|█▋        | 44/252 [00:13<00:54,  3.81it/s] 21%|██        | 53/252 [00:15<00:51,  3.88it/s] 25%|██▍       | 62/252 [00:17<00:48,  3.93it/s]
+  0%|          | 0/50 [00:00<?, ?it/s][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+  2%|▏         | 1/50 [00:06<05:11,  6.36s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+  4%|▍         | 2/50 [00:10<04:11,  5.25s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+ 25%|██▌       | 63/252 [00:29<00:48,  3.93it/s]
+  6%|▌         | 3/50 [00:15<04:02,  5.16s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+  8%|▊         | 4/50 [00:19<03:27,  4.51s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 10%|█         | 5/50 [00:24<03:29,  4.66s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 12%|█▏        | 6/50 [00:30<03:44,  5.09s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 14%|█▍        | 7/50 [00:34<03:24,  4.75s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 16%|█▌        | 8/50 [00:40<03:35,  5.14s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 18%|█▊        | 9/50 [00:44<03:15,  4.76s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 20%|██        | 10/50 [00:47<02:49,  4.23s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 22%|██▏       | 11/50 [00:53<03:05,  4.76s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 24%|██▍       | 12/50 [00:57<02:56,  4.64s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 26%|██▌       | 13/50 [01:03<03:07,  5.06s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 28%|██▊       | 14/50 [01:07<02:49,  4.70s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 30%|███       | 15/50 [01:11<02:41,  4.60s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 32%|███▏      | 16/50 [01:16<02:32,  4.47s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 34%|███▍      | 17/50 [01:22<02:46,  5.03s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 36%|███▌      | 18/50 [01:26<02:29,  4.68s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 38%|███▊      | 19/50 [01:30<02:22,  4.60s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 40%|████      | 20/50 [01:35<02:23,  4.77s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 42%|████▏     | 21/50 [01:39<02:11,  4.52s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 44%|████▍     | 22/50 [01:43<01:59,  4.27s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 46%|████▌     | 23/50 [01:49<02:08,  4.77s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 48%|████▊     | 24/50 [01:54<02:07,  4.92s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 50%|█████     | 25/50 [02:00<02:10,  5.22s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 52%|█████▏    | 26/50 [02:04<01:57,  4.91s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 54%|█████▍    | 27/50 [02:08<01:43,  4.49s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 56%|█████▌    | 28/50 [02:13<01:45,  4.82s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 58%|█████▊    | 29/50 [02:18<01:42,  4.88s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 60%|██████    | 30/50 [02:23<01:35,  4.80s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 62%|██████▏   | 31/50 [02:29<01:37,  5.13s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 64%|██████▍   | 32/50 [02:35<01:35,  5.29s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 66%|██████▌   | 33/50 [02:38<01:20,  4.72s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 68%|██████▊   | 34/50 [02:42<01:11,  4.49s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 70%|███████   | 35/50 [02:45<01:00,  4.04s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 72%|███████▏  | 36/50 [02:48<00:54,  3.90s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 74%|███████▍  | 37/50 [02:54<00:55,  4.25s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 76%|███████▌  | 38/50 [02:58<00:50,  4.21s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 78%|███████▊  | 39/50 [03:02<00:45,  4.16s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 80%|████████  | 40/50 [03:06<00:43,  4.31s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 82%|████████▏ | 41/50 [03:12<00:43,  4.80s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 84%|████████▍ | 42/50 [03:17<00:39,  4.91s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 86%|████████▌ | 43/50 [03:22<00:33,  4.76s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 88%|████████▊ | 44/50 [03:26<00:28,  4.72s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 90%|█████████ | 45/50 [03:32<00:25,  5.10s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 92%|█████████▏| 46/50 [03:37<00:19,  4.98s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 94%|█████████▍| 47/50 [03:42<00:14,  4.92s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 96%|█████████▌| 48/50 [03:48<00:10,  5.23s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 98%|█████████▊| 49/50 [03:52<00:04,  4.93s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+100%|██████████| 50/50 [03:56<00:00,  4.63s/it][A100%|██████████| 50/50 [03:56<00:00,  4.73s/it]
+Model weights saved in ./output_eli5Translated/8_8_6_6_4_5e-05_fp16/pytorch_model.bin
+ 25%|██▌       | 64/252 [04:16<36:50, 11.76s/it] 29%|██▉       | 73/252 [04:18<21:56,  7.35s/it] 32%|███▏      | 81/252 [04:20<14:20,  5.03s/it] 36%|███▌      | 90/252 [04:23<09:08,  3.38s/it] 39%|███▉      | 99/252 [04:25<05:59,  2.35s/it] 43%|████▎     | 108/252 [04:27<04:01,  1.68s/it] 46%|████▋     | 117/252 [04:29<02:45,  1.23s/it] 50%|█████     | 126/252 [04:31<01:55,  1.09it/s]
+  0%|          | 0/50 [00:00<?, ?it/s][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+  2%|▏         | 1/50 [00:04<03:41,  4.52s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+  4%|▍         | 2/50 [00:07<02:54,  3.63s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+  6%|▌         | 3/50 [00:10<02:44,  3.50s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+  8%|▊         | 4/50 [00:16<03:19,  4.33s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+ 50%|█████     | 126/252 [04:49<01:55,  1.09it/s]
+ 10%|█         | 5/50 [00:19<02:57,  3.95s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 12%|█▏        | 6/50 [00:23<02:53,  3.94s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 14%|█▍        | 7/50 [00:26<02:37,  3.65s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 16%|█▌        | 8/50 [00:29<02:20,  3.34s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 18%|█▊        | 9/50 [00:32<02:11,  3.21s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 20%|██        | 10/50 [00:35<02:03,  3.09s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 22%|██▏       | 11/50 [00:39<02:13,  3.43s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 24%|██▍       | 12/50 [00:42<02:08,  3.39s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 26%|██▌       | 13/50 [00:45<02:03,  3.34s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 28%|██▊       | 14/50 [00:49<01:58,  3.30s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 30%|███       | 15/50 [00:52<01:53,  3.23s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 32%|███▏      | 16/50 [00:55<01:46,  3.12s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 34%|███▍      | 17/50 [00:58<01:45,  3.18s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 36%|███▌      | 18/50 [01:00<01:32,  2.88s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 38%|███▊      | 19/50 [01:06<01:57,  3.79s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 40%|████      | 20/50 [01:10<01:53,  3.78s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 42%|████▏     | 21/50 [01:13<01:43,  3.57s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 44%|████▍     | 22/50 [01:16<01:34,  3.37s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 46%|████▌     | 23/50 [01:18<01:25,  3.17s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 48%|████▊     | 24/50 [01:22<01:23,  3.21s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 50%|█████     | 25/50 [01:25<01:18,  3.14s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 52%|█████▏    | 26/50 [01:28<01:17,  3.22s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 54%|█████▍    | 27/50 [01:31<01:09,  3.00s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 56%|█████▌    | 28/50 [01:35<01:16,  3.47s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 58%|█████▊    | 29/50 [01:39<01:15,  3.61s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 60%|██████    | 30/50 [01:42<01:06,  3.30s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 62%|██████▏   | 31/50 [01:44<00:59,  3.14s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 64%|██████▍   | 32/50 [01:47<00:55,  3.09s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 66%|██████▌   | 33/50 [01:50<00:50,  3.00s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 68%|██████▊   | 34/50 [01:54<00:49,  3.11s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 70%|███████   | 35/50 [01:56<00:44,  2.99s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 72%|███████▏  | 36/50 [01:59<00:40,  2.90s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 74%|███████▍  | 37/50 [02:02<00:39,  3.01s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 76%|███████▌  | 38/50 [02:05<00:35,  2.94s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 78%|███████▊  | 39/50 [02:10<00:38,  3.49s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 80%|████████  | 40/50 [02:12<00:32,  3.26s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 82%|████████▏ | 41/50 [02:16<00:28,  3.20s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 84%|████████▍ | 42/50 [02:18<00:23,  2.94s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 86%|████████▌ | 43/50 [02:24<00:26,  3.85s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 88%|████████▊ | 44/50 [02:28<00:23,  3.98s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 90%|█████████ | 45/50 [02:33<00:21,  4.21s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 92%|█████████▏| 46/50 [02:36<00:14,  3.75s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 94%|█████████▍| 47/50 [02:40<00:12,  4.04s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 96%|█████████▌| 48/50 [02:43<00:07,  3.62s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 98%|█████████▊| 49/50 [02:46<00:03,  3.49s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+100%|██████████| 50/50 [02:49<00:00,  3.27s/it][A100%|██████████| 50/50 [02:49<00:00,  3.39s/it]
+Model weights saved in ./output_eli5Translated/8_8_6_6_4_5e-05_fp16/pytorch_model.bin
+ 50%|█████     | 127/252 [07:23<18:34,  8.92s/it] 54%|█████▍    | 136/252 [07:25<10:55,  5.65s/it] 58%|█████▊    | 145/252 [07:27<06:42,  3.76s/it] 61%|██████    | 154/252 [07:30<04:14,  2.59s/it] 65%|██████▍   | 163/252 [07:32<02:43,  1.84s/it] 68%|██████▊   | 172/252 [07:34<01:46,  1.34s/it] 72%|███████▏  | 181/252 [07:36<01:10,  1.00it/s]
+  0%|          | 0/50 [00:00<?, ?it/s][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+  2%|▏         | 1/50 [00:03<02:38,  3.24s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+  4%|▍         | 2/50 [00:06<02:48,  3.52s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+  6%|▌         | 3/50 [00:09<02:33,  3.27s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+ 75%|███████▌  | 189/252 [07:49<01:02,  1.00it/s]
+  8%|▊         | 4/50 [00:14<02:53,  3.78s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 10%|█         | 5/50 [00:17<02:35,  3.45s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 12%|█▏        | 6/50 [00:21<02:43,  3.72s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 14%|█▍        | 7/50 [00:24<02:31,  3.53s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 16%|█▌        | 8/50 [00:27<02:16,  3.26s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 18%|█▊        | 9/50 [00:31<02:30,  3.67s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 20%|██        | 10/50 [00:35<02:23,  3.58s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 22%|██▏       | 11/50 [00:39<02:25,  3.74s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 24%|██▍       | 12/50 [00:43<02:20,  3.70s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 26%|██▌       | 13/50 [00:46<02:13,  3.60s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 28%|██▊       | 14/50 [00:49<02:05,  3.48s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 30%|███       | 15/50 [00:54<02:16,  3.90s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 32%|███▏      | 16/50 [00:58<02:16,  4.00s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 34%|███▍      | 17/50 [01:01<01:55,  3.50s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 36%|███▌      | 18/50 [01:04<01:46,  3.33s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 38%|███▊      | 19/50 [01:07<01:46,  3.43s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 40%|████      | 20/50 [01:10<01:37,  3.26s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 42%|████▏     | 21/50 [01:14<01:37,  3.37s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 44%|████▍     | 22/50 [01:19<01:47,  3.83s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 46%|████▌     | 23/50 [01:23<01:45,  3.92s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 48%|████▊     | 24/50 [01:26<01:33,  3.61s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 50%|█████     | 25/50 [01:30<01:35,  3.82s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 52%|█████▏    | 26/50 [01:32<01:20,  3.36s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 54%|█████▍    | 27/50 [01:34<01:09,  3.03s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 56%|█████▌    | 28/50 [01:39<01:15,  3.45s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 58%|█████▊    | 29/50 [01:42<01:10,  3.36s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 60%|██████    | 30/50 [01:45<01:05,  3.29s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 62%|██████▏   | 31/50 [01:48<00:58,  3.07s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 64%|██████▍   | 32/50 [01:50<00:51,  2.86s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 66%|██████▌   | 33/50 [01:53<00:47,  2.79s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 68%|██████▊   | 34/50 [01:57<00:50,  3.16s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 70%|███████   | 35/50 [02:00<00:49,  3.28s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 72%|███████▏  | 36/50 [02:03<00:43,  3.10s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 74%|███████▍  | 37/50 [02:06<00:38,  2.98s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 76%|███████▌  | 38/50 [02:09<00:38,  3.18s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 78%|███████▊  | 39/50 [02:12<00:32,  2.91s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 80%|████████  | 40/50 [02:15<00:31,  3.11s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 82%|████████▏ | 41/50 [02:18<00:27,  3.05s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 84%|████████▍ | 42/50 [02:21<00:25,  3.15s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 86%|████████▌ | 43/50 [02:25<00:22,  3.20s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 88%|████████▊ | 44/50 [02:28<00:18,  3.15s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 90%|█████████ | 45/50 [02:31<00:15,  3.06s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 92%|█████████▏| 46/50 [02:33<00:11,  2.83s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 94%|█████████▍| 47/50 [02:37<00:09,  3.18s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 96%|█████████▌| 48/50 [02:39<00:05,  2.99s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 98%|█████████▊| 49/50 [02:42<00:02,  2.85s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+100%|██████████| 50/50 [02:45<00:00,  2.92s/it][A100%|██████████| 50/50 [02:45<00:00,  3.31s/it]
+Model weights saved in ./output_eli5Translated/8_8_6_6_4_5e-05_fp16/pytorch_model.bin
+ 75%|███████▌  | 190/252 [10:26<06:42,  6.48s/it] 79%|███████▉  | 199/252 [10:28<04:02,  4.58s/it] 83%|████████▎ | 208/252 [10:30<02:23,  3.27s/it] 86%|████████▌ | 217/252 [10:33<01:22,  2.36s/it] 90%|████████▉ | 226/252 [10:35<00:44,  1.72s/it] 93%|█████████▎| 235/252 [10:37<00:21,  1.28s/it] 97%|█████████▋| 244/252 [10:39<00:07,  1.04it/s]
+  0%|          | 0/50 [00:00<?, ?it/s][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+  2%|▏         | 1/50 [00:04<03:25,  4.20s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+  4%|▍         | 2/50 [00:06<02:32,  3.18s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+  6%|▌         | 3/50 [00:09<02:19,  2.97s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+  8%|▊         | 4/50 [00:11<02:00,  2.62s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 10%|█         | 5/50 [00:14<02:06,  2.82s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+100%|██████████| 252/252 [10:59<00:00,  1.04it/s]
+ 12%|█▏        | 6/50 [00:19<02:29,  3.40s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 14%|█▍        | 7/50 [00:22<02:26,  3.41s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 16%|█▌        | 8/50 [00:26<02:29,  3.57s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 18%|█▊        | 9/50 [00:30<02:36,  3.81s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 20%|██        | 10/50 [00:34<02:34,  3.85s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 22%|██▏       | 11/50 [00:37<02:15,  3.48s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 24%|██▍       | 12/50 [00:40<02:04,  3.27s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 26%|██▌       | 13/50 [00:43<01:55,  3.13s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 28%|██▊       | 14/50 [00:45<01:48,  3.01s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 30%|███       | 15/50 [00:49<01:55,  3.30s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 32%|███▏      | 16/50 [00:55<02:15,  3.98s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 34%|███▍      | 17/50 [00:59<02:08,  3.90s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 36%|███▌      | 18/50 [01:02<01:59,  3.74s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 38%|███▊      | 19/50 [01:07<02:12,  4.27s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 40%|████      | 20/50 [01:13<02:18,  4.63s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 42%|████▏     | 21/50 [01:16<01:58,  4.09s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 44%|████▍     | 22/50 [01:19<01:47,  3.84s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 46%|████▌     | 23/50 [01:23<01:47,  3.97s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 48%|████▊     | 24/50 [01:28<01:51,  4.28s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 50%|█████     | 25/50 [01:32<01:44,  4.18s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 52%|█████▏    | 26/50 [01:35<01:33,  3.89s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 54%|█████▍    | 27/50 [01:38<01:18,  3.42s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 56%|█████▌    | 28/50 [01:43<01:25,  3.89s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 58%|█████▊    | 29/50 [01:47<01:23,  3.96s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 60%|██████    | 30/50 [01:50<01:14,  3.71s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 62%|██████▏   | 31/50 [01:54<01:12,  3.84s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 64%|██████▍   | 32/50 [01:56<01:01,  3.41s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 66%|██████▌   | 33/50 [01:59<00:54,  3.22s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 68%|██████▊   | 34/50 [02:03<00:53,  3.34s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 70%|███████   | 35/50 [02:06<00:49,  3.28s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 72%|███████▏  | 36/50 [02:10<00:47,  3.40s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 74%|███████▍  | 37/50 [02:14<00:47,  3.64s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 76%|███████▌  | 38/50 [02:17<00:40,  3.39s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 78%|███████▊  | 39/50 [02:19<00:34,  3.16s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 80%|████████  | 40/50 [02:23<00:34,  3.41s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 82%|████████▏ | 41/50 [02:26<00:28,  3.18s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 84%|████████▍ | 42/50 [02:29<00:23,  2.99s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 86%|████████▌ | 43/50 [02:33<00:23,  3.32s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 88%|████████▊ | 44/50 [02:35<00:18,  3.12s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 90%|█████████ | 45/50 [02:40<00:17,  3.53s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 92%|█████████▏| 46/50 [02:43<00:13,  3.32s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 94%|█████████▍| 47/50 [02:47<00:10,  3.56s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 96%|█████████▌| 48/50 [02:50<00:06,  3.49s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 98%|█████████▊| 49/50 [02:54<00:03,  3.49s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+100%|██████████| 50/50 [02:57<00:00,  3.50s/it][A100%|██████████| 50/50 [02:57<00:00,  3.55s/it]
+Model weights saved in ./output_eli5Translated/8_8_6_6_4_5e-05_fp16/pytorch_model.bin
+Generate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+  0%|          | 0/50 [00:00<?, ?it/s][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+  2%|▏         | 1/50 [00:03<02:36,  3.19s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+  4%|▍         | 2/50 [00:07<02:51,  3.58s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+  6%|▌         | 3/50 [00:09<02:22,  3.04s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+  8%|▊         | 4/50 [00:14<02:52,  3.74s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 10%|█         | 5/50 [00:18<02:54,  3.87s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 12%|█▏        | 6/50 [00:22<02:48,  3.84s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 14%|█▍        | 7/50 [00:25<02:42,  3.77s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 16%|█▌        | 8/50 [00:29<02:37,  3.75s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 18%|█▊        | 9/50 [00:32<02:29,  3.65s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 20%|██        | 10/50 [00:35<02:18,  3.46s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 22%|██▏       | 11/50 [00:39<02:15,  3.47s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 24%|██▍       | 12/50 [00:42<02:13,  3.50s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 26%|██▌       | 13/50 [00:45<01:55,  3.13s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 28%|██▊       | 14/50 [00:50<02:20,  3.90s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 30%|███       | 15/50 [00:54<02:09,  3.69s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 32%|███▏      | 16/50 [00:56<01:54,  3.37s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 34%|███▍      | 17/50 [01:01<02:04,  3.77s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 36%|███▌      | 18/50 [01:05<02:07,  3.99s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 38%|███▊      | 19/50 [01:08<01:46,  3.43s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 40%|████      | 20/50 [01:12<01:48,  3.63s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 42%|████▏     | 21/50 [01:17<01:55,  3.99s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 44%|████▍     | 22/50 [01:21<01:51,  3.99s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 46%|████▌     | 23/50 [01:24<01:42,  3.79s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 48%|████▊     | 24/50 [01:28<01:45,  4.04s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 50%|█████     | 25/50 [01:32<01:37,  3.91s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 52%|█████▏    | 26/50 [01:37<01:39,  4.15s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 54%|█████▍    | 27/50 [01:40<01:31,  4.00s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 56%|█████▌    | 28/50 [01:44<01:22,  3.74s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 58%|█████▊    | 29/50 [01:47<01:14,  3.53s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 60%|██████    | 30/50 [01:49<01:02,  3.13s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 62%|██████▏   | 31/50 [01:54<01:10,  3.69s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 64%|██████▍   | 32/50 [01:58<01:11,  3.99s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 66%|██████▌   | 33/50 [02:03<01:11,  4.20s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 68%|██████▊   | 34/50 [02:07<01:06,  4.14s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 70%|███████   | 35/50 [02:11<01:02,  4.17s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 72%|███████▏  | 36/50 [02:16<01:00,  4.34s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 74%|███████▍  | 37/50 [02:19<00:52,  4.03s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 76%|███████▌  | 38/50 [02:24<00:49,  4.15s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 78%|███████▊  | 39/50 [02:27<00:40,  3.69s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 80%|████████  | 40/50 [02:31<00:40,  4.05s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 82%|████████▏ | 41/50 [02:34<00:31,  3.47s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 84%|████████▍ | 42/50 [02:37<00:26,  3.34s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 86%|████████▌ | 43/50 [02:42<00:27,  3.97s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 88%|████████▊ | 44/50 [02:45<00:22,  3.83s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 90%|█████████ | 45/50 [02:49<00:18,  3.74s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 92%|█████████▏| 46/50 [02:54<00:16,  4.09s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 94%|█████████▍| 47/50 [02:59<00:13,  4.53s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 96%|█████████▌| 48/50 [03:02<00:08,  4.01s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+ 98%|█████████▊| 49/50 [03:08<00:04,  4.48s/it][AGenerate config GenerationConfig {
+  "_from_model_config": true,
+  "bos_token_id": 0,
+  "decoder_start_token_id": 2,
+  "early_stopping": true,
+  "eos_token_id": 2,
+  "forced_bos_token_id": 0,
+  "forced_eos_token_id": 2,
+  "no_repeat_ngram_size": 3,
+  "num_beams": 4,
+  "pad_token_id": 1,
+  "transformers_version": "4.28.1"
+}
+
+
+100%|██████████| 50/50 [03:13<00:00,  4.53s/it][A100%|██████████| 50/50 [03:13<00:00,  3.86s/it]
+100%|██████████| 252/252 [16:58<00:00,  4.04s/it]
+wandb: Waiting for W&B process to finish... (success).
+wandb: 
+wandb: Run history:
+wandb:             eval/rouge1 ▁▇██
+wandb:             eval/rouge2 ▁▅█▇
+wandb:             eval/rougeL ▁▆█▅
+wandb:          eval/rougeLsum ▁▇██
+wandb:             test/rouge1 ▁
+wandb:             test/rouge2 ▁
+wandb:             test/rougeL ▁
+wandb:          test/rougeLsum ▁
+wandb:      train/crs_att_loss ███▇▅▃▃▂▂▁▁▁
+wandb:      train/dec_att_loss ▅█▆▃▃▃▂▂▁▂▁▁
+wandb:      train/dec_hid_loss █▄▃▂▂▂▁▁▁▁▁▁
+wandb:      train/enc_att_loss █▇▇▇▅▃▃▂▃▁▂▂
+wandb: train/enc_hid_last_loss █▇▇▅▃▃▂▂▁▁▁▁
+wandb:      train/enc_hid_loss █▇▆▄▄▃▂▂▂▁▁▁
+wandb:       train/logits_loss █▃▂▂▂▂▁▁▁▁▁▁
+wandb:              train/loss █▄▃▂▂▂▁▁▁▁▁▁
+wandb:                train/lr █▇▇▆▅▅▄▄▃▂▂▁
+wandb:              train/step ▁▂▂▃▄▄▅▅▆▇▇█
+wandb:         train/task_loss █▄▃▂▂▂▁▁▁▁▁▁
+wandb: 
+wandb: Run summary:
+wandb:             eval/rouge1 22.7343
+wandb:             eval/rouge2 3.4071
+wandb:             eval/rougeL 14.03
+wandb:          eval/rougeLsum 20.396
+wandb:             test/rouge1 23.1983
+wandb:             test/rouge2 3.6276
+wandb:             test/rougeL 14.2938
+wandb:          test/rougeLsum 20.4159
+wandb:      train/crs_att_loss 1.19686
+wandb:      train/dec_att_loss 0.00938
+wandb:      train/dec_hid_loss 1.32316
+wandb:      train/enc_att_loss 0.04326
+wandb: train/enc_hid_last_loss 0.14292
+wandb:      train/enc_hid_loss 0.3233
+wandb:       train/logits_loss 3.11184
+wandb:              train/loss 9.47395
+wandb:                train/lr 0.0
+wandb:              train/step 247
+wandb:         train/task_loss 4.46025
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /home/sshukla7/sshukla7/DQ_BART/wandb/offline-run-20230509_012914-7q648l85
+wandb: Find logs at: ./wandb/offline-run-20230509_012914-7q648l85/logs
