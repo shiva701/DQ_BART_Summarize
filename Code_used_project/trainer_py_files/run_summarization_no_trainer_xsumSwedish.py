@@ -57,7 +57,7 @@ import wandb
 from quant.configuration_bart_quant import BartConfig as QBartConfig
 from quant.modeling_bart_quant import BartForConditionalGeneration as QBart
 
-# require_version("datasets>=1.8.0", "To fix: pip install -r examples/pytorch/summarization/requirements.txt")
+#require_version("datasets>=1.8.0", "To fix: pip install -r examples/pytorch/summarization/requirements.txt")
 
 # You should update this to your particular problem to have better documentation of `model_type`
 MODEL_CONFIG_CLASSES = list(MODEL_MAPPING.keys())
@@ -86,7 +86,7 @@ summarization_name_mapping = {
     "xsum": ("document", "summary"),
     "wiki_summary": ("article", "highlights"),
     "Rahmaa/eli5_final": ("query","answer"),
-    "ml6team/cnn_dailymail_nl": ("article", "highlights"),
+    "Gabriel/xsum_swe": ("document", "summary"),
 }
 
 distill_mappings = {1: {0: 5},
@@ -309,6 +309,8 @@ def parse_args():
         datasetName = "Rahmaa_eli5_final"
     elif args.dataset_name == "ml6team/cnn_dailymail_nl":
         datasetName = "ml6team_cnn_dailymail_nl"
+    elif args.dataset_name == "Gabriel/xsum_swe":
+        datasetName = "Gabriel_xsum_swe"
     else:
         datasetName = args.dataset_name
 
@@ -339,11 +341,11 @@ def parse_args():
         args.max_length = 125
         args.min_length = 36
         args.num_beams = 4
-    elif args.dataset_name == "ml6team/cnn_dailymail_nl":
-        args.length_penalty = 2.0
-        args.max_length = 160
-        args.min_length = 56
-        args.num_beams = 4
+    elif args.dataset_name == "Gabriel/xsum_swe":
+        args.length_penalty = 1.0
+        args.max_length = 62
+        args.min_length = 11
+        args.num_beams = 6
     else:
         assert False, f'args error: dataset name {args.dataset_name}'
 
@@ -426,11 +428,13 @@ def main():
     # download the dataset.
     if args.dataset_name is not None:
         # Downloading and loading a dataset from the hub.
-        # print("\n\n\n\ndataset is not none")
-        # print("\n\n\n\ndataset name is : {} and config name is: {}".format(args.dataset_name, args.dataset_config_name))
-        raw_datasets = load_dataset(args.dataset_name, args.dataset_config_name)
-        # print("\n\n\n\nRaw data set after loading the data is : ", raw_datasets)
-        #raw_datasets = load_dataset(args.dataset_name, args.dataset_config_name)
+        print("\n\n\n\ndataset is not none")
+        print("\n\n\n\ndataset name is : {} and config name is: {}".format(args.dataset_name, args.dataset_config_name))
+        raw_datasets = None
+        if args.dataset_config_name is None:
+            raw_datasets = load_dataset(args.dataset_name)
+        else:
+            raw_datasets = load_dataset(args.dataset_name, args.dataset_config_name)
     else:
         data_files = {}
         if args.train_file is not None:
@@ -456,6 +460,7 @@ def main():
 
     if args.tokenizer_name:
         # changes for language specific tokenizer in mBART
+        print("\n\n ****** the tokenizer name is: ****** " + args.tokenizer_name)
         if args.tokenizer_name == "facebook/mbart-large-cc25":
             print("\n\n\n ******* updating the tokenizer ********* \n\n\n")
             tokenizer = AutoTokenizer.from_pretrained(args.tokenizer_name, use_fast=not args.use_slow_tokenizer, src_lang="nl_XX", tgt_lang="nl_XX")
@@ -484,8 +489,8 @@ def main():
         )
 
         #changes done here to set decoder start token id for mbart
-        # if args.model_name_or_path == "ml6team/mbart-large-cc25-cnn-dailymail-xsum-nl":
-        #     teacher_model.config.decoder_start_token_id = tokenizer.lang_code_to_id['nl_XX']
+        if args.model_name_or_path == "ml6team/mbart-large-cc25-cnn-dailymail-xsum-nl":
+            teacher_model.config.decoder_start_token_id = tokenizer.lang_code_to_id['nl_XX']
         #changes done
 
         student_config = QBartConfig.from_pretrained(args.teacher_model,
@@ -950,3 +955,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

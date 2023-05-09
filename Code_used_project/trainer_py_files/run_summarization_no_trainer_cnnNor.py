@@ -87,6 +87,7 @@ summarization_name_mapping = {
     "wiki_summary": ("article", "highlights"),
     "Rahmaa/eli5_final": ("query","answer"),
     "ml6team/cnn_dailymail_nl": ("article", "highlights"),
+    "jkorsvik/cnn_daily_mail_nor_final": ("article", "highlights")
 }
 
 distill_mappings = {1: {0: 5},
@@ -309,6 +310,8 @@ def parse_args():
         datasetName = "Rahmaa_eli5_final"
     elif args.dataset_name == "ml6team/cnn_dailymail_nl":
         datasetName = "ml6team_cnn_dailymail_nl"
+    elif args.dataset_name == "jkorsvik/cnn_daily_mail_nor_final":
+        datasetName = "jkorsvik_cnn_daily_mail_nor_final"
     else:
         datasetName = args.dataset_name
 
@@ -340,6 +343,11 @@ def parse_args():
         args.min_length = 36
         args.num_beams = 4
     elif args.dataset_name == "ml6team/cnn_dailymail_nl":
+        args.length_penalty = 2.0
+        args.max_length = 160
+        args.min_length = 56
+        args.num_beams = 4
+    elif args.dataset_name == "jkorsvik/cnn_daily_mail_nor_final":
         args.length_penalty = 2.0
         args.max_length = 160
         args.min_length = 56

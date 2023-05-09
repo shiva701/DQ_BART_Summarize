@@ -50,6 +50,7 @@ from transformers import (
     get_scheduler,
     set_seed,
 )
+from transformers import MBartConfig
 from transformers.file_utils import is_offline_mode
 from transformers.utils.versions import require_version
 
@@ -356,7 +357,6 @@ def parse_args():
         args.min_length = 36
         args.num_beams = 4
     elif args.dataset_name == "jkorsvik/cnn_daily_mail_nor_final":
-        print("<-------------------------Yes it is took the parameters---------------------->")
         args.length_penalty = 1.0
         args.max_length = 160
         args.min_length = 50
@@ -449,10 +449,10 @@ def main():
     # download the dataset.
     if args.dataset_name is not None:
         # Downloading and loading a dataset from the hub.
-        print("\n\n\n\ndataset is not none")
-        print("\n\n\n\ndataset name is : {} and config name is: {}".format(args.dataset_name, args.dataset_config_name))
+        # print("\n\n\n\ndataset is not none")
+        # print("\n\n\n\ndataset name is : {} and config name is: {}".format(args.dataset_name, args.dataset_config_name))
         raw_datasets = load_dataset(args.dataset_name, args.dataset_config_name)
-        print("\n\n\n\nRaw data set after loading the data is : ", raw_datasets)
+        # print("\n\n\n\nRaw data set after loading the data is : ", raw_datasets)
         #raw_datasets = load_dataset(args.dataset_name, args.dataset_config_name)
     else:
         data_files = {}
@@ -483,12 +483,16 @@ def main():
         # changes for language specific tokenizer in mBART
         # print("\n\n ****** the tokenizer name is: ****** " + args.tokenizer_name)
         if args.tokenizer_name == "facebook/mbart-large-cc25":
-            print("\n\n\n ******* updating the tokenizer ********* \n\n\n")
+            print("\n\n ******* updating the tokenizer ********* \n\n\n")
             tokenizer = AutoTokenizer.from_pretrained(args.tokenizer_name, use_fast=not args.use_slow_tokenizer, src_lang="hi_IN", tgt_lang="hi_IN")
         # changed done
         else:
             tokenizer = AutoTokenizer.from_pretrained(args.tokenizer_name, use_fast=not args.use_slow_tokenizer)
     elif args.model_name_or_path:
+        # if args.model_name_or_path == "facebook/mbart-large-cc25":
+        #     print("\n\n ******* if args.model_name_or_path facebook/mbart-large-cc25, updating the tokenizer ********* \n\n\n")
+        #     tokenizer = AutoTokenizer.from_pretrained(args.model_name_or_path, use_fast=not args.use_slow_tokenizer, src_lang="hi_IN", tgt_lang="hi_IN")
+        # else:
         tokenizer = AutoTokenizer.from_pretrained(args.model_name_or_path, use_fast=not args.use_slow_tokenizer)
     else:
         raise ValueError(
@@ -502,17 +506,16 @@ def main():
     maps = {'enc': distill_enc_mapping, 'dec': distill_dec_mapping}
 
     if args.model_name_or_path:
-        # print("setting up decoder start token id for config in dutch language: ", config)
         teacher_model = AutoModelForSeq2SeqLM.from_pretrained(
             args.model_name_or_path,
             from_tf=bool(".ckpt" in args.model_name_or_path),
             config=config,
         )
 
-        #changes done here to set decoder start token id for mbart
-        if args.model_name_or_path == "ml6team/mbart-large-cc25-cnn-dailymail-xsum-nl":
-            teacher_model.config.decoder_start_token_id = tokenizer.lang_code_to_id['hi_IN']
-        #changes done
+        # #changes done here to set decoder start token id for mbart
+        # if args.model_name_or_path.find("mbart-large")!=-1:
+        #     teacher_model.config.decoder_start_token_id = tokenizer.lang_code_to_id['hi_IN']
+        # #changes done
 
         student_config = QBartConfig.from_pretrained(args.teacher_model,
                                                      quantize_act=True,
@@ -594,10 +597,10 @@ def main():
 
         # print("\n\n The tokenizer inside the preprocess function: ", tokenizer)
         # Setup the tokenizer for targets
-        # with tokenizer.as_target_tokenizer():
-        #     labels = tokenizer(targets, max_length=max_target_length, padding=padding, truncation=True)
+        with tokenizer.as_target_tokenizer():
+            labels = tokenizer(targets, max_length=max_target_length, padding=padding, truncation=True)
 
-        labels = tokenizer(targets, max_length=max_target_length, padding=padding, truncation=True, add_special_tokens=True)
+        # labels = tokenizer(targets, max_length=max_target_length, padding=padding, truncation=True, add_special_tokens=True)
 
         # If we are padding here, replace all tokenizer.pad_token_id in the labels by -100 when we want to ignore
         # padding in the loss.
@@ -609,7 +612,7 @@ def main():
         model_inputs["labels"] = labels["input_ids"]
         return model_inputs
 
-    print("\n\n\n\n The raw datset is : ", raw_datasets)
+    print("\n\n\n ***** The raw datset is: ***** ", raw_datasets)
     processed_datasets = raw_datasets.map(
         preprocess_function,
         batched=True,
@@ -625,7 +628,7 @@ def main():
     eval_dataset = processed_datasets["validation"]
     test_dataset = processed_datasets["test"]
     #print(type(train_dataset))
-    print("datasets size, train: {}, validate: {}, test: {}".format(train_dataset.num_rows,eval_dataset.num_rows,test_dataset.num_rows))
+    print("\n\n ***** datasets size, train: {}, validate: {}, test: {} *****".format(train_dataset.num_rows,eval_dataset.num_rows,test_dataset.num_rows))
 
     # Log a few random samples from the training set:
     for index in random.sample(range(len(train_dataset)), 1):
@@ -691,6 +694,7 @@ def main():
     else:
         args.num_train_epochs = math.ceil(args.max_train_steps / num_update_steps_per_epoch)
 
+    # optimizer scheduler defined here.
     lr_scheduler = get_scheduler(
         name=args.lr_scheduler_type,
         optimizer=optimizer,
@@ -704,7 +708,7 @@ def main():
     # Train!
     total_batch_size = args.per_device_train_batch_size * accelerator.num_processes * args.gradient_accumulation_steps
 
-    logger.info("***** Running training *****")
+    logger.info("\n\n***** Running training *****")
     logger.info(f"  Num examples = {len(train_dataset)}")
     logger.info(f"  Num Epochs = {args.num_train_epochs}")
     logger.info(f"  Instantaneous batch size per device = {args.per_device_train_batch_size}")
@@ -903,7 +907,11 @@ def main():
             if args.output_dir is not None and res_rougeL > prev:
                 accelerator.wait_for_everyone()
                 unwrapped_model = accelerator.unwrap_model(student_model)
-                unwrapped_model.save_pretrained(args.output_dir, save_function=accelerator.save)
+                print("\n\n line 910, args output dir: ", args.output_dir)
+                unwrapped_model.save_pretrained(save_directory=args.output_dir, is_main_process=True, save_function=accelerator.save, push_to_hub=False, use_diff=False)
+                config = unwrapped_model.config
+                # Save the model configuration to a JSON file
+                config.to_json_file(args.output_dir + "/config.json")
                 prev = res_rougeL
 
                 # load best model and evaluate on testset
@@ -927,6 +935,7 @@ def main():
                                                             clip_val=args.clip_val,
                                                             decoder_layers=args.distill_decoder,
                                                             encoder_layers=args.distill_encoder)
+            print("\n\n ***** best model config in do_test: ***** \n\n", best_model_config)
             best_model = QBart(best_model_config)
             best_model.load_state_dict(
                 torch.load(os.path.join(args.output_dir + "/", "pytorch_model.bin"), map_location='cpu'))

@@ -50,6 +50,7 @@ from transformers import (
     get_scheduler,
     set_seed,
 )
+from transformers import MBartConfig
 from transformers.file_utils import is_offline_mode
 from transformers.utils.versions import require_version
 
@@ -87,6 +88,8 @@ summarization_name_mapping = {
     "wiki_summary": ("article", "highlights"),
     "Rahmaa/eli5_final": ("query","answer"),
     "ml6team/cnn_dailymail_nl": ("article", "highlights"),
+    "jkorsvik/cnn_daily_mail_nor_final":("article","highlights"),
+    "eli5Translated": ("french_query","french_answer"),
 }
 
 distill_mappings = {1: {0: 5},
@@ -111,6 +114,10 @@ def parse_args():
                         default=None,
                         help="The configuration name of the dataset to use (via the datasets library).", )
     parser.add_argument("--train_file",
+                        type=str,
+                        default=None,
+                        help="A csv or a json file containing the training data.")
+    parser.add_argument("--test_file",
                         type=str,
                         default=None,
                         help="A csv or a json file containing the training data.")
@@ -302,6 +309,9 @@ def parse_args():
         if args.validation_file is not None:
             extension = args.validation_file.split(".")[-1]
             assert extension in ["csv", "json"], "`validation_file` should be a csv or a json file."
+        if args.test_file is not None:
+            extension = args.test_file.split(".")[-1]
+            assert extension in ["csv", "json"], "`test_file` should be a csv or a json file."    
 
     #changes done here because of the output file structure. / makes a subdirectory. So, if a dataset name has a / in it, replace it with _.
     datasetName = None
@@ -309,6 +319,13 @@ def parse_args():
         datasetName = "Rahmaa_eli5_final"
     elif args.dataset_name == "ml6team/cnn_dailymail_nl":
         datasetName = "ml6team_cnn_dailymail_nl"
+    elif args.dataset_name == "jkorsvik/cnn_daily_mail_nor_final":
+        datasetName = "jkorsvik_cnn_daily_mail_nor_final"
+    #changes: for data uploaded with manual csv files. 
+    elif args.dataset_name is None:
+        print("here!!")
+        if args.train_file is not None:
+            datasetName = "eli5Translated"
     else:
         datasetName = args.dataset_name
 
@@ -339,10 +356,16 @@ def parse_args():
         args.max_length = 125
         args.min_length = 36
         args.num_beams = 4
-    elif args.dataset_name == "ml6team/cnn_dailymail_nl":
-        args.length_penalty = 2.0
+    elif args.dataset_name == "jkorsvik/cnn_daily_mail_nor_final":
+        args.length_penalty = 1.0
         args.max_length = 160
-        args.min_length = 56
+        args.min_length = 50
+        args.num_beams = 4
+    #changes: adding the configuration for dataset eli5Translated.
+    elif args.dataset_name == "eli5Translated" or datasetName == "eli5Translated":
+        args.length_penalty = 1.0
+        args.max_length = 160
+        args.min_length = 50
         args.num_beams = 4
     else:
         assert False, f'args error: dataset name {args.dataset_name}'
@@ -437,6 +460,8 @@ def main():
             data_files["train"] = args.train_file
         if args.validation_file is not None:
             data_files["validation"] = args.validation_file
+        if args.test_file is not None:
+            data_files["test"] = args.test_file
         extension = args.train_file.split(".")[-1]
         raw_datasets = load_dataset(extension, data_files=data_files)
     # See more about loading any type of standard or custom dataset (from files, python dict, pandas DataFrame, etc) at
@@ -456,13 +481,18 @@ def main():
 
     if args.tokenizer_name:
         # changes for language specific tokenizer in mBART
+        # print("\n\n ****** the tokenizer name is: ****** " + args.tokenizer_name)
         if args.tokenizer_name == "facebook/mbart-large-cc25":
-            print("\n\n\n ******* updating the tokenizer ********* \n\n\n")
-            tokenizer = AutoTokenizer.from_pretrained(args.tokenizer_name, use_fast=not args.use_slow_tokenizer, src_lang="nl_XX", tgt_lang="nl_XX")
+            print("\n\n ******* updating the tokenizer ********* \n\n\n")
+            tokenizer = AutoTokenizer.from_pretrained(args.tokenizer_name, use_fast=not args.use_slow_tokenizer, src_lang="hi_IN", tgt_lang="hi_IN")
         # changed done
         else:
             tokenizer = AutoTokenizer.from_pretrained(args.tokenizer_name, use_fast=not args.use_slow_tokenizer)
     elif args.model_name_or_path:
+        # if args.model_name_or_path == "facebook/mbart-large-cc25":
+        #     print("\n\n ******* if args.model_name_or_path facebook/mbart-large-cc25, updating the tokenizer ********* \n\n\n")
+        #     tokenizer = AutoTokenizer.from_pretrained(args.model_name_or_path, use_fast=not args.use_slow_tokenizer, src_lang="hi_IN", tgt_lang="hi_IN")
+        # else:
         tokenizer = AutoTokenizer.from_pretrained(args.model_name_or_path, use_fast=not args.use_slow_tokenizer)
     else:
         raise ValueError(
@@ -476,17 +506,16 @@ def main():
     maps = {'enc': distill_enc_mapping, 'dec': distill_dec_mapping}
 
     if args.model_name_or_path:
-        # print("setting up decoder start token id for config in dutch language: ", config)
         teacher_model = AutoModelForSeq2SeqLM.from_pretrained(
             args.model_name_or_path,
             from_tf=bool(".ckpt" in args.model_name_or_path),
             config=config,
         )
 
-        #changes done here to set decoder start token id for mbart
-        # if args.model_name_or_path == "ml6team/mbart-large-cc25-cnn-dailymail-xsum-nl":
-        #     teacher_model.config.decoder_start_token_id = tokenizer.lang_code_to_id['nl_XX']
-        #changes done
+        # #changes done here to set decoder start token id for mbart
+        # if args.model_name_or_path.find("mbart-large")!=-1:
+        #     teacher_model.config.decoder_start_token_id = tokenizer.lang_code_to_id['hi_IN']
+        # #changes done
 
         student_config = QBartConfig.from_pretrained(args.teacher_model,
                                                      quantize_act=True,
@@ -571,6 +600,8 @@ def main():
         with tokenizer.as_target_tokenizer():
             labels = tokenizer(targets, max_length=max_target_length, padding=padding, truncation=True)
 
+        # labels = tokenizer(targets, max_length=max_target_length, padding=padding, truncation=True, add_special_tokens=True)
+
         # If we are padding here, replace all tokenizer.pad_token_id in the labels by -100 when we want to ignore
         # padding in the loss.
         if padding == "max_length" and args.ignore_pad_token_for_loss:
@@ -581,7 +612,7 @@ def main():
         model_inputs["labels"] = labels["input_ids"]
         return model_inputs
 
-    print("\n\n\n\n The raw datset is : ", raw_datasets)
+    print("\n\n\n ***** The raw datset is: ***** ", raw_datasets)
     processed_datasets = raw_datasets.map(
         preprocess_function,
         batched=True,
@@ -597,7 +628,7 @@ def main():
     eval_dataset = processed_datasets["validation"]
     test_dataset = processed_datasets["test"]
     #print(type(train_dataset))
-    print("datasets size, train: {}, validate: {}, test: {}".format(train_dataset.num_rows,eval_dataset.num_rows,test_dataset.num_rows))
+    print("\n\n ***** datasets size, train: {}, validate: {}, test: {} *****".format(train_dataset.num_rows,eval_dataset.num_rows,test_dataset.num_rows))
 
     # Log a few random samples from the training set:
     for index in random.sample(range(len(train_dataset)), 1):
@@ -663,6 +694,7 @@ def main():
     else:
         args.num_train_epochs = math.ceil(args.max_train_steps / num_update_steps_per_epoch)
 
+    # optimizer scheduler defined here.
     lr_scheduler = get_scheduler(
         name=args.lr_scheduler_type,
         optimizer=optimizer,
@@ -676,7 +708,7 @@ def main():
     # Train!
     total_batch_size = args.per_device_train_batch_size * accelerator.num_processes * args.gradient_accumulation_steps
 
-    logger.info("***** Running training *****")
+    logger.info("\n\n***** Running training *****")
     logger.info(f"  Num examples = {len(train_dataset)}")
     logger.info(f"  Num Epochs = {args.num_train_epochs}")
     logger.info(f"  Instantaneous batch size per device = {args.per_device_train_batch_size}")
@@ -875,7 +907,11 @@ def main():
             if args.output_dir is not None and res_rougeL > prev:
                 accelerator.wait_for_everyone()
                 unwrapped_model = accelerator.unwrap_model(student_model)
-                unwrapped_model.save_pretrained(args.output_dir, save_function=accelerator.save)
+                print("\n\n line 910, args output dir: ", args.output_dir)
+                unwrapped_model.save_pretrained(save_directory=args.output_dir, is_main_process=False, save_function=accelerator.save, push_to_hub=False, use_diff=False)
+                config = unwrapped_model.config
+                # Save the model configuration to a JSON file
+                config.to_json_file(args.output_dir + "/config.json")
                 prev = res_rougeL
 
                 # load best model and evaluate on testset
@@ -899,6 +935,7 @@ def main():
                                                             clip_val=args.clip_val,
                                                             decoder_layers=args.distill_decoder,
                                                             encoder_layers=args.distill_encoder)
+            print("\n\n ***** best model config in do_test: ***** \n\n", best_model_config)
             best_model = QBart(best_model_config)
             best_model.load_state_dict(
                 torch.load(os.path.join(args.output_dir + "/", "pytorch_model.bin"), map_location='cpu'))

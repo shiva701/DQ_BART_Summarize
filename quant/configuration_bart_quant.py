@@ -217,7 +217,12 @@ class BartConfig(PretrainedConfig):
 
     @classmethod
     def from_pretrained(cls, pretrained_model_name_or_path, **kwargs):
-        config_file = cached_download(hf_hub_url(pretrained_model_name_or_path, CONFIG_NAME))
+        print("\n\n from_pretrained,  args output dir: ", pretrained_model_name_or_path)
+        if "output" in pretrained_model_name_or_path:
+            print("\n\n ****** fetching pre-trained model config from json file ***** \n\n")
+            config_file = pretrained_model_name_or_path + "/"+ "config.json"
+        else:
+            config_file = cached_download(hf_hub_url(pretrained_model_name_or_path, CONFIG_NAME))
         logger.info("loading configuration file {}".format(config_file))
         # Load config
         config = cls.from_json_file(config_file)  

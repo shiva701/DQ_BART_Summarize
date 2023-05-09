@@ -57,7 +57,7 @@ import wandb
 from quant.configuration_bart_quant import BartConfig as QBartConfig
 from quant.modeling_bart_quant import BartForConditionalGeneration as QBart
 
-require_version("datasets>=1.8.0", "To fix: pip install -r examples/pytorch/summarization/requirements.txt")
+# require_version("datasets>=1.8.0", "To fix: pip install -r examples/pytorch/summarization/requirements.txt")
 
 # You should update this to your particular problem to have better documentation of `model_type`
 MODEL_CONFIG_CLASSES = list(MODEL_MAPPING.keys())
