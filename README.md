@@ -1,14 +1,14 @@
+## CS-678 NLP Project Spring 2023
+
 ## DQ-BART:  Efficient Sequence-to-Sequence Model via Joint Distillation and Quantization
-This repository contains the authors' implementation of the ACL 2022 paper "[DQ-BART: Efficient Sequence-to-Sequence Model via
-Joint Distillation and Quantization](https://arxiv.org/pdf/2203.11239.pdf)."
+
+This repository contains the code for the project. We have used the impementation of the ACL 2022 paper "DQ-BART: Efficient Sequence-to-Sequence Model via Joint Distillation and Quantization" and enhanced on top of that. We analyzed the code on the datasets used in the paper along with more multilingual data. We used existing multilingual bart models and also fine-tuned the base model to work on multi-lingual data. 
 
 ## Requirements
-- Install PyTorch from the [official website](https://pytorch.org/get-started/locally/).
 - Install dependencies via `pip install -r requirements.txt`. 
-- The teacher model should be available locally, e.g., downloading manually from the [huggingface model hub](https://huggingface.co/models).
 
 ## Sample Command
-- The following command will train an `8-8-8 3-1` model on CNN/DailyMail dataset. You may use [accelerate](https://github.com/huggingface/accelerate) for distributed training. 
+- The following command will train an `8-8-8 3-1` model on CNN/DailyMail dataset. 
     ```bash
     python3 run_summarization_no_trainer.py \
       --model_name_or_path ainize/bart-base-cnn \
