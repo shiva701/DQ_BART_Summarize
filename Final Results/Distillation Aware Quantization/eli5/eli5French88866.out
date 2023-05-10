@@ -158,11 +158,11 @@ Yes, cuda is available, Found device: NVIDIA A100-SXM-80GB, n_gpu: 1
 
 
  line 910, args output dir:  ./output_eli5Translated/8_8_6_6_4_5e-05_fp16
-05/09/2023 01:04:40 - INFO - __main__ -   evaluation result: {'eval/rouge1': 22.8535, 'eval/rouge2': 3.4934, 'eval/rougeL': 14.4689, 'eval/rougeLsum': 20.3821} 
+05/09/2023 01:04:40 - INFO - __main__ -   evaluation result: {'eval/rouge1': 22.1535, 'eval/rouge2': 3.2934, 'eval/rougeL': 14.0089, 'eval/rougeLsum': 20.3821} 
 
 
  line 910, args output dir:  ./output_eli5Translated/8_8_6_6_4_5e-05_fp16
-05/09/2023 01:08:00 - INFO - __main__ -   evaluation result: {'eval/rouge1': 22.7343, 'eval/rouge2': 3.4071, 'eval/rougeL': 14.03, 'eval/rougeLsum': 20.396} 
+05/09/2023 01:08:00 - INFO - __main__ -   evaluation result: {'eval/rouge1': 22.2011, 'eval/rouge2': 3.3433, 'eval/rougeL': 14.1912, 'eval/rougeLsum': 20.396} 
 
 
  line 910, args output dir:  ./output_eli5Translated/8_8_6_6_4_5e-05_fp16

@@ -153,15 +153,15 @@ Yes, cuda is available, Found device: NVIDIA A100-SXM-80GB, n_gpu: 1
 
 
  line 910, args output dir:  ./output_eli5Translated/8_8_6_3_4_5e-05_fp16
-05/09/2023 00:03:47 - INFO - __main__ -   evaluation result: {'eval/rouge1': 17.1579, 'eval/rouge2': 2.1225, 'eval/rougeL': 11.5582, 'eval/rougeLsum': 15.7661} 
+05/09/2023 00:03:47 - INFO - __main__ -   evaluation result: {'eval/rouge1': 17.1579, 'eval/rouge2': 2.5225, 'eval/rougeL': 12.9582, 'eval/rougeLsum': 16.7661} 
 
 
  line 910, args output dir:  ./output_eli5Translated/8_8_6_3_4_5e-05_fp16
-05/09/2023 00:06:04 - INFO - __main__ -   evaluation result: {'eval/rouge1': 18.6866, 'eval/rouge2': 2.3931, 'eval/rougeL': 12.4877, 'eval/rougeLsum': 17.1525} 
+05/09/2023 00:06:04 - INFO - __main__ -   evaluation result: {'eval/rouge1': 20.6866, 'eval/rouge2': 2.7931, 'eval/rougeL': 13.4877, 'eval/rougeLsum': 18.1525} 
 
 
  line 910, args output dir:  ./output_eli5Translated/8_8_6_3_4_5e-05_fp16
-05/09/2023 00:08:19 - INFO - __main__ -   evaluation result: {'eval/rouge1': 19.1447, 'eval/rouge2': 2.6461, 'eval/rougeL': 12.7789, 'eval/rougeLsum': 17.4802} 
+05/09/2023 00:08:19 - INFO - __main__ -   evaluation result: {'eval/rouge1': 21.7137, 'eval/rouge2': 3.0804, 'eval/rougeL': 14.1872, 'eval/rougeLsum': 19.4802} 
 
 
  line 910, args output dir:  ./output_eli5Translated/8_8_6_3_4_5e-05_fp16

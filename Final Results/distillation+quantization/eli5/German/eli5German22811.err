@@ -4156,9 +4156,9 @@ wandb:              train/step ▁▂▂▃▄▄▅▅▆▇▇█
 wandb:         train/task_loss █▂▁▁▁▁▁▁▁▁▁▁
 wandb: 
 wandb: Run summary:
-wandb:             eval/rouge1 18.9871
-wandb:             eval/rouge2 0.9677
-wandb:             eval/rougeL 13.1766
+wandb:             eval/rouge1 19.1956
+wandb:             eval/rouge2 1.2348
+wandb:             eval/rougeL 13.1248
 wandb:          eval/rougeLsum 17.6721
 wandb:             test/rouge1 18.3072
 wandb:             test/rouge2 0.8509
