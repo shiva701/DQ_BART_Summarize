@@ -5,6 +5,6 @@ wandb
 nltk
 accelerate==0.18.0
 tensorboard
-setuptools<50
+setuptools
 rouge_score
 tokenizers==0.11.6
