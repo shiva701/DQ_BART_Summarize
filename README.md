@@ -1,5 +1,3 @@
-## CS-678 NLP Project Spring 2023
-
 ## DQ-BART:  Efficient Sequence-to-Sequence Model via Joint Distillation and Quantization
 
 This repository contains the code for our project. We have used the impementation of the ACL 2022 paper "[DQ-BART: Efficient Sequence-to-Sequence Model via Joint Distillation and Quantization](https://arxiv.org/pdf/2203.11239.pdf)" and enhanced on top of the base code. We analyzed the code on the datasets used in the paper and on new multilingual datasets. We used existing multilingual bart models and also fine-tuned the bart-base model to work on multilingual data. 
